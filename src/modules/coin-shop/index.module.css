@@ -1,0 +1,98 @@
+:local(.scoped) {
+  height: 100vh;
+  @apply bg-bg_color;
+
+  .header-title {
+    font-size: 17px;
+    @apply m-auto font-medium;
+  }
+
+  .coin-shop-header-title {
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: large;
+  }
+
+  .coin-shop-tab {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .coin-shop-list {
+    margin-top: 20px;
+
+    .user-picture {
+      width: 40px;
+      background-color: aliceblue;
+    }
+
+    .amount-rule {
+      transform: scaleZ(0.2);
+      font-size: 8px;
+      color: #ccc;
+      padding-left: 10px;
+    }
+
+    .recharge-personal-information {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .payment-method {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+    }
+  }
+
+  .triangle-icon {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    border-color: #fff transparent transparent transparent;
+    margin-left: 5px;
+  }
+
+  .paymentMethodButton {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .triangle-icon {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+    margin-left: 5px;
+    vertical-align: middle;
+  }
+
+
+  .pickerContainer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
+
+  .icon-bar {
+    @apply absolute right-4 top-1/2 -translate-y-1/2;
+  }
+
+  .rv-divider {
+    height: 0.5px;
+    @apply mx-4;
+  }
+}
+
+:local(.modal) {
+  @apply bg-bg_color !important;
+}
