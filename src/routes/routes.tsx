@@ -5,6 +5,8 @@ import React, { lazy } from 'react'
 import C2cTrade from '@/modules/c2c/trade'
 import Wallet from '@/modules/wallet'
 import CoinShop from '@/modules/coin-shop'
+import OrderInfo from '@/modules/order-info'
+import Purchase from '@/modules/purchase'
 
 
 const GetRouters = () => {
@@ -21,7 +23,15 @@ const GetRouters = () => {
         {
             path: '/coin-shop',
             element: <CoinShop />
-        }
+        },
+        // {
+        //     path: '/order-info',
+        //     element: <OrderInfo />
+        // },
+        {
+            path: '/purchase',
+            element: <Purchase />
+        },
     ])
     return routes
 }

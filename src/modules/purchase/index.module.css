@@ -1,0 +1,91 @@
+:local(.scoped) {
+  height: 100vh;
+  @apply bg-bg_color;
+
+  .header-title {
+    font-size: 17px;
+    @apply m-auto font-medium;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .back-button {
+      font-size: 16px;
+      cursor: pointer;
+      color: #007BFF;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+
+  .content {
+    .selling-info {
+      margin-bottom: 20px;
+
+      p {
+        margin: 5px 0;
+        font-size: 14px;
+
+        img {
+          width: 16px;
+          height: 16px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .payment-info {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+      }
+
+      span {
+        font-size: 16px;
+      }
+    }
+
+    .reminder {
+      margin-top: 20px;
+
+      p {
+        font-size: 14px;
+        margin: 5px 0;
+
+        &.red-text {
+          color: red;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .icon-bar {
+    @apply absolute right-4 top-1/2 -translate-y-1/2;
+  }
+
+  .rv-divider {
+    height: 0.5px;
+    @apply mx-4;
+  }
+}
+
+:local(.modal) {
+  @apply bg-bg_color !important;
+}
