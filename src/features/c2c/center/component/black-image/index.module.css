@@ -1,0 +1,17 @@
+:local(.scoped) {
+  .no-data {
+    @apply h-full flex flex-col justify-center items-center;
+
+    .no-data-text {
+      @apply text-center text-sm font-normal text-text_color_01;
+    }
+
+    .no-data-image {
+      @apply w-28 h-20 mb-4;
+    }
+  }
+}
+
+.no-data-content {
+  @apply h-full;
+}

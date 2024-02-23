@@ -1,0 +1,32 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "MarketActivitiesProto";
+
+//行情异动
+message MarketActivities{
+  //触发时间
+  sint64 createdTime = 1;
+  //价格
+  string price = 2;
+  //变量值
+  string value = 3;
+  //异动记录 id
+  string marketActivitiesLogId = 4;
+  //交易对标识
+  string symbolWassName = 5;
+  //标的币
+  string base = 6;
+  //计价币
+  string quote = 7;
+  //涨跌色 1 涨 2 跌
+  int32 colorType = 8;
+  //中文标题
+  string title_zh = 9;
+  //英文标题
+  string title_en = 10;
+  //异动唯一标识
+  string key = 11;
+  //交易对名字
+  string symbolName = 12;
+
+}

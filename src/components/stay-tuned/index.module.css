@@ -1,0 +1,31 @@
+:local(.scoped) {
+  @apply flex flex-col;
+
+  .stay-tuned-wrap {
+    @apply flex justify-center items-center;
+
+    .placeholder {
+      @apply mt-32;
+
+      .rv-image {
+        width: 220px;
+        height: 184px;
+        @apply mb-4;
+      }
+
+      .text {
+        @apply text-center;
+
+        p {
+          font-size: 14px;
+          @apply font-medium text-text_color_01 mb-1;
+        }
+  
+        label {
+          font-size: 12px;
+          @apply font-normal text-text_color_03;
+        }
+      }
+    }
+  }
+}

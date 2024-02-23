@@ -1,0 +1,316 @@
+:local(.scoped) {
+  @apply flex-1;
+
+  .c2c-im-wrap {
+    @apply flex-1 flex flex-col justify-between h-full;
+  }
+}
+
+:local(.c2c-im-chat-box) {
+  @apply flex-1 bg-card_bg_color_01 px-4 py-0;
+
+  .ReactVirtualized__Grid {
+    @apply -mx-4 px-4;
+  }
+
+  .date {
+    line-height: 15px;
+    @apply text-center my-4;
+
+    label {
+      font-size: 12px;
+      @apply text-text_color_03 font-normal;
+    }
+  }
+
+  .container {
+    @apply mb-6;
+  }
+
+  .content {
+    max-width: 203px;
+  }
+
+  .time-left, .time-right {
+    label {
+      font-size: 12px;
+      @apply text-text_color_03 font-normal;
+    }
+  }
+
+  .time-left {
+    @apply text-left;
+  }
+
+  .time-right {
+    @apply text-right;
+  }
+}
+
+:local(.c2c-im-chat-input-box) {
+  .chat-input-box-wrap {
+    @apply px-4 pt-4 pb-10 flex;
+
+    .input {
+      @apply mr-3 flex-1 bg-bg_sr_color rounded-full;
+
+      input {
+        font-size: 14px;
+        @apply h-10 px-4;
+      }
+    }
+
+    .upload-image {
+      @apply w-10 h-10 flex justify-center items-center;
+
+      .rv-uploader__wrapper {
+        @apply pb-0;
+      }
+
+      svg {
+        width: 18px;
+        height: 16px;
+      }
+    }
+
+    .btn {
+      .rv-button {
+        border-radius: 20px;
+      }
+    }
+  }
+}
+
+:local(.c2c-im-order) {
+  .order-wrap {
+    @apply px-4 py-3 bg-bg_sr_color rounded;
+
+    .header {
+      border-bottom: 1px solid var(--nc-20);
+      @apply pb-3 flex items-center;
+  
+      label {
+        font-size: 14px;
+        @apply mr-2;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      .buy {
+        @apply text-buy_up_color font-medium;
+      }
+
+      .sell {
+        @apply text-sell_down_color font-medium;
+      }
+
+      .symbol {
+        @apply text-text_color_01 font-medium;
+      }
+
+      .source {
+        padding: 2px 6px;
+        @apply rounded-sm;
+      }
+
+      .station {
+        @apply bg-success_color_special_02 text-success_color;
+      }
+
+      .outside-station {
+        @apply bg-brand_color_special_02 text-brand_color;
+      }
+
+      .order-number {
+        @apply flex-1 text-right;
+
+        label {
+          font-size: 12px;
+          @apply text-text_color_02 font-normal mr-2;
+        }
+
+        svg {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .main {
+      @apply mt-3;
+
+      .price, .quantity, .sum {
+        @apply flex justify-between;
+
+        label {
+          font-size: 12px;
+          @apply font-normal;
+        }
+
+        .text {
+          @apply text-text_color_02;
+        }
+
+        .number {
+          @apply text-text_color_01;
+        }
+      }
+
+      .price, .quantity {
+        @apply mb-2;
+      }
+    }
+  }
+}
+
+:local(.c2c-im-other-side-text-message) {
+  @apply mb-6;
+
+  .text-message-wrap {
+    @apply flex;
+
+    .avatar {
+      @apply mr-2;
+
+      .image {
+        width: 26px;
+        height: 26px;
+        background: linear-gradient(180deg, #FFBC24 0%, #FFD15C 100%);
+        @apply text-center rounded-full;
+
+        span {
+          font-size: 14px;
+          @apply text-button_text_02 font-medium;
+        }
+
+        svg {
+          font-size: 26px;
+        }
+      }
+    }
+
+    .right-container {
+      @apply flex flex-col items-start;
+
+      .name {
+        @apply mb-2;
+
+        label {
+          font-size: 12px;
+          @apply text-text_color_02 font-normal;
+        }
+      }
+
+      .content {
+        @apply py-2 px-3 bg-bg_sr_color mb-1;
+
+        p {
+          font-size: 14px;
+          @apply text-text_color_01 font-medium break-all;
+        }
+      }
+
+      .other-side-message {
+        @apply rounded-r-lg rounded-bl-lg;
+      }
+
+      .c2c-text-message-image {
+        .rv-image {
+          img {
+            @apply rounded-bl-lg rounded-r-lg;
+          }
+        }
+      }
+    }
+  }
+}
+
+:local(.c2c-im-text-message-image) {
+  .rv-dialog__message {
+    @apply p-2;
+  }
+
+  .rv-dialog__footer {
+    @apply hidden;
+  }
+}
+
+:local(.c2c-im-my-text-message) {
+  @apply mb-6;
+
+  .text-message-wrap {
+    @apply flex justify-end;
+
+    .content {
+      @apply flex flex-col items-end;
+
+      .my-message {
+        p {
+          font-size: 14px;
+          @apply font-medium text-text_color_01 rounded-l-lg rounded-br-lg py-2 px-3 bg-bg_sr_color break-all;
+        }
+      }
+
+      .c2c-text-message-image {
+        .rv-image {
+          img {
+            @apply rounded-l-lg rounded-br-lg;
+          }
+        }
+      }
+    }
+  }
+}
+
+:local(.c2c-order-status-info) {
+  .order-status-info-wrap {
+    @apply p-3 bg-bg_sr_color rounded;
+
+    .tips-text {
+      @apply mb-1;
+
+      p {
+        font-size: 14px;
+        @apply text-text_color_01 font-medium;
+      }
+    }
+
+    .link {
+      @apply flex;
+
+      .text {
+        @apply mr-6;
+
+        label, a, svg {
+          font-size: 12px;
+        }
+  
+        label, a {
+          @apply text-brand_color font-normal;
+        }
+
+        & > div {
+          @apply mt-0;
+        }
+      }
+    }
+
+    .text {
+      line-height: 1;
+
+      label {
+        font-size: 12px;
+        @apply text-text_color_02 font-normal;
+      }
+    }
+
+  }
+
+  .system-reminder-wrap {
+    p {
+      font-size: 14px;
+      @apply text-text_color_02 font-normal text-center;
+    }
+  }    
+}

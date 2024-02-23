@@ -1,0 +1,77 @@
+:local(.form-country-popup) {
+  @apply w-full h-full bg-bg_color;
+
+  .rv-index-anchor {
+    @apply hidden;
+  }
+
+  .rv-index-bar {
+    height: calc(var(--vh100) - 46px - 32px);
+    @apply overflow-scroll;
+  }
+
+  .rv-cell__title {
+    .country-item { 
+      @apply flex flex-row gap-x-2 items-center text-text_color_01;
+
+      img {
+        width: 22px;
+        height: 22px;
+        @apply rounded-full;
+      }
+    }
+
+    .state {
+      @apply text-xs px-2 h-5 bg-bg_button_disabled rounded-tr rounded-bl text-text_color_02 ml-1 flex items-center justify-center
+    }
+  }
+
+  .active {
+    @apply text-brand_color;
+  }
+
+  /* 索引列表样式 */
+
+  .index-bar {
+    transform: scale(0.75);
+      
+    @apply font-medium py-px px-1 flex items-center justify-center;
+  }
+  
+  .index-active {
+    @apply bg-brand_color text-button_text_02 rounded-xl
+    }
+  
+  .rv-index-anchor {
+    @apply hidden
+    }
+  
+  .rv-index-bar__index {
+    @apply w-4 h-4 rounded-xl font-medium text-brand_color mx-1.5 p-0 flex items-center justify-center;
+  }
+  
+  .rv-index-bar .rv-cell {
+    @apply py-4
+    }
+  
+  .rv-hairline--bottom {
+    @apply border-0
+    }
+  
+  .rv-hairline--bottom::after {
+    @apply border-0
+    }
+  
+  .active {
+    @apply text-brand_color !important
+    }
+  
+}
+
+:local(.scoped) {
+  @apply flex flex-col w-full gap-y-2;
+
+  .rv-textarea, textarea {
+    @apply bg-bg_sr_color px-3 py-2 rounded;
+  }
+}

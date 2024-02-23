@@ -1,0 +1,97 @@
+:local(.post-advertise-confirm-root) {
+  @apply flex flex-col w-full h-full bg-bg_color !important;
+
+  .page-content {
+    @apply flex flex-col overflow-y-scroll pb-28;
+
+    .content-info {
+      @apply flex flex-col px-4;
+    }
+
+    .form-item {
+      @apply flex flex-col;
+
+      .form-label {
+        @apply text-sm text-text_color_02 mt-4 mb-2 flex items-center justify-between;
+
+        .add-new-btn {
+          @apply flex items-center text-brand_color;
+
+          span {
+            @apply ml-1;
+          }
+        }
+      }
+
+      .drop-icon {
+        svg {
+          @apply w-2 h-2;
+        }
+      }
+
+      .select-item {
+        @apply flex items-center justify-between bg-bg_sr_color rounded h-10 px-3 text-sm text-text_color_01;
+
+        .payment-name {
+          @apply flex items-center;
+
+          .line {
+            @apply h-2.5 rounded w-0.5 mr-1;
+          }
+        }
+
+        .payment-details {
+          @apply w-full whitespace-nowrap overflow-hidden text-ellipsis;
+        }
+      }
+
+      .placeholder {
+        @apply text-text_color_04;
+      }
+
+      .payment-list {
+        @apply flex flex-col mt-2 mb-4;
+
+        .payment-item {
+          @apply flex flex-col mb-4 last:mb-0;
+  
+          .payment-header {
+            @apply flex items-center justify-between text-sm;
+  
+            .payment-title {
+              @apply text-text_color_01;
+            }
+  
+            .payment-del {
+              @apply text-brand_color;
+            }
+          }
+        }
+      }
+
+      .remark-input {
+        @apply bg-card_bg_color_01 px-3 py-2 text-sm rounded;
+
+        .rv-textarea__word-limit {
+          @apply text-text_color_04;
+        }
+      }
+
+      .payment-type-item {
+        @apply text-sm text-text_color_02 mr-4 scale-100 mb-4;
+      }
+    }
+
+    .form-item-line {
+      @apply border-t-4 border-line_color_02;
+    }
+  }
+
+  .page-bottom {
+    @apply w-full px-4 pb-10 pt-8 fixed bottom-0 bg-bg_color;
+
+    .next-button {
+      @apply w-full h-10 rounded;
+    }
+  }
+}

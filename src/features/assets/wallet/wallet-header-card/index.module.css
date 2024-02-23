@@ -1,0 +1,34 @@
+:local(.scoped) {
+  /* height: 142px; */
+  @apply bg-brand_color rounded-xl mx-4 p-4 mt-6;
+
+  .header-brand-logo {
+    font-size: 24px;
+    border-width: 2px;
+
+    @apply rounded-full border-white;
+  }
+
+  > * {
+    @apply mb-1;
+  }
+
+  :last-child {
+    @apply mb-0 mt-auto text-right;
+  }
+
+  label {
+    @apply text-xs font-normal;
+  }
+
+  /* 
+  .rv-divider::before {
+    border: none;
+    @apply text-line_color_02 border-line_color_02; 
+  } */
+
+  .divider {
+    height: 1px;
+    @apply my-4 bg-white opacity-20;
+  }
+}

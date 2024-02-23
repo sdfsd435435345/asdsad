@@ -1,0 +1,79 @@
+/* This CSS is common to all pages */
+@import './preflight.css';
+@import './tailwind.css';
+@import './theme.css';
+@import './global.css';
+
+/* 路由前进时的入场/离场动画 */
+.forward-enter-active,
+.forward-exit-active,
+.back-enter-active,
+.back-exit-active {
+  transition: all 450ms;
+  will-change: transform;
+}
+
+.forward-enter {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.forward-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.forward-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.forward-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.back-enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.back-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.back-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.back-exit-active {
+  transform: translate(100%);
+  opacity: 0;
+}
+
+/* end */
+.relative {
+  position: relative;
+}
+
+#page-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex: 1;
+
+  /* 100vw 会导致 iPhone 横屏时包含滑角区域，导致宽度过宽 */
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  @apply bg-bg_color;
+}
+
+#page-wrapper {
+  @apply flex bg-bg_color;
+
+  min-height: 100vh;
+}
+

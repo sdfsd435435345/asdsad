@@ -1,0 +1,24 @@
+.qrcode-popup {
+  @apply rounded-t-lg overflow-hidden;
+
+  .qrcode-popup-wrap {
+    @apply pt-4 pb-10;
+
+    .popup-wrap-header {
+      @apply mx-4 flex items-center justify-between;
+
+      .wrap-header-text {
+        @apply text-base font-medium text-text_color_01;
+      }
+    }
+
+    .qrcode-popup-body {
+      @apply mx-10 pt-6 pb-8;
+    }
+
+    .popup-wrap-bottom {
+      border-top: 3.5px solid var(--line_color_02);
+      @apply mx-4 py-2 text-sm text-center font-medium rounded bg-brand_color text-button_text_02;
+    }
+  }
+}

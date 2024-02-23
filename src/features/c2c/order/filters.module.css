@@ -1,0 +1,64 @@
+:local(.filters-modal-root) {
+  @apply flex flex-col px-4 text-sm;
+
+  .screen-header {
+    @apply flex flex-row items-center justify-between pt-4;
+
+    span {
+      @apply text-base text-text_color_01 font-semibold
+    }
+
+    .close-icon {
+      svg {
+        @apply w-5 h-5
+      }
+    }
+  }
+
+  .screen-title {
+    @apply text-sm text-text_color_02 mb-2 mt-6;
+  }
+
+  .screen-date {
+    @apply flex flex-row items-center justify-between;
+
+    .date {
+      @apply w-40 h-9 rounded bg-bg_sr_color flex items-center text-sm text-text_color_01 justify-center
+    }
+
+    .date-separate {
+      @apply text-sm text-text_color_02;
+    }
+  }
+
+  .date-type {
+    @apply flex flex-row items-center justify-between flex-wrap;
+
+    .date-type-item {
+      @apply px-4 py-1.5 bg-bg_sr_color flex items-center justify-center text-xs text-text_color_01 mt-2 rounded;
+
+      &.active {
+        @apply bg-brand_color_special_02 border border-brand_color text-brand_color rounded
+      }
+    }
+  }
+
+  .rv-selector__item {
+    width: 22%;
+    margin-right: 4%;
+
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+
+  .rv-checkbox {
+    @apply flex-1;
+  }
+
+  .checkbox {
+    &> div > div {
+      font-size: 14px !important;
+    }
+  }
+}

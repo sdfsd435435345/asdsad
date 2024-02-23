@@ -1,0 +1,125 @@
+:local(.third-trade-confirm-wrapper) {
+  .wrap {
+  
+    @apply flex flex-col;
+
+    background: var(--bg_color);
+
+    .loading-wrap {
+      margin-top: 118px;
+      @apply flex flex-col items-center;
+
+      .image {
+        width: 70px;
+        height: 70px;
+        @apply mb-4;
+      }
+
+      .desc {
+        @apply text-sm text-text_color_02;
+      }
+    }
+
+    .content-wrap {
+      @apply pb-20;
+
+      .timer-wrap {
+        @apply text-sm text-text_color_02 my-4 text-center;
+
+        line-height: 22px;
+
+        span {
+          @apply text-text_color_01 font-medium;
+        }
+      }
+
+      .list-wrap {
+        
+        @apply px-4;
+
+        .title {
+          @apply my-2 text-sm text-text_color_02;
+
+          line-height: 22px;
+        }
+
+        .item {
+          @apply p-4 bg-card_bg_color_01 rounded-lg border border-solid border-transparent relative overflow-hidden mb-4;
+
+          .row1 {
+            @apply flex text-xs items-center mb-3;
+          }
+
+          .row2 {
+            @apply flex text-xs justify-between font-medium text-text_color_02;
+
+            line-height: 18px;
+          }
+
+          .icon {
+            @apply w-5 h-5 rounded-full overflow-hidden;
+          }
+
+          .msg-icon {
+            @apply m-0
+          }
+
+          .name {
+            @apply text-sm text-text_color_01 font-medium pl-2 pr-1;
+
+            line-height: 22px;
+          }
+
+          .selected-icon {
+            @apply hidden;
+          }
+        }
+
+        .selected {
+          @apply bg-brand_color_special_02 border border-solid border-brand_color;
+
+          .selected-icon {
+            @apply block absolute -top-1 -right-0.5;
+
+            svg {
+              width: 25px;
+              height: 17px;
+            }
+          }
+        }
+      }
+
+      .hint {
+        @apply bg-brand_color_special_02 py-1 px-4 text-xs text-brand_color flex;
+
+        line-height: 18px;
+
+        .msg-icon {
+          @apply mr-1 mt-1 shrink-0;
+        }
+
+        span {
+          @apply flex-1;
+        }
+      }
+    }
+  }
+}
+
+
+:local(.action-btn-wrapper) {
+  @apply px-4 pb-10 flex fixed left-0 bottom-0 w-full flex-col;
+
+  background: var(--bg_color);
+
+  .terms {
+    @apply mb-4 text-xs  flex items-center;
+     
+    .checkbox {
+      .rv-checkbox__icon {
+        font-size: 14px;
+        @apply relative -top-px;
+      }
+    }
+  }
+}

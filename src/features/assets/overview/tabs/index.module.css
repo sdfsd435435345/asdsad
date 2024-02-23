@@ -1,0 +1,69 @@
+:local(.assets-overview-root) {
+  @apply flex flex-col items-center bg-bg_color rounded-tl-2xl rounded-tr-2xl px-4 pt-4 pb-6 border-b-4 border-line_color_02;
+  
+  .assets-overview-content {
+    @apply w-full flex items-center flex-wrap;
+  
+    .assets-cell {
+      @apply flex flex-col mb-3;
+  
+      width: 48%;
+  
+      .assets-cell-title {
+        @apply text-xs text-text_color_02 border-dashed border-text_color_02;
+  
+        line-height: 18px;
+      }
+  
+      .assets-cell-value {
+        @apply text-sm text-text_color_01 font-medium w-full;
+  
+        line-height: 22px;
+
+        .unrealized-text {
+          line-height: 22px;
+        }
+      }
+  
+      .yesterday-cell {
+        @apply flex items-center;
+  
+        .yesterday-cell-text {
+          @apply text-sm text-buy_up_color font-medium;
+        }
+  
+        .yesterday-cell-tag {
+          @apply ml-1 h-6 p-1 rounded-sm bg-buy_up_color_special_02 flex items-center text-xs text-buy_up_color font-medium;
+  
+          .yesterday-cell-tag-icon {
+            @apply mr-1 mt-0;
+  
+            svg {
+              @apply w-2 h-2;
+            }
+          }
+        }
+      }
+
+      .increase-wrap {
+        @apply text-sm font-medium;
+      }
+    }
+  }
+  
+  .assets-overview-buttons {
+    @apply w-full flex items-center justify-between mt-3;
+  
+    .overview-gray-btn {
+      @apply h-8 rounded bg-bg_sr_color text-sm text-text_color_01 font-medium flex-1 flex items-center justify-center;
+  
+      /* width: 48%; */
+    }
+  
+    .overview-primary-btn {
+      @apply h-8 rounded bg-brand_color text-sm text-button_text_02 font-medium flex-1;
+  
+      /* width: 48%; */
+    }
+  }
+}

@@ -1,0 +1,56 @@
+:local(.scoped) {
+  .navbar {
+    @apply flex justify-between leading-5;
+  
+    .navbar-left, .navbar-right {
+      @apply flex flex-1;
+    }
+  
+    .navbar-left {
+      @apply flex items-center;
+  
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+
+
+  
+    .navbar-right {
+      @apply flex justify-end;
+    }
+  
+    .theme, .customer-service {
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+  
+    .theme {
+      @apply mr-6;
+    }
+  
+  }
+
+  .icon_bg {
+    @apply mt-32 mb-7 inline-block;
+
+    width: 80px;
+
+  }
+
+  .title {
+    @apply text-center text-text_color_01 text-base font-semibold;
+
+  }
+
+  .text {
+    @apply mt-2 text-text_color_02 px-4 text-sm text-center;
+  }
+
+  .tips {
+    @apply text-center text-sell_down_color text-xs mt-5
+  }
+ 
+}
+

@@ -1,0 +1,30 @@
+:local(.scoped) {
+  .settins-wrap {
+    @apply mt-8 px-4;
+
+    .cell {
+      .checked {
+        svg {
+          @apply w-5;
+        }
+      }
+    }
+
+    .rv-cell {
+      @apply p-0 mb-8;
+
+      .rv-cell__title {
+        @apply text-sm font-normal text-text_color_01;
+      }
+
+      .rv-cell__value {
+        font-size: 14px;
+        @apply font-normal text-text_color_03;
+
+        span {
+          @apply leading-6;
+        }
+      }
+    }
+  }
+}

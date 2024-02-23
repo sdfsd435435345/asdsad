@@ -1,0 +1,31 @@
+:local(.assets-list-root) {
+  @apply flex flex-col py-2 bg-bg_color;
+
+  .assets-list-cell {
+    @apply w-full flex flex-row items-center justify-between p-2 px-4 border-b border-line_color_02;
+
+    height: 74px;
+
+    .list-cell-labels {
+      @apply flex items-center text-base text-text_color_02 font-medium flex-1;
+
+      .labels-icon {
+        @apply text-base mr-2 mt-0;
+      }
+    }
+
+    .list-cell-values {
+      @apply w-3/5 flex flex-col items-end;
+
+      .total-quantity {
+        @apply text-base text-text_color_01 font-medium w-full text-end;
+      }
+
+      .total-amount {
+        @apply text-xs text-text_color_02 w-full text-end;
+
+        line-height: 18px;
+      }
+    }
+  }
+}

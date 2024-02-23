@@ -1,0 +1,109 @@
+:local(.c2c-account) {
+  .c2c-account-icon {
+    @apply w-5 h-5;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .c2c-account-header {
+    @apply px-4 pt-4 pb-1 flex items-center;
+
+    .c2c-account-header-item {
+      @apply flex-1 text-xs font-normal text-text_color_03;
+
+      &:nth-child(2) {
+        @apply text-center;
+      }
+
+      &:nth-child(3) {
+        @apply text-right;
+      }
+    }
+  }
+
+  .account-footer-common-list {
+    @apply flex;
+
+    .common-list-left {
+      @apply flex-1 flex;
+
+      .common-list-left-icon {
+        @apply w-5 h-5;
+
+        svg {
+          @apply w-full h-full;
+        }
+      }
+
+      .common-list-left-contair {
+        @apply ml-2;
+
+        .list-left-contair-title {
+          @apply text-sm font-medium text-text_color_01;
+        }
+        
+
+        .list-left-contair-text {
+          @apply text-xs font-normal text-text_color_02;
+        }
+      }
+    }
+
+    .common-list-middle {
+      @apply flex-1;
+
+      .list-middle-contair-title {
+        @apply text-sm font-medium text-text_color_01;
+      }
+      
+
+      .list-middle-contair-text {
+        @apply text-xs font-normal text-text_color_02;
+      }
+    }
+
+    .common-list-right {
+      @apply flex justify-center items-center;
+
+      .common-list-right-button {
+        @apply py-1 px-3 text-xs font-medium bg-bg_sr_color rounded text-text_color_01;
+
+        height: 26px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .c2c-account-collapse {
+    .c2c-account-collapse-item {
+      .rv-cell--clickable:active {
+        @apply bg-bg_color_03;
+      }
+
+      .rv-cell {
+        border-bottom: 0.5px solid var(--line_color_02);
+        @apply p-4;
+
+        svg {
+          @apply hidden;
+        }
+      }
+
+      .rv-collapse-item__wrapper {
+        .rv-collapse-item__content {
+          @apply p-4 bg-card_bg_color_01;
+
+          .account-collapse-item-content {
+            @apply flex items-center justify-between overflow-hidden text-xs font-normal text-text_color_02;
+
+            .account-collapse-item-value {
+              @apply ml-2 flex-1 truncate text-right;
+            }
+          }
+        }
+      }
+    }
+  }
+}

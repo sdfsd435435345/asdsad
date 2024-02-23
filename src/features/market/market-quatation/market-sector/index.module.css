@@ -1,0 +1,59 @@
+:local(.scoped) {
+  .market-sector {
+    @apply mx-4;
+    
+    .sector-header {
+      @apply flex items-center justify-between;
+
+      .header-top-left {
+        @apply flex items-center my-4 relative;
+
+        label {
+          @apply mr-2 text-sm font-semibold;
+        }
+        
+        .tip-icon {
+          @apply w-3.5 h-3.5;
+        }
+
+        .tip-text {
+          @apply top-6 w-80 bg-toast_bg_color rounded absolute text-button_text_01 text-xs p-2.5 z-50;
+        }
+      }
+    }
+
+    .more-text {
+      @apply text-xs text-text_color_03;
+    }
+
+    .sector-body {
+      @apply mt-8 mb-6 flex items-center justify-between;
+
+      .body-top {
+        @apply flex text-sm font-semibold;
+
+        .body-text {
+          @apply py-2 px-4 mr-4 inline-block cursor-pointer rounded;
+
+          &:hover {
+            @apply bg-bg_sr_color;
+          }
+        }
+
+        .body-bg {
+          @apply bg-bg_sr_color;
+        }
+      }
+    }
+  }
+}
+
+:local(.popover-tips) {
+  .rv-popover__content {
+    @apply bg-toast_bg_color rounded text-button_text_01 text-xs p-2.5;
+  }
+
+  .rv-popover__arrow {
+    @apply text-toast_bg_color;
+  }
+}

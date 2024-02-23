@@ -1,0 +1,20 @@
+:local(.scoped) {
+  @apply text-center;
+
+  .rv-image__error {
+    @apply bg-transparent;
+  }
+
+  img {
+    @apply block bg-transparent w-full h-full;
+  }
+
+  label {
+    @apply text-text_color_03;
+  }
+}
+
+.lazy-radius {
+  border-radius: 50%;
+  @apply overflow-hidden;
+}

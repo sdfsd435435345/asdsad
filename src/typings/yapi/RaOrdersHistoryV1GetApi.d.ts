@@ -1,0 +1,174 @@
+/* prettier-ignore-start */
+/* tslint:disable */
+/* eslint-disable */
+
+/* 该文件由 yapi-to-typescript 自动生成，请勿直接修改！！！ */
+
+/**
+ * 接口 [历史战绩↗](https://yapi.nbttfc365.com/project/44/interface/api/11354) 的 **请求类型**
+ *
+ * @分类 [娱乐区↗](https://yapi.nbttfc365.com/project/44/interface/api/cat_810)
+ * @请求头 `GET /v1/ra/orders/history`
+ * @更新时间 `2023-08-18 15:29:56`
+ */
+export interface YapiGetV1RaOrdersHistoryApiRequest {
+  pageNum: string
+  pageSize: string
+  /**
+   * 项目id
+   */
+  projectId?: string
+  /**
+   * 成功(success)或者失败(fail)或者取消（cancel）
+   */
+  result?: string
+}
+
+/**
+ * 接口 [历史战绩↗](https://yapi.nbttfc365.com/project/44/interface/api/11354) 的 **返回类型**
+ *
+ * @分类 [娱乐区↗](https://yapi.nbttfc365.com/project/44/interface/api/cat_810)
+ * @请求头 `GET /v1/ra/orders/history`
+ * @更新时间 `2023-08-18 15:29:56`
+ */
+export interface YapiGetV1RaOrdersHistoryApiResponse {
+  code?: string
+  message?: string
+  data?: YapiGetV1RaOrdersHistoryData
+}
+export interface YapiGetV1RaOrdersHistoryData {
+  list: YapiGetV1RaOrdersHistoryListData[]
+  total: number
+  pageNum: number
+  pageSize: number
+}
+export interface YapiGetV1RaOrdersHistoryListData {
+  /**
+   * 项目code
+   */
+  projectCode: string
+  /**
+   * 产品名称，哈希是获取
+   */
+  productName: string
+  orderDetailId: string
+  /**
+   * id,查询详情用
+   */
+  id: number
+  /**
+   * 订单id
+   */
+  orderId: string
+  /**
+   * 交易对id
+   */
+  tradePairId: string
+  /**
+   * 交易对symbol
+   */
+  tradePairSymbol: string
+  /**
+   * 合约类型, delivery 交割,perpetual 永续
+   */
+  swapTypeInd: string
+  /**
+   * 作战区，1m,2m,3m,4m,5m
+   */
+  combatArea: string
+  /**
+   * 作战期数
+   */
+  seasonId: number
+  /**
+   * 策略类型大小(big_or_small), 数字(number), 单双(parity)
+   */
+  strategy: string
+  /**
+   * 精度位数, 个位...
+   */
+  precisionDigit: string
+  /**
+   * 下注对应的值，数字(0,1,2,3,4,5,6,7,8,9), 大小(b=大,s=小), 单双(odd=单,even=双)
+   */
+  bettingValue: string
+  /**
+   * 真实赔率
+   */
+  realOdds: string
+  /**
+   * 手续费
+   */
+  fee: string
+  /**
+   * 开奖时的原始值，比如标记价格/完整的hash
+   */
+  lotterySourceValue: string
+  /**
+   * 作战结果，success,fail，cancel
+   */
+  result: string
+  /**
+   * 消耗
+   */
+  amount: string
+  /**
+   * 盈利
+   */
+  income: string
+  /**
+   * 币种名称
+   */
+  coinName: string
+  /**
+   * 创建时间
+   */
+  createTime: number
+  /**
+   * 区块高度
+   */
+  height: string
+  /**
+   * 下单时区块高度
+   */
+  hashHeightNow: string
+  /**
+   * 取消时间
+   */
+  cancelByTime: number
+  /**
+   * 取消原因
+   */
+  cancelReason: string
+  /**
+   * 出块时间
+   */
+  blockTimestamp: number
+  /**
+   * 获取时间
+   */
+  blockTimestampGot: number
+  /**
+   * 区块链高度跳转地址
+   */
+  chainBlockUrl: string
+}
+
+// 以下为自动生成的 api 请求，需要使用的话请手动复制到相应模块的 api 请求层
+// import request, { MarkcoinRequest } from '@/plugins/request'
+
+// /**
+// * [历史战绩↗](https://yapi.nbttfc365.com/project/44/interface/api/11354)
+// **/
+// export const getV1RaOrdersHistoryApiRequest: MarkcoinRequest<
+//   YapiGetV1RaOrdersHistoryApiRequest,
+//   YapiGetV1RaOrdersHistoryApiResponse['data']
+// > = params => {
+//   return request({
+//     path: "/v1/ra/orders/history",
+//     method: "GET",
+//     params
+//   })
+// }
+
+/* prettier-ignore-end */

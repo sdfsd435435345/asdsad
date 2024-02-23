@@ -1,0 +1,125 @@
+:local(.c2c-set-up) {
+  @apply h-screen pb-28 overflow-auto;
+
+  .c2c-set-up-header {
+    @apply px-4 pt-4 mb-6;
+
+    .set-up-header-title {
+      @apply mb-4 text-base font-medium text-text_color_01;
+    }
+
+    .set-up-header-radio {
+      @apply mb-2;
+
+      .rv-radio {
+        @apply mr-8;
+      }
+
+      .header-radio-item {
+        @apply w-3 h-3 mb-0.5;
+
+        svg {
+          @apply w-full h-full text-brand_color;
+        }
+      }
+
+      .rv-radio__label {
+        @apply text-sm font-normal text-text_color_01;
+      }
+    }
+
+    .set-up-header-text-area {
+      @apply flex flex-col py-2 px-3 rounded bg-card_bg_color_01;
+
+      .rv-textarea__word-limit {
+        @apply text-text_color_04;
+      }
+
+      .rv-textarea__control {
+        @apply flex-1 text-text_color_01 overflow-hidden;
+      }
+    }
+
+    .delete-icon {
+      @apply w-3.5 h-3.5 absolute -top-1 -right-1;
+  
+      svg {
+        @apply w-full h-full;
+      }
+    }
+  
+    .uploader-icon {
+      @apply w-20 h-20;
+  
+      svg {
+        @apply w-full h-full;
+      }
+    }
+  }
+
+  .c2c-set-up-main {
+    @apply px-4;
+
+    .set-up-main-radio {
+      .rv-radio {
+        @apply items-start;
+
+        .rv-radio__label {
+          @apply flex-1;
+        }
+      }
+
+      .rv-collapse {
+        .rv-collapse-item {
+          @apply pb-4;
+
+          .rv-collapse-item__wrapper {
+            .rv-collapse-item__content {
+              @apply bg-bg_color_01;
+            }
+          }
+
+          .rv-cell {
+            @apply p-0;
+          }
+
+          .rv-collapse-item__content {
+            @apply mt-2 p-0;
+          }
+        }
+      }
+
+      .main-radio-collapse {
+        @apply text-xs p-3 rounded bg-card_bg_color_01;
+      }
+    }
+
+    .set-up-main-title {
+      @apply mb-4 text-base font-medium text-text_color_01;
+    }
+
+    .main-radio-item {
+      @apply w-3 h-3;
+
+      svg {
+        @apply w-full h-full text-brand_color;
+      }
+    }
+
+    .main-radio-item-contair {
+      @apply my-4 p-3 rounded bg-card_bg_color_01 text-xs font-normal text-text_color_03;
+    }
+
+    .rv-radio__label {
+      @apply text-sm font-normal text-text_color_01;
+    }
+  }
+
+  .c2c-set-up-footer {
+    @apply bg-bg_color pt-4 px-4 pb-10 fixed bottom-0 left-0 right-0;
+
+    .set-up-footer-button {
+      @apply w-full;
+    }
+  }
+}

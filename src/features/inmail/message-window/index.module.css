@@ -1,0 +1,21 @@
+:local(.message-window) {
+  @apply h-screen flex flex-col;
+
+  .message-window-left-icon {
+    @apply w-5 h-5;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .message-window-wrap {
+    @apply flex-1;
+  }
+
+  .wrap-background {
+    .list {
+      @apply bg-card_bg_color_01;
+    }
+  }
+}

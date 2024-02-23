@@ -1,0 +1,64 @@
+:local(.footer-wrapper) {
+  @apply fixed text-sm left-0 w-full px-6 z-100;
+
+  bottom: 118px;
+
+  
+  .inner-content {
+    @apply bg-card_bg_color_02 flex items-center justify-between px-10 py-3;
+
+    border-radius: 80px;
+  }
+
+  .tab-bar-item {
+    line-height: 48px;
+  }
+
+  .tab-bar-box {
+    @apply tab-bar-item text-center text-xs;
+
+    &.is-active {
+      .tab-bar-content {
+        @apply text-text_color_01;
+      }
+    }
+  }
+
+  .tab-bar-content {
+    @apply flex flex-col items-center justify-center leading-none relative text-text_color_02;
+
+    .tab-bar-icon {
+      font-size: 22px;
+      
+      &.w-8 {
+        font-size: 32px;
+      }
+    }
+
+    .tab-bar-badge {
+      @apply flex items-center justify-center absolute px-0.5 h-3 left-3 -top-2 rounded-md bg-warning_color text-button_text_01;
+
+      min-width: 18px;
+
+      &.small-badge {
+        @apply w-3 h-3 left-4;
+
+        min-width: unset;
+      }
+    }
+  }
+}
+
+:local(.more-popup-wrapper) {
+  .cell-box {
+    @apply p-4;
+
+    .cell-content {
+      @apply text-text_color_01;
+
+      .cell-icon {
+        @apply mr-3 text-xl;
+      }
+    }
+  }
+}

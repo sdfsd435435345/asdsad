@@ -1,0 +1,3 @@
+:local(.advertise-more-root) {
+  @apply flex flex-col w-full h-full bg-bg_color !important;
+}

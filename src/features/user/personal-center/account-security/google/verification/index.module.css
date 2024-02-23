@@ -1,0 +1,48 @@
+:local(.scoped) {
+  @apply flex flex-col min-h-screen;
+
+  .google-verification-wrap {
+    @apply flex flex-col flex-1 px-4;
+
+    .google-verification-form {
+      @apply flex flex-col flex-1 justify-between mb-12;
+
+      .verification-code {
+        @apply text-sm font-normal text-text_color_03 mt-3;
+      }
+    }
+
+    .rv-form {
+      @apply flex flex-col flex-1 justify-between;
+    }
+
+    .rv-field {
+      @apply p-0 bg-transparent;
+
+      .rv-field__suffix {
+        @apply absolute;
+      }
+
+      .rv-field__suffix {
+        @apply text-sm font-semibold top-3 right-3 text-brand_color;
+      }
+
+      .rv-field__label {
+        @apply text-text_color_03;
+      }
+    }
+
+    .rv-form-item--vertical {
+      @apply mb-8;
+    }
+
+    input {
+      @apply pr-20;
+    }
+  }
+
+
+  button {
+    @apply w-full;
+  }
+}

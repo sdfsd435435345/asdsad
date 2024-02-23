@@ -1,0 +1,46 @@
+:local(.dropdown-filters-wrapper) {
+  @apply flex p-4 justify-between;
+
+  .left {
+    @apply flex-1 flex items-center;
+  }
+
+  .filter-item {
+    @apply flex items-center mr-8 last:mr-0;
+
+    .label {
+      @apply mr-1 text-xs text-text_color_03;
+    }
+
+    .icon {
+      font-size: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &.is-active {
+      .label,
+      .icon {
+        @apply text-brand_color;
+      }
+
+      .icon {
+        @apply rotate-180;
+      }
+
+    }
+  }
+}
+
+:local(.dropdown-filters-popup-wrapper) {
+  @apply fixed left-0 w-full opacity-100;
+
+  z-index: 999;
+  
+  .content {
+    @apply absolute top-0 left-0 w-full rounded-b bg-card_bg_color_03;
+  }
+
+  .mask {
+    @apply w-full h-full bg-bg_color_02;
+  }
+}

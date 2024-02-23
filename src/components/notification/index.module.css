@@ -1,0 +1,13 @@
+:local(.notification-wrapper) {
+  @apply flex items-center px-4 bg-brand_color_special_02;
+
+  .rv-notice-bar {
+    @apply bg-transparent h-8 px-2;
+  }
+
+  .swipe-notification-item {
+    .notification-title {
+      @apply overflow-hidden text-ellipsis max-w-full whitespace-nowrap text-brand_color pr-2 text-xs;
+    }
+  }
+}

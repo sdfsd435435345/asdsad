@@ -1,0 +1,19 @@
+:local(.scoped) {
+  @apply flex flex-col px-4 pb-2;
+
+  .details-item {
+    @apply flex flex-row items-center justify-between py-2;
+
+    .item-name {
+      @apply text-sm text-text_color_03
+    }
+
+    .item-value {
+      @apply text-sm text-text_color_01
+    }
+
+    .item-value-buy {
+      @apply text-sm text-buy_up_color
+    }
+  }
+}

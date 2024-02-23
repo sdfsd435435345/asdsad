@@ -1,0 +1,61 @@
+:local(.scoped) {
+  @apply flex flex-col min-h-screen;
+
+  .user-tips {
+    @apply mb-0;
+  }
+
+  .email-verification-wrap {
+    @apply flex flex-col flex-1 px-4 mt-8;
+
+    .email-verification-form {
+      @apply flex flex-col flex-1 justify-between mb-12;
+
+      .email-verification-field {
+        .rv-input {
+          input {
+            @apply pr-14;
+          }
+        }
+      }
+    }
+
+    .rv-form {
+      @apply flex flex-col flex-1 justify-between;
+    }
+
+    .rv-field {
+      @apply p-0 bg-transparent;
+
+      .rv-field__body {
+        @apply bg-card_bg_color_01 rounded;
+      }
+
+      .rv-field__suffix {
+        @apply absolute;
+      }
+
+      .rv-field__suffix {
+        @apply text-sm font-semibold top-3 right-3 text-brand_color;
+      }
+
+      .rv-field__label {
+        @apply text-text_color_03;
+      }
+    }
+
+    .rv-form-item--vertical {
+      @apply mb-8;
+    }
+  }
+
+  .rv-form > .email-verification-item > .rv-cell:last-child {
+    input {
+      @apply pr-20;
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

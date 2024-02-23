@@ -1,0 +1,7 @@
+:local(.scoped) {
+  @apply flex justify-center items-center grow;
+
+  > :first-child {
+    @apply m-auto;
+  }
+}

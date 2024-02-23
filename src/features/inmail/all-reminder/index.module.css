@@ -1,0 +1,39 @@
+:local(.scoped) {
+  .all-reminder-wrap {
+    border-bottom: 0.5px solid var(--line_color_02);
+    @apply p-4;
+
+    .all-reminder-header {
+      @apply flex items-center justify-between mb-1;
+
+      .reminder-header-contain {
+        @apply flex items-center;
+
+        .header-contain-text {
+          @apply mr-2 text-sm font-medium text-text_color_01;
+        }
+
+        .header-contain-tag {
+          @apply py-0.5 px-2 bg-bg_sr_color rounded-sm;
+
+          .header-contain-tag-text {
+            transform: scale(0.83);
+            @apply text-xs text-text_color_01 font-normal;
+          }
+        }
+      }
+    }
+
+    .all-reminder-footer {
+      @apply flex items-center justify-between;
+
+      .reminder-footer-text {
+        @apply text-xs font-normal text-text_color_03;
+      }
+    }
+  }
+
+  .page-footer-img {
+    @apply mt-32;
+  }
+}

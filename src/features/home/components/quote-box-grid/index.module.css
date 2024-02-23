@@ -1,0 +1,15 @@
+:local(.scoped) {
+  min-height: 105px;
+  padding-bottom: 27px;
+  @apply pt-4 rounded-lg;
+
+  .rv-indicator__dot {
+    width: 3px;
+    height: 3px;
+    @apply bg-bg_button_disabled;
+  }
+
+  .rv-indicator__dot--active {
+    @apply bg-brand_color w-2;
+  }
+}

@@ -1,0 +1,16 @@
+:local(.side-tag) {
+  @apply text-xs px-1 py-0.5 rounded-sm bg-success_color_special_02 text-success_color flex items-center justify-center whitespace-nowrap;
+
+  line-height: 18px;
+
+  &.is-outside {
+    @apply bg-brand_color_special_02 text-brand_color;
+  }
+
+}
+
+:local(.network-tag) {
+  @apply text-xs px-1 py-0.5 rounded-sm text-text_color_01 bg-bg_sr_color flex items-center justify-center whitespace-nowrap;
+
+  line-height: 18px;
+}

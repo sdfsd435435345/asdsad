@@ -1,0 +1,44 @@
+:local(.list-operation-wrap) {
+  .rv-tab:nth-child(1) {
+    @apply mr-16;
+  }
+
+  .list-operation-contair {
+    border-bottom: 0.5px solid var(--line_color_02);
+    @apply w-full p-4 flex items-center justify-between overflow-hidden;
+
+    .list-operation-left {
+      @apply flex-1 flex items-center mr-6 overflow-hidden;
+
+      .list-operation-icon {
+        min-width: 30px;
+        max-width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        @apply overflow-hidden bg-bg_sr_color text-center flex items-center justify-center text-sm;
+      }
+
+      .list-operation-text {
+        @apply mx-2 font-normal text-base text-text_color_01 truncate;
+      }
+
+      .means-details-title-image {
+        min-width: 16px;
+        max-width: 16px;
+        height: 16px;
+
+        svg {
+          @apply w-full h-full;
+        }
+      }
+    }
+  }
+
+  .rv-tab__text {
+    font-size: 17px;
+  }
+}
+
+:local(.list-operation-user-popUp) {
+  @apply text-center;
+}

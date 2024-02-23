@@ -1,0 +1,98 @@
+:local(.scoped) {
+  .help-center-support-wrap {
+    .help-center-support-header {
+      @apply m-auto;
+    }
+
+    .content {
+      @apply m-auto bg-bg_color w-full pb-4;
+
+      .content-title {
+        @apply mb-6 px-4 box-border;
+
+        .content-title-header {
+          @apply flex items-center;
+
+          .problem-icon {
+            @apply w-5 h-5 mr-2;
+
+            svg {
+              @apply w-5 h-5;
+            }
+          }
+
+          .problem-text {
+            @apply text-lg font-medium text-text_color_01;
+          }
+        }
+
+        .content-title-footer {
+          @apply mt-2 text-sm text-text_color_02 font-normal;
+
+          .footer-text-second {
+            .text-time-color {
+              @apply text-brand_color;
+            }
+          }
+        }
+      }
+
+      .content-func {
+        @apply px-4 box-border;
+      }
+
+      .content-divider {
+        @apply my-6 w-full h-1 bg-line_color_02;
+      }
+
+      .content-new-article {
+        @apply px-4 box-border mb-11;
+
+        .new-article-header {
+          @apply flex items-center;
+
+          .article-icon {
+            @apply w-5 h-5 mr-2;
+
+            svg {
+              @apply w-5 h-5;
+            }
+          }
+
+          .problem-text {
+            @apply text-lg font-medium text-text_color_01;
+          }
+        }
+
+        .rv-list__loadmore {
+          @apply hidden;
+        }
+      }
+    }
+
+    .rv-loading {
+      @apply mt-8;
+
+      .rv-loading__spinner {
+        left: 45%;
+        @apply top-1/2 -translate-y-1/2 -translate-x-1/2;
+      }
+    }
+  }
+}
+
+progress {
+  @apply bg-brand_color; /* 进度条背景色 */
+}
+
+progress::-webkit-progress-value {
+  @apply bg-brand_color; /* WebKit 内核浏览器 */
+}
+
+progress::-moz-progress-bar {
+  @apply bg-brand_color; /* Gecko 内核浏览器 */
+}
+
+progress::-ms-fill {
+  @apply bg-brand_color; /* Trident 内核浏览器 */
+}

@@ -1,0 +1,42 @@
+:local(.scoped) {
+  @apply flex-1 bg-bg_color;
+
+  .community-groups-header {
+    @apply h-36 w-full relative box-border text-center;
+
+    .groups-header-image {
+      @apply w-full h-full overflow-hidden;
+
+      img {
+        @apply object-contain w-full h-full;
+      }
+    }
+
+    .groups-header-first {
+      transform: translateX(-50%);
+      @apply w-full absolute top-8 left-1/2 mb-8 text-xl font-medium text-button_text_02;
+    }
+
+    .groups-header-second {
+      top: 72px;
+      transform: translateX(-50%);
+      @apply w-72 absolute text-xs left-1/2 font-normal text-button_text_02;
+    }
+  }
+
+  .community-groups-content {
+    @apply w-full;
+
+    .fixed-container {
+      @apply w-full bg-bg_color;
+    }
+  }
+
+  .community-groups-body {
+    @apply pt-6 w-full px-4 box-border;
+
+    .groups-body-item {
+      @apply mb-8;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+:local(.scoped) {
+  @apply pb-10;
+
+  .announcement-list-header {
+    @apply flex flex-row justify-between items-center py-3 px-4;
+  }
+
+  .announcement-list-item {
+    @apply p-4;
+  }
+
+}

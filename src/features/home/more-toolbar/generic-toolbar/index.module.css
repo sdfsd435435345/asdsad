@@ -1,0 +1,13 @@
+:local(.scoped) {
+  .rv-grid {
+    @apply grid grid-cols-4;
+    
+    > * {
+      @apply m-auto;
+    }
+
+    .rv-grid-item__content {
+      @apply px-2;
+    }
+  }
+}

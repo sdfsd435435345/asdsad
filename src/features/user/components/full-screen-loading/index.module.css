@@ -1,0 +1,9 @@
+:local(.full-screen-loading) {
+  @apply justify-center items-center absolute inset-0 bg-bg_color;
+
+  z-index: 9999;
+
+  &.with-mask {
+    @apply bg-bg_color_02 fixed;
+  }
+}

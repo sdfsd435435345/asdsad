@@ -1,0 +1,39 @@
+:local(.scoped) {
+  .push-settings-wrap {
+    @apply pb-4;
+
+    .settings-wrap-tooplie {
+      @apply w-full mt-8 mb-2 px-4 text-sm font-medium text-text_color_02 truncate;
+    }
+
+    .settings-wrap-cell {
+      .rv-cell {
+        @apply p-4 items-center overflow-hidden;
+
+        .rv-cell__value {
+          @apply flex items-center justify-end;
+        }
+
+        .rv-cell__title {
+          @apply font-normal text-base text-text_color_01;
+        }
+      }
+
+      .wrap-cell-icon {
+        @apply w-4 h-4 mt-px;
+
+        svg {
+          @apply w-4 h-4 text-base;
+        }
+      }
+    }
+
+    .settings-wrap-bottom {
+      @apply my-2 pl-4 text-xs font-normal text-text_color_03;
+    }
+  }
+
+  .wrap-border-bottom {
+    border-bottom: 4px solid var(--line_color_02);
+  }
+}

@@ -1,0 +1,45 @@
+:local(.scoped) {
+  .rv-form {
+    /* @apply mt- */
+    @apply px-4 mt-6 ;
+  }
+
+  .rv-field__label {
+    @apply mb-0;
+  }
+
+  .rv-cell {
+    @apply px-0;
+
+    padding-top: 2px;
+
+
+    input {
+      @apply h-10;
+    }
+    
+  }
+
+  .rv-field__right-icon {
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      font-size: 20px
+    }
+  }
+
+ 
+
+  .confirm-payment {
+    @apply mt-4 ;
+
+    button {
+      @apply w-full bg-brand_color border-none;
+
+      &:active {
+        @apply text-text_color_01;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+:local(.date-picker-popup-wrapper) {
+  @apply flex flex-col pb-5;
+  
+  .date {
+    @apply flex flex-row items-center justify-between px-5 my-4;
+  
+    .active-item {
+      @apply border border-brand_color
+      }
+  
+    .item {
+      @apply w-36 h-9 flex items-center justify-center bg-bg_sr_color text-base text-brand_color rounded
+      }
+  
+    .separate {
+      @apply text-sm text-text_color_03
+      }
+  
+    .date-none {
+      @apply text-base text-text_color_03
+      }
+  }
+  
+  .rv-picker__toolbar {
+    border-bottom: 0.5px solid var(--line_color_02); 
+    @apply h-12;
+  
+    .rv-picker__cancel {
+      @apply text-base text-text_color_02 px-6 font-medium
+    }
+      
+    .rv-picker__confirm {
+      @apply text-base text-brand_color px-6 font-medium
+    }
+  }
+  
+  .rv-datetime-picker {
+    @apply bg-card_bg_color_03
+    }
+  
+  .rv-picker__mask {
+    background: none;
+  }
+  
+  .rv-picker-column__item {
+    @apply text-text_color_03
+  }
+  
+  .rv-picker-column__item--selected {
+    @apply text-brand_color
+  }
+  
+  .rv-hairline-unset--top-bottom::after {
+    @apply border-line_color_02
+  }
+}

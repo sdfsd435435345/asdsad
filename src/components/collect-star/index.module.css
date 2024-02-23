@@ -1,0 +1,18 @@
+:local(.scoped) {
+  &.wrap {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    @apply absolute flex items-center justify-center right-4 bg-card_bg_color_02 cursor-pointer;
+  }
+  
+  &.collect {
+    @apply text-text_color_03;
+  }
+
+  &.cancel {
+    @apply text-brand_color fill-brand_color;
+  }
+}
+  
+  

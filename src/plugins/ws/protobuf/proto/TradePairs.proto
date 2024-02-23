@@ -1,0 +1,21 @@
+syntax = "proto3";
+option java_package="com.newbit.common.proto.push";
+option java_outer_classname = "TradePairsProto";
+
+message TradePairs{
+
+   repeated TradePair list = 1;
+
+  message TradePair{
+    string high = 1;
+    string low = 2;
+    string volume = 3;
+    string last = 4;
+    string open = 5;
+    string chg = 6;
+    int64 time = 7; //时间
+    string quoteVolume = 8;
+    string symbolWassName = 9;
+  }
+
+}

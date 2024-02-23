@@ -1,0 +1,44 @@
+:local(.scoped) {
+  width: 100%;
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  > * {
+    @apply my-auto;
+  }
+
+  @apply inline-flex;
+
+  .input-group {
+    height: 32px;
+    border-radius: 18px;
+
+    > * {
+      @apply my-auto;
+    }
+
+    @apply bg-bg_sr_color w-full inline-flex;
+
+    .search-icon {
+      @apply mx-3;
+    }
+
+    .rv-input__control {
+      width: 100%;
+      height: 22px;
+      font-size: 14px;
+      @apply text-text_color_01;
+    }
+
+    .close-icon {
+      @apply px-3 my-auto;
+    }
+  }
+
+  .action-buttons {
+    @apply pl-4 whitespace-nowrap inline-flex;
+  }
+}

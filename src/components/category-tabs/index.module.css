@@ -1,0 +1,9 @@
+:local(.scoped) {
+  .rv-tabs__nav {
+    @apply gap-x-3 px-3;
+  }
+
+  .rv-tab {
+    @apply grow-0 capitalize;
+  }
+}

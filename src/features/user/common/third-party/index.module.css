@@ -1,0 +1,22 @@
+:local(.scoped) {
+  .third-party {
+    width: 140px;
+    @apply flex justify-between mx-auto;
+    
+    .rv-button {
+      @apply h-12 mt-4 bg-bg_color border-text_color_01 text-text_color_01 rounded-lg;
+
+      .rv-button__text {
+        @apply text-sm;
+      }
+    }
+    
+    svg {
+      @apply w-3.5 h-3.5;
+    }
+  }
+
+  .rv-divider {
+    @apply mb-6  mt-0 !important;
+  }
+}

@@ -1,0 +1,17 @@
+:local(.scoped) {
+  .title {
+    @apply text-2xl leading-9 text-text_color_01 font-semibold mb-8 mt-4;
+  }
+
+  .tab {
+    @apply flex text-xs;
+  
+    .email, .phone {
+      @apply text-sm font-normal px-5 py-2 text-text_color_03;
+    }
+  
+    .active {
+      @apply text-text_color_01 bg-card_bg_color_02 rounded-sm;
+    }
+  }
+}

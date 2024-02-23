@@ -1,0 +1,31 @@
+:local(.scoped) {
+  width: 170px;
+  height: 45px !important;
+  @apply flex flex-row items-center text-left h-12 w-full bg-text_color_01 justify-center border-none;
+
+  .rv-button__content {
+    @apply w-full h-full;
+  }
+
+  .rv-button__text {
+    @apply flex flex-grow;
+  }
+
+  .rv-button__icon {
+    @apply mr-2 ml-6;
+
+    svg {
+      @apply w-5 h-5;
+    }
+  }
+
+  .button-text {
+    @apply text-xs font-normal !important;
+  }
+}
+
+.rv-button--disabled {
+  .button-text {
+    @apply text-text_color_04 !important;
+  }
+}

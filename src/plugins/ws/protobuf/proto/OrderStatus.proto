@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "OrderStatusProto";
+
+message OrderStatus {
+  repeated Body orderStatus = 1;
+
+  message Body{
+
+    sint64 orderId = 1;
+    string orderStatus = 2;
+    string nextStatus = 3;
+
+  }
+}

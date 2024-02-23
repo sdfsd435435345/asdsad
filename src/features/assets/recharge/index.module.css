@@ -1,0 +1,97 @@
+:local(.scoped) {
+  @apply w-full text-sm;
+
+  .select-currency {
+    @apply flex-col mt-2 px-4 mb-8;
+  }
+
+  .select-currency .rv-cell__title {
+    @apply text-text_color_02;
+  }
+
+  .copy-div .rv-cell__value {
+    @apply flex justify-end;
+  }
+
+  .copy-btn {
+    @apply text-tips_color border px-2 py-1 rounded text-xs bg-tips_color_special font-normal;
+  }
+
+  .share-div {
+    @apply m-4;
+  }
+
+  .memo-tips {
+    @apply text-xs mb-4 text-tips_color;
+  }
+
+  .item-title {
+    @apply text-sm text-text_color_03 mb-2;
+  }
+
+  .coin-info {
+    @apply w-full flex flex-row items-center p-2 justify-between bg-bg_sr_color rounded;
+
+    .coin-info-item {
+      @apply flex flex-row items-center text-sm text-text_color_01;
+
+      .coin-name {
+        @apply ml-2
+      }
+
+      .next-icon {
+        svg {
+          @apply w-4 h-4 ml-1 self-center
+        }
+        
+      }
+    }
+  }
+
+  .recharge-tips {
+    @apply px-4;
+
+    .tips-content {
+      @apply w-full py-3 px-2 bg-bg_sr_color rounded flex flex-row text-sm text-text_color_02;
+
+      .tips-content-icon {
+        @apply mt-1;
+        
+        svg {
+          @apply w-3 h-3 mr-1;
+        }
+      }
+    }
+  }
+
+  .memo {
+    @apply px-4;
+
+    .memo-content {
+      @apply w-full bg-bg_sr_color rounded flex flex-row items-center justify-between px-2 py-3 mb-1;
+
+      .memo-text {
+        @apply text-xs text-text_color_03 w-4/5
+      }
+
+      .memo-btn {
+        @apply h-6 px-4 text-xs text-brand_color rounded border-brand_color bg-brand_color_special_02 border mr-1
+      }
+    }
+  }
+
+  .record-icon {
+    svg {
+      @apply w-5 h-5 self-center
+    }
+  }
+
+  .rv-hairline--bottom {
+    @apply border-line_color_02
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-line_color_02
+  }
+}
+

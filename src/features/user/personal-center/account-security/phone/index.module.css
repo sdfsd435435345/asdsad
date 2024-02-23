@@ -1,0 +1,7 @@
+:local(.account-security-phone-cell) {
+  .rv-cell {
+    &:first-child {
+      border-bottom: 1px solid var(--line_color_02);
+    }
+  }
+}

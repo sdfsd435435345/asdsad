@@ -1,0 +1,369 @@
+:local(.market-trade-popover) {
+  @apply bg-card_bg_color_03 !important;
+
+  .rv-tabs__nav {
+    @apply bg-card_bg_color_03 !important;
+  }
+}
+
+/* 搜索模块的默认样式 交易搜索组件 */
+:local(.market-search-common) {
+  .quote-display-wrapper-futures {
+    .quote-badge {
+      @apply bg-card_bg_color_02 text-text_color_03 px-[4px] py-[2px] text-[10px] mx-1;
+    }
+  }
+
+  /* layout */
+  .rv-input__control {
+    width: 240px;
+  }
+
+  .title {
+    @apply mx-4;
+  }
+
+  .rv-tabs__wrap {
+    @apply ml-[4px] mr-4;
+  }
+
+  .rv-tabs__nav {
+    @apply pl-1;
+  }
+
+  .tabs-spot-base-currency-trade {
+    margin-top: 12px;
+  }
+
+  .tabs-category-by-currency {
+    border-bottom: 1px solid var(--line_color_02);
+  }
+
+  /* syles */
+  .title {
+    font-weight: 500;
+    font-size: 24px;
+    @apply text-text_color_01 mt-[60px] mb-4;
+  }
+
+  .content-title {
+    @apply mt-6 mb-4 mx-4;
+  }
+
+  .single-category-wrapper {
+    @apply mb-8;
+
+    .title {
+      @apply mb-2;
+    }
+  }
+
+  .on-focus {
+    .selected-coin-history-panel {
+      .remove-icon-row {
+        @apply flex justify-between items-center;
+      }
+
+      .remove-icon {
+        @apply hover:cursor-pointer;
+      }
+    }
+
+    .spot-coin-selected-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: left;
+      column-gap: 16px;
+      row-gap: 8px;
+      @apply mx-4;
+
+      .quote-symbol-name,
+      .base-symbol-name {
+        @apply text-xs text-left;
+      }
+
+      .item-block {
+        @apply h-[28px];
+        @apply bg-bg_sr_color;
+        @apply px-2 py-1 flex items-center justify-center cursor-pointer;
+
+        .trade-pair {
+          @apply text-text_color_01 text-xs;
+        }
+      }
+
+      .quote-badge {
+        @apply hidden;
+      }
+    }
+
+    .market-list-spot-filter {
+      @apply flex justify-between items-center;
+    }
+  }
+
+  .on-result {
+    @apply mt-6;
+
+    .spot-trade-search-table {
+      thead {
+        display: none;
+      }
+    }
+  }
+
+  .search-result-content {
+    .group-wrapper {
+      border-bottom: 1px solid var(--line_color_02);
+    }
+
+    .category-title {
+      @apply mx-4 text-base mt-4 mb-4;
+    }    
+  }
+
+  .table-layout-wrapper {
+    min-height: fit-content;
+  }
+
+  .search-bar-trade {
+    @apply mx-4 mt-2;
+  }
+
+  .no-data-content {
+    @apply mt-10;
+  }
+
+  .market-table-trade {
+    .star {
+      @apply mt-0.5;
+    }
+
+    table {
+      table-layout: fixed;
+
+      tr {
+        > :last-child {
+          * {
+            @apply flex justify-end ml-auto;
+          }
+        }
+      }
+    }
+
+    /* shift left and right edge in the th */
+    thead {
+      tr {
+        > :first-child {
+          > * {
+            @apply ml-4;
+          }
+        }
+
+        > :nth-child(2) {
+          > * {
+            @apply flex justify-end;
+          }
+        }
+
+        > :last-child {
+          @apply flex flex-nowrap whitespace-nowrap items-center;
+
+          > * {
+            @apply mr-4;
+
+            /* @apply flex justify-end ml-auto; */
+          }
+        }
+
+        > :last-child::before {
+          width: 1px;
+          height: 14px;
+          content: '/';
+          @apply inline text-text_color_03 text-xs px-2;
+        }
+
+      }
+    }
+
+    tbody {
+      tr {
+        height: 58px;
+
+        > * {
+          @apply py-3;
+        }
+
+        > :last-child {
+          > * {
+            @apply mr-4;
+          }
+        }
+      }
+    }
+  }
+
+  .fav-table {
+    .star {
+      visibility: hidden;
+    }
+  }
+
+  .market-table-search-hot {
+    table {
+      thead {
+        display: none;
+      }
+
+      tbody {
+        tr td {
+          > :first-child {
+            @apply ml-4;
+          }
+        }
+      }
+    }
+
+    .hot-name-column {
+      @apply inline-flex;
+
+      .index-wrapper {
+        width: 20px;
+        @apply pr-2;
+
+        .index-number {
+          font-size: 10px;
+          @apply text-text_color_02 mr-1;
+        }
+
+        .svg {
+          width: 8px;
+          height: 9px;
+        }
+      }
+    }
+
+    .hot-td-right {
+      .column-wrapper {
+        @apply flex-col;
+
+        .bigger {
+          > * {
+            font-size: 14px;
+          }
+        }
+
+        .smaller {
+          > * {
+            font-size: 10px;
+          }
+        }
+      }
+
+      .collect-star {
+        display: none;
+      }
+    }
+  }
+}
+
+/* 全局搜索组件样式 */
+:local(.market-search-global-wrapper) {
+  .nav-bar {
+    height: 46px;
+  }
+
+  .global-search-content {
+    .search-result-tab {
+      border-bottom: 1px solid var(--line_color_02);
+
+      .rv-tabs__nav {
+        @apply whitespace-nowrap;
+
+        .rv-tab {
+          @apply p-2;
+        }
+      }
+    }
+  }
+
+  .search-result-all-table {
+    thead {
+      display: none;
+    }
+
+    /* align star icon in global search */
+    .left {
+      @apply my-auto;
+
+      .star {
+        margin-right: 8px;
+        font-size: 16px;
+        @apply -mt-0.5;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      height: auto !important;
+    }
+  }
+
+  .search-result-single-type {
+    @apply mt-2;
+  }
+
+  .search-bar-global {
+    @apply mx-4 mt-2;
+  }
+
+  .on-result {
+    @apply mt-2;
+
+    table {
+      tr {
+        > :first-child {
+          width: 160px;
+        }
+
+        > :nth-last-child(2) {
+          width: 120px;
+        }
+
+        > :nth-last-child(2),
+        > :last-child {
+          * {
+            @apply flex justify-end ml-auto text-right;
+          }
+        }
+      }
+    }
+
+  }
+
+  .market-table-search-hot {
+    .hot-td-right {
+      .column-wrapper {
+        @apply pr-[10px];
+      }
+
+      .collect-star {
+        @apply block m-0;
+      }
+
+      .star {
+        @apply p-0;
+
+        width: 16px;
+      }
+    }
+  }
+
+  .spot-coin-selected-list {
+    .item-block {
+      @apply bg-card_bg_color_01;
+    }
+  }
+}

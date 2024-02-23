@@ -1,0 +1,81 @@
+:local(.restock-modal-root) {
+  @apply flex !rounded-tl-lg !rounded-tr-lg !bg-card_bg_color_03;
+
+  .restock-modal {
+    @apply w-full flex flex-col p-4;
+
+    .modal-header {
+      @apply flex items-center justify-between text-base text-text_color_01 font-medium;
+
+      .close-icon {
+        @apply text-xl;
+      }
+    }
+
+    .valid-days-title {
+      @apply text-sm text-text_color_02 mt-6 mb-2;
+    }
+
+    .valid-days {
+      @apply w-full
+    }
+
+    .modal-hint {
+      @apply text-sm text-text_color_01 my-8;
+    }
+
+    .modal-bottom {
+      @apply flex items-center justify-between;
+
+      .bottom-btn {
+        width: 47%;
+        @apply h-10 rounded text-sm;
+      }
+
+      .cancel-btn {
+        @apply bg-bg_sr_color text-text_color_01;
+      }
+    }
+  }
+
+  .menu-title {
+    @apply w-full text-sm text-text_color_01 flex justify-between px-3 !important;
+  }
+
+  .rv-dropdown-menu__bar {
+    @apply h-10 bg-bg_sr_color shadow-none rounded;
+  }
+
+  .rv-dropdown-item {
+    @apply left-4 right-4;
+  }
+
+  .rv-dropdown-item__content.rv-popup {
+    @apply rounded-bl-lg rounded-br-lg bg-card_bg_color_03;
+
+    filter: drop-shadow(0 4px 10px rgb(0 0 0 / 10%));
+  }
+
+  .rv-dropdown-menu__title::after {
+    @apply right-3 border-t-transparent border-r-transparent border-b-icon_color border-l-icon_color;
+  }
+
+  .rv-cell {
+    @apply p-0 py-4 flex items-center justify-center border-line_color_02 text-sm text-text_color_01 font-medium;
+
+    line-height: 22px;
+    border-bottom-width: 0.5px;
+  }
+
+  .rv-dropdown-item__option--active {
+    @apply text-brand_color;
+  }
+
+  .rv-cell__title {
+    @apply flex-none font-medium;
+  }
+
+  .rv-cell__value {
+    @apply hidden;
+  }
+}

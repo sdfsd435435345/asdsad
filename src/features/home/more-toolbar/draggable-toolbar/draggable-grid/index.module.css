@@ -1,0 +1,22 @@
+:local(.scoped) {
+  /* disable safari browser press and hold img preview */
+  -webkit-touch-callout: none !important;
+  user-select: none;
+  @apply overflow-hidden !important;
+
+  .rv-grid {
+    @apply grid grid-cols-5;
+
+    > * {
+      @apply m-auto w-full h-full;
+    }
+
+    img {
+      @apply pointer-events-none touch-none !important;
+    }
+
+    .rv-grid-item__content {
+      @apply w-full bg-bg_color;
+    }
+  }
+}

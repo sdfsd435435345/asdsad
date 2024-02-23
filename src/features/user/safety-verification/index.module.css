@@ -1,0 +1,82 @@
+:local(.scoped) {
+  .safety-verification-wrap {
+    @apply min-h-screen p-4;
+
+    .title {
+      @apply text-2xl leading-9 font-semibold mt-10;
+
+      label {
+        @apply text-text_color_01;
+      }
+    }
+
+    .validate {
+      @apply flex flex-col justify-center items-center mb-16 mt-24;
+
+      .icon {
+        @apply mb-5;
+
+        svg {
+          width: 90px;
+          height: 90px;
+        }
+      }
+
+      .text {
+        label {
+          @apply text-sm font-normal text-text_color_02;
+        }
+      }
+    }
+
+    .verify-method-wrap {
+      @apply flex flex-col w-full mt-8;
+
+      .verify-method {
+        @apply flex-1 mb-6;
+
+        label {
+          @apply text-xs text-brand_color;
+        }
+      }
+    }
+
+    .retrieve {
+      @apply text-sm;
+    }
+    
+    .rv-field__suffix {
+      @apply text-sm mr-3 text-brand_color;
+    }
+
+    .rv-field {
+      @apply p-0 bg-transparent;
+    }
+
+    .rv-form--vertical {
+      @apply mt-8;
+    }
+
+    .rv-form-item--vertical {
+      @apply mt-8;
+    }
+    
+    .tips {
+      label {
+        @apply text-xs text-text_color_02;
+      }
+    }
+
+    input {
+      @apply pr-20;
+    }
+
+    button {
+      @apply w-full;
+    }
+  }
+}
+
+.user-safety-verification-popup {
+  @apply w-full;
+}

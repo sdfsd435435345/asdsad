@@ -1,0 +1,82 @@
+:local(.trade-form-wrapper) {
+  @apply bg-bg_color text-sm;
+
+  .input-value-wrapper {
+    @apply flex justify-center relative items-end mb-2 h-10;
+
+    .unit {
+      @apply absolute bottom-1 ml-1 left-full text-text_color_02 text-xs;
+    }
+
+    .switch-wrapper {
+      @apply absolute right-4 bottom-1;
+    }
+  }
+
+ 
+
+  .limit-amount-text {
+    @apply text-xs text-text_color_02 text-center;
+
+    &.is-error {
+      @apply text-warning_color;
+    }
+  }
+
+  .sell-action-wrapper {
+    @apply mt-1 whitespace-nowrap flex text-xs text-text_color_02;
+  }
+
+}
+
+:local(.action-btn-wrapper) {
+  @apply px-4 pb-10 flex;
+}
+
+:local(.confirm-modal-wrapper) {
+  @apply bg-bg_color text-sm;
+
+  .header {
+    @apply flex p-4 justify-between;
+
+    .price-text {
+      @apply text-xs text-sell_down_color;
+    }
+
+    .title {
+      @apply text-base font-medium;
+    }
+  }
+
+  .payment {
+    @apply relative flex border border-transparent bg-card_bg_color_02 px-3 rounded justify-between py-4 mb-4 last:mb-0;
+
+    &.is-active {
+      @apply bg-brand_color_special_02 border-brand_color;
+    }
+
+    .tag {
+      @apply text-brand_color bg-brand_color_special_02 rounded py-0.5 px-1;
+    }
+
+    .selected-icon {
+      @apply absolute -right-px top-px flex items-center justify-center text-white;
+
+      svg {
+        width: 22px;
+        height: 15px;
+      }
+    }
+  }
+
+}
+
+:local(.fast-trade-page-wrapper) {
+  @apply flex flex-col justify-between h-screen;
+
+  .title-wrapper {
+    .label.only-name {
+      @apply text-base font-medium;
+    }
+  }
+}

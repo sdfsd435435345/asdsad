@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "PerpetualProfitLossProto";
+
+message PerpetualProfitLoss {
+    sint64 uid = 1;
+    sint64 groupId = 2;
+    sint64 orderId = 3;
+    int32 businessId = 4;
+    string orderState = 5;
+    int32 tradeId = 6;
+    string symbol = 7;
+    string reason = 8;
+}

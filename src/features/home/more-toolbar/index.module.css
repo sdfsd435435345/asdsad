@@ -1,0 +1,28 @@
+:local(.scoped) {
+  @apply w-full h-full bg-bg_color !important;
+  
+  .rv-notice-bar {
+    @apply px-2;
+  }
+    
+  .rv-notice-bar__content {
+    @apply text-xs text-tips_color grow;
+  }
+
+  .rv-card {
+    @apply bg-bg_color;
+  }
+
+  .rv-tabs__content {
+    @apply h-full flex flex-col justify-start;
+
+    > * {
+      @apply my-4;
+    }
+  }
+
+  .rv-notice-bar {
+    @apply bg-brand_color_special_02;
+  }
+
+}

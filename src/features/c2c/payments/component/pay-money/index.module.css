@@ -1,0 +1,34 @@
+:local(.pay-money) {
+  .rv-cell {
+    border-bottom: 0.5px solid var(--line_color_02);
+    @apply p-4 items-center;
+
+    .rv-cell__title {
+      @apply mr-2;
+
+      .pay-money-cell-item {
+        @apply h-full flex items-center;
+
+        .collapse-item-left {
+          @apply w-0.5 h-2.5 mr-1.5 rounded-3xl;
+        }
+
+        label {
+          @apply text-base font-medium text-text_color_01;
+        }
+
+        .bank {
+          @apply bg-brand_color;
+        }
+
+        .alipay {
+          background-color: #6195F6;
+        }
+
+        .wechat {
+          @apply bg-buy_up_color;
+        }
+      }
+    }
+  }
+}

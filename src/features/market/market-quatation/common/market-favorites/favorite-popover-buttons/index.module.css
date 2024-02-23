@@ -1,0 +1,14 @@
+:local(.scoped) {
+  width: 178px;
+  height: 40px;
+  @apply flex-row table-cell col-span-1;
+
+
+  .rv-popover__content {
+    @apply flex items-center;
+
+    span {
+      @apply inline-flex grow text-sm font-normal whitespace-nowrap justify-center cursor-pointer;
+    }
+  }
+}

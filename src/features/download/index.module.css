@@ -1,0 +1,39 @@
+:local(.header) {
+  height: 49px;
+  @apply bg-card_bg_color_01;
+
+  .container {
+    @apply px-4 py-[10px] flex items-center justify-between;
+
+    .left {
+      @apply flex items-center gap-2;
+    }
+  }
+
+  .logo {
+    img {
+      width: 30px;
+      height: 30px;
+      @apply rounded-full;
+    }
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: 18px;
+    @apply text-brand_color;
+  }
+}
+
+:local(.scoped) {
+  @apply mx-6 h-full;
+
+  .download-image {
+    margin-bottom: 68px;
+  }
+
+  .download-button {
+    bottom: 14px;
+    @apply fixed left-4 right-4;
+  }
+}

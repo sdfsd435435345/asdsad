@@ -1,0 +1,23 @@
+:local(.account-selection-modal-root) {
+  @apply flex !rounded-tl-lg !rounded-tr-lg;
+  
+  .account-selection-modal {
+    @apply w-full flex flex-col bg-card_bg_color_03;
+
+    .item {
+      @apply flex items-center justify-between h-14 border-b border-line_color_02 font-medium px-4 text-sm;
+    }
+
+    .active {
+      @apply text-brand_color;
+    }
+
+    .bottom {
+      @apply py-4 border-t-4 border-line_color_02 text-sm text-text_color_02 flex justify-center;
+    }
+
+    .payment-details {
+      @apply w-full whitespace-nowrap overflow-hidden text-ellipsis;
+    }
+  }
+}

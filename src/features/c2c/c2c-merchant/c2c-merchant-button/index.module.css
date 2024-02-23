@@ -1,0 +1,57 @@
+:local(.merchant-popup) {
+  @apply w-4/5 rounded-lg bg-card_bg_color_03 !important;
+
+  button {
+    min-width: 111px;
+    @apply rounded;
+  }
+
+  .customer-service-btn {
+    @apply border-brand_color;
+
+    .rv-button__text {
+      @apply text-brand_color !important;
+    }
+  }
+
+  .rv-card {
+    @apply bg-card_bg_color_03 px-4 text-text_color_01 !important;
+
+    .rv-card-body {
+      @apply pt-0 my-0;
+    }
+
+    .rv-card-footer {
+      padding-bottom: 30px;
+      @apply pt-5;
+
+      button {
+        @apply h-10;
+      }
+    }
+  }
+
+  .rv-popup__title {
+    margin-top: 30px;
+    @apply bg-card_bg_color_03;
+  }
+
+  .rv-textarea {
+    @apply bg-bg_sr_color px-3 py-2 text-text_color_01 rounded;
+
+    textarea {
+      height: 120px;
+      @apply text-text_color_01;
+    }
+
+    .rv-textarea__word-limit {
+      @apply text-text_color_04;
+    }
+  }
+
+  .rv-button--default {
+    .rv-button__text {
+      @apply text-text_color_02;
+    }
+  }
+}

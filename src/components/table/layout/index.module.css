@@ -1,0 +1,19 @@
+:local(.scoped) {
+  min-height: 50vh;
+  
+  .rv-pull-refresh, .rv-pull-refresh__track {
+    min-height: inherit;
+  }
+  
+  .loading-wrapper, .loading-more-wrapper {
+    @apply flex justify-center items-center mt-10 text-sm text-text_color_04 w-screen;
+
+    .rv-loading {
+      @apply w-4 h-4;
+    }
+  }
+
+  .load-finished-text {
+    @apply flex justify-center items-center text-text_color_03 text-sm py-8 mx-auto;
+  }
+}

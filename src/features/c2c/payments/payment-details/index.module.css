@@ -1,0 +1,50 @@
+:local(.payment-details-wrap) {
+  @apply h-screen pb-28 overflow-auto;
+
+  .rv-cell-group {
+    .rv-cell {
+      @apply pt-4 pb-2;
+
+      .rv-cell__title {
+        @apply text-text_color_02;
+      }
+
+      .rv-cell__value {
+        @apply text-sm font-medium text-text_color_01;
+
+        .cell-tag {
+          @apply flex justify-end flex-wrap items-center;
+
+          .cell-tag-item {
+            @apply ml-2 mb-2 text-xs font-medium inline-block py-0.5 px-2 rounded bg-card_bg_color_02 text-text_color_01;
+
+            height: 22px;
+            line-height: 18px;
+          }
+
+          .disable-tag-item {
+            @apply text-text_color_04 bg-bg_button_disabled;
+          }
+        }
+      }
+    }
+  }
+
+  .payment-details-footer {
+    @apply fixed bottom-0 left-0 right-0 px-2 pt-4 pb-10 bg-bg_color flex;
+
+    .edit {
+      .rv-button {
+        @apply text-text_color_01 bg-bg_sr_color;
+      }
+    }
+  }
+}
+
+:local(.list-operation-user-popUp) {
+  @apply text-left;
+
+  .popup-wrap {
+    padding: 30px;
+  }
+}

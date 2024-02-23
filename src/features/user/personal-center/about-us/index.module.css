@@ -1,0 +1,59 @@
+:local(.scoped) {
+  .about-us-wrap {
+    .icon {
+      @apply flex flex-col justify-center items-center mt-12 mb-8;
+
+      img {
+        border-radius: 18px;
+      }
+
+      label {
+        @apply text-sm font-normal text-text_color_01 mt-2;
+      }
+    }
+
+    .about-us-item {
+      border-bottom: 4px solid #F2F2F2;
+      @apply px-4 pb-6 mb-6;
+
+      .rv-cell {
+        @apply px-0 py-4 flex items-center;
+
+
+        svg {
+          @apply text-text_color_01;
+        }
+    
+        .rv-cell__title {
+          @apply text-sm font-normal text-text_color_01;
+        }
+    
+        .rv-cell__value {
+          @apply text-xs font-normal text-text_color_04;
+    
+          span {
+            @apply leading-6;
+          }
+        }
+      }
+    }
+
+    .introduction {
+      @apply mt-8 px-4;
+
+      .title {
+        @apply mb-2;
+
+        label {
+          @apply text-sm font-normal text-text_color_01;
+        }
+      }
+
+      .text {
+        p {
+          @apply text-xs leading-5 font-normal text-text_color_03;
+        }
+      }
+    }
+  }
+}

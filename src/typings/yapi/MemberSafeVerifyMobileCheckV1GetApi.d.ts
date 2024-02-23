@@ -1,0 +1,141 @@
+/* prettier-ignore-start */
+/* tslint:disable */
+/* eslint-disable */
+
+/* 该文件由 yapi-to-typescript 自动生成，请勿直接修改！！！ */
+
+/**
+ * 接口 [手机验证码验证↗](https://yapi.nbttfc365.com/project/77/interface/api/6104) 的 **请求类型**
+ *
+ * @分类 [用户中心↗](https://yapi.nbttfc365.com/project/77/interface/api/cat_606)
+ * @请求头 `GET /v1/member/safe/verify/mobile/check`
+ * @更新时间 `2023-06-08 16:52:22`
+ */
+export interface YapiGetV1MemberSafeVerifyMobileCheckApiRequest {
+  /**
+   * 验证码
+   */
+  verifyCode: string
+  /**
+   * 用户未登录时验证需要传入
+   */
+  mobileCountryCode?: string
+  /**
+   * 用户未登录时验证需要传入
+   */
+  mobileNumber?: string
+}
+
+/**
+ * 接口 [手机验证码验证↗](https://yapi.nbttfc365.com/project/77/interface/api/6104) 的 **返回类型**
+ *
+ * @分类 [用户中心↗](https://yapi.nbttfc365.com/project/77/interface/api/cat_606)
+ * @请求头 `GET /v1/member/safe/verify/mobile/check`
+ * @更新时间 `2023-06-08 16:52:22`
+ */
+export interface YapiGetV1MemberSafeVerifyMobileCheckApiResponse {
+  /**
+   * 请求是否成功
+   */
+  code?: number
+  /**
+   * 提示信息
+   */
+  message?: string
+  data?: YapiGetV1MemberSafeVerifyMobileCheckData
+}
+/**
+ * 数据集
+ */
+export interface YapiGetV1MemberSafeVerifyMobileCheckData {
+  /**
+   * 验证是否成功
+   */
+  isSuccess?: boolean
+}
+
+// 以下为自动生成的 api 请求，需要使用的话请手动复制到相应模块的 api 请求层
+// import request, { MarkcoinRequest } from '@/plugins/request'
+
+// /**
+// * [手机验证码验证↗](https://yapi.nbttfc365.com/project/77/interface/api/6104)
+// **/
+// export const getV1MemberSafeVerifyMobileCheckApiRequest: MarkcoinRequest<
+//   YapiGetV1MemberSafeVerifyMobileCheckApiRequest,
+//   YapiGetV1MemberSafeVerifyMobileCheckApiResponse['data']
+// > = params => {
+//   return request({
+//     path: "/v1/member/safe/verify/mobile/check",
+//     method: "GET",
+//     params
+//   })
+// }
+
+/**
+ * 接口 [手机验证码验证↗](https://yapi.nbttfc365.com/project/44/interface/api/169) 的 **请求类型**
+ *
+ * @分类 [用户中心↗](https://yapi.nbttfc365.com/project/44/interface/api/cat_85)
+ * @请求头 `GET /v1/member/safe/verify/mobile/check`
+ * @更新时间 `2022-08-05 15:38:07`
+ */
+export interface YapiGetV1MemberSafeVerifyMobileCheckApiRequest {
+  /**
+   * 验证码
+   */
+  verifyCode: string
+  /**
+   * 用户未登录时验证需要传入
+   */
+  mobileCountryCode?: string
+  /**
+   * 用户未登录时验证需要传入
+   */
+  mobileNumber?: string
+}
+
+/**
+ * 接口 [手机验证码验证↗](https://yapi.nbttfc365.com/project/44/interface/api/169) 的 **返回类型**
+ *
+ * @分类 [用户中心↗](https://yapi.nbttfc365.com/project/44/interface/api/cat_85)
+ * @请求头 `GET /v1/member/safe/verify/mobile/check`
+ * @更新时间 `2022-08-05 15:38:07`
+ */
+export interface YapiGetV1MemberSafeVerifyMobileCheckApiResponse {
+  /**
+   * 请求是否成功
+   */
+  code?: number
+  /**
+   * 提示信息
+   */
+  message?: string
+  data?: YapiGetV1MemberSafeVerifyMobileCheckData
+}
+/**
+ * 数据集
+ */
+export interface YapiGetV1MemberSafeVerifyMobileCheckData {
+  /**
+   * 验证是否成功
+   */
+  isSuccess?: boolean
+}
+
+// 以下为自动生成的 api 请求，需要使用的话请手动复制到相应模块的 api 请求层
+// import request, { MarkcoinRequest } from '@/plugins/request'
+
+// /**
+// * [手机验证码验证↗](https://yapi.nbttfc365.com/project/44/interface/api/169)
+// **/
+// export const getV1MemberSafeVerifyMobileCheckApiRequest: MarkcoinRequest<
+//   YapiGetV1MemberSafeVerifyMobileCheckApiRequest,
+//   YapiGetV1MemberSafeVerifyMobileCheckApiResponse['data']
+// > = params => {
+//   return request({
+//     path: "/v1/member/safe/verify/mobile/check",
+//     method: "GET",
+//     params
+//   })
+// }
+
+/* prettier-ignore-end */

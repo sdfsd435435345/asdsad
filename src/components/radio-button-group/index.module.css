@@ -1,0 +1,15 @@
+:local(.radio-button-wrapper) {
+  @apply p-0.5 bg-card_bg_color_01 flex items-center;
+
+  .button {
+    @apply py-1 px-1.5 text-text_color_03 rounded text-xs;
+
+    &.is-selected {
+      @apply bg-bg_color text-text_color_01;
+    }
+
+    &.size-large {
+      @apply px-3.5;
+    }
+  }
+}

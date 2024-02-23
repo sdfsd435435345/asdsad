@@ -1,0 +1,50 @@
+:local(.date-time-select-wrap) {
+  .select-wrap-data {
+    .select-wrap-data-header {
+      @apply mb-2 text-sm font-normal text-text_color_02;
+    }
+
+    .select-wrap-data-main {
+      @apply px-0 flex flex-wrap;
+    
+      .select-wrap-data-contair {
+        @apply w-1/4 text-xs font-normal px-1 mb-2;
+    
+        .select-wrap-data-item {
+          border: 0.5px solid var(--bg_sr_color);
+          @apply py-1.5 bg-bg_sr_color rounded text-center text-text_color_01;
+        }
+      }
+    
+      .selected {
+        .select-wrap-data-item {
+          border: 0.5px solid var(--brand_color);
+          @apply bg-brand_color_special_02  text-brand_color;
+        }
+      }
+    }
+  }
+
+  .select-wrap-time {
+    @apply mt-2;
+
+    .select-wrap-time-header {
+      @apply mb-2 text-sm font-normal text-text_color_02;
+    }
+
+    .select-wrap-time-main {
+      @apply w-full flex flex-row items-center justify-between;
+
+      .date-item {
+        @apply py-2 box-border rounded bg-bg_sr_color flex items-center justify-center text-text_color_01;
+
+        width: 45%;
+        height: 34px
+      }
+
+      .separate {
+        @apply text-text_color_03
+        }
+    }
+  }
+}

@@ -1,0 +1,73 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.notice";
+option java_outer_classname = "NoticeProto";
+/*
+ * 通知
+ */
+enum NoticeType{
+  MSG = 0; // 消息，指包含 title 和 content 的这种类型的消息
+  BIZ_ACTION = 1; // 用于需要各端自己处理逻辑的通知
+  INBOX_MSG = 2; // 站内信消息
+}
+
+message Notice{
+  NoticeType noticeType = 1;
+  // 消息对应的事件 id
+  sint64 eventId = 2;
+  // 消息产生的时间
+  sint64 time = 3;
+  // 各种消息类型的数据
+  oneof NoticeData{
+    MsgData msgData = 4;
+    BizActionData bizActionData = 5;
+    InboxMsgData inboxMsgData = 6;
+  }
+}
+
+// 消息，包含 title 和 content
+message MsgData{
+  // 消息标题
+  string title = 1;
+  // 消息内容
+  string content = 2;
+  // ios 链接
+  string iosLink = 3;
+  // android 链接
+  string androidLink = 4;
+  // web 链接
+  string webLink = 5;
+  // h5 链接
+  string h5Link = 6;
+}
+
+message BizActionData{
+  // 业务行为
+  Action action = 1;
+  string latestDeviceNo = 2; // 最新登录的设备 id
+  bool isForceWindow = 3; // 是否强弹窗 true=强弹窗，false=不强弹窗
+  string title = 4;// 消息标题
+  string content = 5;// 消息内容
+}
+
+enum Action{
+  MULTI_LOGIN = 0; // 多点登录
+  UPDATE_PASSWORD = 1; // 更新密码
+};
+
+// 站内信消息
+message InboxMsgData{
+  // 是否弹窗提醒
+  bool isRemind = 1;
+  // 消息标题
+  string title = 2;
+  // 消息内容
+  string content = 3;
+  // ios 链接
+  string iosLink = 4;
+  // android 链接
+  string androidLink = 5;
+  // web 链接
+  string webLink = 6;
+  // h5 链接
+  string h5Link = 7;
+}

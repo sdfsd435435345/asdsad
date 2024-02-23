@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "OrderProto";
+
+message Order {
+  repeated Body order = 1;
+
+  message Body{
+    sint64 uid = 1;
+    sint64 orderId = 2;
+    int32 businessId = 3;
+    int32 orderState = 4;
+    int32 tradeId = 5;
+    string symbol = 6;
+    string reason = 7;
+  }
+}

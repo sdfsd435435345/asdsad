@@ -1,0 +1,30 @@
+:local(.type-select-modal-root) {
+  max-height: 60%;
+  @apply rounded-tl-lg rounded-tr-lg !important;
+
+  .type-select-modal-content {
+    @apply flex flex-col bg-card_bg_color_03;
+
+    .modal-list {
+      margin-bottom: 74px;
+
+      .item {
+        @apply h-14 border-line_color_02 border-b flex items-center justify-center;
+      
+        .text {
+          @apply text-sm text-text_color_01 font-medium;
+        }
+      
+        .text-active {
+          @apply text-sm text-brand_color font-medium;
+        }
+      }
+    }
+  }
+  
+  .bottom {
+    @apply w-full border-line_color_02 border-t-4 pt-4 text-sm text-text_color_02 flex items-center justify-center fixed bottom-0 bg-card_bg_color_03;
+
+    padding-bottom: 34px;
+  }
+}

@@ -1,0 +1,57 @@
+:local(.scoped) {
+  .popup-wrap {
+    padding: 30px;
+
+    .popup-icon {
+      @apply flex justify-center items-center mb-5 text-base font-medium text-text_color_01;
+
+      svg {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .popup-tips {
+      @apply mb-5 text-sm font-normal text-text_color_01;
+
+      p {
+        @apply text-sm font-normal text-text_color_02 break-all;
+
+        label {
+          @apply text-tips_color break-all;
+        }
+      }
+    }
+
+    .popup-btn {
+      @apply flex justify-between;
+  
+      .cancel, .continue {
+        @apply flex-1;
+      }
+
+      .cancel {
+        @apply pr-3;
+
+        button {
+          border: 1px solid var(--line_color_01);
+          @apply bg-transparent text-text_color_02;
+        }
+      }
+
+      .continue {
+        .rv-button {
+          @apply text-button_text_02;
+        }
+      }
+
+      .rv-button {
+        font-size: 14px;
+      }
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

@@ -1,0 +1,48 @@
+:local(.scoped) {
+  .market-column {
+    @apply flex flex-col justify-between;
+
+    .market-column-icon {
+      @apply flex text-sm mb-1.5;
+
+      img {
+        @apply rounded-full;
+      }
+
+      .column-icon {
+        @apply w-6 h-6;
+      }
+    }
+
+    .market-column-price {
+      @apply flex text-xs text-text_color_03;
+    }
+
+    .column-icon-text {
+      @apply ml-1 flex-1 truncate;
+    }
+  }
+
+  .market-column-sell {
+    @apply flex flex-col items-end;
+
+    .market-price-icon {
+      @apply text-sm mb-2;
+    }
+  }
+
+  .rv-tab {
+    @apply flex-none px-0 mr-8;
+  }
+
+  .rv-tabs__wrap {
+    border-bottom: 0.5px;
+
+    @apply border-line_color_02 border-solid;
+  }
+  
+  .quote-badge {
+    font-size: 10px;
+    @apply text-text_color_03 px-1 py-0.5 bg-card_bg_color_02 ml-1;
+  }
+}

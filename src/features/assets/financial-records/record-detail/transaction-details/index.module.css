@@ -1,0 +1,27 @@
+:local(.scoped) {
+  @apply flex flex-col border-t-4 border-line_color_02;
+
+  .list {
+    @apply pt-4 px-4;
+
+    .list-item {
+      @apply flex flex-col mb-4 border-b border-line_color_02 last:border-b-0;
+
+      .item-info {
+        @apply flex flex-row items-center justify-between mb-4;
+
+        .info-name {
+          @apply text-sm text-text_color_03;
+        }
+
+        .info-value {
+          @apply text-sm text-text_color_01
+        }
+      }
+    }
+  }
+
+  .list-title {
+    @apply px-4 text-base text-text_color_01 font-medium mt-4;
+  }
+}

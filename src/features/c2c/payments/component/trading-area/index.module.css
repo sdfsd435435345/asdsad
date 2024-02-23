@@ -1,0 +1,43 @@
+:local(.trading-area-wrap) {
+  z-index: 2001;
+  @apply flex flex-col fixed left-0 right-0 top-0 h-full bg-bg_color  overflow-hidden;
+
+  .wrap-header-text {
+    @apply text-sm font-normal text-brand_color;
+  }
+
+  .trading-area-main {
+    @apply flex-1 overflow-y-scroll;
+
+    .rv-cell {
+      @apply items-center px-4 py-3;
+
+      .trading-cell {
+        @apply flex items-center;
+
+        .trading-cell-icon {
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          @apply overflow-hidden;
+          
+          svg {
+            @apply w-full h-full;
+          }
+        }
+
+        .trading-cell-text {
+          @apply ml-2 text-base font-medium text-text_color_01;;
+        }
+      }
+    }
+
+    .rv-cell--clickable:active {
+      @apply bg-bg_color_03;
+    }
+  }
+
+  .trading-area-footer {
+    @apply px-4 pb-10 bg-bg_color;
+  }
+}

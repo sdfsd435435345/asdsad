@@ -1,0 +1,15 @@
+syntax = "proto3";
+option java_package="com.newbit.common.proto.push";
+option java_outer_classname = "ConceptPriceProto";
+
+message ConceptPrice{
+
+   repeated Body list = 1;
+
+  message Body{
+    int32 id = 1;
+    string chg = 2;
+    string marketValue = 3;
+  }
+
+}

@@ -1,0 +1,112 @@
+:local(.scoped) {
+  .sector-detail-content {
+    .sector-detail-header {
+      @apply relative box-border;
+
+      .detail-header-back {
+        transform: translateY(-45%);
+        @apply absolute top-1/2;
+      }
+
+      .detail-header-title {
+        @apply w-full text-center box-border;
+
+        label {
+          @apply text-base font-semibold;
+        }
+      }
+    }
+
+    .sector-detail-body {
+      background: linear-gradient(116.72deg, #090c2d 0%, #05132e 99.81%);
+      transition: all 0.3s;
+      @apply h-60 mb-3 relative p-4;
+
+      .detail-header-text {
+        width: 65%;
+        @apply text-3xl font-medium text-white absolute top-8 left-4 truncate;
+
+        .header-text {
+          @apply text-brand_color;
+        }
+      }
+
+      .detail-header-image {
+        width: 110px;
+        height: 110px;
+        @apply absolute top-0 right-1  overflow-hidden;
+
+        .body-image {
+          width: 110px;
+          height: 110px;
+          margin-right: 16px;
+          margin-left: auto;
+        }
+      }
+
+      .detail-footer {
+        background-color: #0f1b43;
+        border: 0.5px solid #3b4c83;
+        transition: all 0.3s;
+        @apply relative top-24 text-white text-sm rounded py-3 px-4 box-border overflow-hidden;
+
+        .footer-text {
+          @apply h-full overflow-hidden flex flex-col;
+
+          .footer-content-text {
+            @apply flex-1 overflow-hidden;
+
+            span {
+              line-height: 24px;
+            }
+          }
+
+          .footer-text-icon {
+            background-color: #0f1b43;
+            @apply flex items-end justify-end cursor-pointer text-brand_color;
+
+            .icon {
+              @apply text-brand_color ml-2 mb-px w-2 h-4;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sector-detail-table {
+    @apply mb-12 mx-4;
+
+    tbody {
+      tr {
+        @apply h-20;
+
+        border-bottom: 1px solid var(--line_color_02);
+        transform: translateY(16px);
+
+        td {
+          vertical-align: top;
+        }
+      }
+    }
+
+    table {
+      tr {
+        > :last-child,
+        > :nth-last-child(2) {
+          * {
+            @apply flex justify-end ml-auto;
+          }
+        }
+      }
+    }
+
+    .sector-table-action-button {
+      font-size: 10px;
+      @apply px-2 py-1 bg-bg_sr_color;
+    }
+
+  
+
+  }
+}

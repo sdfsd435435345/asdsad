@@ -1,0 +1,47 @@
+:local(.scoped) {
+  .text {
+    @apply mb-6;
+
+    label {
+      @apply text-sm font-normal text-text_color_02;
+    }
+  }
+
+  .qrcode {
+    @apply flex mb-5;
+
+    .code-image {
+      width: 140px;
+      height: 140px;
+      padding: 10px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px var(--card_bg_color_02);
+      @apply mr-8 rounded-sm;
+
+
+      svg {
+        @apply w-full h-full;
+      }
+    }
+
+    .code-text {
+      @apply flex flex-1 flex-col justify-between break-all;
+
+      .key {
+        @apply w-full;
+
+        label {
+          @apply text-sm text-text_color_01;
+        }
+      }
+
+      .copy-btn {
+        button {
+          background-color: rgb(1 188 148 / 10%);
+          border: 0.5px solid var(--brand_color);
+          @apply text-sm font-normal w-28 h-9 rounded text-brand_color;
+        }
+      }
+    }
+  }
+}

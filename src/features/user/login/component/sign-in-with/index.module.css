@@ -1,0 +1,87 @@
+:local(.sign-in-width-wrap) {
+  .sign-in-width-header {
+    @apply my-6 flex items-center;
+
+    label {
+      @apply mx-4 text-text_color_03;
+    }
+
+    .header-divider {
+      border-top: 0.5px solid var(--line_color_02);
+      @apply flex-1;
+    }
+  }
+
+  .rv-button {
+    @apply border border-text_color_01;
+
+    .sign-button-icon {
+      @apply w-4 h-4 mr-2 mb-px;
+
+      svg {
+        @apply w-full h-full;
+      }
+    }
+  }
+}
+
+:local(.sign-in-width-popup) {
+  .popup-wrap {
+    padding: 22px;
+
+    .popup-icon {
+      @apply mb-4;
+
+      label {
+        @apply font-medium;
+      }
+    }
+
+    .popup-tips {
+      @apply mb-4;
+
+      .sign-in-width-popup-content {
+        p {
+          @apply text-text_color_01;
+        }
+
+        .sign-in-width-input {
+          @apply my-4 px-3 py-2 rounded-lg bg-bg_sr_color flex items-center box-border;
+
+          .rv-image {
+            @apply w-4 mr-2;
+          }
+
+          span {
+            @apply text-sm;
+          }
+
+          img {
+            @apply w-4 h-4 rounded-full;
+          }
+
+          .divider {
+            height: 18px;
+            @apply w-px mx-3 bg-line_color_02;
+          }
+        }
+
+        .rv-cell {
+          @apply px-0 pt-4 pb-0;
+
+          .rv-cell__value {
+            @apply rounded-lg overflow-hidden;
+          }
+
+          .rv-input {
+            @apply px-3 py-2;
+          }
+        }
+      }
+    }
+
+    .rv-button {
+      @apply rounded-lg;
+    }
+  }
+}

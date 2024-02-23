@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.perpetual";
+option java_outer_classname = "PerpetualGroupRefreshProto";
+
+message PerpetualGroupRefresh{
+
+   string uid =1 ; // 用户uid
+
+   string groupId =2 ; //合约组ID
+
+   string operate = 3; //update更新，delete 删除
+
+   string businessId =4 ; //商户Id
+}

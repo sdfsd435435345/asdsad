@@ -1,0 +1,12 @@
+:local(.scoped) {
+  height: 92px;
+  @apply flex flex-row rounded bg-card_bg_color_01 items-center;
+
+  >:first-child {
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+    @apply m-4;
+  }
+}

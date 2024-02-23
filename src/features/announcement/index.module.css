@@ -1,0 +1,14 @@
+:local(.scoped) {
+  .notice-center-content {
+    @apply mb-11;
+    @apply flex-1 flex flex-col;
+
+    .navigation-content-header {
+      @apply w-full px-9;
+    }
+
+    .navigation-content-body {
+      @apply flex-1 bg-bg_color p-4;
+    }
+  }
+}

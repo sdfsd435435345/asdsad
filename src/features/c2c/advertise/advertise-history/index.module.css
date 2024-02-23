@@ -1,0 +1,39 @@
+:local(.advertise-history-root) {
+  @apply flex flex-col;
+
+  .rv-tabs__wrap {
+    @apply border-solid border-line_color_02 border-b !important;
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-line_color_02
+  }
+}
+
+:local(.adv-history-popover-root) {
+  @apply -mt-1.5 -ml-2 !important;
+
+  .rv-popover__content {
+    @apply bg-card_bg_color_03 rounded;
+  }
+
+  .rv-popover__arrow {
+    @apply hidden;
+  }
+
+  .rv-popover__action {
+    @apply w-auto h-auto mb-4 last:mb-0 px-2.5;
+  }
+
+  .rv-popover__action:active {
+    background: none;
+  }
+
+  .rv-popover__action-text {
+    @apply text-xs font-medium;
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-0;
+  }
+}

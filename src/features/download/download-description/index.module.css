@@ -1,0 +1,13 @@
+:local(.scoped) {
+  max-width: 342px;
+  @apply flex flex-col gap-4;
+
+  > :first-child {
+    font-size: 40px;
+    @apply font-semibold text-text_color_01;
+  }
+
+  > :last-child {
+    @apply text-base font-normal text-text_color_02;
+  }
+}

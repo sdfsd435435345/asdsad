@@ -1,0 +1,23 @@
+:local(.scoped) {
+  @apply flex flex-col justify-center items-center mt-10 mb-5;
+
+  .download-text-description {
+    margin-bottom: 26px;
+    @apply text-text_color_02;
+  }
+
+  .icons-wrapper {
+    @apply flex items-center justify-center gap-2;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  >:last-child {
+    svg {
+      @apply w-8 h-8 mt-3;
+    }
+  }
+}

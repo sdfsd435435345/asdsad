@@ -1,0 +1,193 @@
+:local(.scoped) {
+  @apply h-screen flex flex-col;
+
+  .all-reminder {
+    @apply text-sm font-normal text-text_color_01;
+  }
+
+  .reminder-page-price {
+    @apply text-center box-border pt-4 pb-8;
+
+    .page-price-header {
+      @apply text-2xl font-medium text-text_color_01;
+    }
+
+    .page-price-footer {
+      @apply flex items-center justify-center;
+
+      .price-footer-left {
+        @apply text-sm font-normal text-text_color_02;
+      }
+
+      .price-footer-right {
+        @apply ml-1 p-0.5 text-xs rounded-sm;
+      }
+
+      .rise-color {
+        @apply bg-buy_up_color_special_02;
+      }
+
+      .fall-color {
+        @apply bg-sell_down_color_special_02;
+      }
+
+      .grey-color {
+        @apply bg-bg_button_disabled;
+      }
+    }
+  }
+
+  .reminder-page-menu {
+    border-bottom: 4px solid var(--line_color_02); 
+    @apply px-4 pb-6 mb-6;
+
+    .page-menu-header {
+      @apply flex items-center mb-4;
+
+      .menu-header-text {
+        @apply mr-1 text-base font-normal text-text_color_01;
+      }
+
+      .menu-header-icon {
+        @apply w-2 h-2 mt-px;
+
+        svg {
+          @apply w-2 h-2;
+        }
+      }
+    }
+
+    .page-menu-input {
+      border-bottom: 0.5px solid var(--line_color_02);
+      @apply pb-2 mb-6;
+
+      .menu-input-price {
+        @apply flex items-center text-sm font-normal;
+
+        .input-price-icon {
+          @apply w-5 h-5 mr-1;
+
+          svg {
+            @apply w-5 h-5 text-xl;
+          }
+        }
+      }
+
+      .rise-color {
+        @apply text-buy_up_color;
+      }
+
+      .fall-color {
+        @apply text-sell_down_color;
+      }
+    }
+
+    .page-menu-switch {
+      @apply mb-7 p-0;
+    }
+
+    .page-menu-title {
+      @apply flex items-center;
+
+      .menu-title-text {
+        @apply mr-1 text-base font-normal text-text_color_01;
+      }
+
+      .menu-title-icon {
+        @apply w-3 h-3 mt-px;
+
+        svg {
+          @apply w-3 h-3 text-xs;
+        }
+      }
+    }
+
+    .page-menu-button {
+      @apply w-full rounded h-10;
+
+      .rv-button__text {
+        @apply text-text_color_01;
+      }
+    }
+  }
+
+  .reminder-page-footer {
+    @apply flex-1 flex flex-col overflow-hidden;
+
+    .page-footer-text {
+      @apply px-4 text-base font-medium text-text_color_01;
+    }
+
+    .page-footer-content {
+      @apply mt-2 flex-1 overflow-x-hidden overflow-y-auto;
+
+      .footer-content-list {
+        border-bottom: 0.5px solid var(--line_color_02); 
+        @apply px-4 py-2 flex items-center justify-between;
+
+        .content-list-title {
+          @apply flex-1;
+
+          .list-title-first {
+            @apply mb-1 text-sm font-normal text-text_color_01;
+          }
+
+          .list-title-second {
+            @apply text-xs font-normal text-text_color_03;
+          }
+        }
+
+        .content-list-icon {
+          @apply w-4 h-4;
+
+          svg {
+            @apply w-4 h-4;
+          }
+        }
+      }
+
+      .page-footer-list {
+        @apply mt-11 pb-10;
+
+        .footer-list-content {
+          @apply flex items-center mb-2 px-4;
+
+          .footer-list-icon {
+            @apply h-1.5 w-1.5;
+
+            svg {
+              @apply h-1.5 w-1.5;  
+            }
+          }
+
+          .footer-list-text {
+            @apply ml-1 text-xs font-normal text-text_color_03;
+          }
+        }
+      }
+
+      .page-footer-img {
+        @apply mb-8;
+      }
+    }
+  }
+}
+
+:local(.regsiter-modal-wrap) {
+  .rv-dialog__message {
+    @apply p-6;
+  }
+
+  .modal-wrap-icon {
+    @apply w-16 h-16 mb-4;
+
+    svg {
+      @apply w-16 h-16;
+    }
+  }
+
+  .modal-wrap-text {
+    @apply text-sm font-normal text-text_color_01;
+  }
+
+}

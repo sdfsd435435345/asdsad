@@ -1,0 +1,59 @@
+:local(.bank-form) {
+  .rv-cell {
+    @apply px-0 pt-4 pb-0;
+
+    .rv-cell__title {
+      @apply text-sm font-normal text-text_color_02;
+    }
+
+    .rv-cell__value {
+      @apply rounded;
+
+      .rv-field__body {
+        @apply bg-transparent !important;
+      }
+
+      .rv-input {
+        .rv-input__control {
+          @apply h-10 bg-bg_sr_color;
+        }
+      }
+
+      .rv-textarea {
+        .rv-textarea__control {
+          @apply py-2 px-3 bg-bg_sr_color rounded overflow-hidden;
+        }
+      }
+    }
+  }
+
+  .form-item-uploader {
+    .rv-cell__value {
+      @apply overflow-visible;
+
+      .rv-uploader__preview {
+        @apply relative;
+      }
+    }
+  }
+
+  .delete-icon {
+    @apply w-3.5 h-3.5 absolute -top-1 -right-1;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .uploader-icon {
+    @apply w-20 h-20;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .collection-account-wrap-footer {
+    @apply fixed bottom-0 left-0 right-0 px-4 pt-4 pb-10 bg-bg_color;
+  }
+}

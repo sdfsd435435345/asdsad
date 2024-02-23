@@ -1,0 +1,24 @@
+:local(.scoped) {
+  @apply min-h-screen flex flex-col bg-bg_color;
+
+  .merchant-header-image {
+    @apply absolute top-11 left-0 right-0;
+  }
+
+  .merchant-header-badge {
+    @apply w-24 h-24 ml-auto;
+
+    img {
+      @apply object-cover;
+    }
+  }
+
+  .merchant-section {
+    border-radius: 24px 24px 0 0;
+    @apply bg-bg_color px-4 text-center grow flex flex-col relative;
+  }
+
+  .rv-button {
+    @apply mb-10;
+  }
+}

@@ -1,0 +1,74 @@
+:local(.scoped) {
+  @apply flex flex-col min-h-screen;
+
+  .user-tips {
+    @apply mb-0;
+  }
+
+  .phone-verification-wrap {
+    @apply flex flex-col flex-1 px-4;
+
+    .phone-verification-form {
+      @apply flex flex-col flex-1 justify-between mb-12;
+    }
+  }
+
+  .rv-form {
+    @apply flex flex-col flex-1 justify-between mt-8;
+  }
+
+  .rv-field {
+    @apply p-0 bg-transparent;
+
+    .rv-field__body {
+      @apply bg-card_bg_color_01 rounded;
+
+      .rv-field__prefix {
+        .rv-image {
+          img {
+            margin-right: 10px;
+            @apply w-4 h-4;
+          }
+        }
+
+        svg {
+          @apply w-2 h-2 ml-2;
+        }
+      }
+    }
+
+    .rv-field__suffix {
+      @apply absolute text-sm font-semibold top-3 right-3 text-brand_color;
+    }
+
+    .rv-field__label {
+      @apply text-text_color_03;
+    }
+  }
+
+  .rv-form-item--vertical {
+    @apply mb-8;
+
+    .rv-input {
+      input {
+        @apply bg-transparent;
+      }
+    }
+  }
+
+  .rv-search, .data-list {
+    .rv-field__body {
+      @apply bg-transparent;
+    }
+  }
+
+  .rv-form > .phone-verification-item > .rv-cell:last-child {
+    input {
+      @apply pr-20;
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

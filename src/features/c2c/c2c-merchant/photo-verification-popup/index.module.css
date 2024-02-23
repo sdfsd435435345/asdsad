@@ -1,0 +1,18 @@
+:local(.photo-popup) {
+  height: 300px;
+  @apply aspect-square px-8 rounded-lg;
+
+  .photo-image {
+    width: 200px;
+    height: 200px;
+    @apply mx-auto;
+  }
+
+  .rv-popup__close-icon {
+    @apply top-5 flex;
+  }
+
+  .rv-popup__title {
+    @apply mb-4 text-left mx-0;
+  }
+}

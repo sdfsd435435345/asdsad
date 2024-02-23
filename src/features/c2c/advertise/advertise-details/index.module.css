@@ -1,0 +1,11 @@
+:local(.advertise-details-root) {
+  @apply flex flex-col;
+
+  .off-btn {
+    @apply text-sm text-brand_color font-medium;
+  }
+
+  .page-content {
+    @apply flex flex-col;
+  }
+}

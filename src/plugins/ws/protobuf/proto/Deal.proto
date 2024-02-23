@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "DealProto";
+//最新成交
+message Deal{
+
+  Body deal = 1;
+
+  message Body{
+    string price = 1;
+    string qty = 2;
+    int64 time = 3;
+    int64 id = 4;
+    string symbolWassName = 5 ;
+    //显示颜色 1 卖方颜色 2 买方颜色
+    int32 direction = 6;
+  }
+
+}

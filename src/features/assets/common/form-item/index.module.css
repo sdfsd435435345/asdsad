@@ -1,0 +1,38 @@
+:local(.form-item) {
+  @apply px-4 mb-8 relative;
+
+  &.is-error {
+    .form-item__content {
+      @apply border-warning_color;
+    }
+  }
+
+  .form-item__label {
+    @apply text-sm text-text_color_02 flex justify-between items-end;
+
+    .label-right {
+      @apply text-text_color_01 text-sm font-medium;
+    }
+  }
+
+  .form-item__content {
+    @apply mt-2 py-2.5 px-3 border border-bg_sr_color bg-bg_sr_color rounded flex justify-between items-center;
+      
+    .content-left,
+    .content-right {
+      @apply flex items-center;
+    }
+
+    .content-left {
+      @apply flex-1;
+    }
+
+    .content-right {
+      @apply text-sm ml-4;
+    }
+  }
+
+  .error-msg {
+    @apply text-warning_color text-xs py-1 absolute;
+  }
+}

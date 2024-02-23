@@ -1,0 +1,37 @@
+:local(.currency-popup) {
+  @apply w-full h-full bg-bg_color;
+
+  .rv-checkbox {
+    @apply flex flex-row-reverse justify-between my-8 text-base text-text_color_01 font-medium mx-4;
+  }
+
+  .rv-button {
+    @apply fixed bottom-10 left-4 right-4;
+  }
+
+  .rv-checkbox__icon {
+    font-size: 16px;
+  }
+
+  .rv-checkbox-group {
+    /* 
+    *   98px = header and searchbar
+    *   82px = button height and margin bottom 
+    */
+    height: calc(var(--vh100) - 98px - 82px);
+    @apply overflow-y-scroll bg-bg_color;
+  }
+
+  img {
+    @apply rounded-full w-5 h-5;
+  }
+
+  .rv-search {
+    @apply pb-0;
+
+    .rv-search__content {
+      @apply h-8;
+    }
+  }
+
+}

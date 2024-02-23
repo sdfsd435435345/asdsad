@@ -1,0 +1,19 @@
+:local(.search) {
+  .rv-cell-group {
+    @apply flex flex-row justify-between items-center px-2;
+  }
+
+  .rv-cell-group > :first-child {
+    @apply text-left;
+  }
+
+  .rv-cell-group > :last-child {
+    @apply text-right;
+  }
+}
+
+:local(.market) {
+  .rv-cell-group {
+    @apply flex flex-row h-14 items-center;
+  }
+}

@@ -1,0 +1,120 @@
+:local(.capital-transfer) {
+  @apply h-screen pb-28;
+
+  .capital-transfer-icon {
+    @apply w-5 h-5;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .capital-transfer-header {
+    @apply p-4;
+
+    .transfer-header-text {
+      @apply mb-2 text-sm font-normal text-text_color_02;
+    }
+
+    .transfer-header-select {
+      @apply h-10 py-2 px-3 flex items-center justify-between rounded bg-bg_sr_color;
+
+      .transfer-header-select-left {
+        @apply flex items-center;
+
+        .header-select-left-icon {
+          @apply w-5 h-5;
+
+          svg {
+            @apply w-full h-full;
+          }
+        }
+
+        .header-select-left-text {
+          @apply ml-1 text-sm font-normal text-text_color_01;
+        }
+      }
+    }
+  }
+
+  .capital-transfer-main {
+    @apply px-4 py-2;
+
+    .capital-transfer-main-wrap {
+      @apply py-4 px-3 flex items-center rounded bg-card_bg_color_02 overflow-hidden;
+
+      .capital-transfer-main-contair {
+        @apply flex-1;
+
+        .switch-icon {
+          @apply pt-0.5;
+        }
+
+        .main-contair-middle-icon {
+          @apply my-2 w-3 h-3 ml-0.5;
+
+          svg {
+            @apply w-full h-full;
+          }
+        }
+        
+        .transfer-main-contair-text {
+          transition: all 0.3s;
+          @apply flex items-center overflow-hidden;
+
+          span {
+            @apply ml-2 text-sm font-normal text-text_color_02;
+          }
+
+          label {
+            @apply flex-1 ml-8 text-sm truncate font-medium text-text_color_01;
+          }
+        }
+
+        .transfer-main-transform-next {
+          transform: translateY(48px)
+        }
+
+        .transfer-main-transform-up {
+          transform: translateY(-48px)
+        }
+      }
+
+      .capital-transfer-main-icon {
+        @apply w-5 h-5;
+
+        svg {
+          @apply w-full h-full;
+        }
+      }
+    }
+  }
+
+  .capital-transfer-footer {
+    @apply p-4;
+
+    .capital-transfer-footer-num {
+      @apply mb-2 flex items-center justify-between text-sm font-normal overflow-hidden;
+
+      .footer-num-text {
+        @apply text-text_color_02;
+      }
+
+      .footer-num-usdt {
+        @apply ml-1 truncate text-right flex-1 text-text_color_01;
+      }
+    }
+  }
+
+  .capital-transfer-sure-button {
+    @apply w-full bg-bg_color pt-6 px-4 pb-10 fixed bottom-0 left-0 right-0;
+
+    .set-up-footer-button {
+      @apply w-full py-2.5 text-sm rounded text-center font-medium;
+
+      .rv-button__text {
+        @apply text-text_color_01;
+      }
+    }
+  }
+}

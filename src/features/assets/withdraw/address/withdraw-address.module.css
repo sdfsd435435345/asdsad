@@ -1,0 +1,94 @@
+:local(.withdraw-address-wrapper) {
+  .edit-btn {
+    @apply text-brand_color
+  }
+
+  .address-list {
+    .address-item {
+      @apply flex p-4 justify-between text-sm;
+
+      .address {
+        @apply w-2/3 break-all font-medium;
+      }
+
+      .network {
+        @apply text-text_color_03;
+      }
+
+      .remark {
+        @apply text-text_color_02 text-xs;
+      }
+    }
+  }
+
+  .address-bottom {
+    @apply text-brand_color mt-8;
+
+    .bottom-icon {
+      @apply w-3.5 h-3.5 self-center
+    }
+  }
+
+  .swipe-edit-btn {
+    @apply !h-full px-5 text-sm !text-button_text_01 rounded-none;
+  }
+
+  .swipe-del-btn {
+    @apply !h-full px-5 text-sm text-button_text_01 rounded-none;
+  }
+
+
+  .rv-swipe-cell__right .rv-button {
+    @apply text-sm text-button_text_01 font-medium
+  }
+
+  .rv-swipe-cell__right .rv-button--primary {
+    @apply bg-brand_color
+  }
+
+  .rv-swipe-cell__right .rv-button--danger {
+    @apply bg-warning_color
+  }
+}
+
+:local(.hint-dialog-root) {
+  @apply flex flex-col  px-6;
+
+  .hint {
+    @apply py-8 text-sm text-text_color_01
+    }
+
+  .rv-button {
+    @apply rounded h-10
+    }
+}
+
+:local(.withdraw-address-edit) {
+  .rv-form .rv-cell {
+    @apply pt-2 pb-6
+  }
+
+  .rv-form .rv-cell .rv-field {
+    @apply p-0
+  }
+
+  .rv-form-item--vertical .rv-field__control-wrapper input {
+    @apply bg-bg_sr_color rounded text-sm
+  }
+
+  .form-btn {
+    @apply fixed bottom-10 px-4 w-full h-10;
+    
+    .rv-button {
+      @apply rounded h-full
+    }
+  }
+
+  .rv-form-item--vertical .rv-field__label {
+    @apply text-sm text-text_color_02;
+  }
+
+  .rv-cell__value {
+    @apply rounded
+  }
+}

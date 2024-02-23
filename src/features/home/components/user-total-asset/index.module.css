@@ -1,0 +1,60 @@
+:local(.total-unit-popover-root) {
+  .rv-popover__arrow {
+    @apply hidden;
+  }
+    
+  .rv-popover__content {
+    @apply bg-card_bg_color_03 -mt-2.5;
+  }
+    
+  .unit-popover-content {
+    @apply py-1.5 px-3 text-xs text-text_color_01;
+        
+    .unit-popover-item {
+      @apply mb-4 last:mb-0;
+    
+      min-width: 36px;
+    }
+        
+    .unit-popover-item-active {
+      @apply text-brand_color;
+    }
+        
+    .unit-popover-more {
+      @apply flex items-center mt-4;
+        
+      .more-icon {
+        @apply transform -rotate-90 ml-1;
+        
+        svg {
+          @apply w-2 h-2;
+        }
+      }
+    }
+  }
+}
+
+:local(.scoped) {
+  @apply flex flex-row items-center justify-between px-4 pt-3;
+
+  .dropdown-menu-icon {
+    font-size: 8px;
+    @apply ml-2 mt-0;
+  }
+
+  .encrypt-icon {
+    font-size: 18px;
+    @apply mt-0 ml-2;
+  }
+
+  .total-asset-button {
+    min-width: 88px;
+    height: 30px;
+    @apply font-medium text-sm text-button_text_02;
+  }
+
+  .total-num span {
+    font-size: 24px;
+    @apply font-bold;
+  }
+}

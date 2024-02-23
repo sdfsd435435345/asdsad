@@ -1,0 +1,14 @@
+:local(.scoped) { 
+  .customer-service-content {
+    border-radius: 50%;
+    @apply hidden w-12 h-12 bg-brand_color flex items-center justify-center;
+
+    .customer-service-icon {
+      @apply w-6 h-6;
+
+      svg {
+        @apply w-6 h-6;
+      }
+    }
+  }
+}

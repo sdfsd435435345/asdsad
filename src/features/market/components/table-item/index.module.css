@@ -1,0 +1,29 @@
+:local(.scoped) {
+  .rv-cell-group {
+    @apply flex flex-row h-14 items-center;
+  }
+
+  .table-item-price .rv-cell__title {
+    @apply text-right;
+  }
+
+  .table-item-changes {
+    @apply text-center py-0;
+  }
+
+  .table-item-up {
+    @apply bg-buy_up_color;
+  }
+
+  .table-item-down {
+    @apply bg-sell_down_color;
+  }
+
+  .table-item-up, .table-item-down {
+    @apply py-2 rounded-md;
+  }
+
+  .table-item-changes .rv-cell__value {
+    @apply text-center text-text_color_01;
+  }
+}

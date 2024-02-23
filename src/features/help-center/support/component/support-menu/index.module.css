@@ -1,0 +1,77 @@
+:local(.scoped) {
+  .support-collapse-swagger {
+    .hidden-icon {
+      .rv-icon {
+        @apply hidden;
+      }
+
+      .rv-collapse-item__wrapper {
+        @apply hidden;
+      }
+    }
+
+    .rv-cell {
+      @apply flex items-center overflow-hidden;
+
+      .rv-cell__left-icon {
+        @apply w-5 h-5;
+
+        svg {
+          @apply w-5 h-5;
+        }
+      }
+
+      .rv-cell__title {
+        @apply flex-1 text-base font-semibold text-text_color_01 truncate;
+      }
+    }
+
+    .select-item > .rv-cell > .rv-cell__title {
+      @apply text-brand_color;
+    }
+
+    .rv-collapse-item::after {
+      @apply border-transparent;
+    }
+
+    .rv-cell--clickable:hover {
+      @apply bg-transparent;
+    }
+
+    .rv-collapse-item__content {
+      @apply pl-7 bg-bg_color;
+    }
+
+    .support-collapse-swagger-item {
+      .rv-cell {
+        .rv-cell__right-icon {
+          @apply hidden;
+        }
+
+        .rv-cell__title {
+          @apply text-sm;
+        }
+      }
+
+      .rv-collapse-item__content {
+        @apply pb-0;
+
+        .collapse-content-item {
+          @apply mb-2 text-sm font-normal text-text_color_01;
+        }
+      }
+    }
+
+    .support-article-box {
+      @apply mb-2 pl-4;
+
+      .support-article-text {
+        @apply mb-1 text-sm text-text_color_01;
+      }
+
+      .support-article-time {
+        @apply text-xs text-text_color_03;
+      }
+    }
+  }
+}

@@ -1,0 +1,133 @@
+:local(.common-list-item) {
+  .center-footer-common-list {
+    border-bottom: 0.5px solid var(--line_color_02);
+    @apply p-4;
+  
+    .footer-common-list-title {
+      @apply mb-3 flex items-center;
+  
+      .tilte-line {
+        @apply h-3 w-0.5 rounded-3xl;
+      }
+  
+      .title-buy-line {
+        @apply bg-buy_up_color;
+      }
+  
+      .title-sell-line {
+        @apply bg-sell_down_color;
+      }
+  
+      .title-text {
+        @apply ml-1 text-sm font-medium;
+      }
+  
+      .title-sell-text {
+        @apply text-sell_down_color;
+      }
+  
+      .title-buy-text {
+        @apply text-buy_up_color;
+      }
+  
+      .list-title-content {
+        @apply px-1 py-px ml-2 rounded-sm;
+  
+        .list-title-content-status {
+          transform: scale(0.83);
+          @apply text-xs font-medium;
+        }
+      }
+  
+      .resting {
+        @apply text-text_color_03 bg-card_bg_color_02;
+      }
+  
+      .normal {
+        @apply text-buy_up_color bg-buy_up_color_special_02;
+      }
+  
+      .dealing {
+        @apply text-brand_color bg-brand_color_special_02;
+      }
+    }
+  
+    .footer-common-list-body {
+      border-bottom: 0.5px solid var(--line_color_02);
+  
+      .common-list-body-item {
+        @apply mb-2 text-xs flex items-center justify-between;
+  
+        .list-body-item-left {
+          @apply font-normal text-text_color_02;
+        }
+  
+        .list-body-item-right {
+          @apply font-medium text-text_color_01;
+        }
+      }
+    }
+        
+    .footer-common-list-mode {
+      @apply mt-4 flex items-center justify-between;
+  
+      .list-mode-left {
+        @apply flex items-center;
+  
+        .list-mode-left-title {
+          @apply flex items-center mr-2;
+  
+          .left-title-line {
+            @apply h-3 w-0.5 rounded-3xl;
+          }
+  
+          .BANK {
+            @apply bg-brand_color;
+          }
+  
+          .ALIPAY {
+            background-color: #6195F6;
+          }
+  
+          .WECHAT {
+            @apply bg-buy_up_color;
+          }
+      
+          .left-title-text {
+            @apply ml-1 text-xs font-normal;
+          }
+
+          .text {
+            @apply text-text_color_02;
+          }
+
+          .disabled-line-bg {
+            @apply bg-text_color_04;
+          }
+
+          .disabled-line-text {
+            @apply text-text_color_04;
+          }
+        }
+      }
+  
+      .list-mode-right {
+        @apply flex items-center;
+  
+        .list-mode-right-title {
+          @apply flex items-center;
+      
+          .right-title-text {
+            @apply ml-2 text-sm font-medium text-text_color_01;
+          }
+        }
+      }
+    }
+  }
+}
+
+:local(.common-list-item-popup) {
+  .popup-tips {
+    @apply text-center;
+  }
+}

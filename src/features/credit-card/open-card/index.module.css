@@ -1,0 +1,245 @@
+:local(.scoped) {
+  .rv-form {
+    @apply px-4 mt-6 ;
+  }
+
+  .text-left {
+    @apply text-text_color_02;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+  }
+
+  .text-right {
+    @apply text-text_color_01;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: right;
+  }
+
+  .rv-field__label {
+    @apply mb-0
+  }
+
+  .rv-field__label {
+    @apply mr-0
+
+  }
+
+  .rv-cell {
+    padding: 2px 0 0;
+
+    input {
+      height: 40px
+    }
+
+  }
+
+  .usdt-text {
+    @apply text-text_color_04 font-normal tracking-normal text-left;
+
+    font-size: 12px;
+    line-height: 18px;
+
+  }
+
+  padding: 0 10px;
+
+  .content {
+    @apply text-text_color_01;
+
+    margin-top: 23.5px;
+
+
+  }
+
+  .card-type-btns {
+    @apply flex rounded ;
+
+    display: flex;
+    height: 30px;
+    padding: 2px;
+    background-color: #30373F;
+    border-radius: 4px;
+
+    span {
+      flex: 1;
+      text-align: center;
+      border-radius: 4px;
+
+    }
+
+    .active {
+      background-color: #01BC94;
+    }
+
+  }
+
+  .tect-cs {
+    @apply flex justify-between mt-6;
+
+  }
+
+  .line-text {
+    @apply bg-bg_sr_color mt-6 mb-6 w-full;
+
+    height: 0.5px
+
+  }
+
+  .open-card-text {
+    @apply relative;
+
+    .balance-account-text {
+      @apply text-brand_color absolute right-0 font-normal text-left tracking-normal;
+
+      font-size: 14px;
+      line-height: 22px;
+    
+    }
+
+    .warn-text {
+      @apply text-sell_down_color;
+    }
+  }
+
+  .expense {
+    @apply w-full;
+
+    height: 98px;
+
+    .kk-expense {
+      @apply flex justify-between;
+
+    }
+
+    .jx-expense {
+      @apply mt-4 mb-4 flex justify-between;
+
+    }
+
+    .dz-expense {
+      @apply flex justify-between;
+  
+    }
+  }
+
+  .top-up {
+    margin-top: 86px;
+    margin-bottom: 40.5px;
+
+    button {
+      @apply w-full bg-brand_color border-none;
+
+      &:active {
+        @apply text-text_color_01;
+      }
+    }
+  }
+
+  .balance-Insufficient {
+    margin-top: 86px;
+
+    .rv-button.rv-button--primary {
+      @apply bg-bg_sr_color;
+
+      &:first-child {
+        @apply mb-4 text-text_color_01;
+      }
+
+      &:last-child {
+        color: var(--rd-05);
+      }
+    }
+
+    button {
+      @apply w-full bg-bg_sr_color border-none;
+
+      &:active {
+        @apply text-text_color_04;
+      }
+    }
+  }
+
+
+    
+}
+
+
+:local(.dialog-pwd) {
+  .pwd-Input {
+    height: 40px !important;
+    margin: 0;
+
+    .rv-password-input__security {
+      height: 40px !important;
+
+      .rv-password-input__item {
+        width: 36px;
+        height: 40px !important;
+        background-color: #30373F;
+
+        i {
+          color: transparent;
+          background-color: #ffffff;
+        }
+      }
+    }
+
+
+    input {
+      height: 40px !important;
+      caret-color: transparent !important;
+    }
+  }
+}
+
+
+:local(.customNumberKeyboard) {
+  .rv-key {
+    color: black;
+  }
+}
+
+:local(.dialog-pwd-disabled) {
+  .pwd-Input {
+    height: 40px !important;
+    margin: 0;
+
+    .rv-password-input__security {
+      height: 40px !important;
+
+      .rv-password-input__item {
+        @apply w-9;
+
+        height: 40px !important;
+        background-color: #30373F;
+
+        i {
+          color: transparent;
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    input {
+      height: 40px !important;
+      caret-color: transparent !important;
+    }
+
+  }
+
+  .rv-dialog__footer {
+    .rv-dialog__confirm {
+      color: #5A626B !important;
+      background-color: #3C4651 !important;
+    }
+  }
+ 
+}

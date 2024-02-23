@@ -1,0 +1,28 @@
+:local(.scoped) {
+  .handle-button-icon {
+    @apply flex flex-row justify-around text-center mt-4;
+
+    div {
+      @apply text-xs;
+    }
+  
+    .rv-icon {
+      font-size: 24px;
+      @apply mb-1;
+    }
+  
+    > :first-child {
+      @apply flex-none;
+    }
+  }
+ 
+  .handle-button {
+    @apply flex justify-between mx-4 mt-4 mb-8;
+
+    div {
+      width: 46%;
+      @apply rounded-2xl bg-brand_color h-[36px] flex items-center justify-center;
+    }
+  }
+}
+

@@ -1,0 +1,618 @@
+
+/* 自定义字体配置，数字和字母采用 DINPro
+unicode-range: U+0020-00FF https://www.ssec.wisc.edu/~tomw/java/unicode.html
+*/
+@font-face {
+  font-weight: 300;
+  font-family: DINPro;
+  src: url('/font/DINPro/DINPro-Regular.woff2') format('woff2'), url('/font/DINPro/DINPro-Regular.woff') format('woff');
+  unicode-range: U+0020-00FF;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-weight: 400;
+  font-family: DINPro;
+  src: url('/font/DINPro/DINPro-Regular.woff2') format('woff2'), url('/font/DINPro/DINPro-Regular.woff') format('woff');
+  unicode-range: U+0020-00FF;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-weight: 500;
+  font-family: DINPro;
+  src: url('/font/DINPro/DINPro-Medium.woff2') format('woff2'), url('/font/DINPro/DINPro-Medium.woff') format('woff');
+  unicode-range: U+0020-00FF;
+  font-display: swap;
+} 
+
+@font-face {
+  font-weight: 600;
+  font-family: DINPro;
+  src: url('/font/DINPro/DINPro-Bold.woff2') format('woff2'), url('/font/DINPro/DINPro-Bold.woff') format('woff');
+  unicode-range: U+0020-00FF;
+  font-display: swap;
+} 
+
+@font-face {
+  font-weight: 700;
+  font-family: DINPro;
+  src: url('/font/DINPro/DINPro-Bold.woff2') format('woff2'), url('/font/DINPro/DINPro-Bold.woff') format('woff');
+  unicode-range: U+0020-00FF;
+  font-display: swap;
+} 
+
+body {
+  font-family: DINPro, -apple-system, system-ui, 'PingFang SC', 'Microsoft Yahei', 'Heiti SC', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+
+  @apply text-text_color_01;
+
+  /** 放在 body 下才能覆盖默认情况 */
+
+  /** radio */
+  .rv-radio__label:not(.rv-radio__label--disabled) {
+    @apply text-text_color_01;
+  }
+
+  .rv-radio__label--disabled {
+    @apply text-text_color_04;
+  }
+
+  /** textarea */
+  .rv-textarea .rv-textarea__control {
+    @apply text-text_color_01;
+  }
+
+  .rv-tabs__nav {
+    @apply bg-bg_color;
+  }
+
+  .rv-nav-bar__content {
+    @apply bg-bg_color;
+  }
+
+  .rv-cell {
+    @apply bg-bg_color;
+  }
+
+  .rv-cell {
+    @apply bg-bg_color !important;
+  }
+
+  input {
+    @apply bg-bg_color !important;
+  }
+
+  .rv-input {
+    input{
+      height: 48px !important;
+      line-height: 48px !important;
+    }
+  }
+
+  .rv-field__label {
+    @apply flex items-center  !important;
+  }
+
+  .rv-cell::after {
+    border-bottom: 0 !important;
+  }
+
+  /** action-sheet */
+  .rv-action-sheet {
+    @apply text-text_color_01;
+
+    .rv-action-sheet__item:active, .rv-action-sheet__cancel:active {
+      background: none !important;
+    }
+
+    .rv-action-sheet__cancel, {
+      @apply bg-card_bg_color_03 text-text_color_02;
+    }
+
+    .rv-action-sheet__item {
+      @apply bg-card_bg_color_03;
+    }
+
+    .rv-action-sheet__gap {
+      @apply bg-line_color_02 h-1;
+    }
+
+    /* 添加分割线 */
+    .rv-action-sheet__content {
+      @apply divide-y divide-line_color_02 divide-solid;
+    }
+
+    .rv-action-sheet__description {
+      @apply bg-card_bg_color_03 text-text_color_01;
+
+      &::after {
+        @apply border-b-line_color_02;
+      }
+    }
+  }
+  
+  /** search */
+  .rv-search {
+    @apply bg-transparent;
+  }
+}
+
+.customize-link-style {
+  @apply text-brand_color;
+
+  &:active {
+    @apply text-brand_color_hover;
+  }
+}
+
+
+
+/* 去除浏览器自动填充背景色 */
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--nc-01);
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* 待修改 vant 源码 */
+button.rv-button {
+  /** 默认有圆角 40 高度 */
+  --rv-button-default-height: 40px;
+  @apply font-medium text-button_text_02 rounded-lg;
+}
+
+button.rv-button--disabled {
+  @apply bg-bg_button_disabled border-bg_button_disabled text-text_color_04 opacity-100 font-medium;
+}
+
+/** 主要按钮  */
+button.rv-button.rv-button--primary {
+  @apply bg-brand_color border-brand_color text-button_text_02;
+
+  &:active {
+    @apply bg-brand_color_animate border-brand_color_animate;
+
+    &::before {
+      @apply opacity-0;
+    }
+  }
+
+  &[disabled] {
+    @apply bg-bg_button_disabled text-text_color_04 border-bg_button_disabled;
+  }
+}
+
+button.rv-button.rv-button--large {
+  @apply h-12 text-base;
+}
+
+
+.rv-field__body {
+  @apply bg-bg_sr_color !important
+}
+
+div.rv-form-item--vertical .rv-field__control-wrapper .rv-input input {
+  @apply bg-bg_sr_color;
+}
+
+.rv-search__content {
+  @apply bg-bg_sr_color !important
+}
+
+input.rv-input__control {
+  --rv-input-placeholder-text-color: var(--nc-07);
+  @apply text-sm font-normal text-text_color_01
+}
+
+/** 给输入框添加一种选项 */
+div.rv-textarea.text-xs {
+  --rv-input-placeholder-text-font-size: 12px;
+}
+
+.rv-textarea {
+  .rv-textarea__word-limit {
+    @apply text-text_color_04;
+  }
+}
+
+/** 上传组件样式，参考申诉提交资料 */
+.newbit-uploader-wrapper {
+  --rv-uploader-size: 76px;
+  --rv-uploader-upload-background-color: var(--bg_color);
+
+  .rv-uploader__upload {
+   
+
+    @apply border-dashed border border-line_color_02 rounded;
+
+    .rv-uploader__upload-icon {
+      font-size: 22px;
+    }
+  }
+
+  .rv-uploader__preview-image,
+  .rv-uploader__file {
+    @apply px-0 border-solid border border-line_color_01 rounded;
+  }
+
+
+
+  .del-icon {
+    @apply text-sm absolute -right-1 -top-2;
+  }
+}
+
+/** checkbox  */
+div.rv-checkbox {
+  .rv-checkbox__label {
+    @apply text-text_color_01;
+  }
+}
+
+/* 修改 tab 样式 */
+div.rv-tab {
+  @apply text-sm text-text_color_02 font-medium;
+}
+
+div.rv-tabs.nav-transparent {
+  .rv-tabs__nav {
+    @apply bg-transparent;
+  }
+  @apply text-sm text-text_color_02 font-medium
+}
+
+div.rv-tabs__nav--start .rv-tab {
+  @apply px-4;
+}
+
+.rv-tabs__line {
+  @apply w-5 h-0.5
+}
+
+div.rv-tab.rv-tab--active {
+  @apply text-text_color_01
+}
+
+.rv-nav-bar__title {
+  @apply text-lg text-text_color_01 font-medium
+}
+
+.rv-nav-bar__arrow .icon-index-module__scoped--bUk svg.rv-icon {
+  @apply w-5 h-5;
+}
+
+.rv-popup {
+  @apply bg-card_bg_color_01;
+
+  /** 底部弹窗默认上面有圆角 */
+  &.rv-popup--bottom {
+    @apply rounded-t-lg;
+
+    &.h-full {
+      height: 100%;
+
+      @apply rounded-t-none;
+    }
+  }
+}
+
+.rv-hairline--bottom {
+  @apply border-line_color_02
+}
+
+.rv-hairline--bottom::after {
+  @apply border-line_color_02
+}
+
+div.rv-popover .rv-popover__content {
+  @apply py-2.5 px-3 bg-card_bg_color_03;
+}
+
+.rv-dialog.rv-popup {
+  @apply bg-card_bg_color_03;
+}
+
+.rv-cell--required::before {
+  content: '';
+  @apply hidden;
+}
+
+.rv-form-item--vertical {
+  @apply flex-col;
+
+  .rv-field__label {
+    @apply w-auto !important;
+  }
+}
+
+.rv-overlay {
+  background: rgb(16 16 20 / 60%)!important;
+}
+
+input {
+  caret-color: var(--brand_color)!important;
+}
+
+/* 默认灰色按钮 */
+button.gray-button {
+  @apply bg-bg_sr_color border-bg_sr_color text-text_color_01;
+
+  &[disabled] {
+    @apply bg-bg_button_disabled text-text_color_04;
+  }
+
+  &:active {
+    @apply bg-button_hover_01;
+
+    &::before {
+      @apply opacity-0;
+    }
+  }
+
+  /** 禁用时的背景色浅一些 */
+  &.disable-bg-shallow {
+    &[disabled] {
+      @apply bg-card_bg_color_02 text-text_color_04;
+    }
+  }
+}
+
+/** 适用于背景色为购买出售的按钮，调整禁用和点击时的背景色  */
+button.sell-or-buy-button {
+  @apply text-button_text_01;
+
+  &[disabled] {
+    @apply text-text_color_04;
+
+    background-color: var(--bg_button_disabled) !important;
+    border-color: var(--bg_button_disabled) !important;
+  }
+  
+  &.is-sell {
+    @apply bg-sell_down_color border-sell_down_color;
+
+    &:active {
+      @apply bg-sell_down_color_animate;
+
+      &::before {
+        @apply opacity-0;
+      }
+    }
+  }
+
+  &.is-buy {
+    @apply bg-buy_up_color border-buy_up_color;
+
+    &:active {
+      @apply bg-buy_up_color_animate;
+
+      &::before {
+        @apply opacity-0;
+      }
+    }
+  }
+}
+
+/** 配合 useScaleDom 使用，实现占据剩余宽度，自动缩放，超出省略效果 */
+.overflow-ellipsis-flex-1 {
+  @apply flex-1 w-0 overflow-hidden text-ellipsis whitespace-nowrap;
+}
+
+.overflow-ellipsis {
+  @apply overflow-hidden text-ellipsis whitespace-nowrap;
+}
+
+/** 统一调整弹窗样式，避免影响全局 */
+div.dialog-confirm-wrapper.rv-popup {
+  width: 298px;
+  padding: 30px;
+
+  .rv-dialog__header {
+    @apply pt-0 mb-5;
+  }
+
+  .rv-dialog__content {
+    @apply pb-5 text-sm text-left;
+  }
+
+  .rv-dialog__message {
+    @apply text-text_color_01;
+  }
+
+  .rv-dialog__footer {
+    @apply p-0;
+
+    .rv-dialog__cancel.rv-button,
+    .rv-dialog__confirm.rv-button {
+      @apply h-10 text-sm mx-0 flex justify-center items-center;
+
+      &:first-child:not(:last-child) {
+        @apply mr-4;
+      }
+
+      .rv-button__content {
+        @apply h-10;
+      }
+    }
+  }
+
+  .rv-dialog__message {
+    @apply p-0 text-left;
+  }
+
+  .rv-dialog__footer {
+    .rv-dialog__cancel.rv-button {
+      @apply bg-card_bg_color_03 border-brand_color text-brand_color;
+
+      /** 这种特殊的激活色要调整 */
+      &:active {
+        @apply text-brand_color_animate border-brand_color_animate;
+
+        &::before {
+          @apply opacity-0;
+        }
+      }
+    }
+  }
+
+  &.cancel-gray {
+    .rv-dialog__footer {
+      .rv-dialog__cancel.rv-button {
+        @apply bg-card_bg_color_03 border-line_color_01 text-text_color_02;
+
+        &:active {
+          @apply bg-button_hover_01;
+
+          &::before {
+            @apply opacity-0;
+          }
+        }
+      }
+    }
+  }
+  
+  &.confirm-black {
+    .rv-dialog__footer {
+      .rv-dialog__confirm.rv-button {
+        @apply bg-brand_color border-brand_color text-button_text_02;
+      }
+    }
+  }
+}
+
+.rv-action-sheet__wrapper {
+  @apply rounded-t-2xl !important;
+}
+
+
+/* toast 成功/失败样式 */
+.rv-toast.rv-popup {
+  @apply rounded !important;
+
+  .rv-toast__info {
+    @apply text-button_text_01;
+  }
+}
+
+/** selector */
+div.rv-selector {
+  --rv-selector-checked-text-color: var(--brand_color);
+  
+  .rv-selector__item {
+    &:not(.rv-selector__item--multiple-active):not(.rv-selector__item--active) {
+      @apply bg-bg_sr_color text-text_color_01;
+    }
+    
+  }
+
+  &.size-small {
+    .rv-selector__item {
+      @apply mb-2 mr-2 text-xs py-1.5;
+    }
+  }
+}
+
+/** rv-cell */
+div.rv-cell--clickable:active {
+  @apply bg-bg_color_03;
+}
+
+/** rv-steps，参考 c2c 订单页的样式 */
+div.rv-steps.dash-brand-style {
+  .rv-step {
+    @apply py-4;
+
+    &::after {
+      @apply hidden;
+    }
+
+    &.rv-step--vertical .rv-step__circle-container {
+      @apply top-6;
+    }
+
+    &:not(:last-child) {
+      .rv-step__line {
+        @apply border-r border-brand_color_special_02 w-0 border-dashed bg-transparent;
+      }
+    }
+  }
+}
+
+/** 文字大小相关，后续加入 tailwind */
+.text-40xl {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.text-xs-leading-4\.5 {
+  &.text-xs,
+  .text-xs {
+    line-height: 18px;
+  }
+}
+
+/** 文本，后续加入 tailwind   */
+.text-leading-1-5 {
+  .text-xs, 
+  &.text-xs {
+    line-height: 1.5em;
+  }
+
+  .text-sm,
+  &.text-sm, {
+    line-height: 22px;
+  }
+}
+
+.fusion-mode-dialog {
+  .rv-dialog__header {
+    @apply pt-6 pb-4;
+  }
+
+  .rv-dialog__message {
+    @apply text-left px-6 pb-6 pt-0;
+  }
+
+  .rv-dialog__footer {
+    @apply hidden;
+  }
+}
+
+.bottom-button-wrapper {
+  @apply px-4 pb-12 fixed bottom-0 left-0 w-full z-10 !important;
+}
+
+div.rv-tabs__line {
+  @apply bg-brand_color;
+}
+
+div.rv-switch {
+  @apply bg-bg_sr_color;
+
+  &.rv-switch--on {
+    @apply bg-brand_color;
+  }
+}
+
+div.rv-picker.rv-datetime-picker {
+  @apply bg-card_bg_color_03;
+
+  .rv-picker__mask {
+    @apply hidden;
+  }
+
+  .rv-picker-column__item {
+    @apply text-text_color_03;
+
+    &.rv-picker-column__item--selected {
+      @apply text-brand_color;
+    }
+  }
+
+  .rv-picker__confirm {
+    @apply text-brand_color;
+  }
+}
+

@@ -1,0 +1,32 @@
+{
+  "locales": [
+    "en-US",
+    "zh-CN",
+    "zh-HK"
+  ],
+  "sourceLocale": "zh-CN",
+  "compileNamespace": "ts",
+  "catalogs": [
+    {
+      "path": "src/locales/{locale}/messages",
+      "include": [
+        "src",
+        "renderer"
+      ]
+    }
+  ],
+  "orderBy": "origin",
+  "formatOptions": {
+    "origins": false,
+    "lineNumbers": false
+  },
+  "format": "minimal",
+  "fallbackLocales": {
+    "default": "en-US"
+  },
+  "extractBabelOptions": {
+    "presets": [
+      "@babel/preset-typescript"
+    ]
+  }
+}

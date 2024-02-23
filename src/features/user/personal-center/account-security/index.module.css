@@ -1,0 +1,74 @@
+:local(.scoped) {
+  .account-security-wrap {
+    .account-security-item {
+      @apply flex flex-wrap mb-8 mt-4;
+
+      .item {
+        @apply w-2/4 mb-2;
+
+        &:nth-child(2n) {
+          @apply pl-1;
+        }
+  
+        &:nth-child(2n+1) {
+          @apply pr-1;
+        }
+      }
+    }
+
+    .login-item {
+      @apply px-4;
+
+      .rv-cell {
+        @apply px-0 py-2 mb-2 flex items-center;
+    
+        .rv-cell__title {
+          @apply text-sm font-normal text-text_color_01;
+        }
+    
+        .rv-cell__value {
+          font-size: 13px;
+          @apply font-normal text-text_color_03;
+    
+          span {
+            @apply leading-6;
+          }
+        }
+
+        .rv-cell__value + div {
+          @apply mt-0;
+        }
+
+        svg {
+          @apply text-text_color_01;
+        }
+      }
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}
+
+:local(.account-security-duration) {
+  .duration-wrap {
+    .title {
+      @apply px-8 py-4 text-text_color_01 font-semibold;
+    }
+
+    .item {
+      border-bottom: 1px solid var(--line_color_02);
+      @apply flex items-center justify-center py-3 text-text_color_01;
+    }
+
+    .cancel {
+      @apply flex items-center justify-center;
+
+      .cancel-text {
+        font-size: 16px;
+        @apply py-3 text-text_color_03 mb-5;
+      }
+    }
+  }
+}

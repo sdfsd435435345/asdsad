@@ -1,0 +1,23 @@
+:local(.reminder-popup) {
+  max-height: 50%;
+  @apply rounded-t-lg overflow-hidden bg-card_bg_color_03 flex flex-col;
+
+  .reminder-popup-wrap {
+    @apply flex-1 overflow-auto;
+  
+    .popup-wrap-list {
+      border-bottom: 0.5px solid var(--line_color_02);
+      @apply py-4 text-sm text-center text-text_color_01 font-medium;
+    }
+  
+  
+    .select-list {
+      @apply text-brand_color;
+    }
+  }
+
+  .popup-wrap-bottom {
+    border-top: 3.5px solid var(--line_color_02);
+    @apply py-4 text-sm text-center text-text_color_02;
+  }
+}

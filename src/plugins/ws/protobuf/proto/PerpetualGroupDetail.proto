@@ -1,0 +1,79 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.perpetual";
+option java_outer_classname = "PerpetualGroupDetailProto";
+
+message PerpetualGroupDetail{
+  Detail detail = 1; //合约组详情
+  repeated Positions positions = 2;//合约组持仓列表
+
+  message Detail{
+    string groupAsset = 1;//合约组总价值
+    string marginAvailable = 2;//合约组可用保证金
+    string positionMargin = 3;//仓位保证金
+    repeated MarginCoin marginCoin = 4;//保证金占比
+    repeated PositionAsset positionAsset = 5;//持仓风险占比
+    string groupId = 6;//合约组 ID
+    string baseCoin = 7;//计价币
+  string groupName = 8;//合约组名称
+    string availableBalanceValue = 9;//现货资产购买力
+  }
+
+  message MarginCoin{
+    string coinName = 1;//币种名称
+    string coinConvert = 2;//折算价值
+  }
+
+  message PositionAsset{
+    string groupId = 1;//合约组 ID
+    string groupName = 2;//合约组名称
+    string baseCoin = 3;//计价币
+  }
+
+  message Positions{
+    string groupId = 1;//合约组 id
+    string groupName = 2;//合约组名称
+    string groupMargin = 3;//合约组保证金
+    string tradeId = 4;//交易对 id
+    string symbol = 5;//交易对名称
+    string baseSymbolName = 6;//基础币
+    string quoteSymbolName = 7;//计价币
+    string typeInd = 8;//合约类型
+    string positionId = 9;//仓位 id
+    string sideInd = 10;//long:多仓; short:空仓
+    string lever = 11;//杠杆倍数
+    string unrealizedProfit = 12;//未实现盈亏
+    string profitRatio = 13;//收益率
+    string size = 14;//持仓数量
+    string marginRatio = 15;//仓位保证金率
+    string maintMarginRatio = 16;//维持保证金率
+    string openPrice = 17;//开仓均价
+    string markPrice = 18;//标记价格
+    string latestPrice = 19;//最新价
+    string liquidatePrice = 20;//预估强平价
+    string realizedProfit = 21;//已实现盈亏
+    string profit = 22;//收益
+    string statusCd = 23;//仓位状态：opened:已开仓，closed:已关闭，locked:锁仓中
+    string lockSize = 24;//锁仓数量
+    string lockFees = 25;//锁仓利息
+    string amountOffset = 26;//数量精度
+
+    string priceOffset = 27;//价格精度
+    string createdByTime = 28;//创建时间
+    string updatedByTime = 29;//修改时间
+    LockRecord lockRecord = 30;//锁仓记录
+    repeated ProfitLossEntrust profitLossEntrust = 31;//仓位止盈止损
+        string entrustFrozenSize=32;//委托冻结的数量
+  }
+
+  message LockRecord{
+    string lockPrice = 1;//首次锁仓价格
+    string fees = 2;//锁仓手续费总和
+  }
+
+  message ProfitLossEntrust{
+    string strategyTypeInd = 1;//策略类型 stop_profit 止盈 stop_loss 止损
+    string triggerPrice = 2;//触发价格
+    string triggerPriceTypeInd = 3;//触发方式：mark 标记，new 最新
+    string id = 4;//仓位止盈止损 id
+  }
+}

@@ -1,0 +1,62 @@
+:local(.third-order-detail) {
+  .wrap {
+    .header {
+      @apply p-4 border-b-4 border-solid border-line_color_02;
+
+      .title {
+        @apply text-xl font-medium text-text_color_01 mb-1;
+
+        line-height: 30px;
+      }
+
+      .sub-title {
+        @apply text-xs text-text_color_01;
+
+        line-height: 18px;;
+      }
+    }
+
+    .order-info {
+      @apply p-4;
+
+      .order-title {
+        @apply text-base font-medium mb-4;
+      }
+
+      .info-cell {
+        @apply flex justify-between mb-4;
+
+        .label {
+          @apply text-sm text-text_color_02;
+
+          line-height: 22px;
+        }
+
+        .value {
+          @apply text-sm text-text_color_01;
+
+          line-height: 22px;
+
+          &.sell {
+            @apply font-medium;
+
+            color: var(--rd-05);
+          }
+
+          &.buy {
+            color: var(--gr-05)
+          }
+        }
+
+      }
+
+      .divider {
+        @apply border-solid border-line_color_02 mb-4;
+
+        height: 1px;
+        border-bottom-width: 0.5px;
+      }
+    }
+  }
+}
+

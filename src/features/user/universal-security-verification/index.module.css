@@ -1,0 +1,52 @@
+:local(.scoped) {
+  @apply px-4 py-4 flex fixed inset-0 bg-bg_color;
+
+  z-index: 2001;
+
+  .universal-security-verification-wrap {
+    @apply w-full;
+
+    .header {
+      font-size: 17px;
+      @apply flex justify-end font-medium;
+
+      .close {
+        svg {
+          @apply w-5 h-5;
+        }
+      }
+    }
+
+    .rv-field {
+      @apply p-0 bg-transparent;
+    }
+
+    .rv-field__suffix {
+      @apply text-sm mr-3 text-brand_color;
+    }
+
+    .rv-form--vertical {
+      @apply mt-8;
+    }
+
+    .rv-form-item--vertical {
+      @apply mt-8;
+    }
+
+    .safety-items {
+      @apply mt-8 text-center;
+
+      span {
+        @apply text-sm;
+      }
+    }
+
+    input {
+      @apply pr-20;
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

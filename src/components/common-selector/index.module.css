@@ -1,0 +1,7 @@
+:local(.scoped) {
+  :local(.scoped) {
+    > * {
+      @apply text-xs font-normal p-2 !important;
+    }
+  }
+}

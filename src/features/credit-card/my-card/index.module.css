@@ -1,0 +1,163 @@
+:local(.scoped) {
+  .rv-nav-bar__left .rv-nav-bar__arrow {
+    @apply w-auto;
+  }
+
+  .rv-nav-bar__left:active {
+    opacity: 1;
+  }
+
+  .rv-nav-bar__left .activeText {
+    @apply text-text_color_03 mr-8 text-left tracking-normal;
+
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+  }
+
+  .rv-nav-bar__left .tabActive {
+    @apply text-text_color_01;
+
+    
+  }
+
+
+
+  .navrig {
+    /* 申请新卡 */
+    @apply text-buy_up_color
+}
+
+  .content {
+    @apply mt-6;
+
+   
+    .content-text {
+      @apply mx-4 tracking-normal text-left;
+
+      margin-top: 15px;
+
+      .text1 {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+
+       
+      }
+
+      .text2 {
+        @apply text-text_color_02 mt-2 font-normal;
+
+        font-size: 14px;
+        line-height: 18px;
+
+        div {
+          @apply mb-2;
+
+          a {
+            color: #01BC94;
+
+          }
+        }
+
+      }
+    }
+
+    .announcement {
+      @apply mt-6;
+
+      .announcement-title {
+        @apply w-full h-12;
+
+        border-top: 4px solid #30373F;
+        border-bottom: 0.5px solid #30373F;
+
+        .announcement-title-content {
+          @apply flex justify-between mx-4 mt-3;
+
+          .title-content-left {
+            @apply font-medium  leading-6 tracking-normal text-left;
+
+            font-size: 16px;
+            
+
+          }
+        }
+
+        .announcement-link {
+          color: #ffffff
+        }
+      }
+
+      .announcement-content-text {
+        @apply mt-3 mx-4;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .common-div-text {
+          @apply text-left tracking-normal text-text_color_01;
+
+          font-size: 14px;
+          line-height: 22px;
+          
+        }
+
+        .common-div-date {
+          @apply text-left tracking-normal text-text_color_02 mt-1;
+
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        .common-div {
+          @apply mb-4
+        }
+      }
+    }
+
+    .confirm-payment {
+      @apply mt-4 ml-4 mr-4 mb-4;
+
+      button {
+        @apply w-full bg-brand_color border-none;
+
+        &:active {
+          @apply text-text_color_01;
+        }
+      }
+    }
+
+
+  }
+
+  .card-list {
+    div {
+      @apply mt-6;
+    }
+  }
+
+  .confirm-payment {
+    @apply mt-4 ml-4 mr-4;
+
+    button {
+      @apply w-full bg-brand_color border-none;
+
+      &:active {
+        @apply text-text_color_01;
+      }
+    }
+  }
+
+  .pin-card-no {
+    width: 108px;
+    height: 110px;
+    margin-top: 200px;
+    margin-left: 50%;
+    transform: translate(-50%);
+  }
+}
+
+
+

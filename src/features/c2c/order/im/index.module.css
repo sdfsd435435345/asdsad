@@ -1,0 +1,9 @@
+:local(.im-page-wrapper) {
+  @apply fixed w-full h-full left-0 top-0 flex flex-col overflow-y-auto;
+
+  .nickname {
+    @apply overflow-hidden whitespace-nowrap text-ellipsis;
+
+    max-width: 160px;
+  }
+}

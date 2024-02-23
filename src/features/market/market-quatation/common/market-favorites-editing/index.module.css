@@ -1,0 +1,47 @@
+:local(.scoped) {
+  .rv-tab {
+    @apply grow-0;
+  }
+}
+
+:local(.fav-edit-popover) {
+  @apply w-full h-full bg-bg_color !important;
+
+  .rv-divider--hairline {
+    height: 0.5px;
+    @apply text-line_color_02;
+  }
+
+  .rv-tabs__nav {
+    @apply border-none;
+  }
+
+  .rv-tab {
+    @apply flex-grow-0 rounded border-none;
+
+    .rv-tab__text {
+      width: 60px;
+      @apply text-center text-text_color_02;
+    }
+  }
+
+  .rv-tab--active {
+    @apply border-none bg-card_bg_color_02 !important;
+
+    .rv_tab__text {
+      @apply text-text_color_01;
+    }
+  }
+
+  .pair-name {
+    .base-symbol-name {
+      font-size: 16px;
+      @apply font-medium text-text_color_01;
+    }
+
+    .quote-symbol-name {
+      font-size: 12px;
+      @apply text-text_color_02;
+    }
+  }
+}

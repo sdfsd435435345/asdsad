@@ -1,0 +1,85 @@
+:local(.scoped) {
+  .register-wrap {
+    @apply px-4 py-4 flex flex-col min-h-screen;
+
+    .data-list {
+      @apply px-0;
+    }
+
+    .title {
+      @apply text-2xl text-text_color_01 font-semibold mb-4 mt-2;
+    }
+
+    .subtitle, .area {
+      @apply mb-8 text-text_color_02;
+    }
+
+    .subtitle {
+      @apply text-sm;
+    }
+
+    .area {
+      @apply text-xs mb-8;
+
+      .tips {
+        @apply mt-4;
+
+        label {
+          @apply text-text_color_03;
+        }
+      }
+
+      a {
+        @apply text-brand_color;
+      }
+
+      .rv-cell {
+        @apply bg-card_bg_color_01 rounded mt-2;
+
+        .rv-cell__title {
+          @apply text-sm leading-6 text-text_color_01;
+        }
+
+        .rv-cell__left-icon {
+          @apply w-4 h-4;
+        }
+      }
+    }
+
+    .rv-search {
+      @apply h-9 rounded-2xl bg-bg_sr_color;
+
+      .rv-field__control-wrapper {
+        ::placeholder {
+          @apply text-sm;
+        }
+      }
+    }
+
+    .rv-cell-group {
+      .rv-cell {
+        @apply h-11 px-0;
+      }
+    }
+  }
+
+  .rv-cell--clickable {
+    height: 42px;
+    @apply flex items-center;
+  }
+
+  .rv-hairline--top-bottom::after, .rv-hairline-unset--top-bottom::after {
+    @apply border-none
+  }
+
+  .rv-image {
+    img {
+      @apply w-4 h-4 rounded-full;
+    }
+  }
+
+
+  button {
+    @apply w-full;
+  }
+}

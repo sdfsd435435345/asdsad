@@ -1,0 +1,52 @@
+:local(.form-currency-selection) {
+  /* width: 76px; */
+
+  /* height: 30px; */
+  font-size: 10px;
+  @apply bg-card_bg_color_03 flex flex-row items-center rounded-sm mx-1;
+
+  >:first-child {
+    /* height: 30px !important; */
+    @apply text-center text-text_color_01 bg-card_bg_color_03 flex items-center pl-1.5 !important;
+  }
+
+  svg {
+    font-size: 10px;
+    @apply ml-1 mr-2 my-auto;
+  }
+}
+
+:local(.form-currency-selection-list) {
+  height: 40px;
+  @apply flex flex-row gap-x-2 bg-bg_sr_color rounded py-0;
+
+  .rv-cell__value {
+    @apply flex;
+
+    .rv-field__body, .rv-field__children, .rv-field__suffix {
+      @apply bg-bg_sr_color !important;
+    }
+  }
+
+  .rv-field__control-wrapper {
+    height: 40px;
+    @apply flex items-center;
+  }
+
+  .rv-field__body {
+    @apply flex flex-row items-center w-full;
+  }
+
+  .rv-field__suffix {
+    @apply mr-0 pr-3 right-0.5 top-1/2 -translate-y-1/2 !important;
+  }
+
+  .rv-input__control {
+    height: 30px !important;
+  }
+
+  .rv-input {
+    @apply h-full;
+  }
+
+}

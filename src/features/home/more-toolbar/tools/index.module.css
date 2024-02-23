@@ -1,0 +1,38 @@
+:local(.scoped) {
+  @apply bg-transparent;
+
+  .rv-badge {
+    @apply bg-transparent border-none;
+  }
+
+  .rv-badge--fixed {
+    @apply translate-x-full -translate-y-1/2;
+  }
+
+  .rv-grid-item__content {
+    @apply grid grid-flow-row auto-rows-fr p-1 w-20 h-20 bg-transparent;
+
+    >:first-child {
+      @apply mt-auto mx-auto;
+    }
+
+    >:last-child {
+      @apply text-center;
+    }
+
+    img {
+      @apply w-7 h-7;
+    }
+  }
+
+  .rv-grid-item__text {
+    @apply text-text_color_01;
+  }
+}
+
+
+:local(.placeholder) {
+  .rv-grid-item__content :first-child {
+    @apply m-auto;
+  }
+}

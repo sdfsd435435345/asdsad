@@ -1,0 +1,75 @@
+:local(.total-assets-root) {
+  @apply w-full flex flex-col items-center mb-6;
+
+  .total-header {
+    @apply flex flex-row items-center justify-between w-full;
+
+    .total-header-left {
+      @apply flex flex-row items-center text-xs text-text_color_02;
+
+      line-height: 18px;
+    }
+
+    .total-icon {
+      @apply ml-2;
+
+      font-size: 20px;
+    }
+  }
+
+  .total-num {
+    @apply flex items-end w-full mt-1 text-2xl text-text_color_01 font-semibold leading-9;
+
+    .total-popover {
+      @apply flex flex-row items-center mb-1;
+
+      .total-unit {
+        @apply text-sm text-text_color_01 font-semibold mx-1;
+      }
+        
+      .dropdown-menu-icon {
+        margin-top: 3px;
+
+        svg {
+          @apply w-2 h-2;
+        }
+      }
+    }
+  }
+}
+
+:local(.total-unit-popover-root) {
+  .rv-popover__arrow {
+    @apply hidden;
+  }
+
+  .rv-popover__content {
+    @apply bg-card_bg_color_03 -mt-2.5;
+  }
+
+  .unit-popover-content {
+    @apply py-1.5 px-3 text-xs text-text_color_01;
+    
+    .unit-popover-item {
+      @apply mb-4 last:mb-0;
+
+      min-width: 36px;
+    }
+    
+    .unit-popover-item-active {
+      @apply text-brand_color;
+    }
+    
+    .unit-popover-more {
+      @apply flex items-center mt-4;
+    
+      .more-icon {
+        @apply transform -rotate-90 ml-1;
+    
+        svg {
+          @apply w-2 h-2;
+        }
+      }
+    }
+  }
+}

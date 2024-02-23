@@ -1,0 +1,192 @@
+:local(.ad-item-wrapper) {
+  @apply p-4 text-sm;
+
+  .kyc-button {
+    @apply rounded px-3 py-1 text-brand_color bg-brand_color_special_02;
+  }
+
+  .avatar-container {
+    @apply relative mr-2;
+
+    .avatar {
+      @apply w-5 h-5 rounded-full flex justify-center items-center text-xs text-button_text_02;
+
+      background-image: var(--c2c_ad_avatar_bg_gradinet);
+    }
+
+    .status {
+      @apply absolute bottom-0 w-2 h-2 rounded-full border-white border-solid;
+
+      right: -2px;
+      bottom: -1px;
+      border-width: 1px;
+
+      &.online {
+        @apply bg-success_color;
+      }
+
+      &.offline {
+        @apply bg-bg_button_disabled;
+      }
+
+      &.busy {
+        @apply bg-brand_color;
+      }
+    }
+  }
+
+}
+
+:local(.ad-payment-item) {
+  @apply flex items-center mr-2 last:mr-0;
+
+  &:last-of-type {
+    @apply mr-0;
+  }
+
+  &.text-xs {
+    .name {
+      zoom: 0.85;
+    }
+  }
+  
+}
+
+:local(.ad-payment-item-line) {
+  @apply w-0.5 h-3 rounded-2xl mr-1;
+}
+
+
+:local(.coin-select-item) {
+  .cell-item {
+    @apply py-2 px-4 mb-4;
+
+    .rv-cell__right-icon {
+      @apply hidden;
+    }
+  }
+
+  .coin-item {
+    @apply flex items-center;
+
+    &.is-selected {
+      .short-name,
+      .full-name {
+        @apply text-brand_color;
+      }
+    }
+
+    .short-name {
+      @apply text-base font-medium text-text_color_01 mr-1;
+    }
+
+    .full-name {
+      @apply text-xs text-text_color_02;
+    }
+  }
+}
+
+:local(.index-bar-list-outer) {
+  .index-bar {
+    transform: scale(0.75);
+    
+    @apply text-xs font-medium py-px px-1 flex items-center justify-center text-brand_color;
+  }
+
+  .index-active {
+    @apply bg-brand_color text-button_text_02 rounded-xl
+  }
+}
+
+:local(.search-all-wrapper) {
+  @apply flex items-center px-4 py-2;
+
+  .search-input-wrapper {
+    @apply bg-bg_sr_color px-3 py-1.5 rounded-2xl flex items-center mr-4 flex-1;
+  }
+
+  .divide-line {
+    @apply w-px h-5 bg-button_hover_01 mx-2;
+  }
+}
+
+:local(.filters-popup-wrapper) {
+  .rv-selector__item {
+    &:not(.rv-selector__item--multiple-active) {
+      @apply bg-bg_sr_color;
+    }
+    @apply mb-2 mr-2 text-xs py-1.5;
+  }
+
+  .filter-content {
+    @apply overflow-y-auto;
+  
+    max-height: calc(60 * var(--vh));
+  }
+}
+
+:local(.filter-item) {
+  @apply text-sm mb-6 last:mb-0;
+
+  .label {
+    @apply text-text_color_02 mb-2;
+  }
+
+  .options {
+    .option {
+      @apply mb-3 last:mb-0 flex items-center justify-between;
+
+      .desc {
+        @apply text-text_color_02 text-xs;
+      }
+    }
+  }
+}
+
+:local(.trade-form-wrapper) {
+  @apply bg-card_bg_color_03 text-sm;
+
+  .header {
+    @apply flex p-4 justify-between items-center;
+
+    .price-text {
+      @apply text-xs text-sell_down_color;
+    }
+
+    .title {
+      @apply text-base font-medium;
+    }
+  }
+
+  &.is-buy {
+    .header {
+      .price-text {
+        @apply text-buy_up_color;
+      }
+    }
+  }
+}
+
+:local(.select-sell-payment-wrapper) {
+  @apply pt-4;
+}
+
+/** 账号容器，超出省略 */
+:local(.account-text-wrapper) {
+  @apply whitespace-nowrap overflow-hidden overflow-ellipsis;
+
+  max-width: 50vw;
+}
+
+:local(.qrcode-modal-wrapper) {
+  .qrcode {
+    width: 258px;
+  
+    @apply mx-auto border border-line_color_02 border-solid rounded-lg;
+
+    img {
+      min-height: calc(50 * var(--vh));
+      max-height: calc(70 * var(--vh));
+    }
+  }
+}

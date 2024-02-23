@@ -1,0 +1,71 @@
+:local(.scoped) {
+  .market-changes {
+    border-bottom: 0.5px solid #F2F2F2;
+    @apply p-4 flex justify-between;
+
+    .market-changes-left {
+      @apply flex-1 flex flex-col;
+
+      .changes-left-content {
+        @apply flex items-center;
+
+        .changes-left-tilte {
+          @apply text-sm text-text_color_01;
+        }
+
+        .changes-left-line {
+          @apply m-px text-sm text-text_color_03;
+        }
+
+        .changes-left-text {
+          @apply text-xs text-text_color_03;
+        }
+
+        .changes-left-tag {
+          @apply p-1 ml-1 text-xs rounded-sm bg-card_bg_color_02 text-text_color_03;
+        }
+      }
+
+      .changes-left-footer {
+        @apply flex mt-1;
+
+        .changes-left-time {
+          @apply mr-1 text-xs text-text_color_03;
+        }
+
+        .increase-wrap {
+          @apply text-xs;
+        }
+      }
+    }
+
+    .market-changes-middle {
+      @apply w-1/4 ml-2 flex flex-col items-end justify-between;
+
+      .changes-middle-title {
+        @apply w-full text-right text-sm text-text_color_01 truncate;
+      }
+
+      .changes-middle-text {
+        @apply w-full text-right text-xs text-text_color_03 truncate;
+      }
+    }
+
+    .market-changes-right {
+      @apply ml-3 text-xs flex items-center;
+
+      .changes-right-text {
+        color: #FFFFFF;
+        @apply p-2 bg-warning_color rounded;
+      }
+
+      .back-icon {
+        @apply ml-1 -rotate-90;
+      }
+    }
+  }
+
+  .market-changes-bottom {
+    @apply mt-4 text-xs text-center text-text_color_02;
+  }
+}

@@ -1,0 +1,35 @@
+:local(.scoped) {
+  @apply bg-card_bg_color_01 overflow-x-hidden;
+
+  .section {
+    @apply flex flex-col rounded-lg;
+
+    > div {
+      @apply bg-bg_color mb-2;
+    }
+
+    > :last-child {
+      @apply mb-0;
+    }
+
+    > :first-child {
+      @apply mt-2;
+    }
+
+    .table-section {
+      @apply bg-card_bg_color_01;
+
+      .quote-badge {
+        @apply ml-1 text-text_color_02;
+      }
+  
+      > :first-child {
+        @apply mb-1;
+      }
+  
+      > div {
+        @apply bg-bg_color;
+      }
+    }
+  }
+}

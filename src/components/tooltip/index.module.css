@@ -1,0 +1,34 @@
+:local(.tip-wrapper) {
+  --tootip-bg-color: var(--toast_bg_color);
+
+  &.is-light {
+    --tootip-bg-color: var(--card_bg_color_03);
+
+    .content,
+    .arrow {
+      @apply text-text_color_01;
+
+      /* stylelint-disable-next-line color-function-notation */
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 10%);
+    }  
+  }
+
+  .content,
+  .arrow {
+    @apply fixed text-button_text_01;
+
+    z-index: 9999;
+  }
+
+  .content {
+    @apply py-2 px-3 text-xs rounded-md;
+
+    background-color: var(--tootip-bg-color);
+  }
+
+  .arrow {
+    @apply w-2 h-2 rotate-45 -translate-x-1/2;
+
+    background-color: var(--tootip-bg-color);
+  }
+}

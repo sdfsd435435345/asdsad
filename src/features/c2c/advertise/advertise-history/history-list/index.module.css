@@ -1,0 +1,57 @@
+:local(.history-list-root) {
+  @apply flex flex-col border-b-4 border-line_color_02 last:border-b-0 p-4;
+  
+  .header {
+    @apply flex items-center justify-between mb-3;
+  
+    .coin-info {
+      @apply flex items-center text-sm font-medium;
+  
+      .line {
+        @apply w-0.5 h-3 rounded-2xl mr-1;
+      }
+  
+      .status {
+        @apply rounded-sm flex items-center ml-2 px-0.5;
+
+        height: 18px;
+
+        .status-text {
+          @apply text-xs font-medium;
+
+          transform: scale(0.83);
+        }
+      }
+    }
+
+    .header-operate {
+      @apply text-xs text-brand_color font-medium flex items-center;
+
+      .operate-line {
+        @apply mx-2 text-line_color_02;
+      }
+    }
+  }
+
+  .normal-info {
+    @apply flex flex-col border-line_color_02;
+
+    border-bottom-width: 0.5px;
+  }
+
+  .info-item {
+    @apply flex items-center justify-between mb-2;
+
+    .info-label {
+      @apply text-xs text-text_color_02;
+    }
+
+    .info-value {
+      @apply text-xs text-text_color_01 font-medium;
+    }
+  }
+
+  .bottom {
+    @apply flex items-center justify-between mt-4;
+  }
+}

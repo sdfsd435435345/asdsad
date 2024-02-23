@@ -1,0 +1,24 @@
+:local(.scoped) {
+  .user-layout-wrap {
+    .rv-nav-bar {
+      .rv-nav-bar__content {
+        .rv-nav-bar__title {
+          @apply text-base font-semibold text-text_color_01;
+        }
+
+        .rv-nav-bar__left, .rv-nav-bar__right {
+          svg {
+            @apply w-5 h-5;
+          }
+        }
+      }
+    }
+
+  }
+
+  .hiddent-navbar-left {
+    .rv-nav-bar__left {
+      @apply hidden;
+    }
+  }
+}

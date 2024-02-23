@@ -1,0 +1,61 @@
+:local(.scoped) {
+  .retrieve-wrap {
+    @apply px-4 pb-4;
+
+    .security {
+      @apply mt-4;
+
+      a {
+
+        @apply text-sm;
+      }
+    }
+  
+    .title {
+      @apply text-2xl leading-9 text-text_color_01 font-semibold mb-8;
+    }
+
+    .validate {
+      @apply flex flex-col w-full;
+  
+      label {
+        @apply text-xs mt-1 text-text_color_03;
+      }
+    }
+  
+    .rv-field {
+      @apply p-0 bg-transparent;
+
+      .rv-field__right-icon {
+        line-height: 42px;
+        @apply right-0 top-0 bottom-0 m-auto;
+  
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .rv-field__suffix {
+      @apply text-sm mr-3 text-brand_color;
+    }
+    
+    .rv-form--vertical {
+      @apply mt-8;
+    }
+  
+    .rv-form-item--vertical {
+      @apply mt-8;
+    }
+
+    .rv-form > .rv-cell {
+      input {
+        @apply pr-20;
+      }
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

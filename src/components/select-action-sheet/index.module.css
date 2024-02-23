@@ -1,0 +1,78 @@
+:local(.select-action-sheet-wrapper) {
+  @apply text-sm;
+
+  &+ :local(.select-action-sheet-wrapper) {
+    @apply ml-4;
+  }
+
+  .label {
+    @apply text-text_color_03 mr-0.5 text-xs;
+
+    &.only-name {
+      @apply text-text_color_01;
+    }
+  }
+
+
+}
+
+:local(.actions-sheet-wrapper) {
+  .selected-action {
+    /** TODO: 在 body 内没有覆盖到变量，如果把 theme-light 放到 body 上会有闪烁 */
+    @apply text-brand_color;
+  }
+
+  .custom-header {
+    @apply text-left p-4 bg-card_bg_color_03;
+
+    .title {
+      @apply text-base mb-1 text-text_color_01;
+    }
+
+    .desc {
+      @apply text-xs text-text_color_02 font-normal;
+    }
+  }
+
+  .rv-action-sheet__item {
+    @apply text-text_color_01 bg-card_bg_color_03;
+
+    &.rv-action-sheet__item--disabled {
+      @apply text-text_color_04;
+    }
+  }
+
+  .rv-action-sheet__cancel {
+    @apply bg-card_bg_color_03
+  }
+
+  .selected-action {
+    @apply text-brand_color !important
+  }
+
+  .rv-action-sheet__cancel {
+    @apply text-text_color_02 text-sm
+  }
+
+  .rv-action-sheet__item:active, .rv-action-sheet__cancel:active {
+    background: none !important;
+  }
+
+  .rv-action-sheet__name {
+    @apply font-medium text-sm
+  }
+
+  .rv-action-sheet__gap {
+    @apply h-1 bg-line_color_02
+  }
+
+
+  /* 添加分割线 */
+  .rv-action-sheet__content {
+    @apply divide-y divide-line_color_02 divide-solid;
+  }
+
+  .rv-action-sheet__content .rv-action-sheet__item {
+    @apply border-x-0
+  }
+}

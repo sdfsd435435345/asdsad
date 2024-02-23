@@ -1,0 +1,36 @@
+syntax = "proto3";
+import "google/protobuf/any.proto";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "RequestProto";
+message Request{
+  string event = 1;// login,logout,subscribe,unsubscribe,ping,connect
+  google.protobuf.Any data = 2;
+
+}
+//登入
+message LoginReq{
+  string token = 1;
+}
+
+//订阅/取消订阅
+message SubscribeReq{
+  repeated Body subs = 1;
+  message Body{
+    string biz = 1;//业务 spot/perpetual
+    string type = 2;//类型 depth/deal/asset
+    string base = 3; //交易币种 btc/ltc/eth
+    string quote = 4; //计价币种 cny/usd/btc
+    string contractCode = 5; //交易币种 p_btc-usdt
+    string granularity = 6; //时间周期 1min/ 5min 等
+  }
+
+}
+
+//连接
+message ConnectReq{
+  int32 businessId = 1; //商户id
+  string client = 2; //客户端类型 与http header的全局参数一致
+  string version = 3; //版本号
+  string token = 4; //用户token 未登录状态下不要传，避免无用解析
+  string deviceId = 5; //设备id
+}

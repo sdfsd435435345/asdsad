@@ -1,0 +1,52 @@
+:local(.mainnet-selection-modal-root) {
+  max-height: 60%;
+  @apply rounded-tl-lg rounded-tr-lg !important;
+
+  .mainnet-selection-modal {
+    @apply flex flex-col h-full bg-card_bg_color_03;
+
+    .modal-header {
+      @apply flex w-full items-center justify-between px-4 pt-4 pb-6 top-0 bg-card_bg_color_03;
+    }
+
+    .modal-list {
+      @apply flex flex-col flex-1 px-4;
+
+      margin-bottom: 104px;
+
+      .select-item {
+        @apply mb-4 last:mb-0;
+
+        .rv-checkbox {
+          @apply justify-between text-sm text-text_color_01;
+
+          .checkbox-info {
+            @apply flex items-center;
+        
+            .disabled-tag {
+              @apply w-12 bg-bg_button_disabled rounded-tr rounded-bl text-xs text-text_color_04 font-medium text-center;
+        
+              height: 22px;
+              line-height: 22px;
+              transform: scale(0.75);
+            }
+          }
+        }
+
+        .rv-checkbox__label--disabled {
+          @apply text-text_color_04 !important;
+        }
+      }
+    }
+
+    .modal-bottom {
+      @apply w-full fixed bottom-0 px-4 pt-6 pb-10 bg-card_bg_color_03;
+    }
+
+    .commit-btn {
+      @apply w-full h-10 rounded;
+    }
+  }
+
+  
+}

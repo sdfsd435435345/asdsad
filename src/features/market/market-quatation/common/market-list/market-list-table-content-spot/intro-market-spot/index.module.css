@@ -1,0 +1,44 @@
+:local(.introjs-tooltip-custom) {
+  left: 50% !important;
+  width: 217px;
+  height: 112px;
+  margin-top: 25px;
+  transform: translateX(-50%);
+
+  .introjs-arrow.top {
+    left: 50% !important;
+    border-bottom-color: var(--card_bg_color_01);
+    transform: translateX(-50%);
+  }
+}
+
+:local(.tooltip-content-wrapper) {
+  position: fixed;
+  left: 50%;
+
+  /* intro tooltip z-index is 99999999 */
+  z-index: 999999991;
+  width: 250px;
+  transform: translate(-50%, 20px);
+
+  .row-1 {
+    @apply px-2 pt-2;
+  }
+
+  .row-2 {
+    @apply flex justify-between items-center px-2 pt-2;
+
+    .message {
+      @apply text-xs text-text_color_01 whitespace-nowrap;
+    }
+
+    .exit-button {
+      width: fit-content;
+      height: 30px;
+      padding: 6px 10px;
+      border-radius: 4px;
+
+      @apply bg-brand_color text-button_text_02 flex items-center justify-center pt-2 text-xs;
+    }
+  }
+}

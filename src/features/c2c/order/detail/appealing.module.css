@@ -1,0 +1,24 @@
+:local(.uploaded-info-wrapper) {
+  .box {
+    @apply flex flex-wrap;
+
+    .item {
+      @apply mr-3 mb-3 relative w-20 h-20 rounded border-solid border border-line_color_01;
+
+      .media-el, {
+        @apply w-full h-full object-cover rounded;
+
+        img {
+          @apply object-cover rounded;
+          
+          height: 80px;
+        }
+      }
+
+      .play-icon {
+        @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl;
+      }
+    }
+  }
+  
+}

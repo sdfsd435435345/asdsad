@@ -1,0 +1,8 @@
+:local(.scoped) {
+  @apply flex flex-col items-center mx-4 gap-y-8 my-8;
+
+  .download-title {
+    font-size: 28px;
+    @apply capitalize font-semibold text-text_color_01;
+  }
+}

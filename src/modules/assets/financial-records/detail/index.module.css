@@ -1,0 +1,56 @@
+/* :local(.scoped) {
+  .detail-wrap {
+    @apply p-4 text-xs text-text_color_01;
+
+    .orderno {
+      @apply flex justify-between p-3 bg-card_bg_color_01 text-text_color_03 rounded;
+
+      align-items: center;
+    }
+
+    .order-info {
+      @apply flex flex-1 my-6 items-center text-sm;
+
+      height: 64px;
+      border-radius: 2rem;
+    }
+
+    .success {
+      @apply bg-buy_up_color_light_bg;
+    }
+
+    .fail {
+      @apply bg-sell_down_color_light_bg;
+    }
+
+    .order-info .left {
+      @apply flex flex-col text-right;
+
+      width: 20%;
+    }
+
+    .order-info .right {
+      @apply flex flex-col text-right flex-1 pr-5;
+    }
+
+    .font-color {
+      @apply text-buy_up_color;
+    }
+
+    .detail-item {
+      @apply flex flex-1 py-2 flex-wrap;
+    }
+
+    .detail-item .label {
+      @apply text-text_color_03;
+
+      width: 25%;
+    }
+
+    .reminder {
+      @apply text-tips_color pt-3 text-sm;
+    }
+
+  }
+}
+ */

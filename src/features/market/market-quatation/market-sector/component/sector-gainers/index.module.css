@@ -1,0 +1,17 @@
+:local(.scoped) {
+  .gainers-grid {
+    @apply grid grid-cols-3 gap-2;
+
+    .grid-item {
+      @apply p-3 cursor-pointer bg-card_bg_color_01;
+
+      .grid-item-text {
+        @apply rounded w-full truncate text-sm;
+      }
+
+      .chg-value {
+        @apply text-xs;
+      }
+    }
+  }
+}

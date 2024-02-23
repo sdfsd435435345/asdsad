@@ -1,0 +1,71 @@
+:local(.assets-selection-wrapper) {
+  @apply flex flex-col w-full h-full bg-bg_color !important;
+
+  .content {
+    @apply mt-6;
+
+    .cell-item {
+      @apply py-2 px-4 mb-2;
+    }
+
+    .cell-item:active {
+      @apply bg-bg_color_03;
+    }
+
+    .currency-item {
+      @apply h-full flex flex-row items-center;
+
+      .name {
+        @apply text-base text-text_color_01 mr-2 font-medium
+      }
+
+      .desc {
+        @apply text-xs text-text_color_02
+      }
+    }
+  }
+
+  .all {
+    @apply text-sm text-text_color_01 font-medium py-2 px-4 mb-4;
+  }
+
+  .active {
+    @apply text-brand_color !important
+  }
+
+  .rv-index-anchor {
+    @apply px-4
+  }
+
+  /* 索引列表样式 */
+  .index-bar {
+    font-size: 9px;
+    transform: scale(0.75);
+    
+    @apply font-medium py-px px-1 flex items-center justify-center;
+  }
+
+  .index-active {
+    @apply bg-brand_color text-button_text_02 rounded-xl
+  }
+
+  .rv-index-anchor {
+    @apply hidden
+  }
+
+  .rv-index-bar__index {
+    @apply w-4 h-4 rounded-xl font-medium text-brand_color mx-1.5 p-0 flex items-center justify-center;
+  }
+
+  .rv-input__control {
+    @apply bg-bg_sr_color
+  }
+
+  .rv-hairline--bottom {
+    @apply border-0
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-0
+  }
+}

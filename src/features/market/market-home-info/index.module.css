@@ -1,0 +1,104 @@
+:local(.scoped) {
+  .market-home-info-wrapper {
+    /* height: 600px; */
+    overflow: auto;
+    @apply py-4;
+
+    .tab-list {
+      @apply px-4 bg-bg_color !important;
+
+      .active {
+        @apply bg-card_bg_color_02;
+      }
+    }
+
+    .nav-tabs {
+      @apply mb-2;
+    }
+
+    .market-table-home {
+      @apply mx-4;
+
+      table {
+        @apply mt-2;
+
+        tr {
+          > :last-child,
+          > :nth-last-child(2) {
+            * {
+              @apply flex justify-end ml-auto;
+            }
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          > :last-child {
+            * {
+              @apply font-medium;
+            }
+          }
+        }
+      }
+
+
+      .column-icon {
+        padding-right: 6px;
+
+        img {
+          width: 22px;
+          height: 22px;
+          padding-top: 2px;
+        }
+      }
+
+      .increase-wrap,
+      .quote-volume {
+        padding-top: 2px;
+        font-size: 16px;
+        @apply font-medium;
+      }
+
+      .pair-name {
+        .quote-symbol-name {
+          @apply text-sm;
+        }
+      }
+      
+      .quote-badge {
+        @apply text-sm;
+      }
+    }
+
+    .table-layout-wrapper {
+      min-height: 20vh;
+    }
+
+    .tab-list {
+      border-radius: 4px;
+      @apply whitespace-nowrap mx-0 p-0;
+
+      .tab-item {
+        font-size: 14px;
+      }
+    }
+
+    .rv-tabs__nav--card {
+      @apply mx-0 bg-card_bg_color_01 border-none;
+
+      .rv-tab {
+        @apply border-none text-text_color_02;
+      }
+
+      .rv-tab--active {
+        @apply bg-card_bg_color_03 text-text_color_01;
+      }
+    }
+  }
+
+  .fav-table-more {
+    border-top: 0.5px solid;
+    @apply py-4 text-center text-sm text-text_color_01 border-line_color_02;
+  }
+}

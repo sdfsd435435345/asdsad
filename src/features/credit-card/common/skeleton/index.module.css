@@ -1,0 +1,84 @@
+:local(.scoped) {
+  .card {
+    @apply bg-card_bg_color_03 mr-4 ml-4;
+
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 1rem;
+
+   
+    .conten {
+      @apply ml-4 mt-5 mr-4;
+
+      height: 170px;
+
+
+      .box1 {
+        display: flex;
+        justify-content: space-between;
+
+        .left {
+          width: 74px;
+          height: 18px;
+          background-color: #2D3641;
+          border-radius: 2px;
+        }
+
+        .right {
+          width: 37px;
+          height: 18px;
+          background-color: #2D3641;
+          border-radius: 2px
+        }
+      }
+
+      .box2 {
+        @apply mt-5;
+
+        width: 52px;
+        height: 30px;
+        background-color: #2D3641;
+        border-radius: 2px
+
+      }
+
+      .box3 {
+        width: 177px;
+        height: 18px;
+        margin-top: 18px;
+        background-color: #2D3641;
+        border-radius: 2px;
+
+      }
+
+      .box4 {
+        width: 49px;
+        height: 14px;
+        margin-top: 26px;
+        background-color: #2D3641;
+        border-radius: 2px
+
+      }
+
+      .box5 {
+        width: 74px;
+        height: 14px;
+        margin-top: 4px;
+        background-color: #2D3641;
+        border-radius: 2px
+
+      }
+ 
+
+
+    }
+   
+  }
+
+  
+
+
+}
+
+

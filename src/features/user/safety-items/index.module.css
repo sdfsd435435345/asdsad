@@ -1,0 +1,38 @@
+:local(.scoped) {
+  .safetyitems-wrap {
+    @apply p-4 w-full;
+
+    .title {
+      @apply text-2xl leading-9 font-semibold text-text_color_01 mb-4;
+    }
+
+    .checkbox-wrap {
+      @apply text-sm font-normal;
+
+      .rv-checkbox {
+        overflow: inherit;
+        @apply mt-6;
+
+        span {
+          @apply text-text_color_01;
+        }
+
+        .rv-checkbox__icon--round {
+          @apply border-none;
+
+          svg {
+            @apply rounded-none border-none bg-transparent;
+          }
+        }
+      }
+    }
+    
+    .reset {
+      @apply mt-8;
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

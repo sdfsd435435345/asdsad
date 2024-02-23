@@ -1,0 +1,8 @@
+:local(.scoped) {
+  @apply bg-brand_color_special_02 text-brand_color text-xs font-normal !important;
+
+  .rv-notice-bar__left-icon {
+    font-size: 12px;
+    @apply mb-auto translate-y-1;
+  }
+}

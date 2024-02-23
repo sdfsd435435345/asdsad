@@ -1,0 +1,22 @@
+:local(.search-wrapper) {
+  @apply px-3.5 py-2 bg-bg_sr_color flex items-center text-sm;
+
+  line-height: 22px;
+  border-radius: 18px;
+
+  .search-icon {
+    @apply mr-2;
+  }
+
+  .clear-icon {
+    @apply text-xl;
+  }
+
+  .input {
+    @apply bg-transparent flex-1;
+
+    &::placeholder {
+      @apply text-text_color_04
+    }
+  }
+}

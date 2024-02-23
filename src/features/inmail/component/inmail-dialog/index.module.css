@@ -1,0 +1,21 @@
+:local(.message-modal-wrapper) {
+  .rv-dialog__content {
+    @apply my-4;
+  }
+
+  .modal-wrapper-content {
+    @apply flex flex-col items-center;
+
+    .message-modal-icon {
+      @apply text-center w-20 h-20 mb-4;
+
+      svg {
+        @apply w-20 h-20;
+      }
+    }
+
+    .modal-header {
+      @apply px-4 text-sm font-semibold;
+    }
+  }
+}

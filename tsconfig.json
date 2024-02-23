@@ -1,0 +1,18 @@
+{
+  "extends": "base-ts-config",
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": false,
+    "composite": false,
+    "skipLibCheck": false,
+    "noImplicitReturns": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "renderer/*": ["./renderer/*"]
+    },
+    "types": ["vite/client", "react/next", "react-dom/next"]
+  },
+  "include": ["./**/*", "./package.json", "./src/**/*"],
+  "exclude": ["node_modules", "assets", "dist", "**/ws/protobuf/", "scripts/i18n-update/excel-to-json/utils"],
+  "extensions": [".ts", ".tsx", ".js", ".jsx"]
+}

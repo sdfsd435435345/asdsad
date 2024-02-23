@@ -1,0 +1,13 @@
+:local(.order-book-header-wrapper) {
+  @apply rounded p-3 bg-card_bg_color_01;
+
+  .prop-item {
+    .label {
+      @apply text-text_color_02 mb-0.5;
+    }
+
+    .value {
+      @apply font-medium;
+    }
+  }
+}

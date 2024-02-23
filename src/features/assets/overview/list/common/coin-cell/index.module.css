@@ -1,0 +1,39 @@
+:local(.coin-cell-root) {
+  @apply flex flex-col border-b border-line_color_02 last:border-b-0;
+
+  .coin-cell-simple {
+    @apply w-full flex flex-row items-center justify-between px-4;
+
+    height: 74px;
+      
+    .coin-cell-info {
+      @apply flex flex-col;
+      
+      .coin-cell-title {
+        @apply w-full flex flex-row items-center text-base text-text_color_01;
+      }
+      
+      .coin-cell-name {
+        @apply w-full text-xs text-text_color_02;
+      }
+      
+      .expand-icon {
+        @apply text-base ml-3;
+      }
+    }
+  }
+
+  .coin-cell-expand {
+    @apply w-full flex flex-col p-4 bg-card_bg_color_01;
+
+    .expand-info {
+      @apply flex items-center justify-between mb-2 last:mb-0 text-xs text-text_color_02;
+
+      line-height: 18px;
+
+      .expand-num {
+        @apply w-3/5 text-end;
+      }
+    }
+  }
+}

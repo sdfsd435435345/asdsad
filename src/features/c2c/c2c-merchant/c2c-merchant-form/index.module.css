@@ -1,0 +1,122 @@
+:local(.scoped) {
+  .phone-field-form {
+    .rv-field__body {
+      @apply bg-bg_sr_color !important;
+    }
+
+    .rv-field__prefix {
+      border-right: 1px solid;
+      @apply border-text_color_04;
+    }
+  }
+
+  .photo-verify-form {
+    .rv-field__value {
+      @apply my-auto;
+    }
+  }
+
+  .rv-field {
+    @apply p-0;
+  }
+
+  .rv-field__label {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .rv-input {
+    @apply h-10 box-border !important;
+  }
+
+  .rv-input__control {
+    height: 40px !important;
+    @apply my-auto bg-bg_sr_color !important;
+  }
+
+  .rv-field__body {
+    @apply bg-bg_color !important;
+  }
+
+  .rv-field__suffix {
+    @apply mr-3 text-text_color_01 top-1/2 -translate-y-1/2;
+
+    > * {
+      @apply flex items-center;
+    }
+
+    svg {
+      font-size: 8px;
+    }
+  }
+
+  .mobile-left {
+    svg {
+      font-size: 8px;
+      @apply ml-1;
+    }
+
+    .rv-image img {
+      @apply w-5 h-5 rounded-full mr-1;
+    }
+  }
+
+  .rv-uploader__wrapper {
+    padding-top: 7px;
+    @apply pb-0;
+  }
+
+  .rv-uploader__upload {
+    border-width: 1px;
+    @apply bg-bg_color border-line_color_01 border-dashed rounded;
+  }
+
+  .rv-uploader__preview-delete {
+    transform: translate(50%, -50%);
+    @apply bg-sell_down_color rounded-full !important;
+
+    .rv-uploader__preview-delete-icon {
+      font-size: 10px;
+      transform: translate(0, 0);
+    }
+  }
+
+  .rv-form {
+    .rv-cell--required::before {
+      position: absolute;
+      content: "*";
+      @apply flex text-sell_down_color text-xs top-2 left-0 !important;
+    }
+
+    .rv-cell--required {
+      .rv-field__label {
+        @apply ml-2;
+      }
+    }
+    
+  }
+
+  .form-email-code {
+    .rv-field__suffix {
+      @apply text-brand_color;
+    }
+  }
+
+  .rv-field__error-message {
+    @apply text-sell_down_color;
+  }
+
+  div:has(.rv-field__error-message) {
+    .rv-input, .rv-input__control {
+      border-width: 1px !important;
+      @apply rounded border-sell_down_color;
+    }
+  }
+}
+
+
+.user-search-area-popup {
+  .rv-search {
+    padding-bottom: 22px;
+  }
+}

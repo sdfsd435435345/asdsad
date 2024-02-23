@@ -1,0 +1,23 @@
+:local(.coin-selector-root) {
+  @apply w-full h-full flex flex-col !bg-bg_color;
+
+  .rv-hairline--bottom::after {
+    @apply border-b-0;
+  }
+
+  .rv-list__finished {
+    @apply hidden;
+  }
+
+  .list-cell {
+    @apply py-2 px-4 flex items-center mt-4;
+
+    .name {
+      @apply text-base text-text_color_01 font-medium ml-2;
+    }
+
+    .name-active {
+      @apply text-brand_color
+    }
+  }
+}

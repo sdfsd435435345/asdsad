@@ -1,0 +1,13 @@
+:local(.c2c-image-uploader) {
+  .rv-uploader {
+    @apply relative rounded;
+
+    .fail-icon {
+      @apply absolute -right-1 -top-1 w-3.5 h-3.5;
+      
+      svg {
+        @apply w-full h-full;
+      }
+    }
+  }
+}

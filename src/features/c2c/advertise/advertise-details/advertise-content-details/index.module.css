@@ -1,0 +1,67 @@
+:local(.advertise-content-details-root) {
+  @apply flex flex-col;
+
+  .header {
+    @apply flex items-center justify-between h-14 px-4 border-line_color_02;
+
+    border-bottom-width: 0.5px;
+
+    .header-title {
+      @apply text-base text-text_color_01 font-medium;
+    }
+
+    .header-copy {
+      @apply flex items-center text-sm font-normal;
+
+      .copy-icon {
+        @apply text-sm ml-2 mt-0;
+      }
+    }
+  }
+
+  .info-list {
+    @apply flex flex-col mx-4 border-line_color_02 mt-4;
+
+    border-bottom-width: 0.5px;
+  }
+
+  .mainnet-list {
+    @apply flex flex-col mx-4 pt-4 border-line_color_02;
+
+    border-bottom-width: 0.5px;
+  }
+
+  .info-item {
+    @apply flex items-center justify-between mb-4 text-sm;
+
+    .info-label {
+      @apply text-text_color_02;
+    }
+
+    .info-value {
+      @apply text-text_color_01;
+    }
+
+    .info-payment {
+      @apply flex items-center text-text_color_01;
+
+      max-width: 60%;
+
+      .payment-bank {
+        @apply mr-1;
+      }
+      
+      .payment-details {
+        @apply whitespace-nowrap overflow-hidden text-ellipsis text-end flex-1;
+      }
+    }
+
+    .info-value-grey {
+      @apply text-text_color_04;
+    }
+
+    .payment-text {
+      @apply text-sm text-text_color_01;
+    }
+  }
+}

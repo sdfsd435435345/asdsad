@@ -1,0 +1,19 @@
+:local(.remark-info-root) {
+  @apply flex flex-col border-t-4 border-line_color_02 p-4;
+
+  .title {
+    @apply text-sm text-text_color_02 mb-2;
+  }
+
+  .remark {
+    @apply w-full bg-card_bg_color_01 rounded p-3 text-text_color_01 text-sm whitespace-pre-line;
+  }
+
+  .welcome-img {
+    @apply border border-line_color_01 mb-4;
+  }
+}
+
+:local(.preview-img-root) {
+  @apply flex flex-col w-full h-full bg-bg_color_02 justify-center items-center !important;
+}

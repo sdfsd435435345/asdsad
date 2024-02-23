@@ -1,0 +1,33 @@
+:local(.select-modal-root) {
+  @apply rounded-tl-lg rounded-tr-lg !important;
+
+  max-height: 60%;
+
+  .select-modal-content {
+    @apply flex flex-col bg-card_bg_color_03;
+
+    .modal-list {
+      margin-bottom: 74px;
+
+      .item {
+        @apply flex items-center justify-center h-14 border-b border-line_color_02 last:border-b-0 text-sm font-medium;
+      
+        .text-active {
+          @apply text-brand_color;
+        }
+    
+        .text {
+          @apply text-text_color_01;
+        }
+      }
+    }
+  }
+
+  .disable {
+    @apply text-text_color_04 !important;
+  }
+  
+  .bottom {
+    @apply w-full py-4 text-sm text-text_color_02 border-t-4 border-line_color_02 flex items-center justify-center fixed bottom-0 bg-card_bg_color_03;
+  }
+}

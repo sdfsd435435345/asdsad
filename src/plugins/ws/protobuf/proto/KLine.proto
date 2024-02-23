@@ -1,0 +1,21 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "KLineProto";
+
+message KLine{
+
+   Body kLine = 1;
+
+  message Body{
+    int64 time = 1;
+    string high = 2;
+    string low = 3;
+    string close = 4;
+    string volume = 5;
+    string period = 6;
+    string open = 7;
+    string symbolWassName = 8;
+    string quoteVolume = 9;
+    string chg = 10;
+  }
+}

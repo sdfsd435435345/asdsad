@@ -1,0 +1,128 @@
+:local(.latest-price-header) {
+  @apply flex items-center justify-between;
+
+  .price-info {
+    @apply flex items-center justify-between flex-1 bg-bg_sr_color rounded h-10 px-2.5 text-sm text-text_color_01;
+
+    .price-placeholder {
+      @apply text-text_color_04;
+    }
+  }
+
+  .price-btn {
+    @apply ml-2 h-10 rounded text-sm font-normal;
+  }
+  
+}
+
+:local(.latest-price-table-header) {
+  .latest-price-table-header-wrap {
+    @apply flex mb-1;
+
+    .gear, .price, .quantity {
+      label {
+        @apply text-xs text-text_color_03 font-normal;
+      }
+    }
+
+    .gear {
+      width: 12%;
+    }
+
+    .price, .quantity {
+      @apply text-right flex-1;
+    }
+  }
+}
+
+:local(.latest-price-container-wrap) {
+  .latest-price-container-wrap {
+    .buy, .sell {
+      @apply flex;
+
+      height: 22px;
+      line-height: 22px;
+
+      .gear, .price, .quantity {
+        label {
+          font-size: 12px;
+          @apply text-text_color_03 font-normal;
+        }
+      }
+
+      .gear {
+        width: 12%;
+      }
+
+      .price, .quantity {
+        @apply text-right flex-1;
+      }
+    }
+
+    .buy {
+      .gear, .price {
+        label {
+          @apply text-buy_up_color;
+        }
+      }
+    }
+
+    .sell {
+      .gear, .price {
+        label {
+          @apply text-sell_down_color;
+        }
+      }
+    }
+  }
+}
+
+.advertise-latest-price {
+  .advertise-latest-price-wrap {
+    @apply flex flex-col;
+
+    .empty {
+      @apply mt-9 mb-5;
+    }
+
+    .sites {
+      @apply flex items-center text-xs flex-wrap;
+
+      .site-item {
+        @apply mr-4 whitespace-nowrap last:mr-0 mb-4 flex-1  py-1.5 px-3 rounded flex items-center;
+
+        height: 26px;
+        
+        &::after {
+          @apply rounded;
+        }
+
+        &.is-checked {
+          &::after {
+            @apply border-brand_color;
+          }
+        }
+      }
+    }
+  }
+}
+
+:local(.limit-tip-wrapper) {
+  p {
+    @apply mb-2;
+  }
+
+  .video-wrapper {
+    @apply rounded bg-card_bg_color_02 relative;
+
+    .custom-video-button {
+      transform: translate(-50%, -50%);
+      @apply top-1/2 left-1/2 absolute;
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}

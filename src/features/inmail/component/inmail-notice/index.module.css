@@ -1,0 +1,17 @@
+:local(.scoped) {
+  .inmail-notice-left {
+    padding-bottom: 3px;
+  }
+
+  .inmail-notice-middle {
+    @apply text-xs text-tips_color ml-1 flex-1 overflow-hidden truncate;
+  }
+
+  .inmail-notice-button {
+    @apply text-xs py-px px-2 text-text_color_01 bg-brand_color rounded mx-2 inline-block;
+  }
+}
+
+.inmail-notice-wrap {
+  @apply py-2 px-3 bg-brand_color_special_02 overflow-hidden flex items-center box-border;
+}

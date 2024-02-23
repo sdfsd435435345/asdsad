@@ -1,0 +1,19 @@
+syntax = "proto3";
+import "google/protobuf/any.proto";
+option java_package="com.newbit.common.proto.push";
+option java_outer_classname = "ResponseProto";
+message Response{
+  string biz = 1;//业务 spot/perpetual
+  string type = 2;//类型 depth/deal/asset..
+  string base = 3; //交易币种 btc/ltc/eth
+  string quote = 4; //计价币种 cny/usd/btc
+  string contractCode = 5; //交易币种 p_btc-usdt
+  string granularity = 6; //时间周期 1min/ 5min 等
+  google.protobuf.Any data = 7;
+  int64 userId = 8;
+}
+
+message CommonRsp{
+  int32 code=1;
+  string msg=2;
+}

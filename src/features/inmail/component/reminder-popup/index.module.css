@@ -1,0 +1,21 @@
+.reminder-popup {
+  @apply rounded-t-lg overflow-hidden;
+
+  .reminder-popup-wrap {
+    @apply pb-4;
+
+    .popup-wrap-list {
+      border-bottom: 0.5px solid var(--line_color_02);
+      @apply py-4 text-sm text-center text-text_color_01;
+    }
+
+    .popup-wrap-bottom {
+      border-top: 3.5px solid var(--line_color_02);
+      @apply py-4 text-sm text-center text-text_color_02;
+    }
+
+    .select-list {
+      @apply text-brand_color;
+    }
+  }
+}

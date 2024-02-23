@@ -1,0 +1,23 @@
+:local(.scoped) {
+  @apply flex flex-row;
+
+  /* collect star */
+  > :first-child {
+    margin-top: 6px;
+    @apply flex justify-center;
+
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .star {
+    width: 16px;
+    @apply w-4;
+  }
+
+  > :last-child {
+    @apply flex flex-col;
+  }
+}

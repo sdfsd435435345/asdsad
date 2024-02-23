@@ -1,0 +1,18 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "DepthProto";
+
+//深度
+message Depth{
+
+  repeated Data  bids = 1;
+  repeated Data asks = 2;
+  string time = 3;
+  string symbolWassName = 4;
+
+  message Data{
+    string price = 1;
+    string volume = 2;
+  }
+
+}

@@ -1,0 +1,61 @@
+:local(.scoped) {
+  @apply relative flex flex-col min-h-screen;
+
+  .background-gradient {
+    height: 260px;
+    background: linear-gradient(180deg, rgb(241 174 61 / 10%) 0%, rgb(241 174 61 / 0%) 100%);
+    @apply absolute top-0 left-0 right-0;
+  }
+  
+  .third-party-wrap {
+    width: calc(100% - 32px);
+    @apply absolute bottom-10 left-4;
+  }
+
+  .rv-nav-bar {
+    @apply bg-transparent;
+  }
+
+  .register-wrap {
+    @apply px-4 py-4 flex flex-col flex-1;
+
+    .logo {
+      @apply flex justify-center mt-12 mb-4;
+
+      svg {
+        width: 72px;
+        height: 72px;
+      }
+    }
+
+    .title {
+      @apply text-base font-medium text-text_color_01;
+
+      margin-bottom: 108px;
+    }
+
+    .login {
+      @apply text-sm mt-4 text-text_color_03;
+
+      a {
+        @apply ml-1 text-brand_color;
+      }
+    }
+
+    .tips {
+      @apply break-all  flex justify-center items-end pb-9 mt-8;
+
+      label {
+        @apply text-xs font-normal text-text_color_03;
+      }
+
+      a {
+        @apply mx-2 text-brand_color;
+      }
+    }
+
+    button {
+      @apply w-full;
+    }
+  }
+}

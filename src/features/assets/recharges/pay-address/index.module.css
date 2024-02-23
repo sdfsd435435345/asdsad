@@ -1,0 +1,39 @@
+:local(.scoped) {
+  @apply w-full text-sm;
+
+  .pay-qrcode {
+    @apply text-center;
+  }
+
+  .pay-qrcode canvas {
+    margin: 0 auto;
+  }
+
+  .pay-qrcode img {
+    height: 70px;
+  }
+
+  .pay-qrcode .pay-tips {
+    @apply text-sm text-text_color_01 mt-4 pb-8;
+  }
+
+  .title {
+    @apply text-sm text-text_color_03 mb-2
+  }
+
+  .pay-address {
+    @apply px-4 mb-8
+  }
+
+  .address-content {
+    @apply w-full bg-bg_sr_color rounded py-2 px-3 flex flex-row items-center justify-between;
+
+    .address-text {
+      @apply text-sm text-text_color_01 w-9/12 break-all
+    }
+
+    .copy-btn {
+      @apply h-6 px-4 text-xs text-brand_color rounded border-brand_color bg-brand_color_special_02 border mr-1
+    }
+  }
+}

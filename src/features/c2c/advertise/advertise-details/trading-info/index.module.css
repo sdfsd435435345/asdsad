@@ -1,0 +1,19 @@
+:local(.trading-info-root) {
+  @apply flex flex-col border-t-4 border-line_color_02 p-4;
+
+  .title {
+    @apply text-base text-text_color_01 font-medium mb-4;
+  }
+
+  .info {
+    @apply flex items-center justify-between mb-2 last:mb-0 text-sm;
+
+    .info-label {
+      @apply text-text_color_02;
+    }
+
+    .info-value {
+      @apply text-text_color_01 font-medium;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+/* stylelint-disable color-function-notation */
+
+body {
+  /* 色版 */
+  --or-01: #E8FFF6;
+  --or-02: #BDFAE5;
+  --or-03: #99EED4;
+  --or-04: #058569;
+  --or-05: #01BC94;
+  --or-06: #26C9A0;
+  --or-07: #4FD7B0;
+  --or-08: #02745B;
+  --or-09: #FCEFC4;
+  --or-10: #058569;
+  --or-11: rgba(1 188 148 / 10%);
+  --or-12: rgb(241 174 61 / 15%);
+  --gr-01: #004D39;
+  --gr-02: #06694D;
+  --gr-03: #108560;
+  --gr-04: #1DA173;
+  --gr-05: #2EBD85;
+  --gr-06: #4CCA96;
+  --gr-07: #6ED7A8;
+  --gr-08: #93E5BD;
+  --gr-09: #B2F2D1;
+  --gr-10: #BCF2D6;
+  --gr-11: rgb(46 189 133 / 10%);
+  --gr-12: rgb(46 189 133 / 15%);
+  --rd-01: #FFECE8;
+  --rd-02: #FFD9D3;
+  --rd-03: #FFC4BD;
+  --rd-04: #D24D52;
+  --rd-05: #FF7D7D;
+  --rd-06: #FF9692;
+  --rd-07: #FFAEA8;
+  --rd-08: #FFC4BD;
+  --rd-09: #A62931;
+  --rd-10: #790F19;
+  --rd-11: rgb(255 125 125 / 10%);
+  --rd-12: rgb(246 70 93 / 15%);
+
+  /* 中性色 */
+  --nc-01: #FFFFFF;
+  --nc-02: #F2F2F2;
+  --nc-03: #FFFFFF;
+  --nc-04: #DBDBDB;
+  --nc-05: #858B93;
+  --nc-06: #72787E;
+  --nc-07: #5A626B;
+  --nc-08: #3C4651;
+  --nc-09: #30373F;
+  --nc-10: #272E35;
+  --nc-11: #3D444C;
+  --nc-12: #1A1F24;
+  --nc-13: #FFFFFF;
+  --nc-14: #FFFFFF;
+  --nc-15: #212831;
+  --nc-16: rgba(16 16 20  / 20%);
+  --nc-17: #414953;
+  --nc-18: rgba(16 16 20/ 60%);
+  --nc-19: rgba(48, 55, 63, 20%);
+  --nc-20: #292F36;
+  --nc-21: #212830;
+
+}
+
+body {
+  /* 品牌色 - 重点元素/按钮/文字等 */
+  --brand_color_animate: var(--or-04); /* 辅助色 */
+  --brand_color: var(--or-05);
+  --brand_color_hover: var(--or-06);
+  --brand_color_special: var(--or-07);
+  --brand_color_disable: var(--or-08);
+  --brand_color_light_bg: var(--or-10);
+  --brand_color_special_02: var(--or-11);
+
+  /* 辅助色-K 线/涨跌色/提示文字等 */
+  --sell_down_color: var(--rd-05);
+  --sell_down_color_hover: var(--rd-06);
+  --sell_down_color_animate: var(--rd-04);
+  --sell_down_color_disable: var(--rd-08);
+  --sell_down_color_special: var(--rd-07);
+  --sell_down_color_light_bg: var(--rd-10);
+  --sell_down_color_special_02: var(--rd-11);
+  --sell_down_color_special_03: var(--rd-12);
+ 
+  /* 辅助色-K 线/涨跌色/提示文字等 */
+  --buy_up_color_animate: var(--gr-04);
+  --buy_up_color: var(--gr-05);
+  --buy_up_color_hover: var(--gr-06);
+  --buy_up_color_special: var(--gr-07);
+  --buy_up_color_disable: var(--gr-08);
+  --buy_up_color_light_bg: var(--gr-10);
+  --buy_up_color_special_02: var(--gr-11);
+  --buy_up_color_special_03: var(--gr-12);
+ 
+  /* 线条 Line */
+  --line_color_01: var(--nc-08);
+  --line_color_02: var(--nc-09);
+
+  /* 填充 Icon */
+  --icon_color: var(--nc-03);
+
+  /* 文字 Text */
+  --text_color_01: var(--nc-01);
+  --text_color_02: var(--nc-05);
+  --text_color_03: var(--nc-06);
+  --text_color_04: var(--nc-07);
+  --button_text_01: var(--nc-13);
+  --button_text_02: var(--nc-14);
+  --button_hover_01: var(--nc-20);
+
+  /* 层级用色 Hierarchy */
+  --card_bg_color_01: var(--nc-10);
+  --card_bg_color_02: var(--nc-11);
+  --card_bg_color_03: var(--nc-15);
+  --card_bg_color_04: var(--nc-16);
+  --bg_button_disabled: var(--nc-08);
+
+  /* 背景色 */
+  --bg_color: var(--nc-12);
+  --bg_color_02: var(--nc-18);
+  --bg_color_03: var(--nc-19);
+
+
+  /* 输入框背景色 */
+  --bg_sr_color: var(--nc-09);
+
+  /* 提示 Tips */
+  --tips_color: var(--or-05);
+  --tips_color_hover: var(--or-06);
+  --tips_color_animate: var(--or-04);
+  --tips_color_disable: var(--or-08);
+  --tips_color_special: var(--or-07);
+  --tips_color_lightbg: var(--or-10);
+  --tips_warning_bg_color: var(--nc-21);
+
+  /* 警告 Warning */
+  --warning_color: var(--rd-05);
+  --warning_color_hover: var(--rd-06);
+  --warning_color_animate: var(--rd-04);
+  --warning_color_disable: var(--rd-08);
+  --warning_color_special: var(--rd-07);
+  --warning_color_lightbg: var(--rd-10);
+
+  /* 成功 Success */
+  --success_color: var(--gr-05);
+  --success_color_hover: var(--gr-06);
+  --success_color_animate: var(--gr-04);
+  --success_color_disable: var(--gr-08);
+  --success_color_special: var(--gr-07);
+  --success_color_special_02: var(--gr-11);
+  --success_color_lightbg: var(--gr-10);
+
+  /* 渐变色 */
+  --buy_bg_gradient: linear-gradient(180deg, rgba(106, 200, 133, 80%) 0%, rgba(80, 177, 108, 80%) 100%);
+  --sell_bg_gradient: linear-gradient(180deg, rgba(243, 125, 126, 80%) 0%, rgba(233, 90, 92, 80%) 100%);
+  --brand_bg_gradient: linear-gradient(180deg, rgba(241, 174, 61, 80%) 0%, rgba(252, 189, 84, 80%) 100%);
+  --c2c_chat_bg_gradient: linear-gradient(90deg, rgba(6, 189, 50, 40%) 46.35%, rgba(6, 189, 50, 0%) 80%);
+
+  /* 提示 Toast */
+  --toast_bg_color: var(--nc-17);
+
+  /** 交易表单阴影和背景 */
+  --trade-form-box-bg: #FFFFFFE6;
+
+  /** c2c 广告 头像渐变背景 */
+  --c2c_ad_avatar_bg_gradinet: linear-gradient(180deg, #01BC94 0%, #01BC94 100%);
+}
+
+body[theme= 'dark'] {
+  /** 交易表单阴影和背景 */
+  --trade-form-box-bg: #25262BE6;
+}

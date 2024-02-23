@@ -1,0 +1,50 @@
+:local(.introjs-tooltip-custom) {
+  display: none !important;
+}
+
+:local(.tooltip-content-wrapper) {
+  position: fixed;
+  left: 50%;
+
+  /* intro tooltip z-index is 99999999 */
+  z-index: 999999991;
+  transform: translateX(-50%);
+
+  .wrapper {
+    width: 400px;
+    margin-top: 15vh;
+    @apply flex flex-col self-end mb-16;
+
+    .item {
+      @apply w-full h-20 flex items-center justify-end bg-card_bg_color_03;
+
+      .item-info {
+        @apply flex flex-col pr-6 items-end;
+
+        .info-title {
+          @apply text-base text-text_color_01 font-medium;
+        }
+
+        .info-num {
+          @apply text-xs text-text_color_02;
+        }
+      }
+
+      .item-btn {
+        @apply w-16 h-full border border-brand_color flex items-center justify-center text-sm text-button_text_02;
+      }
+    }
+
+    .arrow-content {
+      @apply self-end mr-8 mt-4;
+    }
+
+    .hint-text {
+      @apply text-sm text-button_text_01 font-medium self-center ml-16 mr-16 my-6 text-center;
+    }
+
+    .bottom-btn {
+      @apply h-10 px-7 rounded bg-brand_color text-sm text-button_text_02 font-medium self-center flex items-center justify-center;
+    }
+  }
+}

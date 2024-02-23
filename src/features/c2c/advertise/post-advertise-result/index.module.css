@@ -1,0 +1,24 @@
+:local(.post-advertise-result-root) {
+  @apply flex flex-col;
+
+  .page-content {
+    @apply flex flex-col items-center mt-20 mb-8;
+
+    .title {
+      @apply mt-4 text-base text-text_color_01 font-medium;
+    }
+  }
+
+  .page-bottom {
+    @apply w-full flex items-center justify-between px-4;
+
+    .btn {
+      width: 47%;
+      @apply h-10 rounded;
+    }
+
+    .order-btn {
+      @apply bg-bg_sr_color text-text_color_01;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "i18n-ally.localesPaths": [
+        "src/locales",
+        "src/features/user/personal-center/settings/language",
+        "src/modules/user/personal-center/settings/language"
+    ]
+}

@@ -1,0 +1,24 @@
+:local(.navbar-wrapper) {
+  z-index: 2000;
+  @apply sticky top-0;
+
+  .rv-nav-bar__arrow {
+    @apply w-5 h-5;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  &.is-transparent {
+    .rv-nav-bar {
+      @apply bg-transparent;
+    }
+  }
+}
+
+:local(.navbar-wrapper-app) {
+  .rv-nav-bar__title.rv-ellipsis {
+    @apply ml-4 !important;
+  }
+}

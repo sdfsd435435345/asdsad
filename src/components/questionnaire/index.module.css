@@ -1,0 +1,35 @@
+:local(.questionnaire-wrapper) {
+  .info {
+    @apply px-4 py-2 bg-brand_color_special_02 text-brand_color text-xs;
+  }
+}
+
+:local(.question-wrapper) {
+  @apply px-4 mb-8 text-sm last:mb-0;
+  
+  .options {
+    .option-item {
+      @apply flex items-center text-text_color_02 justify-between rounded p-2 mt-2 border border-line_color_01;
+
+      .option-content {
+        @apply ml-2 translate-y-px;
+      }
+      
+      &.selected {
+        @apply bg-brand_color_special_02 border-brand_color_special_02;
+
+        &.wrong {
+          @apply bg-transparent border-warning_color text-warning_color;
+        }
+
+        &.correct {
+          @apply bg-success_color_special_02 text-success_color border-success_color;
+        }
+      }
+    }
+  }
+
+  .title {
+    @apply text-base font-medium;
+  }
+}

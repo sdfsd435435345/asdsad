@@ -1,0 +1,49 @@
+:local(.operation-popup) {
+  @apply relative pb-24 bg-card_bg_color_03;
+
+  .operation-popup-header {
+    @apply pt-4 px-4 mb-6 flex items-center justify-between;
+
+    .operation-popup-header-text {
+      @apply text-base font-medium text-text_color_01;
+    }
+
+    .operation-popup-header-icon {
+      @apply w-5 h-5;
+
+      svg {
+        @apply w-full h-full; 
+      }
+    }
+  }
+
+  .operation-popup-main {
+    .rv-radio-group {
+      .rv-cell-group {
+        .rv-cell {
+          @apply bg-card_bg_color_03;
+        }
+
+        .rv-cell__title {
+          @apply text-sm font-normal text-text_color_01;
+        }
+      }
+    }
+
+    .operation-popup-icon {
+      @apply w-3 h-3 pb-px;
+
+      svg {
+        @apply w-full h-full; 
+      }
+    }
+  }
+
+  .operation-popup-footer {
+    @apply absolute bottom-0 left-0 right-0 px-2 pb-10 pt-4 bg-card_bg_color_03 flex;
+
+    .popup-footer-button {
+      @apply flex-1 px-2 text-sm font-medium text-center text-text_color_01 overflow-hidden;
+    }
+  }
+}

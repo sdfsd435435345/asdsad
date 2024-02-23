@@ -1,0 +1,126 @@
+:local(.trade-form-wrapper) {
+  @apply bg-bg_color text-sm;
+
+  .input-value-wrapper {
+    @apply flex justify-center relative items-end mb-2 h-10;
+
+    .unit {
+      @apply absolute bottom-1 ml-1 left-full text-text_color_02 text-xs;
+    }
+
+    .switch-wrapper {
+      @apply absolute right-4 bottom-1;
+    }
+  }
+
+ 
+
+  .limit-amount-text {
+    @apply text-xs text-text_color_02 text-center;
+
+    &.is-error {
+      @apply text-warning_color;
+    }
+  }
+
+  .sell-action-wrapper {
+    @apply mt-1 whitespace-nowrap flex text-xs text-text_color_02;
+  }
+
+}
+
+:local(.action-btn-wrapper) {
+  @apply px-4 pb-10 flex;
+}
+
+:local(.confirm-modal-wrapper) {
+  @apply bg-card_bg_color_03 text-sm flex flex-col flex-1;
+
+  .header {
+    @apply flex p-4 justify-between;
+
+    .price-text {
+      @apply text-xs text-sell_down_color;
+    }
+
+    .title {
+      @apply text-base font-medium;
+    }
+  }
+
+
+  .hint {
+    @apply bg-brand_color_special_02 py-1 px-4 text-xs text-brand_color flex mb-4;
+
+    line-height: 18px;
+
+    .msg-icon {
+      @apply mr-1 mt-1 shrink-0;
+    }
+
+    span {
+      @apply flex-1;
+    }
+  }
+
+  .payment-list {
+    @apply overflow-y-auto px-4 mb-6;
+
+    max-height: calc(var(--vh100) - 360px);
+  }
+
+  .payment {
+    @apply relative flex border border-transparent bg-card_bg_color_01 px-3 rounded justify-between py-4 mb-4 last:mb-0 overflow-hidden;
+
+    &.is-active {
+      @apply bg-buy_up_color_special_02 border-brand_color;
+    }
+
+    .tag {
+      @apply text-brand_color bg-brand_color_special_02 rounded py-0.5 px-1;
+    }
+
+    .used-tag {
+      @apply bg-card_bg_color_02 text-text_color_02 py-0 px-1 absolute right-0 top-0 rounded-bl;
+
+      font-size: 10px;
+      line-height: 16px;
+    }
+
+    .selected-icon {
+      @apply absolute -right-px top-px flex items-center justify-center text-white;
+
+      svg {
+        width: 22px;
+        height: 15px;
+      }
+    }
+  }
+
+  .terms {
+    @apply mb-6 text-xs px-4 flex items-center;
+     
+    .checkbox {
+      .rv-checkbox__icon {
+        font-size: 14px;
+        @apply relative -top-px;
+      }
+    }
+  }
+}
+
+:local(.fast-trade-page-wrapper) {
+  @apply flex flex-col justify-between h-screen;
+
+  .title-wrapper {
+    .label.only-name {
+      @apply text-base font-medium;
+    }
+  }
+}
+
+:local(.modal-wrapper) {
+  @apply flex;
+
+  max-height: 80%;
+}

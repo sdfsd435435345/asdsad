@@ -1,0 +1,37 @@
+:local(.scoped) {
+  .rv-notice-bar {
+    @apply bg-brand_color_special_02;
+    @apply px-4;
+  }
+
+  .rv-notice-bar__content {
+    @apply text-xs text-tips_color grow;
+  }
+
+  .rv-button__text {
+    @apply text-[10px] leading-none;
+  }
+
+}
+
+.market-popover-notice {
+  @apply w-80 rounded-lg h-auto;
+
+  > div {
+    @apply flex-col flex gap-y-6 items-center p-8 text-sm;
+  }
+
+  .rv-icon-n-tips_icon {
+    @apply h-20 w-20;
+  }
+
+  .rv-button {
+    @apply w-28 h-10 rounded;
+  }
+
+
+  .cancel-button {
+    border: 1px solid var(--line_color_01);
+    @apply bg-card_bg_color_03 text-text_color_02;
+  }
+}

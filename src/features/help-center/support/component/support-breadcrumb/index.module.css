@@ -1,0 +1,26 @@
+:local(.scoped) {
+  .support-breadcrumb-flex {
+    @apply flex items-center;
+
+    .breadcrumb-items {
+      @apply flex items-center;
+
+      .breadcrumb-text {
+        max-width: 60px;
+        @apply truncate inline-block text-xs text-text_color_03;
+      }
+
+      .last-breadcrumb {
+        @apply text-text_color_01;
+      }
+
+      .breadcrumb-icon {
+        @apply mx-2 mt-0;
+
+        svg {
+          @apply w-2.5 h-2.5
+        }
+      }
+    }
+  }
+}

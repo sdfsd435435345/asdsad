@@ -1,0 +1,110 @@
+:local(.scoped) {
+  .navbar {
+    @apply flex justify-between leading-5;
+  
+    .navbar-left, .navbar-right {
+      @apply flex flex-1;
+    }
+  
+    .navbar-left {
+      @apply flex items-center;
+  
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+  
+    .navbar-right {
+      @apply flex justify-end;
+    }
+  
+    .theme, .customer-service {
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+  
+    .theme {
+      @apply mr-6;
+    }
+  
+  }
+
+  .kyc-index-wrap {
+    @apply bg-bg_color;
+
+    .kyc-index-wrap-top {
+      @apply pt-6 pb-6 px-4 bg-card_bg_color_01;
+
+      .top {
+        font-size: 22px;
+
+        .icon {
+          @apply float-right
+        }
+      }
+
+      .bottom {
+        @apply mt-6;
+
+        .tag {
+          padding: 6px 13px; 
+          padding-left: 32px;
+          border-radius: 37px;
+          @apply text-sm text-text_color_01 bg-card_bg_color_02 inline-block      
+        }
+        
+        .china_icon {
+          @apply float-right ;
+
+          font-size: 22px;
+        }
+      }
+    }
+
+    .kyc-index-wrap-center {
+      @apply clear-both bg-bg_color px-4 pt-4 pb-4;
+
+      border-radius: 8px 8px 0 0;
+
+
+
+      .rv-tabs__wrap {
+        height: 36px;
+
+        .rv-tabs__line {
+          display: none;
+        }
+        
+        .rv-tabs__nav {
+          height: 36px;
+          border-radius: 36px;
+          @apply pb-0 text-text_color_03 bg-card_bg_color_01;
+
+
+          .rv-tab--active {
+            @apply text-text_color_01 font-semibold bg-brand_color;
+
+            border-radius: 50px; 
+          }
+
+          .rv-tab {
+            height: 36px;
+          }
+        }
+        
+      }
+
+      .rv-tabs__content {
+        @apply mt-6;
+      }
+    }
+  }
+
+  .round {
+    img {
+      @apply rounded-full;
+    }
+  }
+}
+

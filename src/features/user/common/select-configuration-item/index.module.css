@@ -1,0 +1,54 @@
+:local(.scoped) {
+  .select-item-wrap {
+    @apply mt-8;
+
+    .cell {
+      @apply flex px-4 py-4 mb-2;
+
+      .icon {
+        svg {
+          @apply w-5 h-5 mr-2;
+        }
+
+        .rv-image {
+          margin-top: 2px;
+          @apply pr-2;
+
+          img {
+            width: 22px;
+            height: 22px;
+            @apply rounded-full;
+          }
+        }
+      }
+
+      .text {
+        label {
+          @apply text-sm font-normal text-text_color_01;
+        }
+      }
+
+      .checked {
+        @apply flex-1 text-right mr-4;
+
+        svg {
+          @apply w-5 h-5 text-brand_color;
+        }
+      }
+    }
+
+    .cell:hover {
+      @apply bg-bg_color_03
+    }
+
+    .is-checked {
+      /* background: rgb(241 174 61 / 20%); */
+
+      .text {
+        label {
+          @apply text-brand_color;
+        }
+      }
+    }
+  }
+}

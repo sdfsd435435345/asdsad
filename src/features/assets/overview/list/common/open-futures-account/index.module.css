@@ -1,0 +1,32 @@
+:local(.open-futures-account-root) {
+  @apply w-full h-screen flex flex-col bg-bg_color ;
+
+  .open-futures-icon {
+    @apply self-center;
+
+    margin-top: 76px;
+
+    svg {
+      width: 78px;
+      height: 78px;
+    }
+  }
+
+  .open-futures-title {
+    @apply my-4 text-sm font-medium text-center text-text_color_01;
+  }
+
+  .open-futures-text {
+    @apply text-sm text-text_color_02 px-5;
+  }
+
+  .open-futures-bottom {
+    @apply px-4 fixed w-full;
+
+    bottom: 27px;
+  }
+
+  .open-futures-button {
+    @apply w-full h-10 self-center rounded;
+  }
+}

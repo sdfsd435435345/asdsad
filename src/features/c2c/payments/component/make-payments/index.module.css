@@ -1,0 +1,112 @@
+:local(.make-payments) {
+  .payments-header {
+    border-bottom: 0.5px solid var(--line_color_02);
+    @apply p-4 flex items-center;
+  
+    .payments-header-text {
+      @apply ml-1 text-xs font-normal text-text_color_03;
+    }
+  
+    .payments-header-icon {
+      @apply w-2 h-2 ml-1;
+  
+      svg {
+        @apply w-full h-full;
+      }
+    }
+  }
+
+  .payments-contair {
+    .payments-contair-collapse {
+      .rv-collapse-item {
+        border-bottom: 0.5px solid var(--line_color_02);
+
+        .rv-cell {
+          @apply p-4;
+
+          .rv-cell__value {
+            .collapse-item-icon {
+              @apply w-4 h-4;
+
+              svg {
+                @apply w-full h-full;
+              }
+            }
+          }
+
+          .rv-icon-arrow {
+            @apply hidden;
+          }
+        }
+
+        .rv-cell--clickable:active {
+          @apply bg-bg_color_03;
+        }
+      }
+
+      .payments-collapse-items {
+        .rv-cell {
+          svg {
+            @apply hidden;
+          }
+        }
+      }
+
+      .payments-contair-collapse-item {
+        @apply h-full flex items-center rounded-3xl;
+
+        .collapse-item-left {
+          border-radius: 20px;
+          @apply w-0.5 h-3 mr-1.5;
+        }
+
+        label {
+          @apply text-base font-medium text-text_color_01;
+        }
+
+        .bank {
+          @apply bg-brand_color;
+        }
+
+        .alipay {
+          background-color: #6195F6;
+        }
+
+        .wechat {
+          @apply bg-buy_up_color;
+        }
+      }
+
+      .rv-collapse-item__wrapper {
+        .rv-collapse-item__content {
+          @apply px-4 py-0;
+        }
+      }
+    }
+
+    .payments-no-data-image {
+      @apply mt-24;
+  
+      .footer-image-button {
+        padding: 9px 0;
+        @apply mt-8 px-8 font-medium text-button_text_02 rounded text-center bg-brand_color;
+      }
+    }
+  }
+
+  .make-payments-footer-list {
+    @apply flex mt-4 px-4;
+
+    .footer-list-icon {
+      @apply mt-1 h-1.5 w-1.5;
+
+      svg {
+        @apply h-1.5 w-1.5;  
+      }
+    }
+
+    .footer-list-text {
+      @apply ml-1 text-xs font-normal text-text_color_03;
+    }
+  }
+}

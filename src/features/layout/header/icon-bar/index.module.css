@@ -1,0 +1,12 @@
+:local(.scoped) {
+  @apply flex flex-row gap-x-3 grow;
+
+  .search-bar {
+    @apply rounded-2xl w-44 h-8 bg-button_text_01 flex flex-row items-center mr-auto ml-3;
+
+    .search-icon svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+}

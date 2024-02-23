@@ -1,0 +1,19 @@
+:local(.remark-hint-modal-root) {
+  @apply !rounded-tl-lg !rounded-tr-lg !bg-card_bg_color_03;
+
+  .remark-hint-modal {
+    @apply flex flex-col w-72 p-8;
+
+    .title {
+      @apply text-base text-text_color_01 font-medium flex justify-center;
+    }
+
+    .text {
+      @apply text-sm text-text_color_01 my-5;
+    }
+
+    .copy-btn {
+      @apply rounded h-10;
+    }
+  }
+}

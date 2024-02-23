@@ -1,0 +1,21 @@
+:local(.scoped) {
+  @apply w-full mx-4;
+
+  .qr-wrapper {
+    width: 120px;
+    height: 120px;
+    @apply flex justify-center items-center bg-icon_color rounded mb-3;
+
+    canvas {
+      width: 105px !important;
+      height: 105px !important;
+      @apply p-2 rounded bg-white;
+    }
+  } 
+
+  .qr-canvas {
+    width: 120px;
+    @apply text-center;
+  }
+
+}

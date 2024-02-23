@@ -1,0 +1,25 @@
+:local(.mainnet-info-root) {
+  @apply flex items-center;
+
+  .main-item {
+    @apply text-xs text-text_color_01 font-medium mr-2 last:mr-0;
+  }
+}
+
+:local(.mainnet-info-popover-root) {
+  @apply !-mt-2;
+
+  max-width: 80%;
+
+  .rv-popover__content {
+    @apply flex bg-card_bg_color_03 p-3 pb-0 flex-wrap rounded;
+  }
+
+  .rv-popover__arrow {
+    @apply hidden;
+  }
+
+  .popover-cell {
+    @apply text-xs text-text_color_01 font-medium mr-2 last:mr-0 mb-3;
+  }
+}

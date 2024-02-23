@@ -1,0 +1,80 @@
+:local(.overview-wrapper) {
+  .title {
+    @apply text-text_color_01 mb-2 text-base not-italic font-normal mt-4;
+
+    font-family: 'PingFang SC'
+  } 
+    
+  .menu-item {
+    @apply text-sm flex justify-between items-center p-2 px-0;
+
+    .item-center {
+      @apply text-text_color_03;
+
+      .icon_n {
+        @apply mr-1.5;
+
+        margin-top: 1px;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    
+  }
+
+  .m_title {
+    @apply mt-4 font-normal text-sm text-text_color_01 mb-1;
+
+  }
+
+  .rv-hairline--bottom::after {
+    border: none;
+  }
+
+  .kyc_button {
+    @apply bottom-8 font-semibold w-full mt-16;
+
+  }
+
+  .kyc_button_fail {
+    @apply bottom-8 bg-warning_color text-button_text_01 font-semibold  mt-16 w-full;
+  }
+  
+  .kyc_button_not {
+    @apply text-text_color_04 bottom-8 bg-bg_button_disabled font-semibold  mt-16 w-full;
+  }
+
+  .kyc_fail_button {
+    @apply bg-bg_button_disabled;
+  }
+
+  .is_disabled {
+    @apply bg-bg_button_disabled border-none text-text_color_04;
+  }
+
+  .icon_n {
+    @apply relative ;
+
+    top: 1px;
+  }
+
+  .over {
+    @apply absolute bg-buy_up_color_special_02 text-buy_up_color text-sm px-3 py-1.5;
+
+    right: -17px;
+    border-radius: 15px 0 0 15px;
+
+    svg {
+      @apply mr-1.5
+    }
+  }
+
+  .icon_img {
+    @apply inline-block relative mr-1 w-4;
+
+    top: 2px;
+  }
+}

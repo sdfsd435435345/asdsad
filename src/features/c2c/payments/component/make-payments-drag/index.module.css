@@ -1,0 +1,147 @@
+:local(.make-payment-drag) {
+  .collapse-item-content {
+    border-bottom: 0.5px solid var(--line_color_02);
+    @apply pt-4 pb-3 flex items-center;
+
+    .collapse-item-wrap {
+      @apply mr-2 flex-1 overflow-hidden;
+
+      .collapse-item-make-header {
+        @apply flex items-center overflow-hidden;
+
+        .make-header-title {
+          @apply truncate mr-2 text-sm font-medium text-text_color_01;
+        }
+
+        .text-disable {
+          @apply text-text_color_04;
+        }
+      }
+
+      .make-header-text {
+        @apply mr-2 px-2 py-0.5 inline-block rounded text-xs font-medium text-text_color_01 bg-button_hover_01;
+
+        .make-header-text-item {
+          transform: scale(0.8);
+        }
+      }
+
+      .make-header-disable-text {
+        @apply text-text_color_04 bg-bg_button_disabled;
+      }
+
+      .collapse-item-make-body {
+        @apply mt-2 text-xs overflow-hidden font-normal flex items-center text-text_color_02;
+
+        .make-body-title {
+          @apply mr-2 truncate;
+        }
+
+        .make-body-text {
+          @apply truncate flex-1;
+        }
+      }
+
+      .collapse-item-disable {
+        @apply text-text_color_04;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0 solid transparent;
+    }
+  }
+
+  .rv-collapse-item__wrapper {
+    @apply overflow-hidden;
+  }
+
+  .drag-icon {
+    @apply ml-4 pt-0.5;
+  }
+}
+
+.collapse-item-content {
+  @apply pb-3 flex items-center;
+
+  .rv-switch {
+    @apply border-none bg-button_hover_01;
+
+    .rv-switch__node {
+      box-shadow: none;
+    }
+  }
+
+  .rv-switch--on {
+    @apply bg-brand_color;
+  }
+
+  .collapse-item-wrap {
+    @apply mr-2 flex-1 overflow-hidden;
+
+    .collapse-item-make-header {
+      @apply flex items-center overflow-hidden;
+
+      .make-header-title {
+        @apply truncate mr-2 text-sm font-medium text-text_color_01;
+      }
+
+      .text-disable {
+        @apply text-text_color_04;
+      }
+
+    }
+
+    .make-header-text {
+      @apply mr-2 px-2 py-0.5 inline-block rounded text-xs font-medium text-text_color_01 bg-button_hover_01;
+
+      .make-header-text-item {
+        transform: scale(0.8);
+      }
+    }
+
+    .make-header-disable-text {
+      @apply text-text_color_04 bg-bg_button_disabled;
+    }
+
+    .collapse-item-make-body {
+      @apply mt-2 text-xs overflow-hidden font-normal flex items-center text-text_color_02;
+
+      .make-body-title {
+        @apply mr-2 truncate;
+      }
+
+      .make-body-text {
+        @apply truncate flex-1;
+      }
+    }
+
+    .collapse-item-disable {
+      @apply text-text_color_04;
+    }
+  }
+
+  .collapse-item-other {
+    @apply flex-1 text-sm font-normal text-text_color_01 overflow-hidden;
+  }
+
+  .collapse-item-other-disable {
+    @apply text-text_color_04;
+  }
+
+  .item-other-tag {
+    @apply mr-2 px-2 py-0.5 inline-block rounded text-xs font-medium text-text_color_01 bg-button_hover_01;
+
+    .make-header-text-item {
+      transform: scale(0.8);
+    }
+  }
+
+  .make-header-disable-text {
+    @apply text-text_color_04 bg-bg_button_disabled;
+  }
+
+  .drag-icon {
+    @apply ml-4 pt-0.5;
+  }
+}

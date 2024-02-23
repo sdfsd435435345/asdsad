@@ -1,0 +1,25 @@
+:local(.help-center-header) {
+  .title {
+    @apply my-4 h-7 text-center relative;
+
+    label {
+      @apply m-auto text-lg font-semibold text-text_color_01;
+    }
+
+    .header-back {
+      @apply absolute left-4 top-1/2 -translate-y-1/2;
+    }
+  }
+
+  .rv-search {
+    @apply py-4;
+
+    .rv-cell {
+      @apply py-1;
+    }
+
+    .rv-field__body {
+      @apply h-full;
+    }
+  }
+}

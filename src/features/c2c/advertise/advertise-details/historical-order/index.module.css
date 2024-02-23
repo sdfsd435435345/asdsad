@@ -1,0 +1,43 @@
+:local(.historical-order-root) {
+  @apply flex flex-col border-t-4 border-line_color_02 py-4;
+
+  .title {
+    @apply text-base text-text_color_01 font-medium px-4;
+  }
+
+  .order-item {
+    @apply flex flex-col p-4 border-b border-line_color_02;
+
+    .order-info {
+      @apply flex items-center justify-between;
+
+      .user-info {
+        @apply flex items-center text-xs text-text_color_01;
+
+        .user-name {
+          @apply mr-1;
+        }
+      }
+
+      .count-down-info {
+        @apply flex items-center text-xs text-brand_color;
+
+        .count-down {
+          @apply text-xs text-brand_color ml-2;
+        }
+
+        .next-icon {
+          @apply text-xs mt-0;
+        }
+      }
+
+      .info-label {
+        @apply text-xs text-text_color_02;
+      }
+
+      .amount {
+        @apply text-base text-text_color_01 font-medium mt-3 mb-1.5;
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "PerpetualIndexPriceProto";
+
+message PerpetualIndexPrice{
+  string symbolWassName = 1;
+  string indexPrice = 2;
+  string markPrice = 3;
+  string assetFeeRate = 4;
+  int64 time = 5; //时间
+}

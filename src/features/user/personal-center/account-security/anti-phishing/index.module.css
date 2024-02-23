@@ -1,0 +1,109 @@
+:local(.scoped) {
+  @apply flex flex-col min-h-screen;
+
+  .anti-phishing-wrap {
+    @apply flex flex-col flex-1 px-4;
+
+    .anti-phishing-form {
+      @apply flex flex-col flex-1 justify-between mb-12;
+
+      .verification {
+        @apply text-sm font-normal text-text_color_03 mt-3;
+
+        .item {
+          @apply mb-8;
+
+          p {
+            @apply text-xs font-normal text-text_color_03;
+          }
+
+          .card {
+            border: 0.5px solid var(--line_color_01);
+            @apply rounded;
+
+            .card-wrap {
+              @apply p-4;
+
+              .header {
+                @apply flex;
+
+                .icon {
+                  @apply mr-2;
+
+                  svg {
+                    @apply w-10 h-10;
+                  }
+                }
+
+                .name, .code {
+                  @apply leading-10;
+                }
+
+                .name {
+                  label {
+                    @apply text-sm font-semibold text-brand_color;
+                  }
+                }
+
+                .code {
+                  @apply flex-1 text-right truncate ml-1;
+
+                  label {
+                    border: 0.5px solid var(--line_color_01);
+                    @apply p-1 text-xs text-text_color_03 font-normal rounded;
+
+                    span {
+                      @apply text-text_color_01;
+                    }
+                  }
+                }
+              }
+
+              .main {
+                @apply w-full mt-6;
+
+                span {
+                  @apply w-full mb-2 h-3 bg-bg_sr_color block;
+
+                  &:nth-child(3) {
+                    @apply w-3/5;
+                  }
+                }
+              }
+
+              .footer {
+                @apply mt-6;
+
+                p {
+                  font-size: 13px;
+                  @apply leading-5 font-normal;
+
+                  label {
+                    @apply text-brand_color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .rv-field {
+      @apply px-0;
+
+      .rv-field__label {
+        @apply text-text_color_03;
+      }
+
+      input {
+        height: 42px;
+        @apply leading-none pl-3 pr-20 bg-card_bg_color_01 rounded text-text_color_01;
+      }
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

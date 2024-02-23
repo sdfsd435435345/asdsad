@@ -1,0 +1,22 @@
+:local(.scoped) {
+  @apply flex flex-row justify-between items-center h-6 mt-5;
+
+  .rv-grid {
+    @apply grow;
+
+    .rv-grid-item__content {
+      @apply w-8;
+
+      > * {
+        @apply m-auto;
+      }
+    }
+  }
+
+  .rv-image {
+    img {
+      @apply w-5 h-5;
+    }
+  }
+  
+}

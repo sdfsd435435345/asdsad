@@ -1,0 +1,12 @@
+stages:
+  - precheck
+
+code_check:
+  stage: precheck
+  script:
+    - npm i pnpm@7.5.0 -g
+    - pnpm i
+    - npx tsc --noEmit --skipLibCheck
+    - npx eslint --color --quiet ./
+    - npx stylelint --allow-empty-input --config .stylelintrc.cjs --color --quiet ./**/*.css
+    - pnpm build

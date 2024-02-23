@@ -1,0 +1,31 @@
+:local(.scoped) {
+  @apply h-20 bg-card_bg_color_01;
+
+  border-radius: 4px;
+
+  .content {
+    @apply p-[12px];
+
+    font-size: 16px;
+  }
+
+  .header {
+    @apply inline-flex justify-between w-full items-center mb-2;
+
+    .check-box {
+      width: 16px;
+      height: 16px;
+
+      :checked {
+        @apply bg-brand_color;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        border-radius: 4px;
+      }
+    }
+  }
+
+} 

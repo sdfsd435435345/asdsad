@@ -1,0 +1,45 @@
+:local(.assets-selection-wrapper) {
+  z-index: 2001;
+  @apply w-full h-full bg-bg_color absolute top-0 overflow-y-scroll;
+  
+  .assets-selection-cell {
+    @apply mt-5;
+
+    .rv-cell {
+      @apply py-3 font-medium items-center;
+
+      .currency-item {
+        @apply h-full flex flex-row items-center;
+    
+        .name {
+          @apply text-base text-text_color_01 mr-2 font-medium
+        }
+    
+        .desc {
+          @apply text-xs text-text_color_02
+        }
+      }
+
+      .rv-cell__title {
+        @apply flex-none text-base text-text_color_01;
+      }
+
+      .rv-cell__value {
+        @apply flex-1 text-right text-sm text-text_color_01 overflow-hidden;
+      }
+
+      &:hover {
+        @apply bg-bg_color_03;
+      }
+    }
+  }
+  
+  .all {
+    @apply text-sm text-text_color_01 font-medium py-2 px-4
+    }
+  
+  .active {
+    @apply text-brand_color !important
+  }
+
+}

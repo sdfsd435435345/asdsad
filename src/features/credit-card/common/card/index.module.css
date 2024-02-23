@@ -1,0 +1,514 @@
+:local(.scoped) {
+  @apply mx-4 my-0;
+
+
+  .card {
+    @apply bg-card_bg_color_03 relative rounded-2xl;
+
+ 
+    border-color: #2EBD85;
+    border-width: 1.5px 0.5px 0.5px;
+
+
+    .my-png {
+      @apply mt-4 ml-4
+   
+    }
+
+    .bgimgFalse {
+      @apply absolute top-4 right-4;
+
+      width: 178px;
+      height: 122px;
+      background-image: url('https://markcoin.oss-ap-southeast-1.aliyuncs.com/fastpay-h5/image/Vector.svg');
+      background-repeat: no-repeat;
+    }
+
+    .bgimgTrue {
+      @apply absolute;
+
+      top: 77.5px;
+      left: 160px;
+      width: 178px;
+      height: 122px;
+      background-image: url('https://markcoin.oss-ap-southeast-1.aliyuncs.com/fastpay-h5/image/Vector.svg');
+      background-repeat: no-repeat;
+    }
+
+    .xp {
+      @apply mt-5 ml-4;
+     
+    }
+
+    .card-number {
+      @apply text-text_color_01 flex mt-3 ml-4 font-medium;
+
+      width: 255px;
+      height: 30px;
+      font-size: 20px;
+
+      .cardno-text {
+        @apply tracking-normal text-left;
+
+        line-height: 30px;
+       
+
+      }
+
+      .btn {
+        @apply text-text_color_02 absolute font-normal tracking-normal text-center;
+
+        position: absolute;
+        top: 110px;
+        left: 200px;
+        align-self: center;
+        width: 66px;
+        height: 22px;
+        margin-left: 3px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0;
+        text-align: center;
+
+        /* 这里的边框颜色被背景色覆盖掉了 */
+        border-color: #858B93;
+        border-width: 0.5px;
+        border-radius: 11px;
+
+
+      }
+
+    }
+
+    /* 样式文本 */
+    .foot-text {
+      display: flex;
+      justify-content: space-between;
+      width: 133px;
+      height: 36px;
+      margin-top: 16px;
+      margin-bottom: 12px;
+      margin-left: 16px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    /* 卡余额 */
+    .balance-text {
+      @apply text-text_color_02;
+
+      margin-top: 16px;
+      margin-bottom: 3px;
+      margin-left: 16px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0;
+      text-align: left;
+
+    }
+
+    .balance-show {
+      display: flex;
+      height: 12px;
+      margin-bottom: 12px;
+      margin-left: 16px;
+
+      .balance {
+        @apply text-text_color_01;
+
+        margin-right: 4px;
+        margin-bottom: 12px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0;
+        text-align: left;
+
+      }
+
+
+    }
+
+
+    /* 专区 */
+    .prefecture {
+      @apply text-text_color_03;
+
+      position: absolute;
+      top: 17px;
+      right: 16px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      letter-spacing: 0;
+      text-align: left;
+
+    }
+
+    .mast-crad1 {
+      position: absolute;
+      top: 105.5px;
+      right: 16px;
+    }
+
+    .mast-crad2 {
+      position: absolute;
+      top: 160px;
+      right: 16px;
+    }
+
+    /* 详情按钮 */
+    .arrow_expand-down {
+      @apply absolute ;
+
+      
+      bottom: 6px;
+      margin-left: 165px;
+
+      svg {
+        width: 13px;
+        height: 5px;
+      }
+    }
+
+    /* 按钮 */
+    .card-bottom-btn {
+      @apply bg-buy_up_color;
+
+      position: absolute;
+      bottom: 0;
+      left: -0.5px;
+      width: calc(100% + 1px);
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 0 0 1rem 1rem;
+    }
+
+
+  }
+
+  /* 详情 */
+  .card-detail {
+    @apply mt-3;
+
+    /* .detail-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0  8px ;
+      padding-bottom: 2px;
+    } */
+    .detail-content {
+      @apply mb-6 pt-3;
+
+      border-top: 1px  dashed #30373F;
+
+      .text-left {
+        @apply text-text_color_02;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+
+      .text-right {
+        @apply text-text_color_01;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+        text-align: right;
+      }
+
+      .content-text {
+        .topUp-cancel {
+          @apply flex justify-between h-8 mt-3;
+
+          .topUp {
+            @apply bg-bg_sr_color h-8 leading-8 text-center rounded;
+
+            width: 148px;
+            font-size: 14px;
+          }
+
+          .cancel {
+            @apply bg-bg_sr_color h-8 leading-8 text-center rounded;
+
+            width: 148px;
+            font-size: 14px;
+          }
+        }
+
+        .details-text {
+          @apply mt-4 flex justify-between;
+
+          flex-direction: column;
+
+
+          .text {
+            @apply flex justify-between w-full ml-0;
+         
+            margin-top: 10px;
+          }
+    
+        }
+      }
+    
+
+    }
+  }
+
+  .copy-cardNO {
+    @apply absolute;
+
+    top: 115px;
+    left: 221px;
+
+    svg {
+      font-size: 16px;
+    }
+  }
+
+  .eyes-show {
+    @apply absolute;
+
+    top: 116px;
+    left: 195px;
+
+    svg {
+      font-size: 16px;
+    }
+  }
+
+  .topUp-ico {
+    svg {
+      font-size: 20px;
+    }
+  }
+
+  .melt-card {
+    border-color: #5A5C5E !important;
+  }
+
+
+}
+
+
+
+.card-detail-wrapper {
+  /* @apply bg-card_bg_color_03;
+
+  margin: 0 1rem;
+  padding-bottom: 10px;
+  border-radius: 1rem;
+
+  /* 卡片详情 */
+
+  /* .card-detail {
+    @apply bg-card_bg_color_03;
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      padding: 0  8px ;
+      padding-bottom: 2px;
+
+      .card-xq {
+        @apply text-text_color_02 font-normal tracking-normal ;
+
+        font-size: 14px;
+        line-height: 22px;
+        text-align: left;
+
+      }
+    }
+
+    .detail-content {
+      @apply px-2 py-0 rounded-2xl;
+
+
+      .text-left {
+        @apply text-text_color_02;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+        text-align: left;
+      }
+
+      .text-right {
+        @apply text-text_color_01;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: 0;
+        text-align: right;
+      }
+
+      .topUp-cancel {
+        @apply flex justify-between h-8 mt-3;
+
+        .topUp {
+          @apply bg-card_bg_color_01 h-8 leading-8 text-center rounded;
+
+          width: 148px;
+          font-size: 14px;
+        }
+
+        .cancel {
+          @apply bg-card_bg_color_01 h-8 leading-8 text-center rounded;
+
+          width: 148px;
+          font-size: 14px;
+        }
+      }
+
+      .details-text {
+        @apply mt-4 flex justify-between;
+
+        flex-direction: column;
+        height: 174px;
+
+        .text {
+          @apply flex justify-between w-full ml-0;
+         
+          margin-top: 10px;
+        }
+    
+      }
+
+    }
+  }
+
+  .copy-cardNO {
+    @apply absolute;
+
+    top: 115px;
+    left: 221px;
+
+    svg {
+      font-size: 16px;
+    }
+  }
+
+  .eyes-show {
+    @apply absolute;
+
+    top: 116px;
+    left: 195px;
+
+    svg {
+      font-size: 16px;
+    }
+  }
+
+  .topUp-ico {
+    svg {
+      font-size: 20px;
+    }
+  } */
+}
+
+.dialog-confirm-wrapper {
+  .look-out {
+    font-size: 36px;
+  }
+} 
+
+:local(.dialog-pwd) {
+  .pwd-Input {
+    height: 40px !important;
+    margin: 0;
+
+    .rv-password-input__security {
+      height: 40px !important;
+
+      .rv-password-input__item {
+        @apply w-9;
+
+        height: 40px !important;
+        background-color: #30373F;
+
+        i {
+          color: transparent;
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    input {
+      height: 40px !important;
+      caret-color: transparent !important;
+    }
+
+  }
+}
+
+
+:local(.pin-card-verify) {
+  .rv-dialog__message {
+    text-align: center !important;
+  }
+}
+
+:local(.dialog-pwd) {
+  .alias-Input {
+    @apply bg-bg_sr_color h-10;
+
+    input {
+      @apply ml-3;
+    }
+  }
+}
+
+:local(.customNumberKeyboard) {
+  .rv-key {
+    color: black;
+  }
+}
+
+:local(.dialog-pwd-disabled) {
+  .pwd-Input {
+    height: 40px !important;
+    margin: 0;
+
+    .rv-password-input__security {
+      height: 40px !important;
+
+      .rv-password-input__item {
+        @apply w-9;
+
+        height: 40px !important;
+        background-color: #30373F;
+
+        i {
+          color: transparent;
+          background-color: #ffffff;
+        }
+      }
+    }
+
+    input {
+      height: 40px !important;
+      caret-color: transparent !important;
+    }
+
+  }
+
+  .rv-dialog__footer {
+    .rv-dialog__confirm {
+      color: #5A626B !important;
+      background-color: #3C4651 !important;
+    }
+  }
+ 
+}

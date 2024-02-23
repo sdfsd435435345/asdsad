@@ -1,0 +1,28 @@
+:local(.prices) {
+  .rv-cell__title {
+    @apply text-right;
+  }
+}
+
+:local(.changes) {
+  @apply text-center py-0;
+
+
+  .item-up {
+    @apply bg-buy_up_color;
+  }
+
+  .item-down {
+    @apply bg-sell_down_color;
+  }
+
+  .item-up,
+  .item-down {
+    @apply py-2 rounded-md;
+  }
+
+  .rv-cell__value {
+    @apply text-center text-text_color_01;
+  }
+
+}

@@ -1,0 +1,39 @@
+:local(.coin-list-header-root) {
+  @apply w-full flex flex-row justify-between items-center border-b border-line_color_02 px-4 bg-bg_color;
+
+  height: 58px;
+
+  .hide-assets {
+    @apply flex items-center text-xs text-text_color_02;
+
+    line-height: 18px;
+
+    .hide-assets-icon {
+      @apply mr-1 text-xs;
+    }
+  }
+
+  .coin-list-search {
+    @apply h-6 rounded m-0 px-3;
+
+    width: 114px;
+
+    .search-icon {
+      @apply text-sm mt-0 mr-1;
+
+      svg {
+        @apply mr-0;
+      }
+    }
+
+    .search-input {
+      .rv-input__control {
+        @apply text-xs placeholder:text-text_color_04 placeholder:text-xs placeholder:font-normal leading-6;
+      }
+    }
+
+    .close-icon {
+      @apply px-0 mt-0;
+    }
+  }
+}

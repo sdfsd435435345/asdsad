@@ -1,0 +1,66 @@
+:local(.scoped) {
+  .register-wrap {
+    @apply px-4 py-4;
+
+    .tips {
+      @apply text-xs my-2;
+
+      label {
+        @apply text-sm text-text_color_03;
+      }
+    }
+
+    .success-info {
+      @apply flex flex-col justify-center items-center h-screen;
+
+      .success-icon {
+        svg {
+          width: 132px;
+          height: 105px;
+        }
+      }
+
+      .success-title {
+        @apply text-2xl font-semibold text-center text-text_color_01 mt-5;
+      }
+
+      .success-subtitle {
+        @apply text-sm text-text_color_03 font-normal mt-4 mb-14;
+      }
+    }
+
+    .rv-field__suffix {
+      @apply text-sm mr-3 text-brand_color;
+    }
+
+    .rv-field {
+      @apply p-0 bg-transparent;
+    }
+
+    .rv-form--vertical {
+      @apply mt-8;
+
+    }
+
+    .rv-form-item--vertical {
+      @apply mt-8;
+    }
+
+    .not-received-validate {
+      @apply mt-6;
+
+      label {
+        @apply text-sm text-brand_color;
+      }
+    }
+
+    input {
+      @apply pr-20;
+    }
+  }
+
+
+  button {
+    @apply w-full;
+  }
+}

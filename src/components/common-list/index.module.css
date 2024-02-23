@@ -1,0 +1,55 @@
+:local(.scoped) {
+  @apply h-full;
+
+  .empty {
+    @apply flex flex-col items-center;
+
+    .img {
+      svg { 
+        @apply w-28 h-20;
+
+        image {
+          @apply h-full;
+        }
+      }
+    }
+
+    .text {
+      @apply text-sm text-text_color_03 mt-5
+    }
+  }
+
+  /* 优化短列表下拉时的状态，有 bug 的话可去除 */
+  .rv-pull-refresh {
+    @apply overflow-visible;
+
+    .rv-pull-refresh__track {
+      .rv-pull-refresh__head {
+        @apply invisible;
+      }
+    }
+
+    .rv-pull-refresh__track[style *= "transform"] {
+      .rv-pull-refresh__head {
+        @apply visible;
+      }
+    }
+  }
+
+  /* 列表底部 */
+  .rv-list__finished {
+    @apply text-sm text-text_color_03 py-8
+  }
+
+  /* 下拉刷新 */
+  .refresh-img {
+    svg {
+      @apply w-24 h-24
+    }
+  }
+
+  /* 列表 */
+  .list {
+    @apply flex flex-col h-full bg-bg_color
+  }
+}

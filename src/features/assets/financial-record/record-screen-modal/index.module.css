@@ -1,0 +1,65 @@
+:local(.record-screen-modal-root) {
+  @apply rounded-tl-lg rounded-tr-lg !important;
+
+  .record-screen-modal-warp {
+    @apply flex flex-col px-4 bg-card_bg_color_03;
+  }
+
+  .screen-header {
+    @apply flex flex-row items-center justify-between pt-4 pb-4;
+
+    span {
+      @apply text-base text-text_color_01 font-medium
+    }
+
+    .close-icon {
+      svg {
+        @apply w-5 h-5
+      }
+    }
+  }
+
+  .screen-title {
+    @apply text-sm text-text_color_02 mb-2 mt-4;
+  }
+
+  .buttons {
+    @apply flex flex-row items-center justify-between mt-3 mb-6;
+
+    button {
+      width: 48%;
+
+      @apply h-10 rounded text-text_color_01;
+    }
+
+    .reset-btn {
+      @apply bg-bg_sr_color;
+    }
+
+    .screen-btn {
+      @apply text-button_text_02;
+    }
+  }
+
+  .status-list {
+    width: 90%;
+    @apply flex flex-row flex-wrap justify-between mt-1;
+
+    .status-item {
+      @apply w-3/6 pb-3 mr-0
+    }
+  }
+
+  .rv-checkbox__icon--checked .rv-icon {
+    @apply rounded
+  }
+
+  .rv-checkbox__icon .rv-icon {
+    @apply rounded
+  }
+  
+  .rv-checkbox__label {
+    @apply text-xs text-text_color_01
+  }
+}
+

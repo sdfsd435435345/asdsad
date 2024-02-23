@@ -1,0 +1,17 @@
+:local(.scoped) {
+  @apply w-full text-sm;
+
+
+  .rv-flexitem {
+    @apply text-base px-3;
+  }
+
+  .rv-flexitem .state {
+    @apply pl-3 text-xs text-text_color_03;
+  }
+
+  .select-coin {
+    @apply w-full h-full fixed top-0 bg-bg_color z-20
+  }
+}
+

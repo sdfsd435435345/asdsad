@@ -1,0 +1,5 @@
+:local(.scoped) {
+  .geetest-wrap {
+    @apply my-8;
+  }
+}

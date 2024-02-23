@@ -1,0 +1,30 @@
+:local(.history-search-root) {
+  @apply flex items-center justify-between mt-4 mb-2 px-4;
+    
+  .search-left {
+    @apply h-8 flex items-center flex-1 bg-bg_sr_color rounded-2xl px-3;
+
+    .search-coin {
+      width: 94px;
+      @apply flex items-center;
+
+      .coin-name {
+        @apply text-sm text-text_color_01 ml-1 mr-2;
+      }
+
+      .coin-drop {
+        svg {
+          @apply w-2 h-2;
+        }
+      }
+
+      .line {
+        @apply w-px h-5 bg-button_hover_01 mx-2;
+      }
+    }
+  }
+    
+  .search-icon {
+    @apply text-xl ml-4;
+  }
+}

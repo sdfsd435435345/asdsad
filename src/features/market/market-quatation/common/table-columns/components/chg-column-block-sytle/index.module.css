@@ -1,0 +1,13 @@
+:local(.scoped) {
+  width: 74px;
+  height: 30px;
+  @apply rounded;
+
+  > span {
+    @apply m-auto;
+  }
+
+  span.increase-wrap {
+    @apply text-xs;
+  }
+}

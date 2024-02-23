@@ -1,0 +1,55 @@
+:local(.scoped) {
+  .detail-wrap {
+    @apply py-2 text-sm text-text_color_01;
+
+    .order-no {
+      @apply mx-4 h-9 flex justify-between px-3 bg-bg_sr_color text-sm text-text_color_02 rounded items-center;
+    }
+
+    .detail-item {
+      @apply flex flex-1 py-2 flex-wrap items-center;
+    }
+
+    .detail-item .value {
+      @apply flex flex-1 flex-wrap;
+
+      word-break: break-all;
+    }
+
+    .detail-item .label {
+      @apply text-text_color_02;
+
+      width: 25%;
+    }
+
+    .reminder {
+      @apply text-tips_color pt-2 text-sm px-4;
+    }
+
+    .copy-icon {
+      svg {
+        @apply w-4 h-4 ml-2
+      }
+    }
+  }
+
+  .rv-hairline--bottom {
+    @apply border-0
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-0
+  }
+
+  .rv-tabs__nav--line, .rv-tabs__nav--capsule, .rv-tabs__nav--jumbo {
+    @apply px-4 overflow-x-scroll;
+
+    .rv-tab {
+      @apply p-0 m-0 mr-8 text-base;
+    }
+  }
+
+  .rv-tabs__wrap {
+    @apply border-solid border-line_color_02 border-b;
+  }
+}

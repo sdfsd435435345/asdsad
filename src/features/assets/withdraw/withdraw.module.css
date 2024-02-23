@@ -1,0 +1,264 @@
+:local(.withdraw-confirm-wrapper) {
+  .info-list-wrapper {
+    @apply rounded-lg bg-card_bg_color_01 p-4;
+
+    .info-item {
+      @apply text-sm text-text_color_01 flex flex-row mb-4 last:mb-0;
+
+      .name {
+        @apply text-text_color_02 pr-4;
+
+        min-width: 30%;
+      }
+
+      .value {
+        @apply break-all w-4/5
+      }
+
+      .uid {
+        @apply mr-2 border-b border-dashed border-text_color_01;
+      }
+
+      .uid-icon {
+        @apply mt-0;
+
+        svg {
+          @apply w-4 h-4 self-center
+        }
+      }
+    }
+  }
+
+  .note-item {
+    @apply flex text-xs text-text_color_02 px-4 mb-1;
+
+    .note-icon {
+      @apply mt-1;
+
+      svg {
+        @apply w-1.5 h-1.5 mr-1
+      }
+    }
+  }
+
+  .rv-hairline--bottom {
+    @apply border-line_color_02
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-line_color_02
+  }
+}
+
+:local(.bottom-action-wrapper) {
+  @apply fixed bottom-10 left-0 w-full px-4;
+
+  .save-address {
+    @apply mb-8 flex flex-row items-center text-sm text-text_color_01;
+
+    .save-address-icon {
+      svg {
+        @apply w-5 h-5 mr-2;
+      }
+    }
+  }
+
+  .withdraw-confirm-btn {
+    @apply w-full h-10 rounded
+  }
+}
+
+:local(.layout-wrapper) {
+  @apply pb-28 relative;
+
+  .record-icon {
+    svg {
+      @apply w-5 h-5 self-center
+    }
+  }
+
+  .withdraw-notes {
+    @apply text-xs text-text_color_02;
+
+    .withdraw-notes-item {
+      @apply mb-1 px-4 flex;
+
+      .withdraw-notes-icon {
+        @apply mr-1 mt-0.5;
+
+        svg {
+          @apply w-2 h-2
+        }
+      }
+    }
+  }
+
+  .rv-hairline--bottom {
+    @apply border-line_color_02
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-line_color_02
+  }
+}
+
+:local(.limit-dialog-wrapper) {
+  @apply flex flex-col;
+  
+  .limit-hint {
+    @apply py-8 px-6 text-sm text-text_color_02
+  }
+
+  .limit-btn {
+    @apply mx-6 text-sm rounded
+  }
+}
+
+:local(.form-actions-wrapper) {
+  @apply p-4 pb-10 bg-card_bg_color_01 flex flex-row justify-between items-center border-t border-line_color_02;
+
+  .withdraw-info {
+    @apply flex flex-row items-center w-8/12;
+  }
+
+  .number-item {
+    @apply w-full flex flex-col mr-4 break-words truncate;
+
+    .label {
+      @apply text-xs text-text_color_02 flex items-center;
+    }
+
+    .value {
+      @apply text-text_color_01 text-sm mt-1 font-medium break-words truncate;
+    }
+  }
+
+  .withdraw-btn {
+    @apply w-20 p-0 rounded
+  }
+}
+
+:local(.withdraw-confirm-success) {
+  .confirm-icon {
+    @apply flex items-center justify-center mt-11 mb-4;
+
+    svg {
+      @apply w-16 h-16 self-center;
+    }
+  }
+
+  .hint {
+    @apply text-base text-text_color_01 mb-8 text-center font-medium;
+  }
+
+  .coin-info {
+    @apply flex flex-row items-center h-12 border-t border-b border-line_color_02 px-4 justify-between text-sm;
+
+    .info-name {
+      @apply text-text_color_02;
+    }
+
+    .info-value {
+      @apply text-text_color_01;
+    }
+  }
+
+  .rv-icon {
+    @apply w-2.5 h-2.5
+  }
+
+  .rv-steps {
+    background: none;
+  }
+
+  .rv-step--vertical {
+    @apply py-4
+  }
+
+  .rv-step--vertical .rv-step__circle-container {
+    @apply top-6
+  }
+
+  .rv-step--vertical .rv-step__line {
+    top: 22px;
+    background: linear-gradient(180deg, #F1AE3D 0%, #414347 100%);
+  }
+
+  .rv-hairline {
+    @apply border-0
+  }
+
+  .rv-hairline::after {
+    @apply border-0
+  }
+
+  .rv-step--waiting {
+    @apply text-text_color_02
+  }
+
+  .rv-hairline--bottom {
+    @apply border-0
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-0
+  }
+}
+
+:local(.withdraw-from-address-action) {
+  .action-item {
+    @apply py-3 text-sm text-text_color_01 border-t border-line_color_02 text-center font-medium bg-card_bg_color_03;
+  }
+
+  .active-text {
+    @apply text-brand_color
+  }
+}
+
+:local(.form-wrapper) {
+  @apply mt-2;
+
+  .rv-input__control {
+    @apply text-text_color_01
+  }
+
+  .arrow-icon {
+    svg {
+      @apply w-4 h-4
+    }
+  }
+
+  .amount-input {
+    @apply w-full bg-transparent
+  }
+
+  .amount-right {
+    @apply text-base flex items-center;
+
+    .amount-right-symbol {
+      @apply text-text_color_02
+    }
+
+    .amount-right-line {
+      @apply w-px h-5 bg-line_color_01 mx-2
+    }
+
+    .amount-right-all {
+      @apply text-brand_color
+    }
+  }
+
+  .select-coin {
+    @apply fixed left-0 top-0 w-full h-full overflow-y-auto z-10
+  }
+
+  .add-address {
+    @apply absolute top-0 w-screen h-screen bg-bg_color z-20
+  }
+
+  .asset_drawing_attn {
+    svg {
+      @apply w-4 h-4
+    }
+  }
+}

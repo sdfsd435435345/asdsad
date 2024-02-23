@@ -1,0 +1,92 @@
+:local(.scoped) {
+  @apply px-4;
+
+  .inmail-swiper-wrap {
+    border-bottom: 0.5px solid var(--line_color_02);
+    @apply pb-4;
+
+    .swiper-wrap-header {
+      @apply mb-2 flex items-center justify-between;
+
+      .wrap-header-left {
+        @apply pt-4 flex-1 flex items-center overflow-hidden;
+
+        .wrap-header-image {
+          @apply w-6 h-6;
+
+          svg {
+            @apply w-full h-full;
+          }
+
+          img {
+            @apply w-6 h-6;
+          }
+        }
+
+        .wrap-header-text {
+          @apply flex-1 ml-2 text-sm truncate font-medium text-text_color_01;
+        }
+      }
+
+      .wrap-header-right {
+        @apply pt-4 text-xs font-normal text-text_color_03;
+      }
+    }
+
+    .swiper-wrap-body {
+      @apply flex items-center;
+
+      .wrap-body-first {
+        /* stylelint-disable-next-line value-no-vendor-prefix */
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        @apply flex-1 text-xs font-normal text-text_color_01;
+      }
+
+      .wrap-body-second {
+        @apply flex-1 text-xs font-normal;
+      }
+
+      .wrap-body-three {
+        @apply px-1 py-0.5 text-xs rounded font-medium text-button_text_01;
+      }
+    }
+  }
+
+  .rise-color {
+    @apply text-buy_up_color;
+  }
+
+  .fall-color {
+    @apply text-sell_down_color;
+  }
+
+  .rise-bg-color {
+    @apply bg-buy_up_color;
+  }
+
+  .fall-bg-color {
+    @apply bg-sell_down_color;
+  }
+}
+
+.rv-swipe-cell__right {
+  @apply -right-px;
+}
+
+.swiper-button-content {
+  min-width: 160px;
+  @apply h-full flex items-center justify-end text-center;
+
+  .swiper-default-button {
+    width: 68px;
+    @apply flex items-center justify-center px-5 h-full text-button_text_01 bg-icon_color text-sm;
+  }
+
+  .swiper-danger-button {
+    @apply flex items-center justify-center px-8 h-full text-sm text-button_text_01 bg-sell_down_color;
+  }
+}

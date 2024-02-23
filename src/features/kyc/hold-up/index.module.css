@@ -1,0 +1,159 @@
+:local(.scoped) {
+  .navbar {
+    @apply flex justify-between leading-5;
+  
+    .navbar-left, .navbar-right {
+      @apply flex flex-1;
+    }
+  
+    .navbar-left {
+      @apply flex items-center;
+  
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+
+
+  
+    .navbar-right {
+      @apply flex justify-end;
+    }
+  
+    .theme, .customer-service {
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+  
+    .theme {
+      @apply mr-6;
+    }
+  
+  }
+
+  .kyc-stand-wrap {
+    @apply p-4;
+    
+    .title {
+      @apply font-semibold text-text_color_01 text-base;
+    }
+
+    .rv-cell {
+      @apply px-0;
+    }
+  }
+
+  .update {
+    @apply flex flex-1 ml-1 relative;
+
+    .rv-field__label {
+      margin-right: 1px;
+    }
+
+   
+
+    .rv-uploader, .rv-uploader__wrapper, .rv-uploader__input-wrapper {
+      @apply w-full h-full;
+    }
+
+    .rv-uploader__input-wrapper {
+      input {
+        @apply h-full absolute;
+
+        z-index: 9;
+      }
+    }
+
+    .rv-uploader {
+      @apply rounded-lg;
+
+      height: 200px;
+      background: none;
+      border: 2px dashed var(--line_color_01);
+      
+      .update-wrap {
+        @apply bg-cover bg-center bg-no-repeat h-full text-center;
+        
+        & > div {
+          @apply w-full h-full justify-center items-center;
+        }
+
+        
+
+        .icon_bg {
+          svg {
+            @apply w-full h-full absolute z-1 opacity-30;
+
+            width: 220px;
+            height: 130px;
+          }
+        }
+
+        .icon {
+          svg {
+            @apply w-full h-full absolute  top-1/2 -mt-6;
+
+            z-index: 8;
+            width: 52px;
+            height: 52px;
+          }
+        }
+
+        .refesh {
+          svg {
+            @apply w-full h-full absolute top-1/2 -mt-4;
+
+            z-index: 9;
+            width: 32px;
+            height: 32px;
+          }
+          
+        }
+      }
+
+      .update-text {
+        @apply absolute left-0 right-0 bottom-10 text-center;
+
+        label {
+          @apply text-sm text-text_color_01;
+        }
+      }
+
+      .rv-uploader__wrapper {
+        @apply pb-0;
+      }
+    }
+  }
+
+  .iconBox {
+    @apply w-full;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .tips_text {
+    @apply text-center text-xs text-text_color_03 -mt-2;
+
+    svg {
+      @apply mr-1;
+    }
+  }
+
+  .success_btn {
+    @apply mt-4 font-semibold text-base;
+  }
+
+  .fail_btn {
+    @apply mt-4 font-semibold text-base bg-bg_button_disabled text-text_color_04 border-none;
+  }
+}
+
+.slt_icon {
+  svg {
+    width: 280px !important;
+    height: 170px !important;
+  }
+}

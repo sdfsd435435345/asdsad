@@ -1,0 +1,58 @@
+:local(.scoped) {
+  @apply w-full text-sm;
+
+  .main-Network {
+    @apply pb-4
+  }
+
+  .title {
+    @apply text-sm text-text_color_02 px-4
+  }
+
+  .network-list {
+    @apply flex flex-wrap px-4 mt-2;
+  }
+
+  .network-item {
+    @apply mr-4 p-4 mb-4 text-sm rounded text-center bg-bg_sr_color font-medium relative;
+
+    min-width: 82px;
+
+    &.active {
+      @apply bg-brand_color_special_02 rounded text-brand_color border-brand_color border;
+    }
+
+    &.disabled {
+      @apply justify-end relative;
+      
+      .tag {
+        @apply text-xs font-normal text-text_color_02 absolute px-3 py-1 right-0 top-0 bg-bg_button_disabled origin-top-right rounded-bl rounded-tr;
+
+        transform: scale(0.8);
+        
+      }
+    }
+
+  }
+}
+
+:local(.network-actions-root) {
+  @apply flex flex-col bg-card_bg_color_03;
+
+  .network-actions-item {
+    @apply h-14 w-full flex items-center justify-center border-b border-line_color_02;
+
+    .network-actions-text {
+      @apply text-sm text-text_color_01 font-medium;
+    }
+
+    .active-text {
+      @apply text-brand_color;
+    }
+
+    .pause-tag {
+      font-size: 10px;
+      @apply px-2 py-1 text-text_color_02 bg-bg_button_disabled rounded-tr rounded-bl ml-2;
+    }
+  }
+}

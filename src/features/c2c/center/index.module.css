@@ -1,0 +1,244 @@
+:local(.c2c-center) {
+  .popover-icon {
+    @apply w-4 h-4;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .c2c-center-header {
+    @apply px-4 pt-4 pb-4;
+
+    .c2c-center-header-means {
+      @apply flex justify-between overflow-hidden;
+
+      .means-button {
+        @apply rounded font-normal;
+      }
+
+      .means-button-text {
+        @apply text-text_color_03;
+      }
+    }
+
+    .c2c-center-header-status {
+      @apply mt-4 px-4 py-3 rounded-lg bg-card_bg_color_01;
+
+      .header-my-status {
+        @apply flex justify-between;
+
+        .my-status-text {
+          @apply text-sm font-medium text-text_color_01;
+
+          .status-online {
+            @apply text-buy_up_color;
+          }
+
+          .status-reset {
+            @apply text-text_color_04;
+          }
+        }
+
+        .my-status-fit {
+          @apply text-sm font-normal text-brand_color;
+
+          .status-fit-icon {
+            @apply w-3 h-3;
+
+            svg {
+              @apply w-full h-full;
+            }
+          }
+        }
+      }
+
+      .header-my-time {
+        @apply mt-1 text-xs font-normal text-text_color_02;
+      }
+    }
+  }
+
+  .c2c-center-divider {
+    @apply h-1 bg-line_color_02;
+  }
+
+  .c2c-center-footer {
+    @apply pb-6;
+
+    .center-footer-scalp {
+      border-top: 4px solid var(--line_color_02);
+      @apply pt-6 px-4 mb-2 flex items-center;
+
+      .search-input-wrapper {
+        @apply bg-bg_sr_color px-3 py-2 rounded-2xl flex items-center mr-6 flex-1;
+      }
+
+      .center-footer-scalp-input {
+        @apply flex-1 h-8 px-3 rounded-2xl bg-bg_sr_color overflow-hidden;
+
+        .rv-cell__left-icon {
+          @apply mt-0.5;
+        }
+
+        .rv-search__content {
+          @apply pl-0;
+        }
+
+        .rv-field__body {
+          @apply mt-1;
+        }
+      }
+
+      .center-footer-scalp-prefix {
+        @apply flex items-center;
+
+        .scalp-prefix-icon {
+          @apply w-4 h-4;
+
+          svg {
+            @apply w-full h-full;
+          }
+        }
+
+        .scalp-prefix-text {
+          @apply ml-1 mr-2 text-sm font-normal text-text_color_01;
+        }
+
+        .scalp-prefix-drop {
+          @apply w-2 h-2;
+
+          svg {
+            @apply w-full h-full;
+          }
+        }
+
+        .scalp-divider {
+          @apply w-px h-4 ml-2 bg-button_hover_01;
+        }
+      }
+
+      .center-footer-scalp-icon {
+        @apply ml-4 w-5 h-5;
+
+        svg {
+          @apply w-full h-full;
+        }
+      }
+    }
+
+    .center-footer-common-list {
+      border-bottom: 0.5px solid var(--line_color_02);
+      @apply p-4;
+
+      .footer-common-list-title {
+        @apply mb-3 flex items-center;
+
+        .tilte-line {
+          @apply h-3 w-0.5 rounded-3xl;
+        }
+
+        .title-buy-line {
+          @apply bg-buy_up_color;
+        }
+
+        .title-sell-line {
+          @apply bg-sell_down_color;
+        }
+
+        .title-text {
+          @apply ml-1 text-sm font-medium;
+        }
+
+        .title-sell-text {
+          @apply text-sell_down_color;
+        }
+
+        .title-buy-text {
+          @apply text-buy_up_color;
+        }
+
+        .list-title-content {
+          @apply px-1 py-px rounded-sm;
+
+          .list-title-content-status {
+            transform: scale(0.83);
+            @apply text-xs;
+          }
+        }
+
+        .resting {
+          @apply text-text_color_03 bg-card_bg_color_02;
+        }
+
+        .normal {
+          @apply text-buy_up_color bg-buy_up_color_special_02;
+        }
+
+        .dealing {
+          @apply text-brand_color bg-brand_color_special_02;
+        }
+      }
+
+      .footer-common-list-body {
+        border-bottom: 0.5px solid var(--line_color_02);
+
+        .common-list-body-item {
+          @apply mb-2 text-xs flex items-center justify-between;
+
+          .list-body-item-left {
+            @apply font-normal text-text_color_02;
+          }
+
+          .list-body-item-right {
+            @apply font-medium text-text_color_01;
+          }
+        }
+      }
+    }
+  }
+
+  .rv-pull-refresh__head {
+    pointer-events: none
+  }
+}
+
+.c2c-center-popover {
+  @apply w-20;
+
+  .rv-popover__arrow {
+    @apply hidden;
+  }
+
+  .rv-popover__content {
+    @apply p-0 bg-card_bg_color_03;
+
+    .rv-popover__action {
+      @apply w-full px-0 bg-card_bg_color_03; 
+
+      .rv-popover__action-text {
+        @apply text-xs font-medium text-text_color_01;
+      }
+
+      .rv-hairline--bottom::after {
+        @apply border-none;
+      }
+    }
+  }
+
+  .rv-popover__arrow {
+    @apply text-card_bg_color_03;
+  }
+}
+
+.c2c-center-icon {
+  @apply w-4 h-4;
+
+  svg {
+    @apply w-full h-full;
+  }
+}
+
+:local(.center-user-popUp) {
+  @apply text-center;
+}

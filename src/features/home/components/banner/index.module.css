@@ -1,0 +1,37 @@
+:local(.scoped) {
+  /* banner height 90px + header height 44px */
+  height: 144px;
+  @apply mx-auto my-0 pb-1;
+
+  .rv-swiper {
+    @apply rounded-none;
+
+    .rv-swiper-item {
+      /* banner height 90px + header height 44px */
+      height: 144px;
+
+      .rv-image {
+        @apply w-full;
+      }
+
+      .banner-img {
+        @apply h-full !important;
+
+        img {
+          @apply object-cover object-bottom h-full;
+        }
+      }
+    }
+  }
+
+  .banner-indicator {
+    font-size: 10px;
+    @apply absolute right-2 bottom-1;
+  }
+
+  .banner-caption {
+    font-size: 10px;
+    @apply absolute bottom-1 left-1/2 text-text_color_03 -translate-x-1/2 whitespace-nowrap;
+  }
+}
+

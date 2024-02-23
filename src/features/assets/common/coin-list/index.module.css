@@ -1,0 +1,111 @@
+:local(.coin-select-list-root) {
+  /* @apply w-full h-full bg-bg_color overflow-y-scroll; */
+  @apply flex flex-col w-full h-full bg-bg_color !important;
+
+  .coin-select-list-content {
+    @apply w-full h-full bg-bg_color overflow-y-scroll;
+  }
+
+  .search-cell {
+    @apply mt-2;
+  }
+
+  .rv-cell {
+    @apply items-center;
+  }
+
+  .currency-item {
+    @apply flex flex-row items-center;
+  }
+
+  .currency-item .name {
+    @apply text-base text-text_color_01 font-medium;
+  }
+
+  .currency-item .name-disable {
+    @apply text-sm text-text_color_04 font-medium;
+  }
+
+  .currency-item .desc {
+    @apply text-xs text-text_color_02 ml-2;
+  }
+
+  .currency-item .desc-disable {
+    @apply text-xs text-text_color_04 ml-2;
+  }
+
+  .currency-item .state {
+    font-size: 10px;
+
+    @apply px-2 h-5 bg-bg_button_disabled rounded-tr rounded-bl text-text_color_02 ml-1 flex items-center justify-center
+  }
+
+  .currency-name {
+    /* @apply flex justify-between relative text-sm text-text_color_01; */
+    @apply flex flex-row items-center relative text-sm text-text_color_01;
+  }
+
+  .currency-name .descr {
+    @apply pl-2 text-xs text-text_color_03;
+  }
+
+  .currency-name .state {
+    @apply pr-3 right-0 text-text_color_03 text-xs;
+  }
+
+  .recharge-stop .currency-name {
+    @apply text-text_color_03;
+  }
+
+  .hot-currency {
+    @apply flex flex-col border-b border-line_color_02 pb-6 mx-4 mt-5;
+  }
+
+  .hot-currency .hot-title {
+    @apply text-sm text-text_color_01 font-medium;
+  }
+
+  .hot-currency .hot-list {
+    @apply flex flex-wrap flex-row;
+  }
+
+  .hot-currency .hot-list .hot-list-item {
+    @apply h-7 flex items-center justify-center bg-bg_sr_color rounded mt-3 text-xs text-text_color_01 mr-2 px-3
+  }
+
+  /* 索引列表样式 */
+
+  .index-bar {
+    transform: scale(0.75);
+    
+    @apply font-medium py-px px-1 flex items-center justify-center;
+  }
+
+  .index-active {
+    @apply bg-brand_color text-button_text_02 rounded-xl
+  }
+
+  .rv-index-anchor {
+    @apply hidden
+  }
+
+  .rv-index-bar__index {
+    @apply w-4 h-4 rounded-xl font-medium text-brand_color mx-1.5 p-0 flex items-center justify-center;
+  }
+
+  .rv-index-bar .rv-cell {
+    @apply py-4
+  }
+
+  .rv-hairline--bottom {
+    @apply border-0
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-0
+  }
+
+  .active {
+    @apply text-brand_color !important
+  }
+}

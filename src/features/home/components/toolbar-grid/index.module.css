@@ -1,0 +1,45 @@
+:local(.empty) {
+  @apply mx-auto;
+
+  .edit-button {
+    @apply bg-bg_sr_color rounded inline-flex whitespace-nowrap items-center justify-center;
+
+    width: 72px;
+    height: 32px;
+
+    .edit-text {
+      font-size: 12px;
+      @apply text-text_color_01 px-[18px] py-[7px];
+    }
+  }
+}
+
+:local(.scoped) {
+  @apply grid grid-cols-5 !important;
+
+  .rv-grid-item__content {
+    @apply grid grid-flow-row auto-rows-fr p-0 w-20 h-20 bg-transparent;
+
+    >:first-child {
+      @apply mt-auto mx-auto;
+    }
+
+    >:last-child {
+      @apply break-normal text-center text-text_color_01 mb-auto;
+    }
+
+    img, svg {
+      @apply w-7 h-7;
+    }
+  }
+}
+
+:local(.toolbar-grid-item) {
+  padding-top: 6.33px;
+}
+
+:local(.toolbar-grid-item) {
+  img {
+    @apply w-7 h-7;
+  }
+}

@@ -1,0 +1,100 @@
+:local(.record-wrapper) {
+  @apply flex flex-col;
+
+  .record-item {
+    @apply p-4 text-sm flex justify-between items-center;
+
+    .record-left {
+      @apply flex flex-col ml-2 text-text_color_01;
+    }
+
+    .record-left .time {
+      @apply text-xs text-text_color_02;
+    }
+
+    .record-left span {
+      @apply pl-3;
+    }
+
+    .record-right {
+      @apply flex items-center;
+    }
+
+    .record-right .info {
+      @apply flex flex-col items-end mr-4;
+    }
+
+    .record-right .state {
+      @apply text-xs text-text_color_02;
+    }
+
+    .is-up {
+      @apply text-buy_up_color;
+
+    }
+
+    .is-down {
+      @apply text-sell_down_color;
+    }
+  }
+
+  .list-item {
+    /* height: 74px; */
+    @apply p-4 flex items-center border-b border-line_color_02;
+
+    .item-left {
+      @apply flex flex-col flex-1;
+
+      .info {
+        @apply flex items-center justify-between mb-2;
+
+        .info-name {
+          @apply text-base text-text_color_01 font-medium;
+        }
+
+        .info-total {
+          @apply text-sm font-medium
+        }
+
+        .info-date {
+          @apply text-xs text-text_color_02;
+        }
+  
+        .info-type {
+          @apply text-text_color_02 ml-2;
+        }
+
+        .info-status {
+          @apply text-xs text-text_color_02;
+        }
+      }
+
+      .info-transfer {
+        @apply flex items-center text-xs text-text_color_01 mb-2;
+
+        .transfer-separate {
+          @apply text-text_color_03 mx-2;
+        }
+      }
+    }
+
+    .next-arrow {
+      @apply ml-2 text-base;
+    }
+  }
+}
+
+:local(.record-list-screen-root) {
+  height: 50px;
+  @apply bg-card_bg_color_01 flex flex-row items-center px-4 border-line_color_02 border-b;
+
+  .screen-item {
+    @apply flex flex-row items-center mr-8 text-xs text-text_color_03;
+
+    .screen-icon {
+      svg {
+        @apply w-2 h-2 ml-1
+      }
+    }
+  }
+}

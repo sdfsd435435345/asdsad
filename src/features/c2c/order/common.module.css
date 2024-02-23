@@ -1,0 +1,31 @@
+:local(.search-all-wrapper) {
+  @apply flex items-center px-4 py-2 h-8  mt-4;
+
+  .search-input-wrapper {
+    @apply bg-bg_sr_color px-3 py-2 h-8 rounded-2xl flex items-center mr-4 flex-1;
+
+    & > div:first-of-type {
+      & > div:first-of-type {
+        & > div:first-of-type {
+          @apply w-4 h-4;
+        }
+      }
+    }
+  }
+
+  .divide-line {
+    @apply w-px h-5 bg-button_hover_01 mx-2;
+  }
+}
+
+:local(.order-item-wrapper) {
+  @apply p-4;
+
+  .gray-text-wrapper {
+    @apply text-xs text-text_color_02 flex justify-between items-end;
+
+    .total-amount {
+      @apply text-base font-medium translate-y-1 text-text_color_01;
+    }
+  }
+}

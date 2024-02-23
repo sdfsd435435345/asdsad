@@ -1,0 +1,59 @@
+:local(.scoped) {
+  .popup-wrap {
+    @apply px-6 py-8;
+
+    .popup-icon {
+      @apply flex justify-center items-center mb-8;
+
+      svg {
+        width: 36px;
+        height: 36px;
+      }
+    }
+
+    .popup-tips {
+      @apply mb-8;
+
+      p {
+        @apply text-sm font-normal text-text_color_02 break-all;
+
+        label {
+          @apply text-tips_color break-all;
+        }
+      }
+    }
+
+    .popup-btn {
+      @apply flex justify-between;
+  
+      .cancel, .continue {
+        @apply flex-1;
+      }
+
+      .cancel {
+        @apply pr-3;
+
+        button {
+          border: 1px solid var(--line_color_01);
+          @apply bg-transparent text-text_color_02;
+        }
+      }
+
+      .continue {
+        @apply pl-3;
+
+        .rv-button {
+          @apply text-button_text_02;
+        }
+      }
+
+      .rv-button {
+        font-size: 14px;
+      }
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

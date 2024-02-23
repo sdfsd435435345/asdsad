@@ -1,0 +1,84 @@
+:local(.collection-account-wrap) {
+  @apply pb-28 h-screen overflow-auto;
+
+  .collection-account-wrap-main {
+    @apply px-4;
+
+    .collection-account-select {
+      @apply pt-4;
+
+      .collection-account-select-header {
+        @apply mb-2 text-sm font-normal text-text_color_02;
+      }
+
+      .collection-account-select-content {
+        min-height: 40px;
+        @apply flex items-center pt-2 pl-3 pr-4 rounded bg-bg_sr_color;
+
+        .collection-account-select-tag {
+          @apply flex-1 flex flex-wrap;
+
+          .tag-item {
+            @apply mr-2 mb-2 py-1 px-1.5 rounded-sm flex items-center bg-card_bg_color_03 overflow-hidden;
+
+            .tag-item-icon {
+              @apply w-2 h-2 ml-1 pt-px;
+
+              svg {
+                @apply w-2 h-2;
+              }
+            }
+          }
+        }
+
+        .collection-account-select-type {
+          @apply flex-1 flex flex-wrap;
+
+          .collection-item-left {
+            @apply w-0.5 h-2.5 mr-1.5 rounded-3xl;
+          }
+  
+          label {
+            @apply text-sm font-normal text-text_color_01;
+          }
+  
+          .bank {
+            @apply bg-brand_color;
+          }
+  
+          .alipay {
+            background-color: #6195F6;
+          }
+  
+          .wechat {
+            @apply bg-buy_up_color;
+          }
+        }
+
+        .collection-account-select-icon {
+          @apply w-2 h-2 pt-px;
+
+          svg {
+            @apply w-2 h-2;
+          }
+        }
+      }
+    }
+  }
+
+  .make-payments-footer-list {
+    @apply flex mt-6;
+
+    .footer-list-icon {
+      @apply mt-1 h-1.5 w-1.5;
+
+      svg {
+        @apply h-1.5 w-1.5;  
+      }
+    }
+
+    .footer-list-text {
+      @apply ml-1 text-xs font-normal text-text_color_03;
+    }
+  }
+}

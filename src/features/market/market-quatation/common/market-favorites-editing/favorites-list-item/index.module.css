@@ -1,0 +1,9 @@
+:local(.scoped) {
+  .rv-cell {
+    @apply h-16 items-center border-line_color_01 border-b;
+  }
+
+  svg {
+    @apply rounded;
+  }
+}

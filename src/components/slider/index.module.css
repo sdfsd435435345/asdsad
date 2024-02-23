@@ -1,0 +1,113 @@
+:local(.slider-plus-wrapper) {
+  @apply relative;
+
+  &.has-points {
+    @apply mb-4;
+  }
+
+  @keyframes tootip-fade-out {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .tooltip {
+    @apply py-0.5 px-1.5 rounded absolute text-xs bg-toast_bg_color text-white z-10 opacity-0 pointer-events-none;
+
+    top: -32px;
+    transform: translateX(-50%);
+    transition: opacity .5s;
+
+    &.show {
+      @apply block opacity-100;
+      
+      transition: none;
+    }
+
+    .tooltip-arrow {
+      @apply absolute w-0 h-0 top-full left-1/2 -translate-x-1/2  border-transparent border-solid;
+
+      border-width: 4px;
+      border-top-color: black;
+    }
+  }
+
+  .rv-slider__bar {
+    @apply z-10 h-1;
+  }
+  
+  .rv-slider {
+    @apply h-1 bg-line_color_02;
+  }
+
+  .slider-button {
+    @apply w-4 h-4 rounded-full flex items-center justify-center relative z-1;
+
+    .slider-button-inner {
+      @apply w-2 h-2 rounded-full bg-white;
+    }
+  }
+
+  .rv-slider.rv-slider--disabled {
+    .slider-button {
+      background-color: var(--bg_button_disabled) !important;
+    }
+  }
+
+  &.at-start {
+    .slider-button {
+      transform: translateX(6px);
+    }
+
+    .tooltip {
+      transform: translateX(calc(-50% + 6px));
+    }
+  }
+
+  &.at-end {
+    .slider-button {
+      transform: translateX(-8px);
+    }
+
+    .tooltip {
+      transform: translateX(calc(-50% - 8px));
+    }
+  }
+
+  .slider-point {
+    @apply absolute cursor-pointer bg-bg_button_disabled w-2 h-2 rounded-full top-1/2 -translate-y-1/2 z-1 -translate-x-1;
+
+    &.at-end {
+      @apply -translate-x-2;
+
+      .slider-point-text {
+        right: 0;
+        left: unset;
+        transform: translateX(0) scale(0.85);
+      }
+    }
+
+    &.at-start {
+      @apply translate-x-[-2px];
+
+      .slider-point-text {
+        left: 0;
+        transform: translateX(0) scale(0.85);
+      }
+    }
+
+    .slider-point-text {
+      @apply text-xs absolute;
+  
+      top: calc(100% + 4px);
+      left: 50%;
+      transform: translateX(-50%) scale(0.85);
+    }
+  }
+
+  
+}

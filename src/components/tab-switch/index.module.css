@@ -1,0 +1,13 @@
+:local(.scoped) {
+  .tab-list {
+    @apply p-1 bg-card_bg_color_01 rounded flex mx-4 ;
+
+    .tab-item {
+      @apply flex-1 flex font-semibold text-text_color_03 py-1.5 rounded justify-center;
+    }
+
+    .tab-item.active {
+      @apply text-text_color_01 bg-bg_color;
+    }
+  }
+}

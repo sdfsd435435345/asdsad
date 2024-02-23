@@ -1,0 +1,44 @@
+:local(.payment-selection-modal-root) {
+  @apply flex !rounded-tl-lg !rounded-tr-lg;
+
+  max-height: 60%;
+  
+  .payment-selection-modal {
+    @apply w-full flex flex-col bg-card_bg_color_03 relative;
+  
+    .modal-header {
+      @apply w-full flex items-center justify-between p-4 bg-card_bg_color_03 fixed rounded-tl-lg rounded-tr-lg;
+    }
+  
+    .modal-list {
+      @apply flex flex-1 flex-col px-4;
+
+      padding-top: 56px;
+      padding-bottom: 88px;
+  
+      .item {
+        @apply flex items-center justify-between h-14 bg-card_bg_color_02 mb-4 rounded px-3 border border-card_bg_color_02;
+      }
+
+      .active-item {
+        @apply bg-brand_color_special_02 border border-brand_color
+      }
+
+      .info {
+        @apply flex items-center text-sm text-text_color_01;
+
+        .line {
+          @apply w-0.5 h-2.5 rounded mr-1;
+        }
+      }
+    }
+  
+    .modal-bottom {
+      @apply w-full px-4 py-6 bg-card_bg_color_03 fixed bottom-0;
+    }
+  
+    .commit-btn {
+      @apply w-full h-10 rounded;
+    }
+  }
+}

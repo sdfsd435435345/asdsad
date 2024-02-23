@@ -1,0 +1,21 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "RateProto";
+
+message Rate {
+
+  repeated CoinRate coinRate = 1; //虚拟币
+  repeated LegalCurrencyRate legalCurrencyRate = 2; //法币
+
+  message CoinRate{
+    sint64 coinId = 1; //币种 id
+    string symbol = 2; //币种符号
+    int32 coinPrecision = 3; //币种精度
+    string usdtRate = 4; //币种对 USDT 汇率
+  }
+
+    message LegalCurrencyRate{
+    string currency = 1; //法币
+    string rate = 2; //法币汇率
+  }
+}

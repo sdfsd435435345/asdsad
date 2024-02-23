@@ -1,0 +1,16 @@
+:local(.scoped) {
+  @apply flex flex-col justify-between;
+
+  .market-checkbox-footer {
+    height: 92px;
+    @apply fixed bottom-0;
+
+    .rv-checkbox__icon svg {
+      @apply rounded;
+    }
+
+    .rv-cell__title {
+      @apply text-text_color_02;
+    }
+  }
+}

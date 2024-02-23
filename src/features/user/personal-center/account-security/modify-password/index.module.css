@@ -1,0 +1,40 @@
+:local(.scoped) {
+  @apply flex flex-col min-h-screen;
+
+  .password-verification-wrap {
+    @apply flex flex-col flex-1 px-4;
+
+    .password-verification-form {
+      @apply flex flex-col flex-1 justify-between mb-12;
+    }
+
+    .rv-field {
+      @apply p-0 bg-transparent;
+
+      .rv-field__label {
+        @apply text-text_color_03;
+      }
+
+      input {
+        @apply pr-3;
+      }
+
+      .rv-field__right-icon {
+        line-height: 42px;
+        @apply right-0 top-0 bottom-0 m-auto;
+  
+        svg {
+          @apply w-5 h-5;
+        }
+      }
+    }
+
+    .rv-form-item--vertical {
+      @apply mb-8;
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

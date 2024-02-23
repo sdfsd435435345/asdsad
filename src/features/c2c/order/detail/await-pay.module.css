@@ -1,0 +1,3 @@
+:local(.steps-wrapper) {
+  @apply flex flex-col items-center;
+}

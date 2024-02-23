@@ -1,0 +1,46 @@
+:local(.c2c-center-header-means) {
+  @apply flex flex-1 overflow-hidden;
+
+  .means-portrait {
+    border-radius: 50%;
+    @apply w-12 h-12 mr-4 bg-bg_sr_color overflow-hidden flex items-center justify-center;
+
+    .c2c-avatar-header {
+      @apply w-6 h-6;
+
+      svg {
+        @apply w-full h-full;
+      }
+    }
+  }
+
+  .means-details {
+    @apply font-medium text-text_color_01 flex-1 overflow-hidden;
+
+    .means-details-name {
+      @apply mb-1 text-base flex items-center overflow-hidden;
+
+      .means-details-title-image {
+        min-width: 16px;
+        max-width: 16px;
+        @apply ml-2 mr-1 mb-px h-4;
+
+        img {
+          @apply mb-1;
+        }
+      }
+    }
+
+    .means-details-title {
+      @apply text-sm;
+    }
+
+    .means-details-kyc {
+      @apply my-1 text-sm;
+    }
+
+    .means-details-time {
+      @apply text-xs font-normal text-text_color_02;
+    }
+  }
+}

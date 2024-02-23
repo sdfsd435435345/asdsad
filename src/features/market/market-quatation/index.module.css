@@ -1,0 +1,220 @@
+:local(.market-common) {
+  .tabs-spot-base-currency {
+    border-bottom: 1px solid var(--line_color_02);
+    @apply mb-2 ml-[4px] mr-4;
+
+    .rv-tabs__wrap {
+      height: 36px;
+    }
+  }
+
+  .tabs-category-by-currency {
+    @apply mb-[6px] mx-4;
+
+    .rv-tab {
+      @apply py-1 px-2;
+    }
+
+    .rv-tab--active {
+      border-radius: 4px;
+      @apply bg-bg_sr_color;
+    }
+
+    .rv-tabs__wrap {
+      height: 36px;
+    }
+
+    .rv-tab__text {
+      @apply text-xs;
+    }
+  }
+}
+
+:local(.market-table-common) {
+  /* 行情 table 通用样式 */
+  table {
+    tr {
+      > :last-child {
+        * {
+          @apply flex justify-end ml-auto;
+        }
+      }
+    }
+  }
+
+  thead {
+    tr {
+      th {
+        /* line-height: 18 + py: 16 */
+        height: 34px;
+      }
+
+      span {
+        @apply text-xs text-text_color_03;
+
+        font-weight: 400;
+      }
+    }
+
+    .sort-icon-wrapper {
+      @apply ml-1;
+
+      > div {
+        @apply my-[0.2px];
+      }
+
+      svg {
+        width: 7px;
+        height: 5px;
+        margin: 0;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      @apply h-16;
+
+      td {
+        vertical-align: top;
+      }
+    }
+
+  }
+
+  .star {
+    @apply mx-[0.5px];
+  }
+
+  .pair-name {
+    .base-symbol-name {
+      font-size: 16px;
+      @apply font-medium;
+    }
+
+    .quote-symbol-name {
+      @apply font-medium text-xs;
+    }
+  }
+
+  .pair-name-futures {
+    .base-symbol-name,
+    .quote-symbol-name {
+      font-size: 16px;
+      @apply font-medium;
+    }
+  }
+
+  .increase-wrap {
+    @apply font-medium;
+  }
+}
+
+:local(.scoped) {
+  @apply bg-bg_color;
+
+  .quote-display-wrapper-futures {
+    .quote-badge {
+      @apply bg-card_bg_color_02 text-text_color_03 px-[4px] py-[2px] text-[10px] mx-1;
+    }
+  }
+
+  .notice-button {
+    @apply h-5 rounded text-xs px-1 flex-nowrap;
+  }
+
+  .module-tabs {
+    .tab-list {
+      @apply p-0;
+
+      column-gap: 32px !important;
+    }
+  }
+
+  .header-wrapper {
+    height: 46px;
+    @apply flex flex-row justify-between items-center mx-4 bg-bg_color;
+
+    .tab-list {
+      @apply bg-transparent;
+    }
+
+    > :first-child {
+      .tab-list {
+        @apply gap-x-8 mx-0;
+
+        .active {
+          @apply bg-transparent;
+        }
+      }
+    }
+
+    > :last-child {
+      @apply flex gap-x-4;
+    }
+  }
+
+  .market-table-spot {
+    .market-table-fav {
+      .star {
+        @apply invisible;
+      }
+    }
+
+    /* market favorite page button set to fixed */
+    .fav-default-wrapper {
+      .fav-btn {
+        @apply fixed left-4 right-4 bottom-24;
+      }
+    }
+
+    table {
+      tr {
+        > :last-child,
+        > :nth-last-child(2) {
+          * {
+            @apply flex justify-end ml-auto;
+          }
+        }
+      }
+
+      /* shift left and right edge in the th */
+      thead {
+        tr {
+          > :first-child {
+            > * {
+              @apply ml-4;
+            }
+          }
+
+          > :last-child {
+            > * {
+              @apply mr-4;
+            }
+          }
+        }
+
+        /* 偏移第二个 column 名 */
+        th:nth-child(2) {
+          transform: translateX(-12px);
+        }
+      }
+
+      tbody {
+        tr {
+          height: 52px;
+
+          > :last-child {
+            > * {
+              @apply mr-4;
+            }
+          }
+        }
+      }
+    }
+
+    .fav-default-wrapper {
+      @apply mx-4;
+    }
+  }
+}

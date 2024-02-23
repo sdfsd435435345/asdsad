@@ -1,0 +1,144 @@
+:local(.scoped) {
+  .login-wrap {
+    @apply p-4;
+
+    
+    .rv-nav-bar__right {
+      svg {
+        @apply text-xl leading-none;
+      }
+    }
+
+    .rv-form--vertical {
+      @apply mt-8;
+    }
+
+    .register-or-retrieve {
+      @apply flex justify-between mt-6;
+
+      label {
+        @apply text-sm text-brand_color;
+      }
+    }
+  }
+  
+  .third-party-wrap {
+    width: calc(100% - 32px);
+    @apply absolute bottom-10 left-4;
+  }
+
+
+  .rv-cell__title {
+    @apply text-sm;
+  }
+
+  .rv-form-item--vertical {
+    @apply mt-8;
+  }
+
+  .rv-field {
+    @apply p-0 bg-transparent;
+
+    .rv-field__body {
+      @apply bg-card_bg_color_01 rounded;
+
+      .rv-field__prefix {
+        .rv-image {
+          img {
+            margin-right: 10px;
+            @apply w-4 h-4;
+          }
+        }
+
+        svg {
+          @apply w-2 h-2 ml-2;
+        }
+      }
+    }
+
+    .rv-checkbox {
+      @apply bg-bg_color w-full;
+    }
+
+    .rv-checkbox__label {
+      @apply text-text_color_03;
+    }
+
+    .rv-field__right-icon {
+      line-height: 42px;
+      @apply right-0 top-0 bottom-0 m-auto;
+
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+  }
+
+  .rv-search, .data-list {
+    .rv-field__body {
+      @apply bg-transparent;
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+
+  .mobile-left {
+    @apply flex flex-row items-center
+  }
+
+  .mobile-line {
+    @apply h-5 bg-line_color_01 ml-2;
+
+    width: 0.5px;
+  }
+}
+
+.user-validate {
+  .rv-form {
+    .rv-form-item {
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        appearance: none;
+      }
+    
+      input[type= "number"] {
+        appearance: textfield;
+      }
+
+      .rv-field__body {
+        @apply bg-bg_sr_color;
+
+        .rv-field__prefix {
+          @apply text-text_color_01;
+        }
+      }
+
+      .rv-field__right-icon {
+        svg {
+          @apply mr-3;
+        }
+
+        & > div:last-child {
+          @apply mr-0;
+        }
+      }
+
+      .rv-image {
+        img {
+          @apply w-4 h-4 rounded-full;
+        }
+      }
+    }
+  }
+
+  .rv-field__error-message {
+    @apply mt-1;
+  }
+
+  .rv-cell--required::before {
+    content: '';
+    @apply hidden;
+  }
+}

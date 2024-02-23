@@ -1,0 +1,39 @@
+:local(.payments-wrap) {
+  .payments-tab {
+    @apply pl-4;
+
+    .rv-tabs__wrap {
+      @apply h-12;
+    }
+  }
+
+  .rv-tabs__wrap {
+    .rv-tabs__nav {
+      .rv-tab {
+        /* @apply pr-8; */
+
+        &:nth-child(2) {
+          @apply ml-6;
+        }
+      }
+    }
+  }
+
+  .c2c-add-icon {
+    @apply w-5 h-5;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .payments-wrap-main {
+    .payments-contair {
+      .payments-contair-collapse {
+        .rv-collapse-item__content {
+          @apply bg-card_bg_color_01;
+        }
+      }
+    }
+  }
+}

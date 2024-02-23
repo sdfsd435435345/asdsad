@@ -1,0 +1,17 @@
+:local(.scoped) {
+  @apply rounded-lg bg-card_bg_color_01 relative;
+
+
+  .badge-icon {
+    @apply absolute right-0 top-0;
+
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+
+    img {
+      @apply rounded;
+    }
+  }
+}

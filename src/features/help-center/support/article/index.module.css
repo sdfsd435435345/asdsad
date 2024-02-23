@@ -1,0 +1,106 @@
+:local(.scoped) {
+  .help-center-support-article {
+    word-break: break-all;
+    @apply pb-8 bg-bg_color;
+
+    .article-content-body {
+      border-bottom: 4px solid var(--line_color_02);
+      @apply px-4 mb-6;
+
+      .article-body-header {
+        @apply mt-6 text-xl font-medium text-text_color_01;
+      }
+
+      .article-body-time {
+        @apply mt-2 text-sm font-normal text-text_color_03;
+      }
+
+      .article-body-title {
+        @apply w-full box-border overflow-hidden break-words;
+
+        p, div {
+          margin-block-start: 16px;
+          margin-block-end: 16px;
+        }
+
+        p, li, span {
+          line-height: 26px!important;
+          @apply text-sm font-normal text-text_color_01;
+        }
+
+        a {
+          line-height: 26px!important;
+          @apply text-sm font-normal text-brand_color;
+        }
+
+        table {
+          border-right: 1px solid var(--line_color_02);
+          border-bottom: 1px solid var(--line_color_02);
+
+          td {
+            border-top: 1px solid var(--line_color_02);
+            border-left: 1px solid var(--line_color_02);
+          } 
+        }
+
+        video {
+          @apply w-full h-40 object-cover;
+        }
+      }
+
+      .article-body-user {
+        @apply mb-2 text-base font-semibold text-text_color_01;
+      }
+
+      .article-footer-user {
+        @apply text-sm font-normal;
+      }
+
+      .article-share-button {
+        border: 0.5px solid var(--line_color_01);
+        @apply mt-4 mb-6 py-2 w-full rounded flex justify-center items-center bg-card_bg_color_01;
+
+        .share-button-text {
+          @apply ml-2 text-base font-normal;
+        }
+      }
+    }
+
+    .article-content-right {
+      @apply px-4 mb-6 overflow-hidden;
+
+      .content-right-header {
+        @apply mb-4 flex items-center;
+
+        .header-icon {
+          @apply w-5 h-5 mr-2;
+
+          svg {
+            @apply w-5 h-5;
+          }
+        }
+
+        label {
+          @apply text-base font-medium;
+        }
+      }
+
+      .content-right-body {
+        .new-article-text {
+          border-bottom: 0.5px solid var(--line_color_02);
+          @apply pb-4 mb-4 last:border-b-0;
+
+          .new-article-content {
+            /* stylelint-disable-next-line value-no-vendor-prefix */
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            @apply max-h-11 text-sm text-text_color_01 overflow-hidden;
+          }
+        }
+      }
+    }
+  }
+}

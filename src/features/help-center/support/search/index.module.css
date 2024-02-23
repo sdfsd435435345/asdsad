@@ -1,0 +1,63 @@
+:local(.scoped) {
+  .help-center-support-search-wrap {
+    .support-search-header {
+      @apply m-auto;
+    }
+
+    .support-search-body {
+      @apply px-4 pb-4 bg-bg_color;
+
+      .support-search-content {
+        @apply m-auto;
+
+        .support-search-button {
+          @apply mt-6 flex;
+
+          .search-header-button {
+            @apply flex-1 py-1 px-3 mr-4 text-sm truncate;
+
+            &:hover {
+              @apply bg-card_bg_color_02;
+            }
+          }
+
+          .select-color {
+            @apply text-text_color_01 bg-card_bg_color_02;
+          }
+        }
+
+        .search-article-button {
+          @apply inline-block py-2 px-4 text-sm bg-card_bg_color_02;
+        }
+
+        .search-content-pagination {
+          @apply mt-8 flex justify-end;
+        }
+
+        .support-no-data {
+          @apply mt-28;
+        }
+
+        .support-back-button {
+          @apply mt-12 m-auto py-2.5 text-center text-sm font-medium text-button_text_02 box-border bg-brand_color rounded-md;
+        }
+
+        .suppor-lazy-image {
+          @apply text-sm;
+
+          img {
+            @apply h-20 mb-5
+          }
+        }
+      }
+    }
+
+    .support-search-text {
+      @apply font-medium text-text_color_02 rounded cursor-pointer;
+    }
+
+    .card-items-title {
+      @apply text-lg font-medium w-full truncate;
+    }
+  }
+}

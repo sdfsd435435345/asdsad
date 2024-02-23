@@ -1,0 +1,28 @@
+:local(.scoped) {
+  @apply px-6 py-8;
+
+  .success-info {
+    @apply flex flex-col items-center;
+
+    .icon {
+      @apply mb-6;
+
+      svg {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .title {
+      @apply mb-6;
+
+      a, label, p {
+        @apply text-sm text-text_color_01 font-semibold break-all mb-2;
+      }
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

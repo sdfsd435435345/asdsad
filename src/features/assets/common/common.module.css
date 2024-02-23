@@ -1,0 +1,87 @@
+:local(.user-total-assets) {
+  @apply w-40 flex flex-row items-center text-sm text-text_color_01;
+
+  .title {
+    @apply whitespace-nowrap
+  }
+
+  .icon {
+    svg {
+      @apply w-5 h-5 ml-1 mt-0.5
+        }
+  }
+}
+
+:local(.trade-assets-list) {
+  @apply flex flex-col;
+
+  .current-content {
+    @apply flex flex-col p-4 pb-6 border-b border-line_color_02;
+
+    .current-title {
+      @apply text-sm text-text_color_02
+    }
+
+    .current-item {
+      @apply flex flex-col mt-4;
+
+      .current-info {
+        @apply flex flex-row items-center justify-between text-base font-medium text-text_color_01;
+
+        .info-left {
+          @apply flex flex-row items-center;
+
+          .coin-icon {
+            @apply mr-2
+          }
+        }
+      }
+
+      .expand-info {
+        @apply flex flex-row items-center justify-between text-xs text-text_color_02 ml-7
+      }
+    }
+  }
+}
+
+:local(.stop-service-root) {
+  @apply px-4 pt-6;
+
+  .top {
+    @apply flex flex-col items-center;
+
+    .hint {
+      @apply text-sm text-text_color_02 mt-4
+    }
+  }
+
+  .bottom {
+    @apply my-8;
+
+    .setting-btn {
+      @apply rounded
+    }
+  }
+}
+
+:local(.search-wrapper) {
+  @apply flex items-center h-8 rounded-2xl bg-bg_sr_color mx-4 pl-3.5 pr-2;
+
+  .search-icon {
+    svg {
+      @apply w-3.5 h-3.5 mr-2;
+    }
+  }
+
+  .search-input {
+    @apply text-sm;
+  }
+
+  .close-icon {
+    @apply px-2;
+
+    svg {
+      @apply w-3.5 h-3.5
+  }
+  }
+}

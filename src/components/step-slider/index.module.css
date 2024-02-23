@@ -1,0 +1,31 @@
+:local(.scoped) {
+  @apply flex;
+
+  .slider-item {
+    @apply text-center;
+
+    flex: 1;
+
+    .slider-item-inner {
+      @apply bg-nc_09 h-2.5;
+
+      &.light {
+        @apply bg-sell_down_color;
+      }
+
+
+    }
+
+    .slider-text {
+      @apply text-text_color_03;
+
+      &.active {
+        @apply text-nc_04;
+      }
+    }
+  }
+
+  .slider-item+ .slider-item {
+    @apply ml-1.5
+  }
+}

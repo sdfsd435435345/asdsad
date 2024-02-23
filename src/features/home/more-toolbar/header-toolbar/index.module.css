@@ -1,0 +1,7 @@
+:local(.scoped) {
+  @apply flex flex-row justify-between items-center m-4;
+
+  svg {
+    @apply w-5 h-4;
+  }
+}

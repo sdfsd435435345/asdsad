@@ -1,0 +1,23 @@
+:local(.coin-list-root) {
+  @apply flex flex-col bg-bg_color;
+
+  .expand-icon {
+    @apply hidden;
+  }
+
+  .coin-list-header {
+    height: 50px;
+  }
+
+  .coin-list-search {
+    @apply pl-0 pr-0 text-xs font-normal;
+  }
+
+  .search-icon {
+    @apply pl-2;
+  }
+
+  .coin-cell-name {
+    @apply mr-0;
+  }
+}

@@ -1,0 +1,15 @@
+:local(.common-digital-root) {
+  @apply whitespace-nowrap overflow-hidden overflow-ellipsis;
+
+  max-width: 100%;
+
+  .text {
+    @apply whitespace-nowrap overflow-hidden overflow-ellipsis;
+  }
+
+  .text-zoom {
+    @apply text-xs;
+
+    transform: scale(0.83);
+  }
+}

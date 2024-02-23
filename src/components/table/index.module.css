@@ -1,0 +1,50 @@
+:local(.layout) {
+  min-height: 50vh;
+
+  .rv-pull-refresh,
+  .rv-pull-refresh__track {
+    min-height: inherit;
+  }
+
+}
+
+:local(.table) {
+  @apply w-full;
+
+  .table-header tr {
+    @apply px-3.5 py-1 overflow-hidden;
+  }
+
+  .table-header th {
+    @apply font-light text-text_color_01 capitalize;
+  }
+
+  .table-body tr {
+    @apply box-border table-row h-12;
+  }
+
+  .table-body tr td {
+    @apply box-border;
+  }
+
+  thead tr {
+    @apply table-row;
+
+    th {
+      svg {
+        @apply w-1 h-1 my-0.5;
+      }
+
+      .is-active {
+        svg {
+          @apply fill-brand_color !important;
+        }
+      }
+    }
+  }
+
+  .row-highlight-class {
+    @apply bg-bg_color_03;
+  }
+
+}

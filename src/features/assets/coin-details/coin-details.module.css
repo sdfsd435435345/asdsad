@@ -1,0 +1,187 @@
+:local(.page-wrapper) {
+  @apply bg-bg_color;
+
+  .coin-header {
+    @apply flex flex-row items-center justify-center;
+
+    span {
+      @apply ml-2;
+    }
+  }
+  
+  .actions-wrapper {
+    @apply fixed w-full bottom-0 px-4 bg-bg_color pt-8 pb-10;
+  }
+
+  .coin-view-line {
+    @apply h-1 w-full bg-line_color_02
+  }
+
+  .rv-hairline--bottom {
+    @apply border-0
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-0
+  }
+}
+
+:local(.overview-wrapper) {
+  @apply text-xs;
+
+  .coin-overview {
+    @apply px-4 pt-5 pb-6 relative;
+
+    .total-content {
+      @apply flex flex-col relative z-1;
+
+      .total-header {
+        @apply flex flex-row items-center mb-1;
+
+        span {
+          @apply text-xs text-text_color_02;
+        }
+
+        .total-icon {
+          svg {
+            @apply w-5 h-5 ml-2 self-center;
+          }
+        }
+      }
+
+      .total-quantity {
+        @apply text-2xl text-text_color_01 font-semibold;
+      }
+
+      .total-amount {
+        @apply text-sm text-text_color_03 mt-1 mb-4;
+      }
+    }
+  }
+
+  .asset-item {
+    @apply flex flex-col;
+
+    width: 45%;
+
+    .lock-header {
+      @apply flex flex-row items-center;
+    }
+
+    .label {
+      @apply text-text_color_02 text-xs;
+    }
+
+    .value {
+      @apply text-text_color_01 text-sm  font-medium;
+    }
+
+    .hit-icon {
+      svg {
+        @apply w-3 h-3 ml-1
+      }
+    }
+
+    .detail {
+      @apply text-brand_color text-xs ml-4 font-normal
+    }
+  }
+}
+
+:local(.trade-wrapper) {
+  @apply py-4 pl-4 pb-2;
+
+  .title {
+    @apply text-base text-text_color_01 font-medium;
+  }
+
+  .trade-item {
+    @apply rounded px-3 py-2.5 bg-card_bg_color_02 mt-2 float-left mr-2 text-xs text-text_color_01 font-medium;
+  
+    width: 47%;
+
+    .name {
+      @apply flex flex-row items-center;
+    }
+
+    .price-container {
+      @apply flex justify-between mt-1;
+    }
+  }
+
+  .rv-swiper {
+    @apply pb-10
+  }
+
+  .rv-indicator__dot {
+    @apply w-1.5 h-1.5 bg-bg_sr_color opacity-100
+  }
+
+  .rv-indicator__dot--active {
+    @apply w-1.5 h-1.5 bg-brand_color
+  }
+}
+
+:local(.trade-records-wrapper) {
+  @apply py-4 font-medium;
+
+  .title {
+    @apply text-base text-text_color_01 border-line_color_02 pl-4 pb-2 border-b;
+  }
+
+  .record-item {
+    @apply p-4 flex justify-between text-sm;
+
+    .status {
+      @apply text-xs text-text_color_02 mt-1 font-normal;
+    }
+
+    .date {
+      @apply text-xs text-text_color_03 mt-1 font-normal;
+    }
+  }
+
+  .note {
+    @apply text-text_color_03 text-xs text-center py-8;
+  }
+
+  .history-list {
+    @apply pb-24
+  }
+}
+
+:local(.lock-popup-wrapper) {
+  @apply p-8 rounded-lg w-4/5;
+
+  .title {
+    @apply text-base text-text_color_01 font-medium mb-5 text-center
+  }
+
+  .lock-text {
+    @apply text-sm text-text_color_01 mb-2
+  }
+
+  .lock-btn {
+    @apply w-full h-10 rounded text-sm text-button_text_02 font-medium mt-4
+  }
+}
+
+:local(.details-buttons) {
+  @apply flex;
+
+  .rv-button {
+    @apply w-full h-10 rounded text-sm text-text_color_01 font-medium
+  }
+
+  .rv-button--default {
+    @apply bg-bg_sr_color
+  }
+
+  .rv-button--default:active {
+    @apply bg-button_hover_01
+  }
+
+  .recharge-btn {
+    @apply text-button_text_02 !important
+  }
+}

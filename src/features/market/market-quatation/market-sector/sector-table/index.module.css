@@ -1,0 +1,34 @@
+:local(.scoped) {
+  .sector-table {
+    /* 46px nav +  16px  */
+    @apply px-4 mt-4;
+
+    table {
+      tr {
+        > :first-child {
+          * {
+            @apply flex justify-start;
+          }
+        }
+
+        > :nth-child(2) {
+          * {
+            @apply flex justify-end ml-auto;
+          }
+        }
+      }
+    }
+  }
+
+  .tip-context {
+    @apply w-4 h-4 relative;
+
+    .tip-icon {
+      @apply w-full h-full;
+    }
+  }
+
+  .tip-text {
+    @apply mx-4 bg-toast_bg_color rounded text-button_text_01 text-xs p-2.5 z-50;
+  }
+}

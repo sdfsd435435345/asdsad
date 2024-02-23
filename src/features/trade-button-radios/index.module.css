@@ -1,0 +1,45 @@
+:local(.trade-button-radios) {
+  @apply flex;
+
+  .radio-item {
+    @apply flex-1 flex justify-center items-center rounded  whitespace-nowrap font-medium;
+
+    &.h-30 {
+      height: 30px;
+    }
+
+    &.h-10 {
+      height: 40px;
+    }
+    
+    &.h-22 {
+      height: 22px;
+    }
+  }
+
+  &:not(.has-gap) {
+    .radio-item {
+      &:not(:last-child) {
+        @apply rounded-r-none rounded-bl-none;
+      }
+  
+      &:not(:first-child) {
+        @apply rounded-l-none rounded-br-none;
+      }
+    }
+  }
+
+  &.has-gap {
+    .radio-item:not(:last-child) {
+      @apply mr-2;
+    }
+    
+    &.gap-sm {
+      .radio-item:not(:last-child) {
+        @apply mr-4;
+      }
+    }
+  }
+
+
+}

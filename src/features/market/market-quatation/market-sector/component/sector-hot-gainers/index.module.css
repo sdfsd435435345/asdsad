@@ -1,0 +1,21 @@
+:local(.scoped) {
+  .hot-gainers-content {
+    @apply w-full h-80;
+
+    .gainers-tree-map {
+      @apply flex flex-col justify-center items-center rounded-lg box-border border-0 overflow-hidden absolute;
+
+      .tree-map-text {
+        @apply px-1 w-full truncate font-medium text-button_text_01 text-center;
+      }
+
+      .tree-map-name {
+        @apply text-sm
+      }
+      
+      .tree-map-price {
+        @apply text-xs
+      }
+    }
+  }
+}

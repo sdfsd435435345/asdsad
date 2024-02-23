@@ -1,0 +1,171 @@
+:local(.scoped) {
+  .application-form-wrap {
+    @apply px-4 py-4;
+
+    .title {
+      @apply mb-8 mt-2;
+  
+      label {
+        @apply text-2xl font-semibold text-text_color_01;
+      }
+    }
+  
+    p {
+      @apply text-xs mb-2;
+  
+      label {
+        @apply text-brand_color;
+      }
+    }
+
+    .update-image {
+      @apply flex w-full bg-bg_color;
+      
+      .sample, .update {
+        @apply flex-1;
+      }
+
+      .sample {
+        @apply mr-1;
+
+        .rv-field__children > div {
+          padding: 10px;
+          @apply w-full h-full;
+        }
+
+        svg {
+          @apply w-full h-full;
+        }
+      }
+
+      .update {
+        @apply flex flex-1 ml-1 justify-center items-center relative;
+
+        .rv-uploader, .rv-uploader__wrapper, .rv-uploader__input-wrapper {
+          @apply w-full h-full;
+        }
+
+        .rv-uploader__input-wrapper {
+          input {
+            @apply h-full;
+          }
+        }
+
+        .rv-uploader {
+          .update-wrap {
+            padding: 10px;
+            @apply bg-cover bg-center bg-no-repeat bg-bg_sr_color rounded;
+
+            & > div {
+              @apply w-full h-full;
+            }
+
+            svg {
+              @apply w-full h-full;
+            }
+          }
+
+          .update-text {
+            @apply absolute left-0 right-0 bottom-10 text-center;
+
+            label {
+              @apply text-sm text-text_color_02;
+            }
+          }
+
+          .rv-uploader__wrapper {
+            @apply pb-0;
+          }
+        }
+      }
+    }
+
+    .tips {
+      @apply my-8;
+
+      .describe {
+        @apply flex mb-2;
+
+        & > div {
+          @apply mt-1;
+        }
+
+        svg {
+          width: 6px;
+          height: 6px;
+          @apply mr-1 align-super;
+        }
+
+        p {
+          @apply text-xs font-normal text-text_color_03 mb-0;
+        }
+      }
+    }
+
+    .rv-field {
+      @apply p-0 bg-transparent;
+    }
+  
+    .rv-field__suffix {
+      @apply text-sm mr-3 text-brand_color;
+    }
+  
+    .rv-form--vertical {
+      @apply mb-8;
+    }
+
+    .rv-form-item--vertical {
+      @apply mt-8;
+    }
+
+    .rv-field__body {
+      @apply bg-bg_sr_color rounded;
+
+
+      .rv-field__prefix {
+        .rv-image {
+          img {
+            margin-right: 10px;
+            @apply w-4 h-4;
+          }
+        }
+
+        svg {
+          @apply w-2 h-2 ml-2;
+        }
+      }
+    }
+  }
+
+  .submit-success {
+    @apply fixed inset-0 px-4 flex flex-col justify-center items-center;
+
+    .icon {
+      @apply flex flex-1 items-end mb-8;
+
+      svg {
+        width: 132px;
+        height: 105px;
+      }
+    }
+
+    .content {
+      @apply text-text_color_02 text-sm font-normal;
+    }
+
+    .back-home {
+      @apply flex flex-1 w-full items-end mb-20;
+    }
+
+  }
+
+  .rv-form > .rv-cell:nth-child(odd) {
+    input {
+      @apply pr-20;
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

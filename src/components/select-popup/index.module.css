@@ -1,0 +1,35 @@
+
+:local(.scoped) {
+  position: relative;
+
+  .trigger {
+    @apply bg-bg_sr_color flex items-center relative text-text_color_01;
+
+    padding: 6px 12px;
+
+    .rv-icon {
+      @apply absolute right-2.5;
+    }
+  }
+}
+
+:local(.content) {
+  .title {
+    @apply text-text_color_01 text-xl text-center;
+  }
+
+  .close {
+    @apply absolute top-3 right-3;
+  }
+
+  .confirm-btn {
+    @apply w-full;
+
+    margin: 0 auto;
+
+    .rv-button {
+      @apply w-full;
+    }
+  }
+}
+

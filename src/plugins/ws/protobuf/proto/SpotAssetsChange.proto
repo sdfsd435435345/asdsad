@@ -1,0 +1,9 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.perpetual";
+option java_outer_classname = "SpotAssetsChangeProto";
+
+message SpotAssetsChange{
+  string uid = 1; //用户 uid
+  string assets = 2; //变化的资产
+
+}

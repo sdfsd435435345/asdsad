@@ -1,0 +1,20 @@
+:local(.scoped) {
+  font-size: 12px;
+  @apply flex flex-row h-5 items-center mb-2 text-text_color_02;
+
+  svg {
+    @apply w-4 h-4 mr-1;
+  }
+
+  > * {
+    @apply m-auto;
+  }
+
+  .rv-swiper__indicator {
+    @apply hidden;
+  }
+
+  .rv-swiper {
+    @apply h-5;
+  }
+}

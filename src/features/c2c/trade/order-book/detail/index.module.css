@@ -1,0 +1,7 @@
+:local(.order-book-detail-wrapper) {
+  .sticky-header {
+    @apply sticky z-10 bg-bg_color;
+
+    top: 46px;
+  }
+}

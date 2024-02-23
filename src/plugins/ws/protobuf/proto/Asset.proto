@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "AssetProto";
+
+message Asset{
+    Body asset = 1;
+
+    message Body{
+      sint64 uid = 1;
+      sint64 coinId = 2;
+      sint64 businessId = 3;
+      string balance = 4;
+      string locked = 5;
+      string total = 6;
+      bool isRefresh = 7;
+    }
+}

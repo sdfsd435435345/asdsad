@@ -1,0 +1,107 @@
+:local(.master-account-wrap) {
+  .master-account-icon {
+    @apply w-5 h-5;
+
+    svg {
+      @apply w-full h-full;
+    }
+  }
+
+  .master-account-content {
+    @apply pt-3 px-4;
+
+    label {
+      @apply text-xs text-text_color_03;
+    }
+
+    p {
+      font-size: 28px;
+      @apply mb-2 font-medium;
+    }
+
+    .rv-cell {
+      @apply p-0;
+
+      .rv-cell__value {
+        @apply rounded-lg overflow-hidden;
+      }
+
+      .rv-input {
+        @apply p-3;
+      }
+    }
+
+    .master-account-input {
+      @apply my-4 px-3 py-2 h-12 rounded-lg bg-bg_sr_color flex items-center box-border;
+
+      .rv-image {
+        @apply w-4 mr-2 flex items-center;
+      }
+
+      span {
+        @apply text-sm;
+      }
+
+      img {
+        @apply w-4 h-4 rounded-full;
+      }
+
+      .divider {
+        height: 18px;
+        @apply w-px mx-3 bg-line_color_02;
+      }
+    }
+
+    .content-select-image-wrap {
+      @apply h-12 p-3 box-border bg-bg_sr_color rounded-lg flex items-center justify-between;
+
+      .content-select-image {
+        @apply flex items-center;
+
+        .image-key {
+          @apply ml-2 flex-1;
+        }
+
+        .rv-image {
+          @apply w-4 h-4;
+
+          img {
+            @apply w-4 h-4 rounded-full;
+          }
+        }
+      }
+    }
+
+    .invitation-code {
+      @apply mt-8 mb-2;
+
+      label {
+        @apply text-text_color_03 text-sm font-normal mr-2;
+      }
+
+      svg {
+        @apply w-2 h-2;
+      }
+    }
+
+    .master-account-checkbox {
+      @apply mt-6 text-xs;
+
+      .checkbox-icon {
+        @apply w-4 h-4 mb-1;
+
+        svg {
+          @apply w-full h-full;
+        }
+      }
+
+      label {
+        @apply text-brand_color;
+      }
+    }
+
+    .rv-button {
+      @apply mt-4 w-full rounded-lg;
+    }
+  }
+}

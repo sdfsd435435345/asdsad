@@ -1,0 +1,21 @@
+:local(.scoped) {
+  height: 100vh;
+  @apply bg-bg_color;
+  .header-title {
+    font-size: 17px;
+    @apply m-auto font-medium;
+  }
+
+  .icon-bar {
+    @apply absolute right-4 top-1/2 -translate-y-1/2;
+  }
+
+  .rv-divider {
+    height: 0.5px;
+    @apply mx-4;
+  }
+}
+
+:local(.modal) {
+  @apply bg-bg_color !important;
+}

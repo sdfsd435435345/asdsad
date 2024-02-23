@@ -1,0 +1,14 @@
+syntax = "proto3";
+option java_package = "com.newbit.common.proto.push";
+option java_outer_classname = "C2cAccountChangedProto";
+
+message C2cAccountChanged{
+    repeated Body list = 1;
+
+    message Body{
+      int32 coinId = 1;
+      string balance = 2;
+      string freezeBalance = 3;
+      string merchantFreezeBalance = 4;
+    }
+}

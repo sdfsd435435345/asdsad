@@ -1,0 +1,40 @@
+:local(.hint-modal-root) {
+  @apply rounded-lg !important;
+
+  .hint-modal-wrapper {
+    width: 298px;
+    padding: 30px;
+    @apply flex flex-col bg-card_bg_color_03;
+
+    .modal-icon {
+      @apply self-center mb-5;
+  
+      svg {
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    .modal-title {
+      @apply text-base text-text_color_01 font-medium mb-5 self-center;
+    }
+
+    .modal-content {
+      @apply text-sm text-text_color_01;
+    }
+      
+    .modal-bottom {
+      @apply w-full flex items-center justify-between mt-5;
+      
+      .modal-btn {
+        min-width: 46%;
+        
+        @apply h-10 rounded text-button_text_02;
+      }
+      
+      .modal-cancel-btn {
+        @apply text-text_color_02 border-line_color_02 bg-card_bg_color_03;
+      }
+    }
+  }
+}

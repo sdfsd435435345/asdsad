@@ -1,0 +1,3 @@
+:local(.transfer-confirmed-wrapper) {
+  @apply flex flex-col justify-center items-center pt-36 px-4
+}

@@ -1,0 +1,3 @@
+:local(.coin-list-root) {
+  @apply flex flex-col bg-bg_color;
+}

@@ -1,0 +1,36 @@
+:local(.scoped) {
+  @apply px-4 fixed bottom-4 left-0 w-screen z-100;
+
+  .inner-content {
+    @apply bg-card_bg_color_03 flex items-center justify-between px-9 pt-3 pb-4;
+
+    border-radius: 16px;
+  }
+
+  .tab-bar-box {
+    @apply text-center text-xs text-text_color_02;
+
+    &.is-active {
+      @apply text-brand_color;
+    }
+  }
+
+  .tab-bar-content {
+    @apply flex flex-col items-center justify-center h-full leading-none;
+
+    .tab-bar-icon {
+      @apply mb-2 text-lg;
+    }
+  }
+
+  .navigation-link {
+    &.is-active {
+      @apply text-brand_color;
+    }
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: inherit;
+  }
+}

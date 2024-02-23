@@ -1,0 +1,30 @@
+:local(.payments-popup-wrapper) {
+  .rv-selector {
+    @apply flex flex-wrap;
+
+    .rv-selector__item {
+      width: calc((100% - 16px) / 3);
+      line-height: 1rem !important;
+
+      &:nth-child(3n) {
+        @apply mr-0;
+      }
+    }
+
+  }
+
+  .empty {
+    .no-data-image {
+      width: 70px;
+      height: 52px;
+    }
+
+    .no-footer-text {
+      @apply text-xs mt-1;
+    }
+  }
+
+  .action-tip {
+    @apply text-text_color_04 flex-1 mr-4 whitespace-nowrap;
+  }
+}

@@ -1,0 +1,98 @@
+:local(.scoped) {
+  .navigation-content {
+    @apply flex-1 flex flex-col;
+
+    .navigation-content-body {
+      @apply flex-1 bg-bg_color;
+
+      .navigation-breadcrumb {
+        @apply mb-4 px-4;
+      }
+
+      .navigation-menu {
+        @apply mb-11;
+
+        .hidden-icon {
+          .rv-icon {
+            @apply hidden;
+          }
+
+          .rv-collapse-item__wrapper {
+            @apply hidden;
+          }
+        }
+
+        .support-collapse-swagger {
+          .rv-cell {
+            @apply flex items-center py-2;
+
+            .rv-cell__left-icon {
+              border-radius: 50%;
+              @apply w-6 h-6;
+
+              .support-lazy-img {
+                @apply w-6 h-6;
+              }
+      
+              svg {
+                @apply text-2xl;
+              }
+            }
+      
+            .rv-cell__title {
+              @apply flex-1 text-base font-medium text-text_color_01 truncate;
+            }
+          }
+      
+          .select-item > .rv-cell > .rv-cell__title {
+            @apply text-brand_color;
+          }
+
+          .rv-collapse-item::after {
+            @apply border-transparent;
+          }
+
+          .rv-cell--clickable:hover {
+            @apply bg-transparent;
+          }
+
+          .rv-collapse-item__content {
+            @apply pl-7 pt-0 bg-bg_color;
+          }
+
+          .support-collapse-swagger-item {
+            .rv-cell {
+              .rv-cell__right-icon {
+                @apply hidden;
+              }
+      
+              .rv-cell__title {
+                @apply pl-4 text-sm;
+              }
+            }
+      
+            .rv-collapse-item__content {
+              @apply pb-0 pt-1.5;
+      
+              .collapse-content-item {
+                @apply pl-4 mb-2 text-sm font-normal text-text_color_01;
+              }
+            }
+          }
+      
+          .support-article-box {
+            @apply mb-2 pl-4;
+      
+            .support-article-text {
+              @apply mb-1 text-sm text-text_color_01;
+            }
+      
+            .support-article-time {
+              @apply text-xs text-text_color_03;
+            }
+          }
+        }
+      }
+    }
+  }
+}

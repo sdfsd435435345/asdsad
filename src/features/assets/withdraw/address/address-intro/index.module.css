@@ -1,0 +1,50 @@
+:local(.introjs-tooltip-custom) {
+  @apply w-full min-w-full;
+  
+  background: none;
+  box-shadow: none;
+  transform: translate(0, 0);
+  
+  .introjs-arrow.top-middle {
+    display: none !important;
+  }
+  
+  .introjs-tooltiptext {
+    @apply p-0;
+  
+    background: none;
+  }
+  
+  .introjs-tooltipbuttons {
+    @apply fixed p-0 pt-2 w-full flex justify-center;
+  
+    .introjs-button {
+      @apply rounded bg-brand_color border-brand_color text-sm font-medium text-button_text_02 text-center p-0 shadow-none;
+  
+      width: 112px;
+      height: 40px;
+      line-height: 40px !important;
+      text-shadow: none;
+    }
+  }
+}
+  
+:local(.withdraw-address-intro-root) {
+  @apply flex flex-col;
+  
+  .content-img {
+    @apply flex flex-col items-end;
+  
+    margin-right: 34px;
+  }
+  
+  .hint-text {
+    @apply text-sm text-button_text_01 font-medium self-center ml-16 mr-16 my-6 text-center;
+  }
+}
+  
+:local(.introjs-highlight-custom) {
+  background: none !important;
+  @apply p-0 rounded-none !important;
+}
+  

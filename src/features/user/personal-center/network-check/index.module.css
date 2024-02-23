@@ -1,0 +1,112 @@
+:local(.scoped) {
+  .network-check-wrap {
+    .container {
+      .header {
+        background: linear-gradient(98.95deg, #FFC769 0%, #F1AE3D 100%);
+        @apply flex flex-col px-4 pb-4 pt-6;
+
+        .name {
+          @apply flex;
+
+          .icon {
+            @apply mr-2;
+
+            svg {
+              @apply w-12 h-12;
+            }
+          }
+
+          .text {
+            @apply flex flex-col flex-1 justify-center;
+
+            label {
+              color: #101010;
+              font-size: 22px;
+              @apply leading-5;
+
+              &:nth-child(1) {
+                @apply mb-2;
+              }
+            }
+          }
+        }
+
+        .tips {
+          @apply mt-4;
+
+          p {
+            color: #101010;
+            @apply text-xs leading-5;
+          }
+        }
+      }
+
+      .main {
+        @apply px-4 pt-4 bg-bg_color;
+
+        .item {
+          @apply mb-4;
+
+          .item-wrap {
+            border-bottom: 1px solid var(--line_color_02);
+            @apply pb-4;
+
+            .title {
+              @apply text-sm font-semibold text-text_color_01 mb-2;
+            }
+
+            .text {
+              font-size: 13px;
+              @apply leading-5 text-text_color_03;
+            }
+
+            .speed-color {
+              @apply text-buy_up_color;
+            }
+          }
+
+          &:last-child {
+            @apply mb-0;
+
+            .item-wrap {
+              @apply border-none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .generate {
+    @apply px-4 pb-8 bg-bg_color;
+
+    button {
+      @apply w-full;
+    }
+  }
+
+  .save-image {
+    @apply h-screen flex flex-col justify-center items-center;
+
+    .image-wrap {
+      height: 86vh;
+      @apply p-4;
+
+      img {
+        @apply h-full
+      }
+    }
+
+    .save-btn {
+      @apply flex flex-col justify-end flex-1 w-full px-3 pb-3 bg-card_bg_color_03;
+
+      .btn-wrap {
+        @apply flex flex-col;
+      }
+
+      button {
+        @apply mt-3;
+      }
+    }
+  }
+}

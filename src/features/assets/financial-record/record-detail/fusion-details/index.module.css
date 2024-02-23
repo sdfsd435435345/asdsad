@@ -1,0 +1,15 @@
+:local(.fusion-details-root) {
+  @apply flex flex-col px-4;
+
+  .info-item {
+    @apply flex items-center justify-between;
+
+    .label {
+      @apply text-sm text-text_color_02;
+    }
+
+    .value {
+      @apply text-sm text-text_color_01;
+    }
+  }
+}

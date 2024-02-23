@@ -1,0 +1,47 @@
+:local(.scoped) {
+  .row-wrap {
+    @apply flex flex-col w-full p-4 box-border;
+
+    .row {
+      @apply flex justify-between;
+
+      .title {
+        @apply text-text_color_02 text-sm;
+
+        line-height: 22px;
+      }
+
+      .value {
+        @apply text-text_color_01 text-sm;
+
+        line-height: 22px;
+      }
+    }
+
+    .divide {
+      @apply w-full h-[0.5px] bg-line_color_02;
+    }
+  
+  }
+
+
+  .rv-hairline--bottom {
+    @apply border-0
+  }
+
+  .rv-hairline--bottom::after {
+    @apply border-0
+  }
+
+  .rv-tabs__nav--line, .rv-tabs__nav--capsule, .rv-tabs__nav--jumbo {
+    @apply px-4 overflow-x-scroll;
+
+    .rv-tab {
+      @apply p-0 m-0 mr-8 text-base;
+    }
+  }
+
+  .rv-tabs__wrap {
+    @apply border-solid border-line_color_02 border-b;
+  }
+}

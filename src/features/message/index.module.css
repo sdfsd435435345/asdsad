@@ -1,0 +1,79 @@
+:local(.scoped) { 
+  .message-header {
+    @apply p-4 box-border;
+
+    .header-content {
+      @apply overflow-hidden;
+
+      .header-clean {
+        @apply float-right py-1 px-2 w-20 h-6 flex items-center rounded bg-card_bg_color_01;
+
+        .header-read-icon {
+          @apply w-3 h-3 mr-1;
+        }
+
+        .header-read-text {
+          @apply text-xs font-normal text-text_color_02;
+        }
+      }
+    }
+
+    .header-card {
+      @apply mt-6;
+
+      .rv-grid-item__text {
+        @apply mt-1;
+      }
+    }
+  }
+
+  .message-divider {
+    @apply h-1 w-full bg-line_color_02;
+  }
+
+  .message-body {
+    @apply px-4 mb-4 w-full;
+
+    .swipe-del {
+      @apply text-sm font-normal text-button_text_01;
+    }
+
+    .body-swipe-cell {
+      @apply w-full flex items-center py-4 overflow-hidden;
+
+      .swipe-cell-left {
+        border-radius: 50%;
+        @apply mr-3 w-12 h-12 bg-card_bg_color_02;
+      }
+
+      .swipe-cell-right {
+        @apply flex-1;
+
+        .cell-right-first {
+          @apply flex items-center;
+
+          .cell-title {
+            @apply mr-2 flex-1 flex items-center;
+
+            .cell-title-text {
+              @apply truncate mr-2;
+            }
+
+            .cell-title-tag {
+              border-radius: 21px;
+              @apply py-px px-2 text-xs w-10 box-border text-text_color_01 bg-card_bg_color_02 overflow-hidden;
+            }
+          }
+
+          .cell-time {
+            @apply text-xs font-normal text-text_color_03 box-border;
+          }
+        }
+
+        .cell-right-second {
+          @apply mt-1 truncate text-xs font-normal text-text_color_02;
+        }
+      }
+    }
+  }
+}

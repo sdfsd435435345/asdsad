@@ -1,0 +1,60 @@
+:local(.advertise-content-root) {
+  @apply flex flex-col p-4;
+
+  .header-item {
+    @apply flex items-center justify-between;
+
+    .title {
+      @apply text-base text-text_color_01 font-medium;
+    }
+    
+    .more {
+      @apply flex items-center text-sm text-brand_color;
+    
+      .more-icon {
+        svg {
+          width: 9px;
+          height: 9px;
+        }
+      }
+    }
+  }
+
+  .coin-info {
+    @apply flex items-center mt-4 text-sm font-medium;
+
+    .line {
+      @apply w-0.5 h-3 rounded-3xl mr-1;
+    }
+  }
+
+  .content-info {
+    @apply flex items-center justify-between mt-2 text-sm;
+
+    .info-label {
+      @apply text-text_color_02;
+    }
+
+    .info-value {
+      @apply text-text_color_01 font-medium;
+    }
+  }
+
+  .bottom {
+    @apply flex items-center justify-between pt-2 border-line_color_02 mt-3;
+
+    border-top-width: 0.5px;
+
+    .payment-type {
+      @apply text-sm text-text_color_02;
+    }
+
+    .bottom-main {
+      @apply flex items-center;
+
+      .main-item {
+        @apply text-sm text-text_color_01 font-medium mr-2 last:mr-0;
+      }
+    }
+  }
+}

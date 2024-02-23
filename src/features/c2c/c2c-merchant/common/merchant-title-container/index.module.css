@@ -1,0 +1,23 @@
+:local(.scoped) {
+  @apply text-xl text-text_color_01 mt-6 mb-0;
+
+  .container {
+    @apply relative font-medium;
+
+    img {
+      @apply flex;
+    }
+
+    > :first-child {
+      @apply absolute -top-1 -left-1 inline;
+    }
+
+    > :last-child {
+      @apply absolute -bottom-1 left-0 right-0 inline;
+
+      img {
+        @apply h-2;
+      }
+    }
+  }
+}

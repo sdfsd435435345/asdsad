@@ -1,0 +1,111 @@
+:local(.dressing-popup) {
+  @apply relative pb-20 bg-card_bg_color_03;
+
+  .dressing-popup-header {
+    @apply pt-4 px-4 mb-6 flex items-center justify-between;
+
+    .dressing-popup-header-text {
+      @apply text-base font-medium text-text_color_01;
+    }
+
+    .dressing-popup-header-icon {
+      @apply w-5 h-5;
+
+      svg {
+        @apply w-full h-full; 
+      }
+    }
+  }
+
+  .dressing-popup-business {
+    @apply px-4 mb-2 flex items-center justify-between;
+
+    .selected {
+      @apply w-4 h-4;
+
+      svg {
+        @apply w-full h-full;
+      }
+    }
+
+    .unselected {
+      @apply w-4 h-4;
+
+      svg {
+        @apply w-full h-full;
+      }
+    }
+
+    .rv-checkbox {
+      .rv-checkbox__label {
+        @apply text-sm font-normal text-text_color_01;
+      }
+    }
+
+    .popup-business-text {
+      @apply text-sm font-normal text-text_color_02;
+    }
+  }
+
+  .dressing-popup-select {
+    @apply px-3 flex flex-wrap;
+
+    .popup-select-contair {
+      @apply w-1/4 text-xs font-normal px-1 mb-2;
+
+      .popup-select-item {
+        border: 0.5px solid var(--bg_sr_color);
+        @apply py-1.5 px-7 bg-bg_sr_color rounded text-center text-text_color_01;
+      }
+    }
+
+    .selected {
+      .popup-select-item {
+        border: 0.5px solid var(--brand_color);
+        @apply bg-brand_color_special_02  text-brand_color;
+      }
+    }
+  }
+
+  .dressing-popup-direction {
+    @apply px-4 mt-4 mb-6;
+
+    .selected {
+      @apply w-4 h-4;
+
+      svg {
+        @apply w-full h-full;
+      }
+    }
+
+    .unselected {
+      @apply w-4 h-4;
+
+      svg {
+        @apply w-full h-full;
+      }
+    }
+
+    .rv-checkbox {
+      .rv-checkbox__label {
+        @apply text-sm font-normal text-text_color_01;
+      }
+    }
+
+    .popup-direction-text {
+      @apply mb-3 text-sm font-normal text-text_color_02;
+    }
+  }
+
+  .dressing-popup-footer {
+    @apply absolute bottom-0 left-0 right-0 px-2 pb-10 pt-6 bg-card_bg_color_03 flex;
+
+    .popup-footer-button {
+      @apply flex-1 px-2 text-sm font-medium text-center text-text_color_01 overflow-hidden;
+    }
+  }
+}
+
+:local(.dressing-popup-wrap) {
+  @apply rounded-t-lg;
+}

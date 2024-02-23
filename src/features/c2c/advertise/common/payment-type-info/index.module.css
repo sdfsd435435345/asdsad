@@ -1,0 +1,41 @@
+:local(.payment-type-info-root) {
+  @apply flex items-center flex-wrap;
+
+  .payment-item {
+    @apply flex items-center text-xs text-text_color_02 mr-2 last:mr-0;
+
+    .line {
+      @apply w-0.5 h-2.5 mr-1 rounded-2xl;
+    }
+  }
+}
+
+:local(.payment-type-popover-root) {
+  @apply !-mt-2;
+
+  max-width: 80%;
+
+  .rv-popover__content {
+    @apply flex bg-card_bg_color_03 p-3 pb-0 flex-wrap rounded;
+  }
+
+  .rv-popover__arrow {
+    @apply hidden;
+  }
+
+  .popover-cell {
+    @apply text-xs text-text_color_01 font-medium mr-2 last:mr-0 mb-3;
+  }
+
+  .payment-item {
+    @apply flex items-center text-xs text-text_color_02 mr-2 last:mr-0 mb-3;
+
+    .line {
+      @apply w-0.5 h-2.5 mr-1 rounded-2xl;
+    }
+  }
+}
+
+:local(.popover-start-root) {
+  @apply !left-4;
+}

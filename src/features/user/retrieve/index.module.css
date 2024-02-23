@@ -1,0 +1,61 @@
+:local(.scoped) {
+  .retrieve-wrap {
+    @apply p-4;
+  }
+
+  .rv-cell__title {
+    @apply text-sm;
+  }
+
+  .rv-form-item--vertical {
+    @apply mt-8;
+  }
+
+  .rv-field {
+    @apply p-0 bg-transparent;
+
+    .rv-field__body {
+      @apply bg-card_bg_color_01 rounded;
+
+      .rv-field__prefix {
+        .rv-image {
+          img {
+            margin-right: 10px;
+            @apply w-4 h-4;
+          }
+        }
+
+        svg {
+          @apply w-2 h-2 ml-2;
+        }
+      }
+    }
+
+    .rv-checkbox {
+      @apply bg-bg_color w-full;
+    }
+
+    .rv-checkbox__label {
+      @apply text-text_color_03;
+    }
+
+    .rv-field__right-icon {
+      line-height: 42px;
+      @apply right-0 top-0 bottom-0 m-auto;
+
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+  }
+
+  .rv-search, .data-list {
+    .rv-field__body {
+      @apply bg-transparent;
+    }
+  }
+
+  button {
+    @apply w-full;
+  }
+}

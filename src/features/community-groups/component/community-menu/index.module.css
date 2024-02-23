@@ -1,0 +1,28 @@
+:local(.scoped) { 
+  .community-menu-title {
+    @apply mb-2 flex items-center;
+
+    .menu-title-icon {
+      @apply w-5 h-5;
+
+      svg {
+        @apply w-5 h-5;
+      }
+    }
+
+    .menu-title-text {
+      @apply ml-2 text-base font-medium text-text_color_01;
+    }
+  }
+
+  .community-menu-container {
+    .menu-container-item {
+      border-bottom: 0.5px solid var(--line_color_02);
+      @apply py-4;
+
+      .container-item-box {
+        @apply text-sm font-medium text-text_color_01 truncate overflow-hidden;
+      }
+    }
+  }
+}

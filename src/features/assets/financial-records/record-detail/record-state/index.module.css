@@ -1,0 +1,51 @@
+:local(.scoped) {
+  .order-info {
+    @apply mx-4 h-16 flex flex-1 my-6 items-center text-sm text-text_color_01 rounded-full font-medium;
+  }
+
+  .order-info .left {
+    @apply flex flex-col ml-4;
+  }
+
+  .order-info .right {
+    @apply flex flex-col text-right flex-1 pr-10;
+  }
+
+  .font-color {
+    @apply text-buy_up_color;
+  }
+
+
+  .success {
+    @apply bg-success_color_special_02;
+
+    .font-color {
+      @apply text-success_color;
+    }
+  }
+
+  .fail {
+    @apply bg-sell_down_color_light_bg;
+
+    .font-color {
+      @apply text-warning_color;
+    }
+  }
+
+  .processing {
+    @apply bg-card_bg_color_04;
+
+    .font-color {
+      @apply text-text_color_01;
+    }
+  }
+
+  .error {
+    @apply bg-brand_color_special_02;
+
+    .font-color {
+      @apply text-brand_color_special;
+    }
+  }
+}
+
