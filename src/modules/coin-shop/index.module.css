@@ -1,5 +1,6 @@
 :local(.scoped) {
   height: 100vh;
+  height: 100%; 
   @apply bg-bg_color;
 
   .header-title {
@@ -17,6 +18,40 @@
   .coin-shop-tab {
     display: flex;
     justify-content: space-around;
+    margin: 20px 0px;
+
+    .payment-method-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background-color: #ffff !important;
+      border-radius: 20px;
+      height: 42px !important;
+      line-height: 42px;
+      width: 100px;
+      color: black;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .coin-shop-tab-name,
+    .coin-shop-tab-wholesale,
+    .coin-shop-tab-petty {
+      .coin-shop-tab-input {
+        input {
+          background-color: #ffff !important;
+          border-radius: 20px;
+          height: 42px !important;
+          width: 100px;
+          color: black;
+        }
+
+        input.rv-input__control {
+          --rv-input-placeholder-text-color: #DBDBDB !important;
+          padding-left: 10px;
+        }
+      }
+    }
   }
 
   .coin-shop-list {
@@ -24,12 +59,13 @@
 
     .user-picture {
       width: 40px;
+      height: 40px;
       background-color: aliceblue;
     }
 
     .amount-rule {
       transform: scaleZ(0.2);
-      font-size: 8px;
+      font-size: 12px;
       color: #ccc;
       padding-left: 10px;
     }
@@ -48,27 +84,13 @@
     }
   }
 
-  .triangle-icon {
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 5px 4px 0 4px;
-    border-color: #fff transparent transparent transparent;
-    margin-left: 5px;
-  }
-
-  .paymentMethodButton {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
 
   .triangle-icon {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 5px 5px 0 5px;
-    border-color: #fff transparent transparent transparent;
+    border-color: black transparent transparent transparent;
     margin-left: 5px;
     vertical-align: middle;
   }

@@ -1,0 +1,141 @@
+:local(.scoped) {
+  height: 100vh;
+  @apply bg-bg_color;
+}
+
+.buy-coin-page-container {
+}
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+.buy-coin-page {
+  padding: 0px 10px 0px 10px;
+
+  .available-sales {
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .payment-deadline-container {
+    display: flex;
+    margin: 10px 0px 20px 0px;
+  }
+}
+
+.header {
+  height: 60px;
+  line-height: 60px;
+  font-size: large;
+}
+
+.checkbox-section {
+  .rv-checkbox-group--horizontal {
+    display: flex;
+    justify-content: space-around;
+  }
+
+}
+
+.sell-amount-section {
+  .sell-amount-section-input {
+    input {
+      background-color: rgb(46, 66, 86) !important;
+      color: rgb(169, 182, 194) !important;
+    }
+  }
+
+  .rv-input__suffix {
+    background-color: rgb(64, 80, 96) !important;
+    width: 50px;
+    height: 48px;
+    text-align: center;
+  }
+}
+
+.min-amount-section {
+  .min-amount-section-input {
+    input {
+      background-color: rgb(46, 66, 86) !important;
+      color: rgb(169, 182, 194) !important;
+    }
+  }
+}
+
+.leave-message {
+  .leave-message-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 10px 0px 10px 0px;
+
+    .zhifubao-icon {
+      margin: 10px;
+    }
+  }
+}
+
+
+.suffix-input {
+  flex: 1;
+
+  .leave-message-suffix-input {
+    input {
+      background-color: rgb(46, 66, 86) !important;
+      color: rgb(169, 182, 194) !important;
+    }
+  }
+}
+
+.buy-coin-page .sell-amount-section,
+.buy-coin-page .min-amount-section {
+  margin-bottom: 20px;
+}
+
+.buy-coin-page .payment-deadline-section {
+  text-align: center;
+  margin-bottom: 20px;
+
+  .rv-checkbox-group--horizontal {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.buy-coin-page .payment-details,
+.buy-coin-page .leave-message {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.buy-coin-page .payment-details img,
+.buy-coin-page .leave-message img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+
+.buy-coin-page .listing-button,
+.buy-coin-page .delete-button {
+  text-align: center;
+  button {
+    width: 150px;
+  }
+}
+
+.buy-coin-page .suffix-input {
+  display: flex;
+  align-items: center;
+}
+
+:local(.modal) {
+  @apply bg-bg_color !important;
+}
