@@ -1,0 +1,175 @@
+:local(.scoped) {
+  height: 100vh;
+  padding: 0px 5px 0px;
+  @apply bg-bg_color;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    /* 背景色根据实际需要修改 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 阴影效果，根据实际需要修改 */
+  }
+
+  .back-button {
+    font-size: 16px;
+    cursor: pointer;
+    color: #007BFF;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .contact-service {
+    font-size: 14px;
+    color: #007BFF;
+    cursor: pointer;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .orderInfo {
+    margin-bottom: 20px;
+    font-size: 14px;
+
+    p {
+      margin: 5px 0;
+      display: flex;
+      align-items: center;
+
+      .status {
+        font-weight: bold;
+        margin-left: 10px;
+        color: #28a745;
+        /* 根据订单状态设置颜色 */
+      }
+    }
+
+    .message {
+      font-size: 14px;
+      line-height: 1.5;
+      color: red; /* 默认颜色为红色 */
+    }
+
+    .message::before {
+      color: red;
+      /* 【 的字体颜色 */
+    }
+
+    .seller-name {
+      color: blue;
+      /* 陈康的字体颜色 */
+    }
+
+    .message::after {
+      color: red;
+    }
+
+    .other-account {
+      color: blue;
+      /* 其他账户的字体颜色 */
+    }
+
+    .other-account-warning {
+      color: blue;
+      /* 其他账户不会发货的字体颜色 */
+    }
+  }
+
+  .progress {
+    /* 这里根据你的实际需要设置步骤进度条的样式 */
+  }
+
+
+  .payment-info {
+
+    .payment-type {
+      font-size: 16px;
+      font-weight: bold;
+      height: 56px;
+      line-height: 50px;
+    }
+
+    .seller-collection-informatio {
+      display: flex;
+      align-items: center;
+
+      .payment-screenshot {
+        /* 可以设置支付截图的样式，例如设置宽度、高度、边框等 */
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        margin: 10px;
+        flex: 1;
+      }
+
+      .payment-details {
+        flex: 2;
+
+        .input-wrapper {
+          display: flex;
+          align-items: center;
+          margin-bottom: 10px;
+
+          .label {
+            font-size: 14px;
+            color: #333;
+            /* 可以根据需要调整颜色 */
+          }
+
+          .input-field {
+            display: inline-block;
+            width: calc(100% - 40px);
+            /* 算上复制按钮的宽度，总宽度减去按钮宽度 */
+            box-sizing: border-box;
+            /* 防止边框撑大元素 */
+            padding: 8px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            /* 更淡的灰色背景 */
+          }
+
+          .copy-button {
+            display: inline-block;
+            margin-left: 5px;
+            font-size: 14px;
+            color: #007BFF;
+            /* 可以根据需要调整颜色 */
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  .icon-bar {
+    @apply absolute right-4 top-1/2 -translate-y-1/2;
+  }
+
+  .rv-divider {
+    height: 0.5px;
+    @apply mx-4;
+  }
+}
+
+:local(.modal) {
+  @apply bg-bg_color !important;
+}

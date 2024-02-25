@@ -12,27 +12,28 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+  }
 
-    .back-button {
-      font-size: 16px;
-      cursor: pointer;
-      color: #007BFF;
-    }
+  
+  .back-button {
+    font-size: 16px;
+    cursor: pointer;
+    color: #007BFF;
+  }
 
-    .title {
-      font-size: 18px;
-      font-weight: bold;
-    }
+  .title {
+    font-size: 18px;
+    font-weight: bold;
   }
 
   .content {
+    margin: 10px 20px 0; /* 调整上边距 */
     .selling-info {
       margin-bottom: 20px;
 
       p {
-        margin: 5px 0;
+        margin: 10px 0; /* 调整行与行的间距 */
         font-size: 14px;
-
         img {
           width: 16px;
           height: 16px;
@@ -59,21 +60,22 @@
 
     .reminder {
       margin-top: 20px;
+      color: red;
 
       p {
         font-size: 14px;
-        margin: 5px 0;
-
-        &.red-text {
-          color: red;
-        }
+        margin: 10px 0; /* 调整行与行的间距 */
       }
     }
   }
 
   .footer {
-    margin-top: 20px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
+    width: 100%;
   }
 
   .icon-bar {

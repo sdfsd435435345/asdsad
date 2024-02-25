@@ -1,0 +1,79 @@
+:local(.scoped) {
+  height: 100vh;
+  @apply bg-bg_color;
+  
+  .header-title {
+    font-size: 17px;
+    @apply m-auto font-medium;
+  }
+
+  .icon-bar {
+    @apply absolute right-4 top-1/2 -translate-y-1/2;
+  }
+
+  .rv-divider {
+    height: 0.5px;
+    @apply mx-4;
+  }
+
+  .modal {
+    @apply bg-bg_color !important;
+  }
+
+  /* 在这里添加新的样式 */
+
+  .uploadVoucherPage {
+    /* 你的 UploadVoucherPage 样式 */
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .return-button {
+    font-size: 16px;
+    cursor: pointer;
+    color: #007BFF;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .upload-section {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .payment-screenshot {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .upload-prompt {
+      font-size: 14px;
+    }
+  }
+
+  .confirm-button {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .warning {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+  }
+
+  .upload-button {
+    text-align: center;
+  }
+}

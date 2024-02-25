@@ -7,8 +7,7 @@ import Wallet from '@/modules/wallet'
 import CoinShop from '@/modules/coin-shop'
 import OrderInfo from '@/modules/order-info'
 import Purchase from '@/modules/purchase'
-
-
+import UploadVoucher from '@/modules/upload-voucher'
 const GetRouters = () => {
     const routes = useRoutes([
         // 默认路由
@@ -24,13 +23,17 @@ const GetRouters = () => {
             path: '/coin-shop',
             element: <CoinShop />
         },
-        // {
-        //     path: '/order-info',
-        //     element: <OrderInfo />
-        // },
+        {
+            path: '/order-info',
+            element: <OrderInfo />
+        },
         {
             path: '/purchase',
             element: <Purchase />
+        },
+        {
+            path: '/upload-voucher',
+            element: <UploadVoucher />
         },
     ])
     return routes

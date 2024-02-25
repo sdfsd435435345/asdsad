@@ -15,6 +15,7 @@ const PurchasePage = () => {
       message: '确定下单吗?',
       onCancel: handleCancelOrder,
       onConfirm: handleConfirmOrder,
+      className: 'dialog-confirm'
     })
   };
 
