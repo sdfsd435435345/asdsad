@@ -8,6 +8,8 @@ import CoinShop from '@/modules/coin-shop'
 import OrderInfo from '@/modules/order-info'
 import Purchase from '@/modules/purchase'
 import UploadVoucher from '@/modules/upload-voucher'
+import BuyCoinPage from '@/modules/sell-coin';  // 新添加的卖币模块
+
 const GetRouters = () => {
     const routes = useRoutes([
         // 默认路由
@@ -34,6 +36,10 @@ const GetRouters = () => {
         {
             path: '/upload-voucher',
             element: <UploadVoucher />
+        },
+        {
+            path: '/sell-coin',  // 卖币的路由
+            element: <BuyCoinPage />
         },
     ])
     return routes

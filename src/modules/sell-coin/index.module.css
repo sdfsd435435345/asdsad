@@ -1,0 +1,71 @@
+:local(.scoped) {
+  height: 100vh;
+  @apply bg-bg_color;
+
+  .buy-coin-page {
+    padding: 0px 10px;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .return-button {
+      font-size: 16px;
+      cursor: pointer;
+      color: #007BFF;
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .sell-coin-button {
+      display: flex;
+      justify-content: center;
+    }
+
+    .buy-coin-stats {
+      margin-bottom: 20px;
+      font-size: 14px;
+
+      p {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+
+        .status {
+          font-weight: bold;
+          margin-left: 10px;
+          color: #28a745;
+        }
+      }
+    }
+
+    .coin-stats {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .left-stats,
+    .right-stats {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .right-stats {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+  }
+}
+
+:local(.modal) {
+  @apply bg-bg_color !important;
+}
