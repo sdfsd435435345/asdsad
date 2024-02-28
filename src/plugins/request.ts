@@ -102,6 +102,9 @@ const handleErrorCode = (
     return
   }
 
+  console.log(msg, 'msgmsgmsgmsg');
+  
+
   const isAuthError = authErrorCode.includes(code)
   const isServerError = (code === 500 && msg === 'Network Error') || (code === 500 && msg?.includes('timeout of'))
 
@@ -156,7 +159,7 @@ const onRejected = error => {
   const msg = response?.data?.message || error?.toJSON?.()?.message
   const code = response?.data?.code || response?.status || 500
   const errorMessage = error?.config?.errorMessage
-
+  
   // 用户登录失效
   handleErrorCode(code, msg, errorMessage, error?.config)
 
@@ -288,7 +291,7 @@ const Request: MarkcoinRequest = ({ path, headers = {}, ...rest }) => {
     .then(response => {
       let resData: MarkcoinResponse
       const res = response.data
-      const msg = res.message!
+      const msg = res.msg!
 
       // 现在是 yapi mock 暂未约束 code 码
       if (res.code === 200 || baseUrl.includes('yapi')) {
@@ -304,6 +307,7 @@ const Request: MarkcoinRequest = ({ path, headers = {}, ...rest }) => {
 
       if (!isPassBusinessCode && !selfHandleErrorCodes.includes(res.code)) {
         // 用户登录失效
+        
         handleErrorCode(res.code, msg)
       }
 
@@ -320,6 +324,8 @@ const Request: MarkcoinRequest = ({ path, headers = {}, ...rest }) => {
       const response = error?.response
       const msg = response?.data?.message || error?.toJSON?.()?.message
       const code = response?.data?.code || response?.status || 500
+
+  
       handleErrorCode(code, msg)
       resData = {
         isOk: false,

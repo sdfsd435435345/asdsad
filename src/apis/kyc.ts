@@ -78,3 +78,55 @@ export const resubmitUpdate: MarkcoinRequest = options => {
     data: options,
   })
 }
+
+export const memberAdvMyKycInfo: MarkcoinRequest = options => {
+  return request({
+    path: `/memberAdv/myKycInfo`,
+    method: 'POST',
+    data: options,
+  })
+}
+
+export const memberUploadKycBase: MarkcoinRequest = options => {
+  return request({
+    path: `/memberAdv/uploadKycBase`,
+    method: 'POST',
+    data: options,
+  })
+}
+
+
+export const memberUploadKycAdv: MarkcoinRequest = options => {
+  return request({
+    path: `/memberAdv/uploadKycAdv`,
+    method: 'POST',
+    data: options,
+  })
+}
+
+
+export const memberUploadPayPasswordChange: MarkcoinRequest = options => {
+  return request({
+    path: `/memberAdv/payPasswordChange`,
+    method: 'POST',
+    data: options,
+  })
+}
+
+
+export const memberMoneyWithdraw: MarkcoinRequest = options => {
+  return request({
+    path: `/memberMoney/withdraw`,
+    method: 'POST',
+    data: options,
+  })
+}
+
+
+export const memberMoneyLastMoneyLog: MarkcoinRequest = options => {
+  return request({
+    path: `/memberMoney/lastMoneyLog`,
+    method: 'POST',
+    data: options,
+  })
+}

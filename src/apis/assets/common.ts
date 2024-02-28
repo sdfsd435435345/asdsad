@@ -21,11 +21,11 @@ import {
  * 获取资产总览
  * @returns
  */
-export const getAssetsOverview: MarkcoinRequest<AssetsOverviewReq, AssetsOverviewResp> = () => {
-  return request({
-    path: `/v1/asset/overview`,
-    method: 'GET',
-  })
+export const getAssetsOverview = () => {
+  // return request({
+  //   path: `/v1/asset/overview`,
+  //   method: 'GET',
+  // })
 }
 
 /**

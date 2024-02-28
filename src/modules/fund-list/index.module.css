@@ -1,6 +1,6 @@
 :local(.scoped) {
-  height: 100vh;
-  @apply bg-bg_color;
+  min-height: 100vh;
+  @apply bg-bg_color h-full;
   .header-title {
     font-size: 17px;
     @apply m-auto font-medium;
@@ -14,7 +14,20 @@
     height: 0.5px;
     @apply mx-4;
   }
+
+  .fav-dropdown-icon {
+    svg {
+      font-size: 12px !important;
+    }
+  }
 }
+
+.rv-cell__value {
+  .rv-field__body {
+    @apply bg-transparent !important;
+  }
+}
+
 
 
 :local(.modalscoped) {

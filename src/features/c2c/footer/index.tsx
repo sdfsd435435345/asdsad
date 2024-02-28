@@ -104,11 +104,11 @@ function C2cFooter() {
       icon: 'icon_equity_recharge',
       href: getC2cPostAdvPageRoutePath(),
       hoverIcon: 'c2c_publish_ad',
-    },
+    }, 
     {
       title: '訂單',
       icon: 'c2c_order',
-      href: getC2cOrdersPageRoutePath(),
+      href: '/order-list',
       hoverIcon: 'c2c_icon_order',
       iconClassName: '',
       badge: Number(openOrderModule.normal.total) > 99 ? '99+' : Number(openOrderModule.normal.total),
@@ -120,21 +120,21 @@ function C2cFooter() {
     //   invisible: !canPublishAd,
     //   hoverIcon: '',
     // },
-    {
-      title: '交易',
-      icon: 'user_icon_safety',
-      iconClassName: '',
-      // onlyIcon: true,
-      href: getC2cPaymentsManagePageRoutePath(),
-      hoverIcon: 'c2c_management_black',
-    },
-    {
-      title: '我的',
-      icon: 'c2c_management_black',
-      onlyIcon: true,
-      href: getC2cPaymentsManagePageRoutePath(),
-      hoverIcon: 'c2c_management_black',
-    },
+    // {
+    //   title: '交易',
+    //   icon: 'user_icon_safety',
+    //   iconClassName: '',
+    //   // onlyIcon: true,
+    //   href: getC2cPaymentsManagePageRoutePath(),
+    //   hoverIcon: 'c2c_management_black',
+    // },
+    // {
+    //   title: '我的',
+    //   icon: 'c2c_management_black',
+    //   onlyIcon: true,
+    //   href: getC2cPaymentsManagePageRoutePath(),
+    //   hoverIcon: 'c2c_management_black',
+    // },
     // {
     //   title: '商家身份',
     //   icon: 'icon_equity_recharge',
@@ -172,7 +172,7 @@ function C2cFooter() {
     <footer className={styles['footer-wrapper']}>
       <div
         className={classNames('inner-content', {
-          'w-[300px] mx-auto': !canPublishAd,
+          'w-[200px] mx-auto': !canPublishAd,
         })}
       >
         {tabBars.map(item => (

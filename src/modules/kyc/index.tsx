@@ -1,7 +1,7 @@
 import KycIndex from '@/features/kyc'
 
-function Page() {
+function KycIndexs() {
   return <KycIndex />
 }
 
-export { Page }
+export default KycIndexs

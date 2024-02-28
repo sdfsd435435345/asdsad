@@ -12,7 +12,7 @@ export function initVConsoleOnDev() {
   // re-initialise on user agent change
   window.addEventListener('resize', () => {
     // destroy existing vconsole
-    if (vconsole) vconsole.destroy()
+    // if (vconsole) vconsole.destroy()
     vconsole = new VConsole()
   })
 }

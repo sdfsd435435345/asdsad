@@ -204,8 +204,8 @@ export const C2cPaymentInput = () => {
 
 export const C2cPaymentTabList = () => {
   return [
-    { id: TabPaymentsEnum.makeCollections, name: t`features_message_center_index_5101352` },
-    { id: TabPaymentsEnum.payMoney, name: t`features_message_center_index_5101353` },
+    { id: TabPaymentsEnum.makeCollections, name: '收款账号' },
+    { id: TabPaymentsEnum.payMoney, name: '付款方式' },
   ]
 }
 

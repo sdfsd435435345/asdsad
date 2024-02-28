@@ -1,6 +1,6 @@
 :local(.scoped) {
   /* height: 142px; */
-  @apply bg-brand_color rounded-xl mx-4 p-4 mt-6;
+  @apply bg-brand_color rounded-xl mx-4 p-4 mt-6 relative;
 
   .header-brand-logo {
     font-size: 24px;
