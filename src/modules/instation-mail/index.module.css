@@ -1,0 +1,26 @@
+:local(.scoped) {
+  min-height: 100vh;
+  @apply bg-bg_color h-full;
+  .rv-selector__item {
+    width: 48%;
+  }
+}
+
+.rv-cell__value {
+  .rv-field__body {
+    @apply bg-transparent !important;
+  }
+}
+
+
+
+:local(.modalscoped) {
+  width: 300px;
+  height: 150px;
+  @apply bg-bg_color rounded-xl !important;
+}
+
+
+:local(.modal) {
+  @apply bg-bg_color !important;
+}

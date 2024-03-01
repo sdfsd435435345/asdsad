@@ -44,3 +44,65 @@ export const postV1GuideMemberActive: MarkcoinRequest = data => {
     data,
   })
 }
+
+
+export const postMemberMoneyMoneyLogDetailPage: MarkcoinRequest = data => {
+  return request({
+    path: '/memberMoney/moneyLogDetailPage',
+    method: 'POST',
+    data,
+  })
+}
+
+
+export const postSiteMessageSiteMessagePage: MarkcoinRequest = data => {
+  return request({
+    path: '/siteMessage/siteMessagePage',
+    method: 'POST',
+    data,
+  })
+}
+
+
+export const postSiteMessageRunningOrderPage: MarkcoinRequest = data => {
+  return request({
+    path: '/siteMessage/runningOrderPage',
+    method: 'POST',
+    data,
+  })
+}
+
+
+export const postSiteMessageDelMessage: MarkcoinRequest = params => {
+  return request({
+    path: '/siteMessage/delMessage',
+    method: 'POST',
+    params,
+  })
+}
+
+
+export const postSiteMessageMakeRead: MarkcoinRequest = params => {
+  return request({
+    path: '/siteMessage/makeRead',
+    method: 'POST',
+    params,
+  })
+}
+
+export const postMemberTransMyBuyOrderPage: MarkcoinRequest = data => {
+  return request({
+    path: '/memberTrans/myBuyOrderPage',
+    method: 'POST',
+    data,
+  })
+}
+
+
+export const postMemberTransMySoldOrderPage: MarkcoinRequest = data => {
+  return request({
+    path: '/memberTrans/mySoldOrderPage',
+    method: 'POST',
+    data,
+  })
+}

@@ -4,69 +4,69 @@
 import { t } from '@lingui/macro'
 import { useEffect, useState } from 'react'
 import { useDebounce, useUnmount } from 'ahooks'
-import CommonList from '@/components/common-list/list'
+import CommonListEmpty from '@/components/common-list/list-empty'
 import { useAssetsStore } from '@/store/assets/spot'
-import { AssetsC2CListResp } from '@/typings/api/assets/assets'
 import { link } from '@/helper/link'
-import { getAssetsCoinDetailPageRoutePath } from '@/helper/route'
-import { CoinListHeader } from '@/features/assets/overview/list/common/coin-list-header'
-import { CoinCell } from '@/features/assets/overview/list/common/coin-cell'
-import { onGetC2cAssetsListAll } from '@/helper/assets/overview'
-import { YapiGetV1C2cBalanceAllApiRequest } from '@/typings/yapi/C2cBalanceAllV1GetApi'
+import { memberMoneyLastMoneyLog } from '@/apis/kyc'
 import styles from './index.module.css'
+import { useNavigate } from 'react-router-dom'
 
-function WalletCoinList() {
-  const { c2cAssetsListAll, updateAssetsModule } = useAssetsStore().assetsModule
-  const [searchKey, setSearchKey] = useState('') // 搜索关键字
-  const debouncedSearchKey = useDebounce(searchKey, {
-    wait: 300,
-  })
-  const [finished, setFinished] = useState(false)
-  const [apiParams, setapiParams] = useState<YapiGetV1C2cBalanceAllApiRequest>({ pageNum: '1', pageSize: '0' })
+const MERCHANTTYPE = {
+  1: '商户人工加款',
+  2: '商户人工减款',
+  11: '完成申诉单加款',
+  21: '卖家撤单加款',
+  13: '交易完成加款',
+  22: '创建卖单减款',
+  3: '商户额度增加',
+  4: '商户客户减少',
+  31: '额度转换充币',
+  32: '额度转换提币'
+}
 
-  const displayList =
-    c2cAssetsListAll.filter(item => {
-      const ignoreCaseKey = debouncedSearchKey.toUpperCase()
-      const { coinName = '', coinFullName = '' } = item || {}
-      const isShowName =
-        (coinName || coinFullName) &&
-        (coinName?.toUpperCase().includes(ignoreCaseKey) ||
-          coinFullName?.toUpperCase().includes(ignoreCaseKey) ||
-          ignoreCaseKey === '')
+function WalletCoinList({ token }: any) {
+  const [fundList, setFundList] = useState<any[]>([])
 
-      return isShowName
-    }) || ([] as AssetsC2CListResp[])
+  const navigate = useNavigate()
 
-  useEffect(() => {
-    setFinished(true)
-  }, [c2cAssetsListAll])
-
-  useUnmount(() => {
-    updateAssetsModule({ coinAssetsList: [] })
-  })
+  const getMmberMoneyLastMoneyLog = async () => {
+    const { isOk, data } = await memberMoneyLastMoneyLog({})
+    if (isOk) {
+      setFundList(data)
+    }
+  }
 
   useEffect(() => {
-    onGetC2cAssetsListAll(apiParams)
-  }, [apiParams])
+    getMmberMoneyLastMoneyLog()
+  }, [token])
 
   return (
     <div className={styles['coin-list-root']}>
-      <CommonList
-        refreshing
-        onRefreshing={() => onGetC2cAssetsListAll(apiParams)}
-        finished={finished}
-        showEmpty={displayList.length === 0}
-        listChildren={displayList.map(item => {
-          return (
-            <CoinCell
-              onClick={() => item?.coinId && link(getAssetsCoinDetailPageRoutePath(item.coinId))}
-              data={item as any}
-              key={item?.coinId}
-              expandList={[]}
-            />
-          )
-        })}
-      />
+      <div className="flex justify-between">
+        <span className="text-lg">资金变动</span>
+        <span className="text-sm" onClick={() => navigate('/fundlist')}>更多{`>>`}</span>
+      </div>
+      {
+        fundList?.length > 0 ? <>
+          <div className='flex justify-between mt-3'>
+            <span className="text-sm w-[100px]">交易类型</span>
+            <span className="text-sm">交易数量</span>
+            <span className="text-sm">余额</span>
+          </div>
+          {
+            fundList.map(item => {
+              return <div className='flex justify-between mt-2 items-center' key={Math.random()}>
+                <span className="text-sm">
+                  <div>{MERCHANTTYPE[item?.moneyType]}</div>
+                  <span className="text-sm text-gray-500">{item?.createTime}</span>
+                </span>
+                <span className="text-sm">{item?.moneySide === 0 ? '-' : '+'}{item?.transAmount}</span>
+                <span className="text-sm">{item?.afterAmt}</span>
+              </div>
+            })
+          }
+        </> : <CommonListEmpty />
+      }
     </div>
   )
 }

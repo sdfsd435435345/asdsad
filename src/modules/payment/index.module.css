@@ -16,6 +16,13 @@
   }
 }
 
+.rv-cell__value {
+  .rv-field__body {
+    @apply bg-transparent !important;
+  }
+}
+
+
 
 :local(.modalscoped) {
   width: 300px;

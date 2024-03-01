@@ -29,7 +29,7 @@ function C2cPayments() {
   return (
     <section className={styles['payments-wrap']}>
       <NavBar
-        title={t`features_message_center_index_5101354`}
+        title="管理收付款"
         right={<Icon name="c2c_add" onClick={onPaymentsChange} className="c2c-add-icon" />}
       />
       <Tabs align="start" className="payments-tab" active={paymentsTab} onChange={onTabsChange}>
@@ -37,16 +37,16 @@ function C2cPayments() {
           <Tabs.TabPane key={item.id} name={item.id} title={item.name} />
         ))}
       </Tabs>
-      <FullTip
+      {/* <FullTip
         message={
           paymentsTab === TabPaymentsEnum.makeCollections
             ? t`features_message_center_index_5101355`
             : t`features_message_center_index_5101356`
         }
-      />
-      <main className="payments-wrap-main">
+      /> */}
+      {/* <main className="payments-wrap-main">
         {paymentsTab === TabPaymentsEnum.makeCollections ? <MakePayments /> : <PayMoney />}
-      </main>
+      </main> */}
     </section>
   )
 }

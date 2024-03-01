@@ -10,6 +10,14 @@ import Purchase from '@/modules/purchase'
 import UploadVoucher from '@/modules/upload-voucher'
 import BuyCoinPage from '@/modules/sell-coin';  // 新添加的卖币模块
 import EditBuyCoinPage from '@/modules/edit-buy-coin';  // 假设你有一个编辑买币广告的组件
+import KycIndexs from '@/modules/kyc'
+import C2CPayments from '@/modules/payment'
+import FundList from '@/modules/fund-list'
+import InstationMail from '@/modules/instation-mail'
+import OrderList from '@/modules/order-list'
+
+
+
 
 
 const GetRouters = () => {
@@ -46,6 +54,26 @@ const GetRouters = () => {
         {
             path: '/edit-buy-coin',
             element: <EditBuyCoinPage />
+        },
+        {
+            path: '/kyc',
+            element: <KycIndexs />
+        },
+        {
+            path: '/c2cpayments',
+            element: <C2CPayments />
+        },
+        {
+            path: '/fundlist',
+            element: <FundList />
+        },
+        {
+            path: '/instationmail',
+            element: <InstationMail />
+        },
+        {
+            path: '/order-list',
+            element: <OrderList />
         },
     ])
     return routes

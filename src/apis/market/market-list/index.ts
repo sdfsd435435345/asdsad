@@ -148,3 +148,49 @@ export const getV1MemberBaseGetContextt: MarkcoinRequest = data => {
     data,
   })
 }
+
+export const getSiteMessageRunningOrderPage: MarkcoinRequest = data => {
+  return request({
+    path: '/siteMessage/runningOrderPage',
+    method: 'POST',
+    data,
+  })
+}
+
+
+export const setMemberAdvAddPayment: MarkcoinRequest = data => {
+  return request({
+    path: '/memberAdv/addPayment',
+    method: 'POST',
+    data,
+  })
+}
+
+export const setMemberAdvMyPayments: MarkcoinRequest = data => {
+  return request({
+    path: '/memberAdv/myPayments',
+    method: 'POST',
+    data,
+  })
+}
+
+
+export const setMemberSetDefault: MarkcoinRequest = params => {
+  return request({
+    path: '/memberAdv/setDefault',
+    method: 'POST',
+    params,
+  })
+}
+
+
+export const setMemberDelPayment: MarkcoinRequest = params => {
+  return request({
+    path: '/memberAdv/delPayment',
+    method: 'POST',
+    params,
+  })
+}
+
+
+

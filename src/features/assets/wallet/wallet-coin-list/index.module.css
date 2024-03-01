@@ -1,5 +1,5 @@
 :local(.coin-list-root) {
-  @apply flex flex-col bg-bg_color;
+  @apply flex flex-col bg-bg_color px-4;
 
   .expand-icon {
     @apply hidden;

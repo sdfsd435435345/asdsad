@@ -1,5 +1,15 @@
 :local(.scoped) {
   height: 100vh;
+
+  .order-tab {
+    .rv-tab {
+      @apply px-3 !important;
+    }
+    .rv-tab__text {
+      @apply text-2xl  !important;
+    }
+  }
+
   @apply bg-bg_color;
   .header-title {
     font-size: 17px;
@@ -15,6 +25,13 @@
     @apply mx-4;
   }
 }
+
+.rv-cell__value {
+  .rv-field__body {
+    @apply bg-transparent !important;
+  }
+}
+
 
 
 :local(.modalscoped) {
