@@ -33,7 +33,7 @@ const BuyCoinPage = () => {
 
         {/* “我要卖币”按钮 */}
         <div className='sell-coin-button'>
-          <Button type='primary' onClick={handleSellCoinClick}>+我要卖币</Button>
+          <Button type='primary' onClick={handleSellCoinClick}>我要卖币</Button>
         </div>
 
         {/* 买币统计信息 */}

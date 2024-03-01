@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Dialog } from 'react-vant';
+import NavBar from '@/components/navbar';
 import styles from './index.module.css'
+import Icon from '@/components/icon';
 
 const PurchasePage = () => {
   const handleBackClick = () => {
@@ -48,10 +50,14 @@ const PurchasePage = () => {
     <div className={styles.scoped}>
       <div className="purchase-page">
         {/* 标题 + 返回按钮 */}
-        <div className="header">
+        {/* <div className="header">
           <span className="back-button" onClick={handleBackClick}>返回</span>
           <span className="title">购买页面</span>
-        </div>
+        </div> */}
+        <NavBar
+          title='购买页面'
+          left={<Icon name="back" hasTheme className="header-back" />}
+        />
 
         {/* 购买内容 */}
         <div className="content">

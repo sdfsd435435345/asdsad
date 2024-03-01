@@ -2,8 +2,10 @@
 
 import React, { useState } from 'react';
 import { Button, Checkbox, Input } from 'react-vant';
-import styles from './index.module.css'
+import NavBar from '@/components/navbar';
+import styles from './index.module.css';
 import { log } from 'console';
+import Icon from '@/components/icon';
 
 enum IsSeparable {
   NotSeparable = 0,
@@ -37,16 +39,20 @@ const BuyCoinPage = () => {
     const lastElement = value[value.length - 1];
     setPaymentDeadline(lastElement)
   };
-  
+
   return (
     <div className={styles.scoped}>
       <div className="buy-coin-page-container">
         <div className="buy-coin-page">
           {/* 第一部分 - 返回按钮和标题 */}
-          <div className="header">
+          {/* <div className="header">
             <span className="return-button">返回</span>
             <span className="title">{!!isSeparable ?  '创建买币广告' : '编辑买币广告'}</span>
-          </div>
+          </div> */}
+          <NavBar
+            title={!!isSeparable ?  '创建买币广告' : '编辑买币广告'}
+            left={<Icon name="back" hasTheme className="header-back" />}
+          />
 
           {/* 第二部分 - 两个复选框 */}
           <div className="checkbox-section">

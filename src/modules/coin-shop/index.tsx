@@ -128,14 +128,14 @@ function CoinShop() {
   return (
     <div className={styles.scoped}>
       <NavBar
-        title={'买卖大厅'}
+        title='买币大厅'
         left={<Icon name="back" hasTheme className="header-back" />}
       />
       <CommonList
         finished={finished}
         onRefreshing={() => requestWithLoading(onLoadMore(true), 0)}
         onLoadMore={onLoadMore}
-        finishedText={ !!recordList.length ? '暂无数据' : ''}
+        finishedText={!!recordList.length ? '暂无数据' : ''}
         listChildren={<><div className='coin-shop-tab'>
           <div className='coin-shop-tab-wholesale'>
             <Input placeholder='大额' className='coin-shop-tab-input' onChange={handleBigAmountClick} />

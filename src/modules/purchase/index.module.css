@@ -14,7 +14,7 @@
     margin-bottom: 20px;
   }
 
-  
+
   .back-button {
     font-size: 16px;
     cursor: pointer;
@@ -27,13 +27,17 @@
   }
 
   .content {
-    margin: 10px 20px 0; /* 调整上边距 */
+    margin: 10px 20px 0;
+
+    /* 调整上边距 */
     .selling-info {
       margin-bottom: 20px;
 
       p {
-        margin: 10px 0; /* 调整行与行的间距 */
+        margin: 10px 0;
+        /* 调整行与行的间距 */
         font-size: 14px;
+
         img {
           width: 16px;
           height: 16px;
@@ -64,18 +68,23 @@
 
       p {
         font-size: 14px;
-        margin: 10px 0; /* 调整行与行的间距 */
+        margin: 10px 0;
+        /* 调整行与行的间距 */
       }
     }
   }
 
   .footer {
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
     width: 100%;
+
+    button {
+      width: 150px;
+    }
   }
 
   .icon-bar {
@@ -85,6 +94,9 @@
   .rv-divider {
     height: 0.5px;
     @apply mx-4;
+  }
+  .dialog-confirm {
+    color: red;
   }
 }
 
