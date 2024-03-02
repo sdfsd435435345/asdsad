@@ -103,10 +103,10 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
     // 处理购买按钮点击事件
     Dialog.confirm({
       title: '',
-      message: <div style={{ textAlign: 'center' }}>确定下单吗</div>,
+      message: <div style={{ textAlign: 'center' }}>确定下单吗?</div>,
       onCancel: handleCancelOrder,
       onConfirm: handleConfirmOrder,
-      className: 'dialog-confirm-wrapper cancel-gray confirm-black',
+      className: 'dialog-confirm-wrapper cancel-gray confirm-black confim-order-status',
     })
   };
 

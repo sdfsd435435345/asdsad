@@ -95,6 +95,8 @@
     }
   }
 
+
+
   .payment-method {
     /* display: flex;
     justify-items: center;
@@ -131,4 +133,11 @@
 
 :local(.modal) {
   @apply bg-bg_color !important;
+}
+
+div.confim-order-status.rv-popup {
+  padding: 0px!important;
+  .rv-dialog__confirm {
+    border-radius: 0;
+  }
 }
