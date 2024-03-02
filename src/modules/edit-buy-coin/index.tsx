@@ -110,7 +110,11 @@ const SellCoinsPage = () => {
                   className="sell-amount-section-input"
                   suffix="cbr"
                   type='number'
-                  onChange={(value) => setSellAmount(value)}
+                  onChange={(value) => {
+                    if (Number(value) <= Number(balance)) {
+                      setSellAmount(value);
+                    }
+                  }}
                 />
               </div>
               {!!isSeparable && <div className="min-amount-section">
@@ -120,7 +124,11 @@ const SellCoinsPage = () => {
                   value={minAmount}
                   type='number'
                   className='min-amount-section-input'
-                  onChange={(value) => setMinAmount(value)}
+                  onChange={(value) => {
+                    if (Number(value) <= Number(balance)) {
+                      setMinAmount(value);
+                    }
+                  }}
                 />
               </div>}
             </>
