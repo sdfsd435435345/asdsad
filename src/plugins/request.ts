@@ -159,6 +159,7 @@ const onRejected = error => {
   const msg = response?.data?.message || error?.toJSON?.()?.message
   const code = response?.data?.code || response?.status || 500
   const errorMessage = error?.config?.errorMessage
+  // console.log(response, 'responseresponseresponse');
   
   // 用户登录失效
   handleErrorCode(code, msg, errorMessage, error?.config)
@@ -291,7 +292,7 @@ const Request: MarkcoinRequest = ({ path, headers = {}, ...rest }) => {
     .then(response => {
       let resData: MarkcoinResponse
       const res = response.data
-      const msg = res.msg!
+      const msg = res.message!
 
       // 现在是 yapi mock 暂未约束 code 码
       if (res.code === 200 || baseUrl.includes('yapi')) {
@@ -307,7 +308,6 @@ const Request: MarkcoinRequest = ({ path, headers = {}, ...rest }) => {
 
       if (!isPassBusinessCode && !selfHandleErrorCodes.includes(res.code)) {
         // 用户登录失效
-        
         handleErrorCode(res.code, msg)
       }
 
@@ -325,7 +325,8 @@ const Request: MarkcoinRequest = ({ path, headers = {}, ...rest }) => {
       const msg = response?.data?.message || error?.toJSON?.()?.message
       const code = response?.data?.code || response?.status || 500
 
-  
+      console.log(response, 'responseresponseresponse');
+      
       handleErrorCode(code, msg)
       resData = {
         isOk: false,
