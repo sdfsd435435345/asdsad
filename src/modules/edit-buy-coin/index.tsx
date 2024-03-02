@@ -40,6 +40,9 @@ const SellCoinsPage = () => {
   const navigate = useNavigate();
 
 
+  const { userInfo } = useUserStore()
+  const { balance } = userInfo || {}
+
   const handleIsSeparable = (value: number | string[]) => {
     const lastElement = value[value.length - 1];
     setIsSeparable(lastElement)
@@ -64,7 +67,6 @@ const SellCoinsPage = () => {
       });
       if (isOk) {
         Toast.success('创建成功')
-        navigate('/order-info')
         navigate('/order-info?', { target: true, state: rowData });
       }
 
@@ -74,16 +76,17 @@ const SellCoinsPage = () => {
     }
   }
 
-  const handleDeleteItem = () => {
-    // 实现删除逻辑
-  };
+  // const handleDeleteItem = () => {
+  //   // 实现删除逻辑
+  // };
 
   return (
     <div className={styles.scoped}>
       <div className="buy-coin-page-container">
         <div className="buy-coin-page">
           <NavBar
-            title={!!isSeparable ? '创建卖币广告' : '编辑卖币广告'}
+            // title={!!isSeparable ? '创建卖币广告' : '编辑卖币广告'}
+            title='创建卖币广告'
             left={<Icon name="back" hasTheme className="header-back" />}
           />
           <div className='buy-coin-page-content'>
@@ -97,7 +100,7 @@ const SellCoinsPage = () => {
             </div>
 
             {/* 第三部分 - 根据复选框勾选处理显隐 */}
-            <div className='available-sales'> 可销售额：8888</div>
+            <div className='available-sales'> 可销售额：{balance}</div>
             <>
               <div className="sell-amount-section">
                 {/* 可销售额 */}
@@ -162,7 +165,7 @@ const SellCoinsPage = () => {
               <Divider dashed >向买家留言</Divider>
               <div className='leave-message-container'>
                 {/* 显示留言图标和输入框等详细信息 */}
-                <div className='zhifubao-icon'>图标</div>
+                <div className='zhifubao-icon'>留言</div>
                 <div className='suffix-input'>
                   <Input
                     placeholder="需要向买家留言 ，如无可不填"
@@ -178,11 +181,11 @@ const SellCoinsPage = () => {
                 <Button type="info" onClick={onSubmit}>上架</Button>
               </div>
               {/* 删除按钮 */}
-              {!isSeparable && (
+              {/* {!isSeparable && (
                 <div className="delete-button">
                   <Button type="danger" onClick={handleDeleteItem}>删除</Button>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>

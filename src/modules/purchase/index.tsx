@@ -33,13 +33,13 @@ interface PaymentInfo {
 const PurchasePage: React.FC<PurchasePageProps> = () => {
   const location = useLocation();
   const { state } = location;
-  const { seqNo, transAmount, logo, leftAmount, isWechat, isAlipay, isBank, isSplit, payLimitTime } = (state as any).usr || {};
-  const [minutes, setMinutes] = useState<number>(15);
-  const [seconds, setSeconds] = useState<number>(0);
+  const { seqNo, transAmount, splitMin, logo, leftAmount, isWechat, isAlipay, isBank, isSplit, payLimitTime } = (state as any).usr || {};
+  // const [minutes, setMinutes] = useState<number>(15);
+  // const [seconds, setSeconds] = useState<number>(0);
   const [isPickerOpen, setPickerOpen] = useState<boolean>(false);
   const [paymentMethod, setPaymentMethod] = useState<number>(0);
   const [memberAdvMyPayments, setMemberAdvMyPayments] = useState<any[]>([]);
-
+  const [minAmount,setiMinValue] = useState();
 
 
   const alipay = isAlipay ? 0 : ''; //支付宝
@@ -48,7 +48,6 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
 
   const currentPayment = useRef({
     paymentType: null,
-    minAmount: '',
   })
 
 
@@ -73,22 +72,22 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
     }
   }
 
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      if (minutes === 0 && seconds === 0) {
-        clearInterval(intervalId);
-      } else {
-        if (seconds === 0) {
-          setMinutes((prevMinutes) => prevMinutes - 1);
-          setSeconds(59);
-        } else {
-          setSeconds((prevSeconds) => prevSeconds - 1);
-        }
-      }
-    }, 1000);
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     if (minutes === 0 && seconds === 0) {
+  //       clearInterval(intervalId);
+  //     } else {
+  //       if (seconds === 0) {
+  //         setMinutes((prevMinutes) => prevMinutes - 1);
+  //         setSeconds(59);
+  //       } else {
+  //         setSeconds((prevSeconds) => prevSeconds - 1);
+  //       }
+  //     }
+  //   }, 1000);
 
-    return () => clearInterval(intervalId);
-  }, [minutes, seconds]);
+  //   return () => clearInterval(intervalId);
+  // }, [minutes, seconds]);
 
   const handleBackClick = () => {
     // 处理返回按钮点击事件
@@ -96,6 +95,10 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
   };
 
   const handlePurchaseClick = () => {
+    if (Number(minAmount) < Number(splitMin)) {
+      Toast('请输入最低起售的金额');
+      return;
+    }
     // 处理购买按钮点击事件
     Dialog.confirm({
       title: '',
@@ -117,7 +120,7 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
       const { isOk, data } = await postMemberBuyOrderCreate({
         seqNo,
         paymentId: paymentMethod,
-        transAmount: isSplit ? currentPayment.current.minAmount : null,
+        transAmount: isSplit ? minAmount : null,
       });
       if (isOk) {
         navigate(`/order-info?seqNo=${data?.seqNo}`);
@@ -197,11 +200,10 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
               placeholder="最低多少起售"
               className='min-amount-section-input'
               type="number"
+              value={minAmount}
               onChange={(value) => {
-                if (Number(value) <= Number(leftAmount)) {
-                  currentPayment.current.minAmount = value;
-                } else {
-                  Toast('交易金额不能大于今日剩余金额');
+                if (Number(leftAmount) >= Number(value) ) {
+                  setiMinValue(value);
                 }
               }}
             />

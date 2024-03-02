@@ -88,6 +88,11 @@
   }
   .min-amount-section {
     margin-top: 20px;
+    .min-amount-section-input {
+      input {
+        padding-left: 10px;
+      }
+    }
   }
 
   .payment-method {

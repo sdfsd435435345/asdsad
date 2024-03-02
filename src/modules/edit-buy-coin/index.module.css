@@ -57,6 +57,7 @@
     input {
       background-color: rgb(46, 66, 86) !important;
       color: rgb(169, 182, 194) !important;
+      padding-left: 15px;
     }
   }
 
@@ -73,6 +74,7 @@
     input {
       background-color: rgb(46, 66, 86) !important;
       color: rgb(169, 182, 194) !important;
+      padding-left: 15px;
     }
   }
 }
@@ -98,6 +100,7 @@
     input {
       background-color: rgb(46, 66, 86) !important;
       color: rgb(169, 182, 194) !important;
+      padding-left: 15px;
     }
   }
 }
