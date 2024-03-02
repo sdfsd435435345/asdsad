@@ -32,15 +32,16 @@ interface PaymentInfo {
 
 const PurchasePage: React.FC<PurchasePageProps> = () => {
   const location = useLocation();
-  const { state } = location;
+  const { state, search } = location || {};
+  const params = new URLSearchParams(search);
+  const paymentMethodUrl = params.get('paymentMethod');
   const { seqNo, transAmount, splitMin, logo, leftAmount, isWechat, isAlipay, isBank, isSplit, payLimitTime } = (state as any).usr || {};
   // const [minutes, setMinutes] = useState<number>(15);
   // const [seconds, setSeconds] = useState<number>(0);
   const [isPickerOpen, setPickerOpen] = useState<boolean>(false);
-  const [paymentMethod, setPaymentMethod] = useState<number>(0);
+  const [paymentMethod, setPaymentMethod] = useState<number>(Number(paymentMethodUrl));
   const [memberAdvMyPayments, setMemberAdvMyPayments] = useState<any[]>([]);
   const [minAmount,setiMinValue] = useState();
-
 
   const alipay = isAlipay ? 0 : ''; //支付宝
   const wechat = isWechat ? 1 : ''; //微信
@@ -89,10 +90,10 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
   //   return () => clearInterval(intervalId);
   // }, [minutes, seconds]);
 
-  const handleBackClick = () => {
-    // 处理返回按钮点击事件
-    // 可以使用 react-router-dom 进行页面跳转
-  };
+  // const handleBackClick = () => {
+  //   // 处理返回按钮点击事件
+  //   // 可以使用 react-router-dom 进行页面跳转
+  // };
 
   const handlePurchaseClick = () => {
     if (Number(minAmount) < Number(splitMin)) {

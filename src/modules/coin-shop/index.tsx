@@ -9,7 +9,7 @@ import { useUpdateEffect } from 'ahooks'
 import { useUserStore } from '@/store/user'
 import Icon from '@/components/icon'
 import { t } from '@lingui/macro';
-import { postMemberTransSoldOrderPage } from '@/apis/server'
+import { postMemberTransSoldOrderPage, postMemberAdvMyPayments } from '@/apis/server'
 import { debounce } from 'lodash'
 import styles from './index.module.css'
 import { FireO } from '@react-vant/icons';
@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom'
 import wx from '../../images/wx.png'
 import zfb from '../../images/zfb.png'
 import bank from '../../images/bank.png'
+import _ from 'lodash';
 
 
 export const columns = [
@@ -37,6 +38,7 @@ function CoinShop() {
   const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(); //收款方式
   const [finished, setFinished] = useState(false)
   const [recordList, setRecordList] = useState<any>([])
+  const [memberAdvMyPayments, setMemberAdvMyPayments] = useState<any>([])
 
 
   const requestParams = useRef({
@@ -51,6 +53,24 @@ function CoinShop() {
   useEffect(() => {
     onLoadMore(true);
   }, []); // 初始化时加载第一页数据
+
+  useEffect(() => {
+    getMemberAdvMyPayments();
+  }, [])
+
+  const getMemberAdvMyPayments = async () => {
+    try {
+      const res = await postMemberAdvMyPayments({});
+      const { isOk, data } = res || {};
+      if (isOk || data) {
+        setMemberAdvMyPayments(data);
+        return;
+      }
+    } catch (error) {
+      console.error("Error while loading list:", error);
+      // 处理错误，比如显示错误提示
+    }
+  }
 
   useUpdateEffect(() => {
     requestParams.current = {
@@ -83,8 +103,26 @@ function CoinShop() {
 
 
   const handlePurchaseClick = (rowData: any) => {
+    const { isWechat, isAlipay, isBank } = rowData || {};
+
+    const alipay = isAlipay ? 0 : ''; //支付宝
+    const wechat = isWechat ? 1 : ''; //微信
+    const bank = isBank ? 2 : ''; //银行
+
+    const allPaymentMethods = () => {
+      const communicationPaymentMethods = _.compact(memberAdvMyPayments.map(item => {
+        if ([alipay, wechat, bank].includes(item.paymentType)) {
+          return columns.find(ele => ele.value === item.paymentType);
+        }
+      }));
+      return communicationPaymentMethods;
+    }
+    if (!allPaymentMethods()?.length) {
+      Toast('您暂无卖家的支付方式,请绑定后再尝试');
+      return;
+    }
     //跳转逻辑
-    navigate('/purchase', { target: true, state: rowData });
+    navigate(`/purchase?paymentMethod=${allPaymentMethods()?.[0]?.value}`, { target: true, state: rowData });
   };
 
   const handleBigAmountClick = debounce((value: any) => {
