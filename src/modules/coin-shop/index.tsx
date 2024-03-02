@@ -21,10 +21,13 @@ import _ from 'lodash';
 
 
 export const columns = [
+  { text: '全部', value: '' },
   { text: '支付宝', value: 0 },
   { text: '微信', value: 1 },
   { text: '银行', value: 2 },
 ]
+
+
 
 
 
@@ -35,7 +38,7 @@ function CoinShop() {
   const [smallAmount, setSmallAmount] = useState(''); //小额
   const [nickname, setNicknamet] = useState(''); //昵称
   const [isPickerOpen, setPickerOpen] = useState<boolean>(false);
-  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(); //收款方式
+  const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(''); //收款方式
   const [finished, setFinished] = useState(false)
   const [recordList, setRecordList] = useState<any>([])
   const [memberAdvMyPayments, setMemberAdvMyPayments] = useState<any>([])
@@ -52,11 +55,8 @@ function CoinShop() {
 
   useEffect(() => {
     onLoadMore(true);
-  }, []); // 初始化时加载第一页数据
-
-  useEffect(() => {
     getMemberAdvMyPayments();
-  }, [])
+  }, []); // 初始化时加载第一页数据
 
   const getMemberAdvMyPayments = async () => {
     try {
@@ -94,6 +94,7 @@ function CoinShop() {
 
   const handlePickerCancel = () => {
     setPickerOpen(false);
+    requestParams.current.paymentType = ''
   };
 
   const handlePickerConfirm = () => {
@@ -179,6 +180,9 @@ function CoinShop() {
     }
   }
 
+  const currentPaymentName = columns.find(ele => String(selectedPaymentMethod) === String(ele?.value))?.text || '全部';
+
+
   return (
     <div className={styles.scoped}>
       <NavBar
@@ -187,13 +191,13 @@ function CoinShop() {
       />
       <div className='coin-shop-tab'>
         <div className='coin-shop-tab-wholesale'>
-          <Input placeholder='大额' className='coin-shop-tab-input' onChange={handleBigAmountClick} />
+          <Input placeholder='大额' type='number' className='coin-shop-tab-input' onChange={handleBigAmountClick} />
         </div>
         <div className='coin-shop-tab-petty'>
-          <Input placeholder='小额' className='coin-shop-tab-input' onChange={handleSmallAmountClick} />
+          <Input placeholder='小额' type='number'  className='coin-shop-tab-input' onChange={handleSmallAmountClick} />
         </div>
         <div className='payment-method-button' onClick={handlePaymentMethodClick}>
-          <span>收款方式</span>
+          <span>{currentPaymentName}</span>
           <div className='triangle-icon'></div>
         </div>
         <div className='coin-shop-tab-name'>
@@ -240,6 +244,8 @@ function CoinShop() {
           onConfirm={handlePickerConfirm}
           onCancel={handlePickerCancel}
           onChange={handlePickerChange}
+          defaultValue={''}
+          placeholder=''
         />
       </div>}
     </div>

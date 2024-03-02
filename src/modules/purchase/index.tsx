@@ -35,7 +35,7 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
   const { state, search } = location || {};
   const params = new URLSearchParams(search);
   const paymentMethodUrl = params.get('paymentMethod');
-  const { seqNo, transAmount, splitMin, logo, leftAmount, isWechat, isAlipay, isBank, isSplit, payLimitTime } = (state as any).usr || {};
+  const { seqNo, transAmount, splitMin, logo, leftAmount, isWechat, isAlipay, isBank, isSplit, payLimitTime } = (state as any)?.usr || {};
   // const [minutes, setMinutes] = useState<number>(15);
   // const [seconds, setSeconds] = useState<number>(0);
   const [isPickerOpen, setPickerOpen] = useState<boolean>(false);
@@ -96,7 +96,7 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
   // };
 
   const handlePurchaseClick = () => {
-    if (Number(minAmount) < Number(splitMin)) {
+    if (Number(minAmount || 0) < Number(splitMin)) {
       Toast('请输入最低起售的金额');
       return;
     }
@@ -226,6 +226,7 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
             onConfirm={handlePickerConfirm}
             onCancel={handlePickerCancel}
             onChange={handlePickerChange}
+            placeholder=''
           />
         </div>}
       </div>

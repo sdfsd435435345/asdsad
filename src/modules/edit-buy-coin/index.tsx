@@ -55,6 +55,22 @@ const SellCoinsPage = () => {
 
 
   const onSubmit = async () => {
+    if (!sellAmount) {
+      Toast('请输入出售数量');
+      return
+    }
+
+    if (isSeparable) {
+      if (!minAmount) {
+        Toast('请输入最低多少起售');
+        return
+      }
+      if (Number(sellAmount || 0) < Number(minAmount || 0)) {
+        Toast('总出售数量必须大于或者等于最低多少起售');
+        return
+      }
+    }
+
     try {
       const { isOk } = await postMemberTransSoldOrderCreate({
         isSplit: !!isSeparable,
@@ -67,7 +83,7 @@ const SellCoinsPage = () => {
       });
       if (isOk) {
         Toast.success('创建成功')
-        navigate('/order-info?', { target: true, state: rowData });
+        navigate('/order-info', { target: true });
       }
 
     } catch (error) {
