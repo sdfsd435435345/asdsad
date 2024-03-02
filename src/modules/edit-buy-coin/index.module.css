@@ -4,6 +4,15 @@
 }
 
 .buy-coin-page-container {
+    .buy-coin-page-content {
+      padding: 20px 10px 0px 10px;
+    }
+    .payment-account-container {
+      margin-top: 10px;
+      .payment-account-label-checkbox {
+        padding: 20px 10px;
+      }
+    }
 }
 .button-container {
   display: flex;
@@ -17,7 +26,6 @@
 }
 
 .buy-coin-page {
-  padding: 0px 10px 0px 10px;
 
   .available-sales {
     height: 50px;
@@ -74,7 +82,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    margin: 10px 0px 10px 0px;
+    margin: 15px 0px 10px 0px;
 
     .zhifubao-icon {
       margin: 10px;

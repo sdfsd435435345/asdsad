@@ -58,9 +58,13 @@
     margin-top: 20px;
 
     .user-picture {
+      /* width: 15%; */
       width: 40px;
       height: 40px;
       background-color: aliceblue;
+    }
+    .recharge-information {
+      /* width: 30%; */
     }
 
     .amount-rule {
@@ -72,7 +76,7 @@
 
     .recharge-personal-information {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
       margin-bottom: 10px;
     }
@@ -81,6 +85,7 @@
       display: flex;
       justify-items: center;
       align-items: center;
+      width: 30%;
       span {
         width: 40px;
         height: 40px;

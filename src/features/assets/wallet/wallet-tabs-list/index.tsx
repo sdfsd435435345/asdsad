@@ -35,8 +35,8 @@ function WalletTabsList() {
         </div> */}
       </div>
       <div className="handle-button">
-         <div>买币</div>
-         <div>卖币</div>
+         <div onClick={() => navigate('/coin-shop') }>买币</div>
+         <div onClick={() => navigate('/sell-coin') } >卖币</div>
       </div>
     </div>
   )

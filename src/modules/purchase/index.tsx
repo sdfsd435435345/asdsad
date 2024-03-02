@@ -4,7 +4,7 @@ import _ from 'lodash'
 import NavBar from '@/components/navbar';
 import styles from './index.module.css'
 import Icon from '@/components/icon';
-import { postMemberAdvMyPayments } from '@/apis/server'
+import { postMemberAdvMyPayments, postMemberBuyOrderCreate } from '@/apis/server'
 import { useNavigate } from 'react-router-dom'
 import { log } from 'console';
 import { useLocation } from 'react-use';
@@ -114,16 +114,18 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
   const handleConfirmOrder = async () => {
     // 处理确认订单按钮点击事件
     try {
-      const res = await postMemberAdvMyPayments({
+      const { isOk, data } = await postMemberBuyOrderCreate({
         seqNo,
         paymentId: paymentMethod,
         transAmount: isSplit ? currentPayment.current.minAmount : null,
       });
+      if (isOk) {
+        navigate(`/order-info?seqNo=${data?.seqNo}`);
+      }
     } catch (error) {
       console.error("Error while loading list:", error);
       // 处理错误，比如显示错误提示
     }
-    navigate('/order-info');
   };
 
 
@@ -180,7 +182,7 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
             </p>
             <p>请选择付款账号：</p>
             <p>
-              此支付宝付款额度，{isSplit ? <span>单笔${transAmount}元</span> : <span>今日剩余${leftAmount}元</span>
+              此支付宝付款额度，{!isSplit ? <span>单笔${transAmount}元</span> : <span>今日剩余${leftAmount}元</span>
               }
             </p>
           </div>

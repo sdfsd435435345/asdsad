@@ -170,15 +170,17 @@ function CoinShop() {
         listChildren={<><div className='coin-shop-list overflow-hidden'>
           {recordList.map((rowData, index) => {
             return (
-              <div key={index} className='recharge-personal-information'>
-                <div className='user-picture'><Image src={rowData.logo} /></div>
-                <div className='recharge-information'>
-                  <div>
-                    <span><Icon name="default_avatar" /></span>
-                    <span>{rowData.transAmount}</span>
-                  </div>
-                  <div className='amount-rule'>
-                    {`${rowData.splitMin}以上可拆售`}
+              <div key={index} className='recharge-personal-information px-2'>
+                <div className="w-2/5 flex items-center">
+                  <div className='user-picture'><Image src={rowData.logo} /></div>
+                  <div className='recharge-information w-3/5 ml-[10px]'>
+                    <div>
+                      <span><Icon name="default_avatar" /></span>
+                      <span>{rowData.transAmount}</span>
+                    </div>
+                    <div className='amount-rule'>
+                      {rowData.splitMin ? `${rowData.splitMin}以上可拆售` : '不可拆售'}
+                    </div>
                   </div>
                 </div>
                 <div className='payment-method'>

@@ -106,8 +106,10 @@ function Wallet() {
 
   return (
     <div className={styles.scoped}>
-      <Popup visible={tipVisible} destroyOnClose onClose={() => setTipVisible(false)} closeOnClickOverlay={false} className={styles.modalscoped}
+      <Popup destroyOnClose onClose={() => setTipVisible(false)} closeOnClickOverlay={false} className={styles.modalscoped}
       // overlay={false}
+      // visible={tipVisible} 
+      visible={false} 
       >
         <div style={{ padding: '20px 20px' }} className="text-center">
           买家需要购买您的C币，金额200元，是否接单

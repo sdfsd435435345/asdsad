@@ -1,8 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from 'react-vant';
+import NavBar from '@/components/navbar';
+import Icon from '@/components/icon';
+// import { postMemberTransSoldOrderPage } from '@/apis/server'
+import { useNavigate } from 'react-router-dom'
+
 import styles from './index.module.css';  // 根据你的实际情况导入样式文件
 
-const BuyCoinPage = () => {
+
+const SellCoins = () => {
+
+  const navigate = useNavigate()
+
+  useEffect(()=>{
+    // initQueryDada();
+  },[])
+
+  // const initQueryDada = async () =>{
+  //   try {
+  //     const res = await postMemberTransSoldOrderPage({
+       
+  //     });
+  //     const { isOk, data } = res || {};
+
+  //     // if (!isOk || !data) {
+  //     //   setFinished(true);
+  //     //   return;
+  //     // }
+
+  //   } catch (error) {
+  //     console.error("Error while loading list:", error);
+  //     // 处理错误，比如显示错误提示
+  //   }
+  // }
+
   const handleReturnClick = () => {
     // 处理返回按钮点击事件
     // 可以使用 react-router-dom 进行页面跳转
@@ -10,7 +41,7 @@ const BuyCoinPage = () => {
 
   const handleSellCoinClick = () => {
     // 处理“我要卖币”按钮点击事件
-    // 具体逻辑...
+    navigate('/edit-buy-coin');
   };
 
   // 模拟接口返回的数据
@@ -24,13 +55,11 @@ const BuyCoinPage = () => {
 
   return (
     <div className={styles.scoped}>
-      <div className='buy-coin-page'>
-        {/* 标题 + 返回按钮 */}
-        <div className='header'>
-          <span className='return-button' onClick={handleReturnClick}>返回</span>
-          <span className='title'>买币</span>
-        </div>
-
+      <div className='buy-coin-container-page'>
+        <NavBar
+          title='卖币'
+          left={<Icon name="back" hasTheme className="header-back" />}
+        />
         {/* “我要卖币”按钮 */}
         <div className='sell-coin-button'>
           <Button type='primary' onClick={handleSellCoinClick}>我要卖币</Button>
@@ -54,4 +83,4 @@ const BuyCoinPage = () => {
   );
 };
 
-export default BuyCoinPage;
+export default SellCoins;
