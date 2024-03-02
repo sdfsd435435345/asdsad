@@ -1,6 +1,17 @@
 import React from 'react';
-import { Button, Input, Steps } from 'react-vant';
+import { Button, Input, Steps, Image } from 'react-vant';
+import { Service } from '@react-vant/icons'
+import NavBar from '@/components/navbar'
+import Icon from '@/components/icon'
+
 import styles from './index.module.css';  // 根据你的实际情况导入样式文件
+
+enum OrderStatus {
+  Pending = '待接单',
+  Accepted = '已接单',
+  Paid = '已付款',
+  Completed = '已完成',
+}
 
 const OrderPage = () => {
 
@@ -18,7 +29,7 @@ const OrderPage = () => {
     // 模拟接口返回的订单状态，根据实际接口返回数据进行替换
     const orderStatus = '待接单';
 
-    return <span className={styles.status}>{orderStatus}</span>;
+    return <span className='status'>{`(${orderStatus})`}</span>;
   };
 
   const renderOrderInfo = () => {
@@ -38,15 +49,17 @@ const OrderPage = () => {
       </div>
     );
   };
-
+  const src = 'https://img.yzcdn.cn/vant/cat.jpeg'
   return (
     <div className={styles.scoped}>
-      {/* 标题 */}
-      <div className='header'>
-        <span className='backButton' onClick={handleBackClick}>返回</span>
-        <span className='title'>订单信息</span>
-        <Button type="primary" onClick={handleContactServiceClick}>联系客服</Button>
-      </div>
+      <NavBar
+        title='订单信息'
+        left={<Icon name="back" hasTheme className="header-back" />}
+        right={
+          // <Button type="primary" onClick={handleContactServiceClick}>联系客服</Button>
+          <Service color='#26C9A0' onClick={handleContactServiceClick} />
+        }
+      />
       {/* 订单信息 */}
       {renderOrderInfo()}
 
@@ -67,7 +80,7 @@ const OrderPage = () => {
         </Button>
       </div>
       <div style={{ margin: '16px 16px 0' }}>
-        <Button round nativeType='submit' type='primary' block>
+        <Button round type="danger" block>
           取消
         </Button>
       </div>
@@ -76,8 +89,7 @@ const OrderPage = () => {
         <div className='payment-type'>买家付款信息：支付宝</div>
         <div className='seller-collection-informatio'>
           <div className='payment-screenshot'>
-            {/* 这里可以根据实际情况，展示支付截图 */}
-            {/* 你可以使用图片组件或其他方式展示支付截图 */}
+            <Image src={src} />
           </div>
           <div className='payment-details'>
             <div className='input-wrapper'>
@@ -98,8 +110,7 @@ const OrderPage = () => {
         <div className='payment-type'>卖家付款信息：支付宝</div>
         <div className='seller-collection-informatio'>
           <div className='payment-screenshot'>
-            {/* 这里可以根据实际情况，展示支付截图 */}
-            {/* 你可以使用图片组件或其他方式展示支付截图 */}
+            <Image src={src} />
           </div>
           <div className='payment-details'>
             <div className='input-wrapper'>

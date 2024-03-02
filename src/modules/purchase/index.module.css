@@ -86,6 +86,29 @@
       width: 150px;
     }
   }
+  .min-amount-section {
+    margin-top: 20px;
+  }
+
+  .payment-method {
+    /* display: flex;
+    justify-items: center;
+    align-items: center;
+    span {
+      width: 40px;
+      height: 40px;
+      margin: 5px 2px;
+    } */
+  }
+  
+  .pickerContainer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+  }
 
   .icon-bar {
     @apply absolute right-4 top-1/2 -translate-y-1/2;
@@ -96,7 +119,8 @@
     @apply mx-4;
   }
   .dialog-confirm {
-    color: red;
+    background-color: aqua;
+    width: 500px;
   }
 }
 

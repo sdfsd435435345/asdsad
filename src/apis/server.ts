@@ -110,6 +110,30 @@ export const postMemberTransMySoldOrderPage: MarkcoinRequest = data => {
 export const postMemberTransSonOrders: MarkcoinRequest = data => {
   return request({
     path: '/memberTrans/sonOrders',
+    ethod: 'POST',
+    data,
+  })
+}
+
+export const postMemberTransSoldOrderPage: MarkcoinRequest = data => {
+  return request({
+    path: '/memberTrans/soldOrderPage',
+    method: 'POST',
+    data,
+  })
+}
+
+export const postMemberTransBuyOrderCreate: MarkcoinRequest = data => {
+  return request({
+    path: '/memberTrans/buyOrderCreate',
+    method: 'POST',
+    data,
+  })
+}
+
+export const postMemberAdvMyPayments: MarkcoinRequest = data => {
+  return request({
+    path: '/memberAdv/myPayments',
     method: 'POST',
     data,
   })

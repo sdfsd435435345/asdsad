@@ -1,5 +1,5 @@
 :local(.scoped) {
-  height: 100vh;
+  min-height: 100vh;
   height: 100%; 
   @apply bg-bg_color;
 
@@ -81,6 +81,11 @@
       display: flex;
       justify-items: center;
       align-items: center;
+      span {
+        width: 40px;
+        height: 40px;
+        margin: 5px 2px;
+      }
     }
   }
 

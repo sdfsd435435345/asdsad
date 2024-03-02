@@ -47,7 +47,7 @@
       .status {
         font-weight: bold;
         margin-left: 10px;
-        color: #28a745;
+        color: rgb(246, 127, 127);
         /* 根据订单状态设置颜色 */
       }
     }
@@ -85,6 +85,9 @@
 
   .progress {
     /* 这里根据你的实际需要设置步骤进度条的样式 */
+    .rv-steps {
+      background-color: #333;
+    }
   }
 
 
@@ -99,14 +102,9 @@
 
     .seller-collection-informatio {
       display: flex;
-      align-items: center;
 
       .payment-screenshot {
         /* 可以设置支付截图的样式，例如设置宽度、高度、边框等 */
-        width: 100px;
-        height: 100px;
-        background-color: aqua;
-        margin: 10px;
         flex: 1;
       }
 
@@ -116,7 +114,7 @@
         .input-wrapper {
           display: flex;
           align-items: center;
-          margin-bottom: 10px;
+          padding: 5px 10px;
 
           .label {
             font-size: 14px;
