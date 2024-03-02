@@ -2,7 +2,7 @@
  * 资产总览 - 币种列表
  */
 import { t } from '@lingui/macro'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, forwardRef, useImperativeHandle } from 'react'
 import { useDebounce, useUnmount } from 'ahooks'
 import CommonListEmpty from '@/components/common-list/list-empty'
 import { useAssetsStore } from '@/store/assets/spot'
@@ -24,7 +24,7 @@ const MERCHANTTYPE = {
   32: '额度转换提币'
 }
 
-function WalletCoinList({ token }: any) {
+function WalletCoinList({ token }: any, ref) {
   const [fundList, setFundList] = useState<any[]>([])
 
   const navigate = useNavigate()
@@ -36,9 +36,11 @@ function WalletCoinList({ token }: any) {
     }
   }
 
-  useEffect(() => {
-    getMmberMoneyLastMoneyLog()
-  }, [token])
+  useImperativeHandle(ref, () => ({
+    getMmberMoneyLastMoneyLogs() {
+      getMmberMoneyLastMoneyLog()
+    },
+  }))
 
   return (
     <div className={styles['coin-list-root']}>
@@ -71,4 +73,4 @@ function WalletCoinList({ token }: any) {
   )
 }
 
-export { WalletCoinList }
+export default forwardRef(WalletCoinList)

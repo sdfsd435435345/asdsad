@@ -1,4 +1,3 @@
-import { WalletCoinList } from '@/features/assets/wallet/wallet-coin-list'
 import WalletHeaderCard from '@/features/assets/wallet/wallet-header-card'
 import WalletTabsList from '@/features/assets/wallet/wallet-tabs-list'
 import { Divider, Picker, Toast, Selector } from 'react-vant'

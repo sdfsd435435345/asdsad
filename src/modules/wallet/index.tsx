@@ -1,8 +1,8 @@
-import { WalletCoinList } from '@/features/assets/wallet/wallet-coin-list'
+import WalletCoinList from '@/features/assets/wallet/wallet-coin-list'
 import WalletHeaderCard from '@/features/assets/wallet/wallet-header-card'
 import WalletTabsList from '@/features/assets/wallet/wallet-tabs-list'
 import { Divider } from 'react-vant'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useAssetsStore } from '@/store/assets/spot'
 import { usePersonalCenterStore } from '@/store/user/personal-center'
 import styles from './index.module.css'
@@ -28,8 +28,11 @@ function Wallet() {
 
   const [visible, setVisible] = useState<boolean>(false)
 
+  const [detailToken, setDetailToken] = useState<string>('')
 
   const [tipVisible, setTipVisible] = useState<boolean>(false)
+
+  const walletCoinListRef = useRef<any>()
 
 
   const getV1MemberBaseGetContextChange = async () => {
@@ -43,12 +46,15 @@ function Wallet() {
       const userInfoDetial = { token: token, ...data }
       setUserInfo({ ...userInfoDetial } as any)
       setToken({ ...userInfoDetial })
+      setDetailToken(token as string)
+      walletCoinListRef.current?.getMmberMoneyLastMoneyLogs()
+      run({})
     }
   }
 
   useEffect(() => {
     setLogin(true)
-    run({})
+  
     const userInfoDetial = { token: token}
     setUserInfo({ ...userInfoDetial } as any)
     setToken({ ...userInfoDetial })
@@ -76,6 +82,7 @@ function Wallet() {
 
   const { data, run, cancel } = useRequest(getSiteMessageRunningOrderPage, {
     pollingInterval: 30000,
+    manual: true 
   });
 
   useEffect(() => {
@@ -160,7 +167,7 @@ function Wallet() {
       </div>
       <WalletTabsList />
       <Divider />
-      <WalletCoinList token={token} />
+      <WalletCoinList  ref={walletCoinListRef}  />
       <C2cFooter />
     </div>
   )
