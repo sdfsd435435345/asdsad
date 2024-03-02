@@ -62,8 +62,8 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
   const getMemberAdvMyPayments = async () => {
     try {
       const res = await postMemberAdvMyPayments({});
-      const { code, data } = res || {};
-      if (code === 200 || data) {
+      const { isOk, data } = res || {};
+      if (isOk || data) {
         setMemberAdvMyPayments(data);
         return;
       }
