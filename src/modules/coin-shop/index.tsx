@@ -54,7 +54,6 @@ function CoinShop() {
   const token = params.get('token')
 
   useEffect(() => {
-    onLoadMore(true);
     getMemberAdvMyPayments();
   }, []); // 初始化时加载第一页数据
 
@@ -79,7 +78,7 @@ function CoinShop() {
       size: 10,
     }
     setRecordList([])
-    onLoadMore(true);
+    onLoadMore(3);
   }, [bigAmount, smallAmount, nickname, selectedPaymentMethod])
 
   const handlePickerToggle = () => {
@@ -147,6 +146,7 @@ function CoinShop() {
 
 
   const onLoadMore = async (isRefresh = false) => {
+    console.log(isRefresh, 'isRefresh', requestParams.current, 'requestParams.current');
     try {
       const res = await postMemberTransSoldOrderPage({
         current: requestParams.current.current,
@@ -206,7 +206,7 @@ function CoinShop() {
       </div>
       <CommonList
         finished={finished}
-        onRefreshing={() => requestWithLoading(onLoadMore(true), 0)}
+        onRefreshing={() => requestWithLoading(onLoadMore(1), 0)}
         onLoadMore={onLoadMore}
         finishedText={!!recordList.length ? '暂无数据' : ''}
         listChildren={<><div className='coin-shop-list overflow-hidden'>
