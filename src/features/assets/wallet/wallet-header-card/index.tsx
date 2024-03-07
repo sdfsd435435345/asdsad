@@ -18,7 +18,7 @@ function WalletHeaderCard() {
   const handleCopy = (key: number | undefined) => {
     if (!key) return
     copyToClipboard(key.toString())
-    state.error ? Toast.fail(t`user.secret_key_02`) : Toast.success(t`user.secret_key_01`)
+    state.error ? Toast.fail('复制失败') : Toast.success('复制成功')
   }
 
   useEffect(() => {
@@ -50,9 +50,9 @@ function WalletHeaderCard() {
         <Icon name="default_avatar" className="mr-2 header-brand-logo" />
         <span className="text-base font-semibold">{userInfo?.nickname || t`user.personal_center_01`}</span>
       </div>
-      <div>
-        <label>{userInfo?.token || '-'}</label>
-        <Icon className="ml-1" name="copy_black" onClick={() => handleCopy(userInfo?.token)} />
+      <div className="h-[18px]">
+        {/* <label>{userInfo?.token || '-'}</label>
+        <Icon className="ml-1" name="copy_black" onClick={() => handleCopy(userInfo?.token)} /> */}
       </div>
       <div className="divider"></div>
       <div className="flex justify-between">

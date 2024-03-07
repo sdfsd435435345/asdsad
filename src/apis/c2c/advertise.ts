@@ -165,11 +165,7 @@ export const getAdvertDetail: MarkcoinRequest<AdvertDetailReq, AdvertDetailResp>
  * 广告详情 - 历史订单
  */
 export const getAdvertOrderHistory: MarkcoinRequest<AdvertOrderHistoryReq, AdvertOrderHistoryResp> = params => {
-  return request({
-    path: `/v1/c2c/order/getsPageBy`,
-    method: 'GET',
-    params,
-  })
+  return new Promise(()=>{})
 }
 
 /**

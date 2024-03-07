@@ -38,6 +38,7 @@
   .orderInfo {
     margin-bottom: 20px;
     font-size: 14px;
+    @apply pl-2 pt-2;
 
     p {
       margin: 5px 0;
@@ -86,18 +87,47 @@
   .progress {
     /* 这里根据你的实际需要设置步骤进度条的样式 */
     .rv-steps {
-      background-color: #333;
+     @apply bg-bg_color;
+
+      .rv-step__circle-container {
+        @apply bg-bg_color;
+
+      }
+    }
+
+    .rv-step__title {
+      @apply relative;
+
+      .time-label {
+        color: #00c853;
+      }
+      .time {
+        top: 40px;
+        left: 0;
+        width:80px;
+        color: #00c853;
+        @apply absolute;
+      }
+
+      .time-red {
+        @apply text-red-400 !important;
+      }
+    }
+
+    .rv-steps__items {
+      height: 80px;
     }
   }
 
 
   .payment-info {
-
+    @apply pl-3;
     .payment-type {
       font-size: 16px;
       font-weight: bold;
       height: 56px;
       line-height: 50px;
+
     }
 
     .seller-collection-informatio {

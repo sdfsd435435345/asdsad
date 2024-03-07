@@ -83,7 +83,7 @@ const SellCoinsPage = () => {
       });
       if (isOk) {
         Toast.success('创建成功')
-        navigate('/order-info', { target: true });
+        navigate('/coin-shop');
       }
 
     } catch (error) {

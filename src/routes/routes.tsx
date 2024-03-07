@@ -72,7 +72,7 @@ const GetRouters = () => {
             element: <InstationMail />
         },
         {
-            path: '/order-list',
+            path: '/orderlist',
             element: <OrderList />
         },
     ])

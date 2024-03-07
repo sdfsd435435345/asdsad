@@ -110,7 +110,7 @@ export const postMemberTransMySoldOrderPage: MarkcoinRequest = data => {
 export const postMemberTransSonOrders: MarkcoinRequest = data => {
   return request({
     path: '/memberTrans/sonOrders',
-    ethod: 'POST',
+    method: 'POST',
     data,
   })
 }
@@ -152,5 +152,55 @@ export const postMemberBuyOrderCreate: MarkcoinRequest = data => {
     path: '/memberTrans/buyOrderCreate',
     method: 'POST',
     data,
+  })
+}
+
+export const postMemberBuyOrderDetail: MarkcoinRequest = params => {
+  return request({
+    path: '/memberTrans/buyOrderDetail',
+    method: 'POST',
+    params,
+  })
+}
+
+
+export const postMemberCancelBuyOrder: MarkcoinRequest = params => {
+  return request({
+    path: '/memberTrans/cancelBuyOrder',
+    method: 'POST',
+    params,
+  })
+}
+
+export const postMemberConfirmBuyOrder: MarkcoinRequest = params => {
+  return request({
+    path: '/memberTrans/confirmBuyOrder',
+    method: 'POST',
+    params,
+  })
+}
+
+export const postMemberOrderAppeal: MarkcoinRequest = data => {
+  return request({
+    path: '/memberTrans/orderAppeal',
+    method: 'POST',
+    data,
+  })
+}
+
+export const postMemberFinishBuyOrder: MarkcoinRequest = params => {
+  return request({
+    path: '/memberTrans/finishBuyOrder',
+    method: 'POST',
+    params,
+  })
+}
+
+
+export const postMemberCancelSoldOrder: MarkcoinRequest = params => {
+  return request({
+    path: '/memberTrans/cancelSoldOrder',
+    method: 'POST',
+    params,
   })
 }

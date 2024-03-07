@@ -19,6 +19,7 @@ import { link } from '@/helper/link'
 import { queryCanPublishAd } from '@/apis/c2c/trade'
 import styles from './index.module.css'
 import { useTradeContext } from '../trade/trade-context'
+import { useLocation } from 'react-router-dom'
 
 type ITabBarItem = {
   title: string
@@ -92,6 +93,10 @@ function C2cFooter() {
     // fetchCanPublishAd()
   }, [params])
 
+  const location = useLocation();
+  const locationparams = new URLSearchParams(location.search);
+  const token = locationparams.get('token');
+
   const tabBars: ITabBarItem[] = [
     // {
     //   title: 'C2C',
@@ -102,13 +107,13 @@ function C2cFooter() {
     {
       title: '主页',
       icon: 'icon_equity_recharge',
-      href: getC2cPostAdvPageRoutePath(),
+      href: `/?token=${token}`,
       hoverIcon: 'c2c_publish_ad',
     }, 
     {
       title: '訂單',
       icon: 'c2c_order',
-      href: '/order-list',
+      href: `/order-list?token=${token}`,
       hoverIcon: 'c2c_icon_order',
       iconClassName: '',
       badge: Number(openOrderModule.normal.total) > 99 ? '99+' : Number(openOrderModule.normal.total),

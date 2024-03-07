@@ -22,10 +22,7 @@ import { YapiPostV1C2cOrderAddComplaintInformationApiRequest } from '@/typings/y
  * https://yapi.nbttfc365.com/project/73/interface/api/4967
  */
 export const queryC2cOrderList: MarkcoinRequest<IC2cQueryOrderListReq, IC2cQueryOrderListResp> = params => {
-  return request({
-    path: '/v1/c2c/order/getsPageBy',
-    params,
-  })
+  return new Promise(()=>{})
 }
 /**
  * 查询订单详情

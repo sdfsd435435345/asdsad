@@ -28,6 +28,12 @@ export const columns = [
 ]
 
 
+export const columnsBuy = [
+  { text: '全部', value: '' },
+  { text: '支付宝', valueType: 0 },
+  { text: '微信', valueType: 1 },
+  { text: '银行', valueType: 2 },
+]
 
 
 

@@ -34,6 +34,7 @@ function Payment() {
     const { isOk } = await setMemberAdvAddPayment({ ...values })
     if (isOk) {
       Toast.success('添加成功')
+      setVisible(false)
     }
   }
 
@@ -152,7 +153,7 @@ function Payment() {
             <Input placeholder='请输入日交易金额上限' />
           </Form.Item>
           <Form.Item
-            name='dayLimit'
+            name='remark'
             label='备注'
           >
             <Input placeholder='请输入备注' />
@@ -163,7 +164,7 @@ function Payment() {
       {
         paymentsList?.length === 0 ? <div className="h-full flex justify-center items-center">
           <div className="w-3/5">
-            <Button round nativeType='submit' type='primary' block>
+            <Button round nativeType='submit' type='primary' block onClick={() => setVisible(true)}>
               添加支付方式
             </Button>
           </div>

@@ -1,12 +1,12 @@
 :local(.scoped) {
-  height: 100vh;
-
+  min-height: 100vh;
+  height: 100%;
   .order-tab {
     .rv-tab {
-      @apply px-3 !important;
+      @apply px-3 py-3 !important;
     }
     .rv-tab__text {
-      @apply text-2xl  !important;
+      @apply text-xl  !important;
     }
   }
 
@@ -42,5 +42,7 @@
 
 
 :local(.modal) {
+  min-height: 30%;
+  max-height: 50%;
   @apply bg-bg_color !important;
 }

@@ -14,7 +14,7 @@ import {
 } from '@/apis/market/market-list'
 import { Popup, Button, Input, Form, Toast } from 'react-vant'
 import { postV1GuideMemberActive } from '@/apis/server'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useUserStore } from '@/store/user'
 import { setToken } from '@/helper/auth'
 import { useMount, useUnmount, useRequest } from 'ahooks'
@@ -32,7 +32,11 @@ function Wallet() {
 
   const [tipVisible, setTipVisible] = useState<boolean>(false)
 
+  const [orderDataList, setOrderDataList] = useState<any[]>([])
+
   const walletCoinListRef = useRef<any>()
+
+  const navigate = useNavigate()
 
 
   const getV1MemberBaseGetContextChange = async () => {
@@ -53,18 +57,19 @@ function Wallet() {
   }
 
   useEffect(() => {
-    setLogin(true)
+    if(token) {
+      setLogin(true)
   
-    const userInfoDetial = { token: token}
-    setUserInfo({ ...userInfoDetial } as any)
-    setToken({ ...userInfoDetial })
-    getV1MemberBaseGetContextChange()
+      const userInfoDetial = { token: token}
+      setUserInfo({ ...userInfoDetial } as any)
+      setToken({ ...userInfoDetial })
+      getV1MemberBaseGetContextChange()
+    }
+
   }, [token])
 
   // useEffect(async () => {
-  //   await getV1PerpetualTradeParDefaultApiRequest({
-  //     "merchantCode": "test01", "password": "j6vgldnn", "signature": "7RJWD6dP0VFUzsODWJh8UjNBlV678VIKXnnFvLup9m2hwoyPK2PuG1wD+jWiY42+drDUZS4zT/R+mPo3KAlgOw==", "userAccount": "member01"
-  //   })
+  //   await getV1PerpetualTradeParDefaultApiRequest({"merchantCode":"test01","password":"b8fo9ucy","signature":"7RJWD6dP0VFUzsODWJh8Uj9W5ZeUkwLGnrDMqBdlPHTSLy1C8BR76/FwUuyTu4uxbKiAe02Orw6ovbm+a9KoWg==","userAccount":"member02"})
   // }, [])
 
   const [form] = Form.useForm()
@@ -90,6 +95,7 @@ function Wallet() {
       const { isOk, data: dataList } = data
       if(isOk) {
         setTipVisible(dataList?.records?.length > 0)
+        setOrderDataList(dataList?.records)
       }
     }
   }, [data])
@@ -99,24 +105,26 @@ function Wallet() {
     cancel()
   })
 
+  const lastorderData = orderDataList?.[orderDataList?.length - 1]
 
-  const goToPickUpTheOrder = () => {
 
+  const goToPickUpTheOrder = () => {  
+   navigate(`/order-info?seqNo=${lastorderData?.seqNo}`);
   }
 
   return (
     <div className={styles.scoped}>
       <Popup destroyOnClose onClose={() => setTipVisible(false)} closeOnClickOverlay={false} className={styles.modalscoped}
-      // overlay={false}
-      // visible={tipVisible} 
-      visible={false} 
+      overlay={false}
+      visible={tipVisible} 
+      // visible={false} 
       >
         <div style={{ padding: '20px 20px' }} className="text-center">
-          买家需要购买您的C币，金额200元，是否接单
+          您单号为：{lastorderData?.seqNo}的单据待处理, 金额{lastorderData?.transAmount}元
         </div>
         <div className="flex justify-center w-full">
           <div className="w-[100px] h-[40px] bg-brand_color flex justify-center items-center rounded-xl" onClick={goToPickUpTheOrder}>
-            前往接单
+            前往处理
           </div>
         </div>
       </Popup>
@@ -167,10 +175,10 @@ function Wallet() {
       <div className="overflow-hidden">
         <WalletHeaderCard />
       </div>
-      <WalletTabsList />
+      <WalletTabsList cancel={cancel} />
       <Divider />
       <WalletCoinList  ref={walletCoinListRef}  />
-      <C2cFooter />
+      {/* <C2cFooter /> */}
     </div>
   )
 }

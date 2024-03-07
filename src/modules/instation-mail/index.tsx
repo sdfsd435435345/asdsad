@@ -10,7 +10,7 @@ import C2cFooter from '@/features/c2c/footer'
 import { postSiteMessageSiteMessagePage, postSiteMessageRunningOrderPage, postSiteMessageDelMessage, postSiteMessageMakeRead } from '@/apis/server'
 import { useLocation } from 'react-router-dom';
 import { useUserStore } from '@/store/user'
-import { setToken } from '@/helper/auth'
+import { useNavigate } from 'react-router-dom'
 import { useUpdateEffect } from 'ahooks'
 import { Success } from '@react-vant/icons'
 import CommonList from '@/components/common-list/list'
@@ -87,6 +87,8 @@ function InstationMail() {
 
   const [selected, setSelected] = useState(['mail'])
 
+  const navigate = useNavigate()
+
   const { id } = userInfo
   
 
@@ -157,7 +159,9 @@ function InstationMail() {
     }
   }
 
-  const setViewOrder = () => {}
+  const setViewOrder = (seqNo) => {
+    navigate(`/order-info?seqNo=${seqNo}`);
+  }
 
 
   return (
@@ -248,7 +252,7 @@ function InstationMail() {
                     <div className="text-xs">
                       内容：{item?.messageContent || '--'}
                     </div> */}
-                    <div className="absolute text-xs text-brand_color px-2 py-1 bg-white right-10 bottom-3 rounded-2xl"  onClick={()=>setViewOrder()}>
+                    <div className="absolute text-xs text-brand_color px-2 py-1 bg-white right-4 bottom-3 rounded-2xl"  onClick={()=>setViewOrder(item?.seqNo)}>
                       去查看
                     </div>
                     {/* <div className="absolute text-xs text-red-500 px-2 py-1 bg-white right-3 bottom-3 rounded-2xl" onClick={()=>setDeleteInstationmail(item?.id)}>

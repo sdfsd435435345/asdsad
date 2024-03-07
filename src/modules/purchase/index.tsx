@@ -8,7 +8,7 @@ import { postMemberAdvMyPayments, postMemberBuyOrderCreate } from '@/apis/server
 import { useNavigate } from 'react-router-dom'
 import { log } from 'console';
 import { useLocation } from 'react-use';
-import { columns } from '../coin-shop';
+import { columnsBuy } from '../coin-shop';
 import wx from '../../images/wx.png'
 import zfb from '../../images/zfb.png'
 import bank from '../../images/bank.png'
@@ -64,7 +64,8 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
       const res = await postMemberAdvMyPayments({});
       const { isOk, data } = res || {};
       if (isOk || data) {
-        setMemberAdvMyPayments(data);
+        setMemberAdvMyPayments(data);      
+        setPaymentMethod(data?.find(item=>item?.paymentType === Number(paymentMethodUrl))?.id)
         return;
       }
     } catch (error) {
@@ -140,10 +141,10 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
 
   const handlePickerConfirm = () => {
     setPickerOpen(false);
-    setPaymentMethod(currentPayment.current.paymentType);
+    setPaymentMethod(currentPayment.current?.paymentType as any);
   };
 
-  const handlePickerChange = (value) => {
+  const handlePickerChange = (value) => {  
     currentPayment.current.paymentType = value;
   };
 
@@ -155,15 +156,22 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
     handlePickerToggle();
   };
   const allPaymentMethods = useMemo(() => {
+    console.log(alipay, 'alipayalipay');
+    
     const communicationPaymentMethods = _.compact(memberAdvMyPayments.map(item => {
       if ([alipay, wechat, bank].includes(item.paymentType)) {
-        return columns.find(ele => ele.value === item.paymentType);
+        return {...columnsBuy.find(ele => ele.valueType === item.paymentType), value: item?.id };
       }
     }));
+    // console.log(communicationPaymentMethods, 'communicationPaymentMethodscommunicationPaymentMethods');
+    
     return communicationPaymentMethods;
   }, [alipay, wechat, bank, memberAdvMyPayments]);
+  
 
-  const currentPaymentName = columns.find(ele => String(paymentMethod) === String(ele?.value))?.text || '' //当前支付方式名称
+  const currentPaymentpaymentType= memberAdvMyPayments.find(ele => String(paymentMethod) === String(ele?.id))?.paymentType //当前支付方式名称
+  
+  const currentPaymentName = columnsBuy.find(ele => String(currentPaymentpaymentType) === String(ele?.valueType))?.text //当前支付方式名称
 
   return (
     <div className={styles.scoped}>
@@ -204,7 +212,7 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
               value={minAmount}
               onChange={(value) => {
                 if (Number(leftAmount) >= Number(value) ) {
-                  setiMinValue(value);
+                  setiMinValue(value as any);
                 }
               }}
             />
