@@ -23,7 +23,7 @@ function UserChooseVerificationMethod({
         <label>{title}</label>
       </div>
 
-      <div className="tab">
+      {/* <div className="tab">
         {isThirdPartyRegister ? (
           <>
             {method === UserValidateMethodEnum.email ? (
@@ -52,7 +52,7 @@ function UserChooseVerificationMethod({
             </div>
           </>
         )}
-      </div>
+      </div> */}
     </div>
   )
 }

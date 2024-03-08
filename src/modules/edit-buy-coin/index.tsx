@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { Button, Checkbox, Input, Toast, Divider } from 'react-vant';
-import { postMemberTransSoldOrderCreate } from '@/apis/server'
+import { postMemberTransSoldOrderCreate, postGetPaymentLimitTimes } from '@/apis/server'
 import { useNavigate } from 'react-router-dom'
 import { useUserStore } from '@/store/user'
+import { useMount } from 'ahooks'
 
 
 
@@ -33,8 +34,10 @@ const SellCoinsPage = () => {
   const [minAmount, setMinAmount] = useState('');
   const [showPaymentDetails, setShowPaymentDetails] = useState(false);
   const [showLeaveMessage, setShowLeaveMessage] = useState(false);
-  const [paymentDeadline, setPaymentDeadline] = useState(PaymentDeadline.TenMinutes);
+  const [paymentDeadline, setPaymentDeadline] = useState(0);
   const [cellCheck, setCellCheck] = useState<PaymentMethods[]>([PaymentMethods.Alipay])//收款账号方式
+
+  const [timeDateList, setTimeDateList] = useState([]);
 
 
   const navigate = useNavigate();
@@ -44,12 +47,17 @@ const SellCoinsPage = () => {
   const { balance } = userInfo || {}
 
   const handleIsSeparable = (value: number | string[]) => {
-    const lastElement = value[value.length - 1];
+    const lastElement = value?.[value?.length - 1];
     setIsSeparable(lastElement)
   };
 
   const handlePaymentDeadline = (value: number | string[]) => {
-    const lastElement = value[value.length - 1];
+    console.log(value, 'valuevalue');
+    
+    const lastElement = value?.[value?.length - 1];
+
+    console.log(lastElement, 'lastElementlastElementlastElement');
+    
     setPaymentDeadline(lastElement)
   };
 
@@ -76,7 +84,7 @@ const SellCoinsPage = () => {
         isSplit: !!isSeparable,
         transAmount: sellAmount,
         splitMin: !!isSeparable ? minAmount : null,
-        paymentLimitTime: 5,
+        paymentLimitTime: paymentDeadline,
         isAlipay: cellCheck.includes(PaymentMethods.Alipay),
         isWechat: cellCheck.includes(PaymentMethods.Wechat),
         isBank: cellCheck.includes(PaymentMethods.Bank),
@@ -92,9 +100,20 @@ const SellCoinsPage = () => {
     }
   }
 
+  const postGetPaymentLimitTimesChange = async () => {
+    const { isOk, data } = await postGetPaymentLimitTimes({})
+    if (isOk) {
+      setTimeDateList(data)
+      setPaymentDeadline(data?.[0])
+    }
+  }
   // const handleDeleteItem = () => {
   //   // 实现删除逻辑
   // };
+
+  useMount(() => {
+    postGetPaymentLimitTimesChange()
+  })
 
   return (
     <div className={styles.scoped}>
@@ -152,9 +171,13 @@ const SellCoinsPage = () => {
             <div className="payment-deadline-container" >
               <div className="payment-deadline-label">限制买家期限内付款：</div>
               <div className="payment-deadline-options">
+              
                 <Checkbox.Group value={[paymentDeadline]} onChange={handlePaymentDeadline} direction='horizontal'>
-                  <Checkbox name={PaymentDeadline.TenMinutes} shape='square'>10分钟</Checkbox>
-                  <Checkbox name={PaymentDeadline.FifteenMinutes} shape='square'>15分钟</Checkbox>
+                  {
+                    timeDateList?.map(item=>{
+                      return  <Checkbox name={item} key={item} shape='square'>{item}分钟</Checkbox>
+                    })
+                  }
                 </Checkbox.Group>
               </div>
 

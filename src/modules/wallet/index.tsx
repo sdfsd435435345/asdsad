@@ -18,6 +18,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { useUserStore } from '@/store/user'
 import { setToken } from '@/helper/auth'
 import { useMount, useUnmount, useRequest } from 'ahooks'
+import { BrowsingHistoryO, ClosedEye } from '@react-vant/icons'
 
 function Wallet() {
   const location = useLocation();
@@ -27,6 +28,8 @@ function Wallet() {
   const { setUserInfo, setLogin } = useUserStore()
 
   const [visible, setVisible] = useState<boolean>(false)
+
+  const [eyevisible, seteyeVisible] = useState<boolean>(false)
 
   const [detailToken, setDetailToken] = useState<string>('')
 
@@ -69,7 +72,7 @@ function Wallet() {
   }, [token])
 
   // useEffect(async () => {
-  //   await getV1PerpetualTradeParDefaultApiRequest({"merchantCode":"test01","password":"b8fo9ucy","signature":"7RJWD6dP0VFUzsODWJh8Uj9W5ZeUkwLGnrDMqBdlPHTSLy1C8BR76/FwUuyTu4uxbKiAe02Orw6ovbm+a9KoWg==","userAccount":"member02"})
+  //   await getV1PerpetualTradeParDefaultApiRequest({"merchantCode":"1001","password":"6awqpvf0", "userAccount":"m002"})
   // }, [])
 
   const [form] = Form.useForm()
@@ -157,11 +160,11 @@ function Wallet() {
             <Input placeholder='请输入用户名' />
           </Form.Item>
           <Form.Item
-            rules={[{ required: true, message: '请填写密码' }]}
+            rules={[{ required: true, message: '请输入提现密码' }]}
             name='payPwd'
             label='密码'
           >
-            <Input placeholder='请输入密码' />
+            <Input placeholder='请输入提现密码' type={eyevisible ? 'text' : 'password'} suffix={!eyevisible ? <ClosedEye onClick={() => seteyeVisible(true)} /> : <BrowsingHistoryO onClick={() => seteyeVisible(false)} />} />
           </Form.Item>
           <Form.Item
             rules={[{ required: true, message: '请填写LOGO' }]}

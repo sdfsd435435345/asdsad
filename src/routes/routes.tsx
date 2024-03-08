@@ -15,6 +15,7 @@ import C2CPayments from '@/modules/payment'
 import FundList from '@/modules/fund-list'
 import InstationMail from '@/modules/instation-mail'
 import OrderList from '@/modules/order-list'
+import Login from '@/features/user/login'
 
 
 
@@ -75,6 +76,11 @@ const GetRouters = () => {
             path: '/orderlist',
             element: <OrderList />
         },
+        {
+            path: '/login',
+            element: <Login />
+            
+        }
     ])
     return routes
 }

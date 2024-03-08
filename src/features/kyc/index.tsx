@@ -55,9 +55,12 @@ export default function KycIndex() {
 
 
   const kycStateobj = {
-    0: '待审核',
-    1: '通过',
-    2: '驳回'
+    0: '基础KYC待审核',
+    1: '基础KYC通过',
+    2: '高级KYC待审核',
+    3: '高级KYC通过',
+    '-1': '基础KYC驳回',
+    '-2': '高级KYC驳回'
   }
 
   const onFinishModifyPassword  = async values => {
@@ -73,6 +76,7 @@ export default function KycIndex() {
       const { isOk } = await memberUploadKycBase({ ...values })
       if (isOk) {
         getUserInfo()
+        setSubmitInfomationVisible(false)
       }
     }
 
@@ -94,7 +98,14 @@ export default function KycIndex() {
             ...tokenParams
           },
         })
+    
+
         const json = await resp.json()
+        if(json?.code === 200) {
+          setSubmitInfomationVisible(false)
+        } else {
+          Toast.fail(json?.message)
+        }
         // return包含 url 的一个对象 例如: {url:'https://img.yzcdn.cn/vant/sand.jpg'}
         return json.image
       } catch (error) {

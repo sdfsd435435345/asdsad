@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useMount } from 'react-use'
-import { Form, Button, Field, Flex, Image } from 'react-vant'
+import { Form, Button, Field, Flex, Image, Input } from 'react-vant'
 import Link from '@/components/link'
 import { t } from '@lingui/macro'
 import { LoginValidateRules, formatPhoneNumber } from '@/features/user/utils/validate'
@@ -30,6 +30,8 @@ import { link } from '@/helper/link'
 import { useLayoutStore } from '@/store/layout'
 import { toKenTtlDefaultValue } from '@/constants/auth'
 import styles from './index.module.css'
+import { getV1PerpetualTradeParDefaultApiRequest } from '@/apis/market/market-list'
+import { useNavigate } from 'react-router-dom'
 
 const FormItem = Form.Item
 
@@ -49,38 +51,13 @@ export default function UserLogin() {
 
   const [passwordShow, setPasswordShow] = useState<boolean>(false)
   const [form] = Form.useForm()
-  const pageContext = usePageContext()
-  const email = Form.useWatch('email', form)
-  const mobile = Form.useWatch('mobile', form)
-  // const password = Form.useWatch('password', form)
-
-  const { redirect } = pageContext.urlParsed.search
-  const { searchOriginal } = pageContext.urlParsed
-  const isAccount = email || mobile
-
-  const geeTestInit = useGeeTestBind()
   const store = useUserStore()
+
+  const navigate = useNavigate()
 
   const { tokenTtl } = store.personalCenterSettings
 
   const rules = LoginValidateRules()
-
-  const getAreaIp = async () => {
-    const res = await getMemberAreaIp({})
-    if (res.isOk) {
-      const { enCode, fullName, shortName } = res.data
-
-      setArea({
-        codeVal: enCode,
-        codeKey: fullName,
-        remark: shortName,
-      })
-
-      // res.data.enableInd === UserEnabledStateTypeEnum.unEnable ? setIsEnble(false) : setIsEnble(true)
-    }
-  }
-
-  useMount(getAreaIp)
 
   // const handleValidateChange = () => {
   //   form
@@ -109,7 +86,6 @@ export default function UserLogin() {
       }
       await store.setUserTransitionDatas(cacheData)
 
-      redirect ? link(`/safety-verification${searchOriginal || `?redirect=${redirect}`}`) : link('/safety-verification')
       return
     }
 
@@ -148,37 +124,20 @@ export default function UserLogin() {
     }
   }
 
-  const geeTestOnSuccess = async () => {
-    setLoading(false)
-    handleLogin(form.getFieldsValue())
-  }
-
-  const geeTestOnError = () => setLoading(false)
-
-  const onFinish = () => {
-    // if (method === UserValidateMethodEnum.phone && !isEnble) {
-    //   Toast.info(t`features_user_register_flow_index_510247`)
-    //   return
-    // }
-
-    setLoading(true)
-
-    // /** 极验验证 */
-    const operateType = GeeTestOperationTypeEnum.login
-    const account = isAccount?.replace(/\s/g, '')
-    geeTestInit(account, operateType, geeTestOnSuccess, geeTestOnError)
+  const onFinish = async (res) => {
+    const { isOk, data } = await getV1PerpetualTradeParDefaultApiRequest({...res})
+    if(isOk) {
+      navigate(`/?token=${data?.currentToken}`)
+    }
   }
 
   return (
     <section className={`login ${styles.scoped}`}>
-      <NavBar title="" left={null} right={<Icon name="close" hasTheme />} onClickRight={() => window.history.back()} />
+      <NavBar title="" left={null} onClickRight={() => window.history.back()} />
 
       <div className="login-wrap user-validate">
         <UserChooseVerificationMethod
-          title={t({
-            id: 'features_user_login_index_5101290',
-            values: { 0: '' },
-          })}
+          title="账户登陆"
           method={method}
           choosMethod={handleChoosMethod}
         />
@@ -189,36 +148,38 @@ export default function UserLogin() {
           onFinish={onFinish}
           autoComplete="off"
           validateTrigger="onFinish"
-          //  onChange={handleValidateChange}
+        //  onChange={handleValidateChange}
         >
-          {method === UserValidateMethodEnum.email && (
-            <>
-              <FormItem
-                name="email"
-                rules={[rules.account]}
-                label={t`user.validate_form_01`}
-                validateTrigger="onFinish"
-              >
-                <Field placeholder={t`features_user_login_index_510241`} />
-              </FormItem>
+          <>
+            <FormItem
+              name="userAccount"
+              label="账号"
+              validateTrigger="onFinish"
+              rules={[{ required: true, message: '请输入账号' }]}
+            >
+              <Input className="input-bg" placeholder="请输入账号" />
+            </FormItem>
 
-              <FormItem
-                name="password"
-                rules={[rules.password]}
-                label={t`user.validate_form_05`}
-                validateTrigger="onFinish"
-              >
-                <Field
-                  formatter={FormValuesTrim}
-                  type={passwordShow ? 'text' : 'password'}
-                  rightIcon={passwordShow ? <Icon name="eyes_open" hasTheme /> : <Icon name="eyes_close" hasTheme />}
-                  onClickRightIcon={() => setPasswordShow(!passwordShow)}
-                  placeholder={t`user.validate_form_06`}
-                />
-              </FormItem>
-            </>
-          )}
+            <FormItem
+              name="password"
+              label="密码"
+              validateTrigger="onFinish"
+              rules={[{ required: true, message: '请输入密码' }]}
+            >
+              <Input className="input-bg" placeholder="请输入密码" type={passwordShow ? 'text' : 'password'} suffix={passwordShow ? <Icon name="eyes_open" hasTheme onClick={()=> setPasswordShow(false)} /> : <Icon name="eyes_close" hasTheme onClick={()=> setPasswordShow(true)}  />} />
+            </FormItem>
 
+            <FormItem
+              name="merchantCode"
+              label="商户代码"
+              validateTrigger="onFinish"
+              rules={[{ required: true, message: '请输入商户代码' }]}
+            >
+              <Input className="input-bg" placeholder="请输入商户代码" />
+            </FormItem>
+          </>
+
+          {/* 
           {method === UserValidateMethodEnum.phone && (
             <>
               <FormItem name="mobile" rules={[rules.phone]} label={t`user.validate_form_03`} validateTrigger="onFinish">
@@ -262,7 +223,7 @@ export default function UserLogin() {
                 />
               </FormItem>
             </>
-          )}
+          )} */}
 
           <FormItem>
             <Button
@@ -270,14 +231,14 @@ export default function UserLogin() {
               size="large"
               nativeType="submit"
               type="primary"
-              // disabled={disabled || !isAccount || !password}
+            // disabled={disabled || !isAccount || !password}
             >
-              {t`user.field.reuse_07`}
+              登陆
             </Button>
           </FormItem>
         </Form>
 
-        <div className="register-or-retrieve">
+        {/* <div className="register-or-retrieve">
           <Link href="/register" prefetch className="customize-link-style">
             <label>{t`user.login_02`}</label>
           </Link>
@@ -285,9 +246,9 @@ export default function UserLogin() {
           <div onClick={() => setRetrieve(true)}>
             <label>{t`user.login_03`}</label>
           </div>
-        </div>
+        </div> */}
         <div className="third-party-wrap">
-          <SignInWith />
+          {/* <SignInWith /> */}
         </div>
 
         <UserPopUp
@@ -311,15 +272,6 @@ export default function UserLogin() {
           }
         />
       </div>
-
-      <UserSearchArea
-        visible={selectArea}
-        checkedValue={area?.codeVal}
-        type={UserSelectAreaTypeEnum.phone}
-        placeholderText={t`user.field.reuse_25`}
-        selectArea={handleSelectArea}
-        onClose={() => setSelectArea(false)}
-      />
     </section>
   )
 }

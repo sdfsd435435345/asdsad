@@ -182,18 +182,18 @@ function OrderList() {
       <NavBar
         title={
           <div className="mb-4 mt-2  w-full mx-auto px-4 flex justify-center">
-          <div className='order-tab py-2'>
-            <Tabs active={selected} onChange={(e) => setSelected(e as number)}>
-              {[{ title: '购买', key: Trade.buy }, { title: '出售', key: Trade.sell }].map(item => (
-                <Tabs.TabPane key={item.key} name={item.key} title={item.title}>
-                </Tabs.TabPane>
-              ))}
-            </Tabs>
+            <div className='order-tab py-2'>
+              <Tabs active={selected} onChange={(e) => setSelected(e as number)}>
+                {[{ title: '购买', key: Trade.buy }, { title: '出售', key: Trade.sell }].map(item => (
+                  <Tabs.TabPane key={item.key} name={item.key} title={item.title}>
+                  </Tabs.TabPane>
+                ))}
+              </Tabs>
+            </div>
           </div>
-        </div>
         }
       />
- 
+
       <Popup
         visible={visible}
         className={styles.modal}
@@ -298,9 +298,10 @@ function OrderList() {
                     <div className="text-xs">
                       最低可拆金额：{item?.splitMin || '--'}
                     </div>
-                    <div className="absolute text-xs text-brand_color px-3 py-2 bg-white right-24 bottom-3 rounded-2xl" onClick={() => setRevert(item?.seqNo)}>
+                    {[0, 1].includes(item?.orderState) && <div className="absolute text-xs text-brand_color px-3 py-2 bg-white right-24 bottom-3 rounded-2xl" onClick={() => setRevert(item?.seqNo)}>
                       撤单
-                    </div>
+                    </div>}
+
                     <div className="absolute text-xs text-brand_color px-3 py-2 bg-white right-4 bottom-3 rounded-2xl" onClick={() => setReadInstationmail(item?.seqNo)}>
                       点击查看
                     </div>

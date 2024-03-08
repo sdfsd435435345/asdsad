@@ -111,6 +111,12 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
     })
   };
 
+  const currentPaymentpaymentList = memberAdvMyPayments.find(ele => String(paymentMethod) === String(ele?.id)) //当前支付方式名称
+  
+  const currentPaymentpaymentType = currentPaymentpaymentList?.paymentType
+
+  const currentPaymentName = columnsBuy.find(ele => String(currentPaymentpaymentType) === String(ele?.valueType))?.text //当前支付方式名称
+
   const handleCancelOrder = () => {
     // 处理取消订单按钮点击事件
     // 其他逻辑...
@@ -169,9 +175,8 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
   }, [alipay, wechat, bank, memberAdvMyPayments]);
   
 
-  const currentPaymentpaymentType= memberAdvMyPayments.find(ele => String(paymentMethod) === String(ele?.id))?.paymentType //当前支付方式名称
+
   
-  const currentPaymentName = columnsBuy.find(ele => String(currentPaymentpaymentType) === String(ele?.valueType))?.text //当前支付方式名称
 
   return (
     <div className={styles.scoped}>
@@ -194,8 +199,7 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
             </p>
             <p>请选择付款账号：</p>
             <p>
-              此支付宝付款额度，{!isSplit ? <span>单笔${transAmount}元</span> : <span>今日剩余${leftAmount}元</span>
-              }
+              此支付宝付款额度，{currentPaymentpaymentList?.eachLimit  !== -1 && <span>单笔${transAmount}元</span>} <span>今日剩余${currentPaymentpaymentList?.todayCostAmt}元</span>
             </p>
           </div>
           <div className="payment-info" onClick={handlePaymentMethodClick} >
@@ -206,11 +210,12 @@ const PurchasePage: React.FC<PurchasePageProps> = () => {
           {!!isSplit && <div className="min-amount-section">
             {/* 最低起售 */}
             <Input
-              placeholder="最低多少起售"
+              placeholder="请输入金额"
               className='min-amount-section-input'
               type="number"
               value={minAmount}
               onChange={(value) => {
+
                 if (Number(leftAmount) >= Number(value) ) {
                   setiMinValue(value as any);
                 }

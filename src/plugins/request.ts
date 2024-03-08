@@ -159,7 +159,6 @@ const onRejected = error => {
   const msg = response?.data?.message || error?.toJSON?.()?.message
   const code = response?.data?.code || response?.status || 500
   const errorMessage = error?.config?.errorMessage
-  // console.log(response, 'responseresponseresponse');
   
   // 用户登录失效
   handleErrorCode(code, msg, errorMessage, error?.config)

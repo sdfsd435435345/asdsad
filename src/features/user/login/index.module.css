@@ -1,8 +1,15 @@
 :local(.scoped) {
+  min-height: 100vh;
+  height: 100%;
+  @apply bg-bg_color;
+
+
+
+
   .login-wrap {
     @apply p-4;
 
-    
+
     .rv-nav-bar__right {
       svg {
         @apply text-xl leading-none;
@@ -33,6 +40,15 @@
   }
 
   .rv-form-item--vertical {
+    .input-bg {
+      @apply bg-bg_sr_color !important;
+    }
+    input{
+      @apply pl-2 bg-bg_sr_color pr-2 !important;
+    }
+    .rv-input__suffix {
+      @apply pl-0 pr-2 !important;
+    }
     @apply mt-8;
   }
 

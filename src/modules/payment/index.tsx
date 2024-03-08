@@ -19,12 +19,13 @@ import { useLocation } from 'react-router-dom';
 import { useUserStore } from '@/store/user'
 import { setToken } from '@/helper/auth'
 import { useMount, useUnmount } from 'ahooks'
-import { Success } from '@react-vant/icons'
+import { BrowsingHistoryO, ClosedEye, Success } from '@react-vant/icons'
 
 function Payment() {
 
   const [visible, setVisible] = useState<boolean>(false)
 
+  const [eyevisible, seteyeVisible] = useState<boolean>(false)
 
   const [paymentsList, setPaymentsList] = useState<any[]>([])
 
@@ -118,7 +119,7 @@ function Payment() {
             name='payPwd'
             label='支付密码'
           >
-            <Input placeholder='请输入支付密码' />
+            <Input placeholder='请输入支付密码' type={eyevisible ? 'text' : 'password'} suffix={!eyevisible ? <ClosedEye onClick={() => seteyeVisible(true)} /> : <BrowsingHistoryO onClick={() => seteyeVisible(false)} />} />
           </Form.Item>
           <Form.Item
             rules={[{ required: true, message: '请填写真实姓名' }]}
@@ -198,14 +199,17 @@ function Payment() {
                     会员ID: {item.memberId}
                   </div>
                   <div className="border border-dashed mt-1.5 mb-1"></div>
-                  <span className="text-sm pr-2 text-blue-300" onClick={()=>setDefaultPay(item.id)}>设为默认</span> <span className="text-sm text-blue-300"  onClick={()=>setDeletePay(item.id)}>删除</span>
+                  <span className="text-sm pr-2 text-blue-300" onClick={() => setDefaultPay(item.id)}>设为默认</span> <span className="text-sm text-blue-300" onClick={() => setDeletePay(item.id)}>删除</span>
                 </div>
               })
             }
 
             <div className="flex justify-center items-center">
               <div className="w-3/5">
-                <Button round nativeType='submit' type='primary' block onClick={() => setVisible(true)}>
+                <Button round nativeType='submit' type='primary' block onClick={() => { 
+                  setVisible(true) 
+                  setMemberAdvMyPaymentsRequest()
+                }}>
                   添加支付方式
                 </Button>
               </div>

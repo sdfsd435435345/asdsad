@@ -204,3 +204,13 @@ export const postMemberCancelSoldOrder: MarkcoinRequest = params => {
     params,
   })
 }
+
+
+export const postGetPaymentLimitTimes: MarkcoinRequest = params => {
+  return request({
+    path: '/pub/getPaymentLimitTimes',
+    method: 'POST',
+    params,
+  })
+}
+
